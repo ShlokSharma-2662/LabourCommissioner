@@ -375,7 +375,7 @@ namespace LabourCommissioner.Controllers
             ChangePasswordModel user = await _iaccountService.ChangePassword(changePasswordModel);
 
 
-
+            //test
 
             if (user != null && user.errorcode == 0)
             {
