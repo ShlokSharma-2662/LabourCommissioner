@@ -60,7 +60,7 @@ namespace LabourCommissioner.Controllers
         {
             return RedirectToAction("Index", "home");
         }
-
+        //test
         [HttpPost, AllowAnonymous]
         [ValidateDNTCaptcha(
             ErrorMessage = "કૃપા કરીને સાચો Captcha નાખો.",

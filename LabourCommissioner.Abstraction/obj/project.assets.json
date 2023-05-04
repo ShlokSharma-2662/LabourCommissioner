@@ -6575,11 +6575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner.Abstraction\\LabourCommissioner.Abstraction.csproj",
+      "projectUniqueName": "D:\\TestCases\\LabourCommissioner\\LabourCommissioner.Abstraction\\LabourCommissioner.Abstraction.csproj",
       "projectName": "LabourCommissioner.Abstraction",
-      "projectPath": "D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner.Abstraction\\LabourCommissioner.Abstraction.csproj",
+      "projectPath": "D:\\TestCases\\LabourCommissioner\\LabourCommissioner.Abstraction\\LabourCommissioner.Abstraction.csproj",
       "packagesPath": "C:\\Users\\Uttamshlok.Sharma\\.nuget\\packages\\",
-      "outputPath": "D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner.Abstraction\\obj\\",
+      "outputPath": "D:\\TestCases\\LabourCommissioner\\LabourCommissioner.Abstraction\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
