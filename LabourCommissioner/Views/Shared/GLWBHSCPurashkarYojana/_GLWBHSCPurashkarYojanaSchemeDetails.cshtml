@@ -1,0 +1,140 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBHSCSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    var year = ViewBag.Year;
+    //var std = ViewBag.Standard;
+    var enirmancardno = ViewBag.EnirmanCardNo;
+    var Totalsahay = ViewBag.TotalSahay;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    //var dropDownItems = new SelectList(std, "Value", "Text", "12");
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHSCPurashkarYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    @*<input type="hidden" asp-for="Schmename" value="@Model.Schmename" />*@
+    @*<input type="hidden" asp-for="Standard" value="@dropDownItems.SelectedValue" />*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+
+            <div class="form-horizontal form-bordered">
+                <div class="form-group row">
+                    <span class="control-label col-md-2">ધો-૧૨ પરીક્ષા આપ્યા માસ તથા વર્ષ : <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-4 d-flex">
+                        @*<select asp-for="Standard" asp-items="@(new SelectList(@ViewBag.Standard, "Value", "Text"))" class="form-control me-1" disabled="disabled">
+                        </select>*@
+                        @Html.DropDownListFor(model => model.ExamMonth, Enumerable.Range(1, 12).Select(x => new SelectListItem { Value = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x), Text = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x) }), "Select Month", new { @class = "form-control" })
+
+                        <span asp-validation-for="ExamMonth" class="text-danger"></span>
+                        <select asp-for="ExamYear" asp-items="@(new SelectList(@ViewBag.Year, "Value", "Text"))" class="form-control me-1">
+                            <option value="0">--Select--</option>
+                        </select>
+                        <span asp-validation-for="ExamYear" class="text-danger"></span>
+                        
+                    </div>
+                    <span class="control-label col-md-3">ધોરણ ૧૨ માં મેળવેલ પર્સન્ટાઇલ (ઓવર ઓલ): <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="Percentage" type="text" class="form-control">
+                        <span asp-validation-for="Percentage" class="text-danger"></span>
+                    </div>
+                </div>
+                @*<div class="form-group row">
+                    <span class="control-label col-md-3">
+                        વિદ્યાર્થીના વાલી જે કારખાના સંસ્થામાં કામ કરે છે તે સંસ્થાને
+                        અત્રેની કચેરી દ્વારા આપવામાં આવેલ લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3 mt-4">
+                        <input type="text" disabled="disabled" value="@enirmancardno" class="form-control">
+                    </div>
+                    <span class="control-label col-md-3">
+                        વિદ્યાર્થીનો આધાર કાર્ડ નંબર : <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3 d-flex">
+                        <input asp-for="StudentAadharCardNo" type="text" class="form-control" maxlength="12">
+                        <span asp-validation-for="StudentAadharCardNo" class="text-danger"></span>
+                    </div>
+                </div>*@
+            </div>
+
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">વિદ્યાર્થીની બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+             <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+
+    //function GetBenifitByCourseId(courseId) {
+    //    $.ajax({
+    //        type: "get",
+    //        url: "/BOCWSikshanSahayYojana/GetBenifitByCourseId",
+    //        data: { courseId: courseId },
+    //        datatype: "json",
+    //        traditional: true,
+    //        success: function(data) {
+    //            debugger;
+    //            var Benifitsrs = "";
+    //            console.log(data.data.result.length);
+    //            Benifitsrs = data.data.result;
+
+    //            $('#Benifitsrs').html(Benifitsrs);
+    //            //$('#PlistTaluka').html(TalukaList);
+    //        }
+    //    });
+    //}
+
+    function GetDeegreeBySubjectId(subjectId) {
+
+        var subjectID = subjectId
+        $.ajax({
+            type: "get",
+            url: "/BOCWSikshanSahayYojana/GetSubject",
+            data: { subjectId: subjectId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+
+                var DegreeList = "";
+                DegreeList = DegreeList + '<option value="">--Select--</option>';
+                for (var i = 0; i < data.data.result.length; i++) {
+                    DegreeList = DegreeList + '<option value=' + data.data.result[i].value + '>' + data.data.result[i].text + '</option>';
+                }
+                $('#GSubject').html(DegreeList);
+
+            }
+        });
+    }
+
+
+</script>

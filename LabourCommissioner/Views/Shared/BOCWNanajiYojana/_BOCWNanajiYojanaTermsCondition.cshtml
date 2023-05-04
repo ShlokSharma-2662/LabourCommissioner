@@ -1,0 +1,54 @@
+﻿@using System.Web
+@using LabourCommissioner.Abstraction.ViewDataModels;
+@using LabourCommissioner.Common.Utility
+@model FinalSubmitModel
+@{
+    var TabSequenceNo = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.TabSequenceNo.ToString()));
+    var ServiceId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ServiceId.ToString()));
+    var ApplicationId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ApplicationId.ToString()));
+
+    var name = ViewBag.Applicantname;
+}
+
+
+<form id="TermsConditionsForm" method="post" asp-controller="BOCWNanajiYojana" asp-action="FinalSubmit" asp-route-strApplicationId="@ApplicationId" asp-route-strServiceId="@ServiceId" asp-route-strTabsequenceNo="@TabSequenceNo">
+    <input type="hidden" asp-for="serviceid" value="@ServiceId" />
+    <input type="hidden" asp-for="tabsequenceno" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <div class="tab-pane fade show" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact-tab2" tabindex="0">
+
+        <div class="">
+            <p>
+                આથી હું જણાવુ છું કે, આથી હું નીચે સહી કરનાર શ્રી / શ્રીમતી @ViewBag.Applicantname શ્રી નાનાજી દેશમુખ આવાસ યોજના હેઠળ મકાન સહાય માટેની અરજી કરેલ છે. હું ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડમાં લાભાર્થી તરીકે નોધાયેલ છું. ઉપરોકત અરજી મેં વાચી/ સાંભળી છે તથા યોજના અંગેના નિયમોની મને જાણ છે. અરજીમાં ભરેલ તમામ વગતો સાચી હોવાનું જણાય છે અને તે બદલે નીચે સહી કરૂ છું. ખોટી વિગતો રજુ કરી નાણાકીય લાભ લેવો ગુનો બને છે તેની મને જાણ છે. જો ખોટી વિગતો રજુ કરી નાણાકીય લાભ મેળવીશ તો મારી સામે જે કાર્યવાહી થશે તે મને કબુલ / મજુર છે. તેમજ તે પરત ચુકવવા હું લેખિત બાંહેધરી આપુ છું.
+            </p>
+
+            @*<div class="text-center">
+            <input id="chk_Terms_Conditions" type="checkbox" name="" style="transform:scale(1.3)">
+            <label class="">
+            હું ઉપરની બધી શરતો થી સહેમત છું.
+            </label>
+            </div>*@
+            <div class="form-group form-check text-center">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" asp-for="isagree" data-val="false" />
+                    હું ઉપરની બધી શરતો થી સહેમત છું.
+                </label>
+                <span asp-validation-for="isagree" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="card-footer text-center border">
+            <button type="submit" id="btnSubmit" class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@ServiceId');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#btnSubmit").click(function(e) {
+            if (!($('#isagree').prop('checked'))) {
+                alert('Accept The Terms and Conditions');
+                return false;
+            }
+        });
+    });
+</script>

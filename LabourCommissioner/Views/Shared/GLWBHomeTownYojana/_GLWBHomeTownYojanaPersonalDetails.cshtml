@@ -1,0 +1,1005 @@
+﻿﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Abstraction.ViewDataModels
+@using LabourCommissioner.Common
+@using Newtonsoft.Json
+@using System.Web
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using LabourCommissioner.Common.Utility
+@using System.Security.Claims
+@model GLWBhty_PersonalDetailsModel
+@{
+
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var RegistrationNo = identity.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault();
+    var UserName = claims.FirstOrDefault(x => x.Type.Equals("DisplayName", StringComparison.OrdinalIgnoreCase))?.Value;
+
+    var model = ViewBag.States;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    bool isfilled = ViewBag.isFilled;
+    var image = ViewBag.Image;
+    var CD = Model.CDistrictId;
+    var ApplicationNo = "";
+    string imgSrc = "";
+    int val = 7;
+    if (ServiceId == "32")
+    {
+        ApplicationNo = Model.ApplicationNo;
+        imgSrc = String.Format("data:image/png;base64,{0}", image);
+        var RegNo = ViewBag.RegNo;
+    }
+    if (isfilled == true)
+    {
+        ApplicationNo = Model.ApplicationNo;
+        imgSrc = String.Format("data:image/png;base64,{0}", image);
+        var RegNo = ViewBag.RegNo;
+    }
+
+    //var base64 = Convert.ToBase64String(Model.ByteArray);
+
+
+
+}
+<form id="personalDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHomeTownYojana" asp-action="AddUpdateApplication" asp-route-strTabId=@TabSequenceNo asp-route-strApplicationNo="@ApplicationNo">
+    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+    <input type="hidden" asp-for="ServiceId" id="hdnServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="TabSequenceNo" id="hdnServiceId" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="FileName" id1="hdnFileName" />
+    <input type="hidden" asp-for="OrganizationName" value="@Model.OrganizationName" />
+    <input type="hidden" asp-for="OrganizationAddress" value="@Model.OrganizationAddress" />
+    <input type="hidden" asp-for="OrganizationDistrict" value="@Model.OrganizationDistrict" />
+    <input type="hidden" asp-for="OrganizationTaluka" value="@Model.OrganizationTaluka" />
+    <input type="hidden" asp-for="OrganizationCity" value="@Model.OrganizationCity" />
+    <input type="hidden" asp-for="OrganizationEmail" value="@Model.OrganizationEmail" />
+    <input type="hidden" asp-for="OrganizationPincode" value="@Model.OrganizationPincode" />
+    <input type="hidden" asp-for="LwbAccountNo" value="@Model.LwbAccountNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    @* <input type="hidden" asp-for="DateOfBirth" />*@
+    @{
+        if (isfilled == true)
+        {
+            <input type="hidden" asp-for="AadharCardNo" id="hdnAadharCard" />
+            <input type="hidden" asp-for="CouchDBDocId" id="hdnCouchDBDocId" />
+            <input type="hidden" asp-for="CouchDBDocRevId" id="hdnCouchDBDocRevId" />
+        }
+    }
+
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>
+                શ્રમયોગીની વિગત
+            </legend>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row border-0">
+                            <div class="col-md-12 p-0 align-self-center">
+                                <div class="form-horizontal form-bordered border-bottom-0">
+                                    <div class="form-group row">
+                                       <span class="control-label col-md-3">
+                                            શ્રમિક નું નામ :  <span class="text-danger">*</span>
+                                        </span>
+                                        <div class="control-form col-md-3">
+                                            @*<input name="txtShramikName" type="text" disabled="disabled" value="Akshay Pandya" maxlength="100" id="body_innerbody_ " class="form-control">*@
+                                            @UserName
+                                        </div>
+                                        <span class="control-label col-md-3">
+                                            શ્રમિક ઓળખ કાર્ડ નંબર :  <span class="text-danger">*</span>
+                                        </span>
+                                        <div class="control-form col-md-3">
+                                            @RegistrationNo
+                                            @*<input name="txtShramikIdentityNo" type="text" disabled="disabled" value="123456789" maxlength="100" id="body_innerbody_txtShramikCardNo" class="form-control">*@
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                @*<div class="form-group row">
+                                <span class="control-label col-md-3">
+                                લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર : <span class="text-danger">*</span>
+                                </span>
+                                <div class="control-form col-md-6">
+                                <input name="ctl00$ctl00$body$innerbody$txtFatherName" type="text" maxlength="100" id="body_innerbody_txtFatherName" class="form-control">
+                                </div>
+
+                                <div class="control-form col-md-3">
+                                <button class="btn btn-sm btn-primary pl-3 pr-3">Fetch</button>
+                                </div>
+                                </div>*@
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>
+                કારખાના/સંસ્થાનું વિગત
+            </legend>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row border-0">
+                            <div class="col-md-12 p-0 align-self-center">
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        કારખાના/સંસ્થાનું નામ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-9">
+                                        @Html.DisplayFor(item => item.OrganizationName, new {@class = "form-control"})
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @* <input name="ctl00$ctl00$body$innerbody$txtFatherName" type="text" maxlength="100" id="body_innerbody_txtFatherName" value="123456" disabled="disabled" class="form-control">*@
+                                        @Html.DisplayFor(item => item.LwbAccountNo)
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        કારખાના/સંસ્થાનું સરનામું : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @Html.DisplayFor(item => item.OrganizationAddress)
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        શહેર : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+
+                                        @Html.DisplayFor(item => item.OrganizationCity)
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <span class="control-label col-md-3">
+                                        જિલ્લો : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @Html.DisplayFor(item => item.OrganizationDistrict)
+                                        <span id="body_innerbody_ucApplicantAddress_ReqddlDistrict" class="text-danger" style="display: none;">જિલ્લાનું નામ પસંદ કરો.</span>
+
+                                    </div>
+
+                                    <span class="control-label col-md-3">
+                                        તાલુકો : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @Html.DisplayFor(item => item.OrganizationTaluka)
+                                        <span id="body_innerbody_ucApplicantAddress_ReqddlTaluka" class="text-danger" style="display: none;">તાલુકાનું નામ પસંદ કરો.</span>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        પીનકોડ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @Html.DisplayFor(item => item.OrganizationPincode)
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        સંપર્કકર્તા વ્યક્તિનું નામ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        <input asp-for="OContactPersonName" value="@Model.OContactPersonName" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="OContactPersonName" class="text-danger"></span>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        સંપર્કકર્તા મોબાઇલ નંબર : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+
+                                        <input asp-for="OContactPersonMobile" value="@Model.OContactPersonMobile" onkeypress="return AllowNumeric(event);" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="OContactPersonMobile" class="text-danger"></span>
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        કંપનીનો ઈમેલ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        <input asp-for="OContactPersonEmail" value="@Model.OContactPersonEmail" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="OContactPersonEmail" class="text-danger"></span>
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        કંપનીમાં જોડાયા તારીખ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        @*<input asp-for="OrganizationJoiningDate"  class="form-control"/>*@
+                                        <input asp-for="OrganizationJoiningDate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                        @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                                        <span asp-validation-for="OrganizationJoiningDate" class="text-danger"></span>
+                                        <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">કંપનીમાં જોડાવાની તારીખ પસંદ કરો.</span>
+                                    </div>
+                                </div>
+                                @*<div class="form-group row">
+                                <div class="form-group row">
+
+                                </div>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>
+                @ViewData["Applicant"]શ્રમયોગી ની માહિતી
+            </legend>
+            <div class="row">
+                @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+                <div class="col-md-12">
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <div class="col-md-10 p-0 align-self-center">
+                                <div class="form-horizontal form-bordered border-0">
+                                    <div class="form-group row border-top">
+
+                                        <span class="control-label col-md-2">શ્રમયોગી સાથેનો સબંધ :<span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <select asp-for="Relation" class="form-control">
+                                                @*<option value="0">Select an Option</option>*@
+                                                <option value="1" selected>પોતે</option>
+
+                                            </select>
+                                            <span asp-validation-for="Relation" class="text-danger"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row border-top">
+                                        <span id="body_innerbody_lblApplicantFullName" class="control-label col-md-2">શ્રમયોગીનું પુરુ નામ : <span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="Name" value="@Model.Name" class="aspNetDisabled form-control">
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <span id="body_innerbody_Label1" class="control-label col-md-2">શ્રમયોગીનું પુરુ નામ (ગુજરાતીમાં):<span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="NameinGujarati" class="form-control">
+                                            <span asp-validation-for="NameinGujarati" class="text-danger"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <span id="body_innerbody_lblFathernm" class="control-label col-md-2">શ્રમયોગીના પિતા નું નામ : <span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="FatherOrHusbandName" class="form-control">
+                                            <span asp-validation-for="FatherOrHusbandName" class="text-danger"></span>
+                                            <span id="body_innerbody_rfvtxtFatherName" style="color: Red; display: none;"> શ્રમયોગીના પિતા નું નામ English માં લખો.</span>
+                                            <span id="body_innerbody_regtxtFatherName" style="color: Red; display: none;"> શ્રમયોગીના પિતા નું નામ બરાબર લખો.</span>
+                                        </div>
+                                        <span id="body_innerbody_lblFathernmguj" class="control-label col-md-2">શ્રમયોગીના પિતા નું નામ(ગુજરાતીમાં) : <span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="FatherOrHusbandNameinGujarati" class="form-control">
+                                            <span asp-validation-for="FatherOrHusbandNameinGujarati" class="text-danger"></span>
+                                            <span id="body_innerbody_rfvtxtFatherNameGuj" style="color: Red; display: none;">શ્રમયોગી ના પિતા નું નામ ગુજરાતી માં લખો.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span id="body_innerbody_lblApplicantGender" class="control-label col-md-2">શ્રમયોગીનું લિંગ : <span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3 d-flex align-items-center">
+                                            <input asp-for="Gender" type="radio" value="0" id="rbmale" name="Gender" />પુરુષ<br />
+                                            <span class="px-2"><input asp-for="Gender" type="radio" value="1" id="rbfemale" name="Gender" />સ્ત્રી<br /></span>
+                                            <input asp-for="Gender" type="radio" value="2" id="rbother" name="Gender" />અન્ય<br />
+                                            <span asp-validation-for="Gender" class="text-danger"></span>
+                                            <span id="body_innerbody_reqApplicantGender" style="color: Red; display: none;">લિંગ પસંદ કરો.</span>
+                                        </div>
+
+                                        <span id="body_innerbody_lblApplicantDOB" class="control-label col-md-2">શ્રમયોગીની જન્મ તારીખ :<span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="DateOfBirth" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                            @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                                            <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">શ્રમયોગીની જન્મ તારીખ પસંદ કરો.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span id="body_innerbody_lblApplicantAge" class="control-label col-md-2">શ્રમયોગીની ઉમર :<span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input id="age" asp-for="Age" class="form-control" readonly>
+                                            <span asp-validation-for="Age" class="text-danger"></span>
+                                            <span id="body_innerbody_reqtxtApplicantAge" style="color: Red; display: none;">શ્રમયોગીની ઉંમર લખો.</span>
+                                        </div>
+                                        @*<span class="control-label col-md-2">શ્રમયોગી ની જાતિ :</span>*@
+                                        @*<div class="control-form col-md-3">
+                                        <select name="ctl00$ctl00$body$innerbody$ddlCaste" id="body_innerbody_ddlCaste" class="form-control">
+                                        <option value="0">-Please Select-</option>
+                                        <option value="1">SC - અનુ.જાતિ</option>
+                                        <option value="2">ST - અનુ.જનજાતિ</option>
+                                        <option value="3">SEBC - સામાજિક અને શૈક્ષણિક રીતે પછાતવર્ગ</option>
+                                        <option selected="selected" value="4">General - સામાન્ય</option>
+
+                                        </select>
+                                        <span id="body_innerbody_reqddlCaste" style="color:Red;display:none;">શ્રમયોગીની જાતિ પસંદ કરો.</span>
+                                        </div>*@
+                                        <span class="control-label col-md-2">શ્રમયોગીનો મોબાઈલ નંબર :<span class="text-danger">*</span></span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="MobileNo" onkeypress="return AllowNumeric(event);" class="form-control">
+                                            <span asp-validation-for="MobileNo" class="text-danger"></span>
+                                            <span id="body_innerbody_ReqtxtMobileNo" class="message" style="color: Red; display: none;">મોબાઈલ નંબર લખો</span>
+                                            <span id="body_innerbody_rgvtxtMobileNo" style="color: Red; display: none;">મોબાઈલ નંબર બરાબર નથી.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+
+                                        <span class="control-label col-md-2">શ્રમયોગીનો ફોન નંબર :</span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="PhoneNo" onkeypress="return AllowNumeric(event);" class="form-control">
+                                            @*<span asp-validation-for="PhoneNo" class="text-danger"></span>*@
+                                            @*<span id="body_innerbody_regtxtPhoneNo" style="color: Red; display: none;">ફોન નંબર બરાબર નથી.</span>*@
+                                        </div>
+                                        <span class="control-label col-md-2">શ્રમયોગીનો ઈ-મેઇલ :</span>
+                                        <div class="control-form col-md-3">
+                                            <input asp-for="EmailId" class="form-control">
+                                            <span asp-validation-for="EmailId" class="text-danger"></span>
+
+                                            @* <span id="body_innerbody_rgvtxtEmail" style="color: Red; display: none;">ઈ-મેઇલ બરાબર નથી.</span>*@
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+
+                                        <span class="control-label col-md-2">શ્રમયોગીનો આધાર કાર્ડ નંબર : <span class="text-danger">*</span> </span>
+                                        <div class="control-form col-md-3">
+                                            @if (isfilled == true)
+                                            {
+                                                <input asp-for="MaskedAadharCardNo" id="MaskedAadharCardNo" class="form-control" disabled />
+                                            }
+                                            else
+                                            {
+                                                <input asp-for="AadharCardNo" id="aadharcard" class="form-control" />
+                                                <span asp-validation-for="AadharCardNo" class="text-danger"></span>
+                                            }
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="control-form col-md-2 align-items-center">
+                                <fieldset class="custom-fieldset">
+                                    <legend>શ્રમયોગીનો ફોટો</legend>
+
+                                    <style>
+                                        #clock {
+                                            background-image: url('');
+                                            background-size: cover;
+                                            background-position: center;
+                                            height: 154px;
+                                            width: 100%;
+                                            border: 1px solid #bbb;
+                                        }
+                                    </style>
+
+                                    @*<div id='clock'>
+                                    </div>*@
+                                    @if (isfilled == true)
+                                    {
+                                        <img src="@imgSrc" id="clock" class="form-control-file border p-1" asp-for="Photo" />
+                                    }
+                                    else
+                                    {
+                                        @if (ServiceId == "32")
+                                        {
+                                            <img src="@imgSrc" id="clock" class="form-control-file border p-1" asp-for="Photo" />
+                                        }
+                                        else
+                                        {
+                                            <img id="clock" class="form-control-file border p-1" asp-for="Photo" />
+                                        }
+                                    }
+
+                                    <br />
+
+                                    @if (isfilled == true)
+                                    {
+                                        <div class="custom-file d-none">
+                                        </div>
+
+                                        <div class="custom-file mt-3">
+
+                                            <input asp-for="Photo" id="FormFile123" data-val="false" class="profileupload custom-file-input form-control h-auto fs-75" />
+                                            <label class="custom-file-label form-label" for="FormFile123"></label>
+
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        @if (ServiceId == "32")
+                                        {
+                                            <div class="custom-file d-none">
+                                            </div>
+
+                                            <div class="custom-file mt-3">
+
+                                                <input asp-for="Photo" id="FormFile123" data-val="false" class="profileupload custom-file-input form-control h-auto fs-75" />
+                                                <label class="custom-file-label form-label" for="FormFile123"></label>
+
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="custom-file mt-3">
+
+                                                <input asp-for="Photo" id="FormFile123" class="profileupload custom-file-input form-control h-auto fs-75" />
+                                                <label class="custom-file-label form-label" for="FormFile123"></label>
+
+                                            </div>
+                                        }
+                                    }
+
+                                    <span asp-validation-for="Photo" class="text-danger"></span>
+                                </fieldset>
+
+                                @if (ViewData["PhotoVisible"] != null && ViewData["PhotoVisible"].ToString() == "True")
+                                {
+                                    <div class="control-form col-md-2 align-items-center">
+                                        <fieldset class="custom-fieldset">
+                                            <legend>પાસપોર્ટ સાઇઝ ફોટો</legend>
+
+                                            <style>
+                                                #clock {
+                                                    background-image: url('');
+                                                    background-size: cover;
+                                                    background-position: center;
+                                                    height: 154px;
+                                                    width: 100%;
+                                                    border: 1px solid #bbb;
+                                                }
+                                            </style>
+
+                                            <div id='clock'></div>
+                                            <br />
+                                            <input type="file" id="getval" class="rounded-0 border w-100 overflow-hidden p-1" style="font-size: 88%;">
+                                            <script>
+                                                document.getElementById('getval').addEventListener('change', readURL, true);
+
+                                                function readURL() {
+                                                    var file = document.getElementById("getval").files[0];
+                                                    var reader = new FileReader();
+                                                    reader.onloadend = function() {
+                                                        document.getElementById('clock').style.backgroundImage = "url(" + reader.result + ")";
+                                                    }
+                                                    if (file) {
+                                                        reader.readAsDataURL(file);
+                                                    } else {
+                                                    }
+                                                }
+                                            </script>
+                                        </fieldset>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>શ્રમયોગીનું હાલનું સરનામું</legend>
+            <div class="form-horizontal form-bordered">
+
+                <div class="form-group row">
+                    <span class="control-label col-md-2">
+                        રાજયનું નામ :  <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        @*<select id="listState" onload="GetDistrict();" asp-for="CStateId" asp-items="@(new SelectList{Value = "7", Text = "Gujrat", Selected = true})" class="form-control"></select>*@
+                        <select id="listState" asp-for="CStateId" class="form-control">
+                            <option value="7">
+                                Gujrat - ગુજરાત
+                            </option>
+                        </select>
+                        <span id="listState" class="text-danger" style="color:Red;display:none;">રાજયનું નામ પસંદ કરો.</span>
+                        <span asp-validation-for="CStateId" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-2">
+                        જિલ્લાનું નામ :  <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        @if (ServiceId == "32")
+                        {
+                            <select asp-for="CDistrictId" asp-items="@(new SelectList(@ViewBag.District, "Value", "Text", selectedValue:@Model.CDistrictId))" class="form-control" id="listDistrict" onchange="GetTalukaByDistrictId(this.value);">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listDistrict" class="text-danger" style="color:Red;display:none;">જિલ્લાનું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CDistrictId" class="text-danger"></span>
+                        }
+                        else
+                        {
+                            <select asp-for="CDistrictId" asp-items="@(isfilled == true ? new SelectList(@ViewBag.District, "Value", "Text", selectedValue:@Model.CDistrictId) : null)" class="form-control" id="listDistrict" onchange="GetTalukaByDistrictId(this.value);">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listDistrict" class="text-danger" style="color:Red;display:none;">જિલ્લાનું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CDistrictId" class="text-danger"></span>
+                        }
+                    </div>
+
+                    <span class="control-label col-md-2">
+                        તાલુકાનું નામ: <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        @if (ServiceId == "32")
+                        {
+                            <select asp-for="CTalukaId" id="listTaluka" asp-items="@(new SelectList(@ViewBag.CTaluka,"Value", "Text",selectedValue:@Model.CTalukaId))" onchange="GetVillageByDistrictIdAndTalukaId(this.value);" class="form-control">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listTaluka" class="text-danger" style="color:Red;display:none;">તાલુકાનું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CTalukaId" class="text-danger"></span>
+                        }
+                        else
+                        {
+
+
+                            <select asp-for="CTalukaId" id="listTaluka" asp-items="@(isfilled == true ? new SelectList(@ViewBag.CTaluka,"Value", "Text",selectedValue:@Model.CTalukaId) : null)" onchange="GetVillageByDistrictIdAndTalukaId(this.value);" class="form-control">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listTaluka" class="text-danger" style="color:Red;display:none;">તાલુકાનું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CTalukaId" class="text-danger"></span>
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <span class="control-label col-md-2">
+                        ગામનું નામ :  <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        @if (ServiceId == "32")
+                        {
+                            <select asp-for="CVillageId" id="listVillage" asp-items="@(new SelectList(@ViewBag.CVillage,"Value", "Text",selectedValue:@Model.CVillageId))" class="form-control">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listVillage" class="text-danger" style="color:Red;display:none;">ગામ નું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CVillageId" class="text-danger"></span>
+                        }
+                        else
+                        {
+                            <select asp-for="CVillageId" id="listVillage" asp-items="@(isfilled == true ? new SelectList(@ViewBag.CVillage,"Value", "Text",selectedValue:@Model.CVillageId) : null)" class="form-control">
+                                <option value="0">- Please Select -</option>
+                            </select>
+                            <span id="listVillage" class="text-danger" style="color:Red;display:none;">ગામ નું નામ પસંદ કરો.</span>
+                            <span asp-validation-for="CVillageId" class="text-danger"></span>
+                        }
+                    </div>
+                    <span class="control-label col-md-2">
+                        શ્રમયોગીનું સરનામું (English)  : <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        <textarea asp-for="CAddressInEng" rows="2" cols="20" id="CAddressInEnglish" class="form-control" style="height: auto !important">Ahmedabad</textarea>
+                        <span asp-validation-for="CAddressInEng" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-2">
+                        શ્રમયોગીનું સરનામું (ગુજરાતીમાં)  : <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        <textarea asp-for="CAddressInGuj" rows="2" cols="20" id="CAddressInGujrati" class="form-control" style="height: auto !important">અમદાવાદ</textarea>
+                        <span asp-validation-for="CAddressInGuj" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-2">
+                        પીનકોડ :  <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-2">
+                        <input asp-for="CPinCode" type="text" maxlength="6" onkeypress="return AllowNumeric(event);" id="CPincode" class="form-control">
+                        <span asp-validation-for="CPinCode" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+        <div class="card-footer text-center border">
+            <button type="submit" class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+        @if (ViewData["IsPermanentAddress"] != null && ViewData["IsPermanentAddress"].ToString() == "True")
+        {
+            <fieldset class="custom-fieldset mb-4">
+                <legend>@ViewData["Applicant"]નું કાયમી સરનામું</legend>
+                <div class="text-left">
+                    <label class="">
+
+                        <input id="body_innerbody_ucApplicantAddress_cbSameAsAbove" type="checkbox" name="ctl00$ctl00$body$innerbody$ucApplicantAddress$cbSameAsAbove" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$body$innerbody$ucApplicantAddress$cbSameAsAbove\',\'\')', 0)">
+                        ઉપર મુજબ
+                    </label>
+                </div>
+                <br>
+                <div class="form-horizontal form-bordered">
+
+                    <div class="form-group row">
+                        <span class="control-label col-md-2">
+                            રાજયનું નામ : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <select name="ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlState" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlState\',\'\')', 0)" id="body_innerbody_ucApplicantAddress_ddlState" tabindex="1" class="aspNetDisabled form-control">
+                                <option value="0">-Please Select-</option>
+                                <option value="1">Andhra Pradesh - આંધ્રપ્રદેશ</option>
+                                <option value="2">Arunachal Pradesh - </option>
+                                <option value="3">Assam - </option>
+                                <option value="4">Bihar - </option>
+                                <option value="5">Chhattisgarh - </option>
+                                <option value="6">Goa - </option>
+                                <option selected="selected" value="7">Gujarat - ગુજરાત</option>
+                                <option value="8">Haryana - </option>
+                                <option value="9">Himachal Pradesh - </option>
+                                <option value="10">Jammu and Kashmir - </option>
+                                <option value="11">Jharkhand - </option>
+                                <option value="12">Karnataka - </option>
+                                <option value="13">Kerala - </option>
+                                <option value="14">Madhya Pradesh - </option>
+                                <option value="15">Maharashtra - </option>
+                                <option value="16">Manipur - </option>
+                                <option value="17">Meghalaya - </option>
+                                <option value="18">Mizoram - </option>
+                                <option value="19">Nagaland - </option>
+                                <option value="20">Odisha - </option>
+                                <option value="21">Punjab - </option>
+                                <option value="22">Rajasthan - </option>
+                                <option value="23">Sikkim - </option>
+                                <option value="24">Tamil Nadu - </option>
+                                <option value="25">Telangana - </option>
+                                <option value="26">Tripura - </option>
+                                <option value="27">Uttar Pradesh - </option>
+                                <option value="28">Uttarakhand - </option>
+                                <option value="29">West Bengal - </option>
+                                <option value="30">Andaman and Nicobar Islands(UT) - </option>
+                                <option value="31">Chandigarh(UT) - </option>
+                                <option value="32">Dadra and Nagar Haveli(UT) - </option>
+                                <option value="33">Daman and Diu(UT) - </option>
+                                <option value="34">Delhi(UT) - </option>
+                                <option value="37">Lakshadweep(UT) - </option>
+                                <option value="38">Puducherry(UT) - </option>
+
+                            </select>
+                            <span id="body_innerbody_ucApplicantAddress_ReqddlState" class="text-danger" style="display:none;">રાજયનું નામ પસંદ કરો.</span>
+                        </div>
+                        <span class="control-label col-md-2">
+                            જિલ્લાનું નામ : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <select name="ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlDistrict" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlDistrict\',\'\')', 0)" id="body_innerbody_ucApplicantAddress_ddlDistrict" tabindex="2" class="form-control">
+                                <option value="0">-Please Select-</option>
+                                <option selected="selected" value="9">Ahmadabad - અમદાવાદ</option>
+                                <option value="1">Amreli - અમરેલી</option>
+                                <option value="10">Anand - આણંદ</option>
+                                <option value="27">Arvalli - અરવલ્લી</option>
+                                <option value="11">Banaskantha - બનાસકાંઠા</option>
+                                <option value="12">Bharuch - ભરુચ</option>
+                                <option value="2">Bhavnagar - ભાવનગર</option>
+                                <option value="28">Botad - બોટાદ</option>
+                                <option value="29">Chhotaudepur - છોટાઉદેપુર</option>
+                                <option value="13">Dahod - દાહોદ</option>
+                                <option value="14">Dangs - ડાંગ</option>
+                                <option value="30">Devbhumi Dwarka - દેવભુમિ દ્વારકા</option>
+                                <option value="15">Gandhinagar - ગાંધીનગર</option>
+                                <option value="31">Gir Somnath - ગીર સોમનાથ</option>
+                                <option value="3">Jamnagar - જામનગર</option>
+                                <option value="4">Junagadh - જુનાગઢ</option>
+                                <option value="16">Kachchh - કચ્છ</option>
+                                <option value="18">Kheda - ખેડા</option>
+                                <option value="17">Mahesana - મહેસાણા</option>
+                                <option value="32">Mahisagar - મહિસાગર</option>
+                                <option value="33">Morbi - મોરબી</option>
+                                <option value="19">Narmada - નર્મદા</option>
+                                <option value="20">Navsari - નવસારી</option>
+                                <option value="21">Panchmahals - પંચમહાલ</option>
+                                <option value="22">Patan - પાટણ</option>
+                                <option value="5">Porbandar - પોરબંદર</option>
+                                <option value="6">Rajkot - રાજકોટ</option>
+                                <option value="23">Sabarkantha - સાબરકાંઠા</option>
+                                <option value="24">Surat - સુરત</option>
+                                <option value="7">Surendranagar - સુરેન્દ્રનગર</option>
+                                <option value="25">Tapi - તાપી</option>
+                                <option value="8">Vadodara - વડોદરા</option>
+                                <option value="26">Valsad - વલસાડ</option>
+
+                            </select>
+                            <span id="body_innerbody_ucApplicantAddress_ReqddlDistrict" class="text-danger" style="display:none;">જિલ્લાનું નામ પસંદ કરો.</span>
+
+                        </div>
+
+                        <span class="control-label col-md-2">
+                            તાલુકાનું નામ : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <select name="ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlTaluka" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlTaluka\',\'\')', 0)" id="body_innerbody_ucApplicantAddress_ddlTaluka" tabindex="3" class="form-control">
+                                <option value="0">- Please Select -</option>
+                                <option selected="selected" value="276">ASARWA - અસારવા</option>
+                                <option value="67">Bavla - બાવળા</option>
+                                <option value="68">Daskroi - દશક્રોઈ</option>
+                                <option value="69">Detroj-Rampura - દેત્રોજ-રામપુરા</option>
+                                <option value="70">Dhandhuka - ઘંઘુકા</option>
+                                <option value="237">Dholera - ધોલેરા</option>
+                                <option value="71">Dholka - ઘોળકા</option>
+                                <option value="277">GHATLODIA - ઘાટલોડીયા</option>
+                                <option value="72">Mandal - માંડલ</option>
+                                <option value="278">MANINAGAR - મણિનગર</option>
+                                <option value="279">SABARMATI - સાબરમતી</option>
+                                <option value="73">Sanand - સાણંદ</option>
+                                <option value="280">VATVA - વટવા</option>
+                                <option value="281">VEJALPUR - વેજલપુર</option>
+                                <option value="74">Viramgam - વિરમગામ</option>
+
+                            </select>
+                            <span id="body_innerbody_ucApplicantAddress_ReqddlTaluka" class="text-danger" style="display:none;">તાલુકાનું નામ પસંદ કરો.</span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span class="control-label col-md-2">
+                            ગામનું નામ : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <select name="ctl00$ctl00$body$innerbody$ucApplicantAddress$ddlVillage" id="body_innerbody_ucApplicantAddress_ddlVillage" class="form-control">
+                                <option value="0">- Please Select -</option>
+                                <option selected="selected" value="24766">ASARWA - અસારવા</option>
+                                <option value="24767">Dariyapur- kajipur - દરીયાપુર-કાઝીપુર</option>
+                                <option value="24768">hansol - હાંસોલ</option>
+                                <option value="24769">HANSPURA - હંસપુરા</option>
+                                <option value="24770">Kotarpur - કોતરપુર</option>
+                                <option value="24771">Muthiya - મુઠીયા </option>
+                                <option value="24772">NARODA - નરોડા</option>
+                                <option value="24773">Nikol - નિકોલ </option>
+                                <option value="24774">SAIJPUR BOGHA - સેજપુર બોઘા</option>
+                                <option value="24775">SARDARNAGAR - સરદારનગર</option>
+
+                            </select>
+                            <span id="body_innerbody_ucApplicantAddress_ReqddlVillage" class="text-danger" style="display:none;">ગામનું નામ પસંદ કરો.</span>
+                        </div>
+                        <span class="control-label col-md-2">
+                            સરનામું (અંગ્રેજીમાં) : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <textarea name="ctl00$ctl00$body$innerbody$ucApplicantAddress$txtAddress" rows="2" cols="20" id="body_innerbody_ucApplicantAddress_txtAddress" class="form-control" style="height: auto !important">Ahmedabad</textarea>
+                            <span id="body_innerbody_ucApplicantAddress_reqtxtAddress" class="text-danger" style="display:none;">શ્રમયોગીનું સરનામું અંગ્રેજીમાં લખો .</span>
+                            <span id="body_innerbody_ucApplicantAddress_RetxtAddress" style="color:Red;display:none;">માત્ર (A-Z,a-z,0-9 ) સ્વીકાર્ય છે. અને (&lt; and &gt;) શિવાય ના ૨૦૦ અક્ષર સુધી લખી શકાશે.</span>
+
+
+                        </div>
+                        <span class="control-label col-md-2">
+                            સરનામું (ગુજરાતીમાં) : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <textarea name="ctl00$ctl00$body$innerbody$ucApplicantAddress$txtaddressingujarati" rows="2" cols="20" id="body_innerbody_ucApplicantAddress_txtaddressingujarati" class="form-control" style="height: auto !important">અમદાવાદ</textarea>
+                            <span id="body_innerbody_ucApplicantAddress_rfvtxtaddressingujarati" class="text-danger" style="display:none;">શ્રમયોગીનું સરનામું ગુજરાતીમાં લખો .</span>
+                            <span id="body_innerbody_ucApplicantAddress_revtxtaddressingujarati" style="color:Red;display:none;">માત્ર (A-Z,a-z,0-9 ) સ્વીકાર્ય છે. અને (&lt; and &gt;) શિવાય ના ૨૦૦ અક્ષર સુધી લખી શકાશે.</span>
+
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-2">
+                            પીનકોડ : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-2">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantAddress$txtPinCode" type="text" value="386598" maxlength="6" id="body_innerbody_ucApplicantAddress_txtPinCode" class="form-control">
+                            <span id="body_innerbody_ucApplicantAddress_ReqtxtPinCode" class="text-danger" style="color:Red;display:none;">પીનકોડ લખો.</span>
+
+                            <span id="body_innerbody_ucApplicantAddress_rgvtxtPinCode" style="color:Red;display:none;">પીનકોડ બરોબર નથી.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+        }
+        @if (ViewData["IsBankVisible"] != null && ViewData["IsBankVisible"].ToString() == "True")
+        {
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">@ViewData["Applicant"]ના બેંકની વિગતો</span>
+                </legend>
+                <div class="form-horizontal form-bordered">
+
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">
+                            બેંકનું નામ : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantBankdetails$txtBankName" type="text" value="Union Bank" id="body_innerbody_ucApplicantBankdetails_txtBankName" class="form-control">
+
+                            <span id="body_innerbody_ucApplicantBankdetails_regtxtBankName" style="color:Red;display:none;">બેંકનું નામ બરાબર લખો </span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            શાખાનું નામ : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantBankdetails$branchName" type="text" value="Rajpipla" id="body_innerbody_ucApplicantBankdetails_branchName" class="form-control">
+
+                            <span id="body_innerbody_ucApplicantBankdetails_RegbranchName" style="color:Red;display:none;">બેંકની શાખાનું નામ બરાબર લખો </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">
+                            IFSC કોડ નંબર : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantBankdetails$txtIFSCCode" type="text" value="IFSCIN01252" maxlength="11" id="body_innerbody_ucApplicantBankdetails_txtIFSCCode" class="form-control">
+
+                            <span id="body_innerbody_ucApplicantBankdetails_RetxtIFSCCode" style="color:Red;display:none;">બેંકનો આઇ.એફ.એસ.સી નંબર સાચો નાખો.</span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            બેંક એકાઉન્ટ નંબર : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantBankdetails$txtBankACNo" type="text" value="2562352352" maxlength="20" id="body_innerbody_ucApplicantBankdetails_txtBankACNo" class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">
+                            કન્ફર્મ બેંક એકાઉન્ટ નંબર : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="ctl00$ctl00$body$innerbody$ucApplicantBankdetails$txtBankACNo" type="text" value="2562352352" maxlength="20" id="body_innerbody_ucApplicantBankdetails_txtBankACNo" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+            </fieldset>
+        }
+        @if (ViewData["IsDivyangta"] != null && ViewData["IsDivyangta"].ToString() == "True")
+        {
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                        દિવ્યાંગતાની વિગત
+                    </span>
+                </legend>
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">
+                            શારીરિક  દિવ્યાંગતા છે ? : <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <td><span><input id="body_innerbody_rblCard_0" type="radio" name="ctl00$ctl00$body$innerbody$rblCard" value="1" checked="checked"><label for="body_innerbody_rblApplicantGender_0">હા</label></span></td>
+                            <td><span><input id="body_innerbody_rblCard_1" type="radio" name="ctl00$ctl00$body$innerbody$rblCard" value="0"><label for="body_innerbody_rblApplicantGender_1">ના</label></span></td>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">
+                            દિવ્યાંગતાનો પ્રકાર : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <select class="form-control">
+                                <option>--select--</option>
+                                <option>સાંભળવાની ક્ષતિ</option>
+                                <option>ક્રોનિક ન્યુરોલોજીકલ સ્થિતિ</option>
+                                <option>ઓછી દ્રષ્ટિ</option>
+                                <option>બૌધ્ધિક અસમર્થતા</option>
+                                <option>હિમોગ્લોબિનની ઘટેલી માત્રા</option>
+                                <option>રક્તપિત-સાજા થયેલ</option>
+                            </select>
+                        </div>
+                        <span class="control-label col-md-3">
+                            દિવ્યાંગતાની ટકાવારી : <span class="text-danger"></span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input name="" type="text" value="" id="" class="form-control">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </fieldset>
+        }
+    </div>
+</form>
+
+<script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>
+<link href="lib/jqueryui/themes/base/jquery-ui.min.css" />
+<link href="lib/jqueryui/themes/base/theme.min.css" />
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $('#clsdatepicker').datepicker({
+            autoclose: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '1920:2010',
+            dateFormat: 'dd/MM/yyyy'
+        });
+
+        debugger;
+        if ('@isfilled' == 'True') {
+
+            $('#aadharcard').attr("disabled", true);
+        }
+        else {
+            if ('@ServiceId' != "32") {
+                GetDistrict();
+            }
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    //$(".custom-file-input").on("change",
+    //    function() {
+    //        var fileName = $(this).val().split("\\").pop();
+    //        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    //    });
+
+
+    //$(document).ready(function () {
+    //    $('#datepicker1').datepicker({
+    //        dateFormat: "dd/mm/yy",
+    //        showStatus: true,
+    //        showWeeks: true,
+    //        currentText: 'Now',
+    //        autoSize: true,
+    //        gotoCurrent: true,
+    //        showAnim: 'blind',
+    //        highlightWeek: true
+    //    });
+    //});
+
+    $(function() {
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+
+    $("#dob").change(function() {
+        var today = new Date();
+        var dateArray = $('#dob').val().split('/');
+        var date = dateArray[2] + "-" + dateArray[1] + "-" + dateArray[0];
+        var birthDate = new Date(date);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        $("#age").val(age);
+    });
+
+    document.getElementById('FormFile123').addEventListener('change', readURL, true);
+
+    function readURL() {
+
+        var file = document.getElementById("FormFile123").files[0];
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            debugger;
+            ValidateProfilePicture(reader.result);
+            debugger;
+        }
+        if (file) {
+            debugger;
+            reader.readAsDataURL(file);
+        }
+        else {
+        }
+
+
+    }
+</script>

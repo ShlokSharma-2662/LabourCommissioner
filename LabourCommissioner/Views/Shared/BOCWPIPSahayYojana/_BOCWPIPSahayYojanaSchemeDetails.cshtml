@@ -1,0 +1,148 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@model BOCWPIPSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    // var Totalsahay = ViewBag.TotalSahay;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWPIPSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    @*<input type="hidden" asp-for="totalsahay" value="@Totalsahay" />*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+        @* //new design for antyesthi *@
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+
+                        <span id="body_innerbody_label2" class="control-label col-md-3">યોજનાનુ નામ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <select asp-for="schemetype" id="schemetype" class="form-control" required>
+                                <option value="" selected hidden>-Please Select-</option>
+                                <option value="1">પ્રધાન મંત્રી જીવન જ્યોતિ બીમા યોજના</option>
+                            </select>
+                            <span asp-validation-for="schemetype" class="text-danger"></span>
+                            <span id="body_innerbody_txtDOB" style="color:Red;display:none;">યોજનાનુ નામ લખો.</span>
+                        </div>
+                        <span id="body_innerbody_label2" class="control-label col-md-3">યોજનામાં જોડાવાની તારીખ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="joindate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="joindate" class="text-danger"></span>
+                            <span id="body_innerbody_txtDOB" style="color:Red;display:none;">યોજનામાં જોડાવાની તારીખ લખો.</span>
+                        </div>
+                    </div>
+                   
+
+                <div class="form-group row">
+                    <span id="body_innerbody_label2" class="control-label col-md-3">કુલ કપાયેલ પ્રિમ્યમની રકમ(રૂપિયામાં):<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" class="form-control" />
+                         <span asp-validation-for="totalsahay" class="text-danger"></span>                        
+                    </div>
+                    <span id="body_innerbody_label2" class="control-label col-md-3">ચાલુ વષનું પ્રીમિયમ કપાયા તારીખ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="premiumdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="premiumdate" class="text-danger"></span>
+                            <span id="body_innerbody_txtDOB" style="color:Red;display:none;">ચાલુ વષનું પ્રીમિયમ કપાયા તારીખ લખો.</span>
+                        </div>
+                </div>
+
+
+            </div>
+        </fieldset>
+
+
+
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">Cancel</button>
+        </div>
+
+    </div>
+</form>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+
+
+        //var select = document.getElementById('ddlList1');
+        //var input = document.getElementById('txtprice');
+        //select.onchange = function() {
+        //    input.value = select.value;
+        //}
+
+        function Cleartotalsahay() {
+            //$('#Relation').children("option:selected").val('');
+            $('#schemetype').prop('checked', true);
+            $('#Totalsahay').val('');
+        }
+
+
+        // radio validation for taxtboxs
+        $(function() {
+            $("input[name='insuranceNo']").click(function() {
+                if ($("#chkYes").is(":checked")) {
+                    $("#vigat").removeAttr("disabled");
+                    $("#vigat").focus();
+                } else {
+                    $("#vigat").attr("disabled", "disabled");
+                }
+            });
+        });
+
+    });
+    function GettotalsahaybysahayId(serviceid, schemetype) {
+
+        var schemetype = $('#schemetype').children("option:selected").val();
+
+        $.ajax({
+            type: "get",
+            url: "/BOCWPIPSahayYojana/GettotalsahaybysahayId",
+            data: { serviceid: serviceid, schemetype: schemetype },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var totalsahay = data.data.result.totalsahay;
+                $('#Totalsahay').val(totalsahay);
+
+            }
+        });
+    }
+</script>

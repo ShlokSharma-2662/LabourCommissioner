@@ -1,0 +1,188 @@
+﻿@using Highsoft.Web.Mvc.Charts
+@using Highsoft.Web.Mvc.Charts.Rendering;
+@model IEnumerable<CountForDashBoard>
+
+@{
+    ViewData["Title"] = "Employee Dashboard";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    var chartOptions = new Highcharts
+            {
+                Chart = new Chart
+                {
+                    Type = ChartType.Column
+                },
+                Title = new Title
+                {
+                    Text = "District Wise Workers Application Count",
+                    X = -20
+                },
+                XAxis = new List<XAxis>
+                {
+                    new XAxis
+                    {
+                        Categories = ViewData["DistrictData"] as List<string>,
+                        Title = new XAxisTitle
+                        {
+                            Text = "<span style='font-size:14px;font-weight:bold;'>District Name</span>"
+                        }
+                    }
+                },
+                YAxis = new List<YAxis>
+                {
+                    new YAxis
+                    {
+                        Title = new YAxisTitle
+                        {
+                            Text = "<span style='font-size:14px;font-weight:bold;'>Application Count</span>"
+                        },
+                        PlotLines = new List<YAxisPlotLines> { new YAxisPlotLines { Value = 0, Width = 1, Color = "#808080" } }
+                    }
+                },
+                PlotOptions = new PlotOptions
+                {
+
+                    Column = new PlotOptionsColumn
+                    {
+                        Grouping = false,
+                        Stacking = PlotOptionsColumnStacking.Normal,
+                        DataLabels = new PlotOptionsColumnDataLabels
+                        {
+                            Enabled = true,
+                            Color = "White"
+                        }
+                    }
+                },
+                Tooltip = new Tooltip
+                {
+                    HeaderFormat = "<b>{point.x}</b><br/>"
+                    //PointFormat = "{point.y}-{point.custom1}-{point.custom2}"
+                },
+                Legend = new Legend
+                {
+                    Align = LegendAlign.Right,
+                    VerticalAlign = LegendVerticalAlign.Top,
+                    Floating = true,
+                    BackgroundColor = "white",
+                    BorderColor = "#CCC",
+                    BorderWidth = 1,
+                    //Shadow = false,
+                    Y = 25,
+                    X = -30
+                },
+                Series = new List<Series>
+        {
+            new ColumnSeries { Name = "Rejected", Color = "#FF0000", Data = ViewData["RejectedData"] as List<ColumnSeriesData>},
+            new ColumnSeries {Name="Approved",Color="#66bb6a",Data= ViewData["ApprovedData"] as List<ColumnSeriesData>},
+    new ColumnSeries {Name="Pending",Color="#ffa726",Data= ViewData["PendingData"] as List<ColumnSeriesData>}
+
+
+        }
+            };
+    chartOptions.ID = "chartTest";
+    var renderer = new HighchartsRenderer(chartOptions);
+    string serviceid = @ViewBag.serviceId;
+    string servicename = "";
+    if (Model != null)
+    {
+        servicename = Convert.ToString(Model.Select(s => s.servicename).FirstOrDefault());
+    }
+}
+
+
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Dashboard - @servicename</h2>
+</section>
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container-fluid pt-5">
+
+            <div class="row mb-3">
+
+                <div class="col">
+                    <div class="p-3 rounded-3 border border-primary">
+                        <div class="d-flex align-items-sm-center  flex-column flex-sm-row justify-content-start justify-content-sm-between">
+                            <h5 class="desc text-primary"><i class='bx bxs-user-badge'></i>@servicename</h5>
+                            <div class="d-flex align-items-sm-center">
+                                <span>Financial Year :</span> <select id="finYearList" onchange="BindChartCount(this.value);" name="finYearList" asp-items="@(new SelectList(@ViewBag.FinYearList, "Value", "Text",selectedValue:@ViewBag.FinYear))" class="form-select form-select-sm ms-2 w-auto">
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row dashboard-block">
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status">
+                            @* <a href="listing.html" class="card pull-up border-@item.backgroundcolor">*@
+                            <span class="card pull-up border-@item.backgroundcolor">
+                                <div class="card-content">
+                                    <div class="card-body dashboard-count">
+                                        <div class="media d-flex position-relative">
+                                            <div class="media-right-icon text-@item.backgroundcolor">
+                                                @item.totalapplicationcount
+                                            </div>
+                                            <div class="media-body align-self-center">
+                                                <h5 class="desc text-@item.backgroundcolor"><i class='bi bi-@item.icon'></i>  @item.countyype</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                            @* </a>*@
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">District Wise Workers Application Count</span>
+            </legend>
+            <div id="chartTest">
+                @Html.Raw(renderer.RenderHtml());
+            </div>
+        </fieldset>
+
+    </section>
+</main>
+
+@section Scripts{
+    <script type="text/javascript">
+        function BindChartCount(finyear) {
+            debugger;
+            var serviceid = '@serviceid';
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/EmployeeDashboard",
+                data: { strserviceId: serviceid, finYear: finyear },
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true
+                //success: function(response) {
+                //    debugger;
+                //    $("#" + divId).find("#divContent").html(response);
+                //    $("#" + divId).modal('show');
+                //},
+                //failure: function(response) {
+                //    alert(response.responseText);
+                //},
+                //error: function(response) {
+                //    alert(response.responseText);
+                //}
+            });
+        }
+    </script>
+}
+
+

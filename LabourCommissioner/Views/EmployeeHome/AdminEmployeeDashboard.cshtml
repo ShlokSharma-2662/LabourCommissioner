@@ -1,0 +1,299 @@
+﻿@using LabourCommissioner.Common.Utility
+@using System.Web
+@using System.Security.Claims
+@model IEnumerable<CountForDashBoard>
+
+@{
+
+    ViewData["Title"] = "Employee Dashboard";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    string ServiceId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("ServiceId", StringComparison.OrdinalIgnoreCase))?.Value;
+    
+    double totalapplication = Model.Sum(v => Convert.ToDouble(v.totalapplication));
+    double approved = Model.Sum(v => Convert.ToDouble(v.approved));
+    double pending = Model.Sum(v => Convert.ToDouble(v.pending));
+    double rejected = Model.Sum(v => Convert.ToDouble(v.rejected));
+    double sendback = Model.Sum(v => Convert.ToDouble(v.sendback));
+    string BeneficiaryType = "";
+    var hodid = ViewBag.hodid;
+    if (ViewBag.PostId == 37)
+    {
+        if (ViewBag.BeneficiaryType == "")
+        {
+            BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+        }
+        else
+        {
+            BeneficiaryType = ViewBag.BeneficiaryType;
+        }
+    }
+    else
+    {
+        BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+    }
+}
+
+
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Dashboard</h2>
+</section>
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container-fluid pt-5">
+            <div class="row mb-3">
+                <form asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" method="get">
+                     <input type="hidden" name="strServiceId" id="strServiceId" value="@HttpUtility.UrlEncode(CommonUtils.Encrypt(ServiceId))" />
+                     <input type="hidden" name="beneficiarytype" id="beneficiarytype" value="@BeneficiaryType" />
+                    <div class="col">
+                        <div class="p-3 rounded-3 border border-primary">
+                            <div class="d-flex align-items-sm-center  flex-column flex-sm-row justify-content-start justify-content-sm-between">
+                                <h5 class="desc text-primary"><i class='bi bi-person-badge-fill'></i></h5>
+                                <div class="d-flex align-items-sm-center">
+                                    @*  <input type="hidden" asp-for="finYear" />*@
+                                    <span>Financial Year :</span> <select id="finYear" name="finYear" asp-items="@(new SelectList(@ViewBag.FinYearList, "Value", "Text",selectedValue:@ViewBag.FinYear))" onchange="this.form.submit()" class="form-select form-select-sm ms-2 w-auto">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="row dashboard-block">
+                @if (ViewBag.CountList != null)
+                {
+                    foreach (var item in ViewBag.CountList)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                            @* <a href="listing.html" class="card pull-up border-@item.backgroundcolor">*@
+                            <div class="card pull-up" style="border-color:@item.backgroundcolor">
+                                <div class="card-content">
+                                    <div class="card-body dashboard-count">
+                                        <div class="media d-flex position-relative">
+                                            <div class="media-right-icon" style="color:@item.backgroundcolor">
+                                                <i class='bi bi-@item.icon'></i>
+                                            </div>
+                                            <div class="media-body align-self-center">
+                                                <h5 class="desc text-dark">  @item.countyype</h5>
+                                                <h4>@item.totalcount</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if (@item.url != null && @item.url != "")
+                                    {
+                                        <a href="@item.url" style="background:@item.backgroundcolor">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                                    }
+                                    else
+                                    {
+                                        <a style="background:@item.backgroundcolor">&nbsp;</a>
+                                    }
+
+                                </div>
+                            </div>
+                            @* </a>*@
+                        </div>
+                    }
+                }
+
+                <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-info">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-info">
+                                        <i class="bi bi-list-check"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-black">Total Applications</h5>
+                                        <h4>@totalapplication</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="ViewTotalApplicationDetails?isApproved=0" class="bg-info">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-success">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-success">
+                                        <i class="bi bi-check-lg"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-dark">Completed Count</h5>
+                                        <h4>@approved</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="ViewTotalApplicationDetails?isApproved=2" class="bg-success">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-warning">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-warning">
+                                        <i class="bi bi-hourglass-bottom"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-black">Work in Progress</h5>
+                                        <h4>@pending</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="ViewTotalApplicationDetails?isApproved=1" class="bg-warning">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-warning3">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-warning3">
+                                       <i class="bi bi-box-arrow-left"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-warning3">Sentback Count</h5>
+                                        <h4>@sendback</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="ViewTotalApplicationDetails?isApproved=4" class="bg-warning3">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                            @*<a  class="bg-warning3">&nbsp;</a>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-danger">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-danger">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-black">Rejected Count</h5>
+                                        <h4>@rejected</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="ViewTotalApplicationDetails?isApproved=3" class="bg-danger">More Details <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                @*<div class="col-xl-3 col-lg-4 col-md-6 dashboard-status dashboard-status-link">
+                    <div class="card pull-up border-danger">
+                        <div class="card-content">
+                            <div class="card-body dashboard-count">
+                                <div class="media d-flex position-relative">
+                                    <div class="media-right-icon text-danger">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <h5 class="desc text-black">Application Status</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationSearch" style="background:Red">Application Status <i class='bx bxs-chevrons-right h4 mb-0'></i></a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+
+            <div class="table-responsive">
+                <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+
+                    <thead>
+                        <tr>
+                            <th>Sr.No.</th>
+                            <th>Scheme Name</th>
+                            <th>All Applications</th>
+                            <th>Completed Applications</th>
+                            <th>Work in Progress</th>
+                            <th>Rejected Applications</th>
+                            <th>Sendback Applications</th>
+                            <th>Summary</th>
+                            <th>More Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() > 0)
+                        {
+                            int srnocnt = 1;
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">
+                                        @srnocnt
+                                    </td>
+                                    <td class="text-start">
+                                        @if (BeneficiaryType == "1" || BeneficiaryType == "3" || BeneficiaryType == "4")
+                                        {
+                                            <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-hodid="@hodid" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" asp-route-fromDate="@item.fromdate" asp-route-toDate="@item.todate">
+                                                @item.servicename
+                                            </a>
+                                        }
+                                        else if (BeneficiaryType == "2" || BeneficiaryType == "5" || hodid == 5)
+                                        {
+                                            <a asp-controller="EmployeeHome" asp-action="GLWBEmployeeApplicationDetails" asp-route-hodid="@hodid" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" asp-route-fromDate="@item.fromdate" asp-route-toDate="@item.todate">
+                                                @item.servicename
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <span>-</span>
+                                        }
+
+                                    </td>
+                                    <td class="text-center">
+                                        @item.totalapplication
+                                    </td>
+                                    <td class="text-center">
+                                        @item.approved
+                                    <td class="text-center">
+                                            @item.pending
+                                    </td>
+                                    <td class="text-center">
+                                            @item.rejected
+                                    </td>
+                                    <td class="text-center">
+                                            @item.sendback
+                                    </td>
+                                    <td class="text-center">
+                                        <a asp-controller="EmployeeHome" asp-action="EmployeeDashboard" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" class="text-success">
+                                            <h5><i class="bi bi-clipboard-data-fill"></i></h5>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a asp-controller="Report" asp-action="PendencyReport" asp-route-hodId="@hodid" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" class="text-teal">
+                                            <h7>View Details</h7>
+                                        </a>
+                                    </td>
+                                </tr>
+                                srnocnt++;
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </section>
+</main>

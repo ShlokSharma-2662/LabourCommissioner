@@ -1,0 +1,11 @@
+﻿@Html.Raw(ViewBag.CTPFormlist)
+
+<script src="~/js/Common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var msg = '@Html.Raw(@TempData["Message"])';
+        if (msg != null && msg != '') {
+            ShowDynamicSwalAlert("", msg);
+        }
+    });
+</script>

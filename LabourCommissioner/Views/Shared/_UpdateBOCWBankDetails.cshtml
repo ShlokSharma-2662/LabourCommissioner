@@ -1,0 +1,63 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model PaymentDetailsModel
+
+
+<form asp-controller="EmployeeHome" asp-action="UpdateBOCWBankDetails" id="UpdateMobileNo">
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center justify-content-between flex-row-reverse" id="dynamicSchemeModelLabel">
+                    Update Bank Details
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <div class="modal-body bocw_bg">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="hidden" asp-for="applicationid" id="hdnApplicationId" />
+                        <input type="hidden" asp-for="serviceid" id="hdnServiceId" />
+                        <input type="hidden" asp-for="payinfoid" id="hdnPayinfoId" />
+                        <div class="form-group">
+                            <label>
+                                <span id="lblUserId">બેંક એકાઉન્ટ નંબર : </span><span class="text-danger">*</span>
+                            </label>
+                            <div class="control-form col-md-6">
+                                <input asp-for="beneficiaryaccountno" class="form-control" autocomplete="off" />
+                                <span asp-validation-for="beneficiaryaccountno" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span id="lblifsccode">IFSC કોડ નંબર : </span><span class="text-danger">*</span>
+                            </label>
+                            <div class="control-form col-md-6">
+                                <input asp-for="ifsccode" class="form-control" autocomplete="off" />
+                                <span asp-validation-for="ifsccode" class="text-danger"></span>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label>
+                                <span id="lblifsccode">Remarks : </span><span class="text-danger">*</span>
+                            </label>
+                            <div class="control-form col-md-6">
+                                <textarea asp-for="remarks" class="form-control"></textarea>
+                                <span asp-validation-for="remarks" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                 <input type="submit" value="Submit" class="btn btn-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>

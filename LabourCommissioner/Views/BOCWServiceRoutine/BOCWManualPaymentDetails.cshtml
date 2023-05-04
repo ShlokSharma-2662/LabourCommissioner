@@ -1,0 +1,88 @@
+﻿@model IEnumerable<AadeshPaymentDetailsModel>
+@{
+    ViewData["Title"] = "BOCW Manual Payment Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    string fromDate = ViewBag.StartDate;
+    string toDate = ViewBag.EndDate;
+
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Payment Details</h2>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2 mt-4">
+        <div class="container-fluid">
+
+
+
+            <div class="row position-relative">
+
+
+                <ul class="nav nav-pills step22 mb-3 justify-content-center" id="pills-tab" role="tablist">
+
+                    <li class="nav-item me-sm-5" role="presentation">
+                        <button type="submit" class="btn btn-primary" id="pills-contact-tab" onclick="return LoadPaymentPartialView('BOCWServiceRoutine','BOCWPaymentDisbursement','','');">
+                            <i class="bx bxs-bank"></i><br />
+                            <span>Payment Disbursement File Generation</span>
+                        </button>
+                    </li>
+                    <li class="mx-5"></li>
+                    <li class="nav-item ms-sm-5" role="presentation">
+                        <button type="submit" class="btn btn-warning" id="pills-contact-tab2" onclick="return LoadPaymentPartialView('BOCWServiceRoutine','BOCWPaymentResponseDetails','','');">
+                            <i class="bx bx-rupee"></i><br />
+                            <span>Payment Response</span>
+                        </button>
+                    </li>
+
+                </ul>
+                <span style="display: flex;border: solid 1px black;position: absolute;width: 14%;margin: auto;z-index: -1;justify-content: center;align-items: center;top: 48%;left: 50%;transform: translate(-50%);"></span>
+
+            </div>
+            <div class="tab-content border p-3" id="pills-tabContent">
+
+
+                <div id="dvPaymentPartialView">
+
+                    @*<partial name="~/Views/Shared/BOCWServiceRoutine/_BOCWPDFileGeneration.cshtml" />*@
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+</main><!-- End #main -->
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/Common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        $("#navbar ul li a").removeClass('active');
+        $("#menuPaymentDisbursement").addClass('active');
+        var msg = '@Html.Raw(@TempData["Message"])';
+        if (msg != null && msg != '') {
+            ShowDynamicSwalAlert("Done!", msg);
+        }
+        var msgPayment = '@Html.Raw(@TempData["PaymentMessage"])';
+        if (msgPayment != null && msgPayment != '') {
+            swal({
+                title: "Done!",
+                text: msgPayment,
+                type: "success",
+                showCancelButtonClass: "btn-primary",
+                confirmButtonText: 'OK'
+            }, function() {
+                window.location = '/EmployeeHome/BOCWPaymentHistory';
+            });
+        }
+
+        LoadPaymentPartialView('BOCWServiceRoutine', 'BOCWPaymentDisbursement', '@fromDate', '@toDate');
+    });
+</script>

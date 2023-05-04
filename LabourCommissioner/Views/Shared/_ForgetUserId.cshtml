@@ -1,0 +1,76 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common
+@model Usermaster
+
+<form id="forgetUserId" asp-controller="Home" asp-action="GetUserId" method="post">
+    <input asp-for="isapplicationfrom" type="hidden"  value="1">
+    <div class="modal fade" id="forgetuseridpopup" tabindex="-1" aria-labelledby="schemeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-x">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="schemeModalLabelTablet">યુઝરઆઇડી ભૂલી ગયા છો?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="control-label col-lg-6">
+                            આધાર નંબર:<span class="text-danger">*</span>
+                        </label>
+                        <div class="control-form col-lg-6">
+                            <input asp-for="aadharcardno" type="text" class="form-control">
+                            <span asp-validation-for="aadharcardno" class="text-danger" ></span>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-lg-6">
+                            <br />
+                            જન્મ તારીખ:<span class="text-danger">*</span>
+                        </label>
+                        <div class="control-form col-lg-6">
+                            <input type="date" asp-for="DateofBirth" class="form-control"/>
+                            <span asp-validation-for="DateofBirth" class="text-danger" ></span>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="યુઝર આઇડી મેળવો" class="btn btn-warning">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+@*<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+
+<script>
+    function getResetPasswordModel() {
+        $.ajax({
+            type: "GET",
+            url: "/Home/ForgetPasswordReset",
+            //data: {ServiceId: serviceId},
+            //data: JSON.stringify(objData),
+            contentType: "application/json; charset=utf-8",
+            dataType: "html",
+            traditional: true,
+            success: function(response) {
+                $("#popup").modal('hide');
+                //$("#dynamicResetPasswordModel").find("#ResetPasswordpartialView").html(response);
+                $("#popup10").modal('show');
+            },
+            failure: function(response) {
+                alert(response.responseText);
+            },
+            error: function(response) {
+                alert(response.responseText);
+            }
+        });
+    }
+</script>*@

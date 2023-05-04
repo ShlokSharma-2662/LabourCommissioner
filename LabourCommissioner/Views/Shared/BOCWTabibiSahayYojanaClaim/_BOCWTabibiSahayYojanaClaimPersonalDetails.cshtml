@@ -1,0 +1,118 @@
+﻿﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Abstraction.ViewDataModels
+@using LabourCommissioner.Common
+@using Newtonsoft.Json
+@using System.Web
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using LabourCommissioner.Common.Utility
+@model BOCW_TBSYClaim_personalDetails
+@{
+    var model = ViewBag.States;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    bool isfilled = ViewBag.isFilled;
+    //var image = ViewBag.Image;
+    //var CD = Model.CDistrictId;
+    var ApplicationNo = "";
+    //string imgSrc = "";
+    int val = 7;
+    if (isfilled == true)
+    {
+        ApplicationNo = Model.ApplicationNo;
+        //imgSrc = String.Format("data:image/png;base64,{0}", image);
+    }
+
+    //var base64 = Convert.ToBase64String(Model.ByteArray);
+
+
+
+}
+<div class="tab-pane fade show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+
+    @*
+    ---------------------------------------------------------------------શ્રમિક ઓળખ કાર્ડની વિગતો---------------------------------------------------------------------------------------------------
+    *@
+    <form id="personalDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWTabibiSahayYojanaClaim" asp-action="AddUpdateApplication" asp-route-strTabId=@TabSequenceNo asp-route-strApplicationNo="@ApplicationNo">
+        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+        <input type="hidden" asp-for="ServiceId" id="hdnServiceId" value="@ServiceId" />
+        <input type="hidden" asp-for="TabSequenceNo" id="hdnServiceId" value="@TabSequenceNo" />
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>
+                હોસ્પિટલની વિગત
+            </legend>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row border-0">
+                            <div class="col-md-12 p-0 align-self-center">
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        હોસ્પિટલનું નામ: <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        <input asp-for="hospitalname" class="aspNetDisabled form-control" readonly>
+                                        <span asp-validation-for="hospitalname" class="text-danger"></span>
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        હોસ્પિટલનું સરનામું : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        <input asp-for="hospitaladdress" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="hospitaladdress" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        હોસ્પિટલનો ઈમેલ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+
+                                        <input asp-for="hospitalemailid" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="hospitalemailid" class="text-danger"></span>
+                                    </div>
+                                    <span class="control-label col-md-3">
+                                        હોસ્પિટલનો મોબાઇલ નંબર : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+                                        <input asp-for="hospitalmobile" onkeypress="return AllowNumeric(event);" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="hospitalmobile" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <span class="control-label col-md-3">
+                                        હોસ્પિટલનો પીનકોડ : <span class="text-danger">*</span>
+                                    </span>
+                                    <div class="control-form col-md-3">
+
+                                        <input asp-for="hospitalpincode" onkeypress="return AllowNumeric(event);" class="aspNetDisabled form-control">
+                                        <span asp-validation-for="hospitalpincode" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+        <div class="card-footer text-center border">
+            <button type="submit" class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+
+
+
+    </form>
+</div>

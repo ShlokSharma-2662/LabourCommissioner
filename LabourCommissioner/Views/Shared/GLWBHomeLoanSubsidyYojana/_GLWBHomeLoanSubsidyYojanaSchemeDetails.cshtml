@@ -1,0 +1,264 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBHLS_SchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //var year = ViewBag.Year;
+    ////var std = ViewBag.Standard;
+    //var enirmancardno = ViewBag.EnirmanCardNo;
+    ////if (isfilled == true)
+    ////{
+    ////    ApplicationNo = Model.ApplicationNo;
+    ////}
+    //var dropDownItems = new SelectList(std, "Value", "Text", "12");
+    long Totalsahay = 0;
+    if (Model != null)
+    {
+        Totalsahay = Model.totalsahay;
+    }
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHomeLoanSubsidyYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" id="Totalsahay" asp-for="totalsahay" value="@Totalsahay" />
+    @* <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />*@
+    @*<input type="hidden" asp-for="Schmename" value="@Model.Schmename" />*@
+    @* <input type="hidden" asp-for="Standard" value="@dropDownItems.SelectedValue" />*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+
+            @* <div class="form-horizontal form-bordered">
+            <div class="form-group row">
+            <span class="control-label col-md-2">માસિક પગાર રૂ : <span class="text-danger">*</span></span>
+            <div class="control-form col-md-4 d-flex">
+            <input asp-for="monthlyincome" type="text" class="form-control" autocomplete="off" maxlength="15">
+            <span asp-validation-for="monthlyincome" class="text-danger"></span>
+            </div>
+            </div>
+            </div>*@
+            <fieldset class="custom-fieldset mb-4">
+                <legend>દસ્તાવેજની વિગત</legend>
+                <div class="">
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <span class="control-label col-md-3">દસ્તાવેજની તારીખ : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input id="doucumentdate" asp-for="doucumentdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="doucumentdate" class="text-danger"></span>
+                            </div>
+                            <span class="control-label col-md-3">દસ્તાવેજ મુજબ મકાનની કિંમત : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="houseprice" id="houseprice" type="text" onblur="getHLStotalsahay();" class="form-control" autocomplete="off" maxlength="8">
+                                <span asp-validation-for="houseprice" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @*<span id="body_innerbody_label1" class="control-label col-md-3">દસ્તાવેજ નંબર :</span>
+                            <div class="control-form col-md-3">
+                            <input name="txtStudentName" type="text" maxlength="100" id="body_innerbody_txtStudentName" class="form-control" autocomplete="off">
+                            <span id="body_innerbody_txtStudentName" style="color:Red;display:none;">દસ્તાવેજ નંબર લખો.</span>
+                            </div>*@
+                            <span class="control-label col-md-3">દસ્તાવેજ નંબર :  <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input id="doucumentnumber" asp-for="doucumentnumber" type="text" class="form-control" autocomplete="off" maxlength="100">
+                                <span asp-validation-for="doucumentnumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="custom-fieldset mb-4">
+                <legend>લોનની વિગત</legend>
+                <div class="">
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <span class="control-label col-md-3">લોનની રકમ રૂ : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="loanamount" id="loanamount" type="text" onblur="getHLStotalsahay();" class="form-control" autocomplete="off" maxlength="8">
+                                <span asp-validation-for="loanamount" class="text-danger"></span>
+                            </div>
+                            <span class="control-label col-md-3">વ્યાજનો દર : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="intrestrate" id="intrestrate" type="text" class="form-control" autocomplete="off" maxlength="100">
+                                <span asp-validation-for="intrestrate" class="text-danger"></span>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-3">
+                                લોનની સમય મર્યાદા (વર્ષ) :   <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="loanduration" id="loanduration" type="text" class="form-control" autocomplete="off" maxlength="100" />
+                                <span asp-validation-for="loanduration" class="text-danger"></span>
+                            </div>
+
+                            <span class="control-label col-md-3">
+                                હોમ લોન એકાઉન્ટ નં :  <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="loanaccountno" id="loanaccountno" type="text" class="form-control" autocomplete="off" maxlength="20">
+                                <span asp-validation-for="loanaccountno" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <span class="control-label col-md-3">માસિક હપ્તો રૂ : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="installmentamount" id="installmentamount" type="text" class="form-control" autocomplete="off" maxlength="100">
+                                <span asp-validation-for="installmentamount" class="text-danger"></span>
+                            </div>
+                            <span class="control-label col-md-3">લોન મંજુર થયા તારીખ : <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="loanapprovaldate" type="text" class="form-control dateValidateCls datepicker1" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="loanapprovaldate" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+    $(function() {
+
+        var date = new Date();
+        var currentYear = date.getFullYear();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDate();
+
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            startDate: new Date(currentYear, currentMonth - 12, currentDate),
+            endDate: new Date(),
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+        //$('.datepicker').datepicker({
+        //    changeMonth: true,
+        //    changeYear: true,
+        //    format: "dd/mm/yyyy",
+        //    language: "local",
+        //    todayHighlight: 'TRUE',
+        //    autoclose: true
+        //});
+    });
+
+    $(function() {
+
+        $('.datepicker1').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+
+    $(document).ready(function() {
+        $("#doucumentnumber").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#houseprice").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#loanamount").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#intrestrate").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#loanduration").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#installmentamount").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+        $("#loanaccountno").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+
+    });
+
+    function getHLStotalsahay() {
+        debugger;
+        var houseprice = $("#houseprice").val();
+        var loanamount = $("#loanamount").val();
+        var ishouse = false;
+
+        if (houseprice < loanamount) {
+            ishouse = true;
+        }
+
+        if (ishouse == true) {
+            if (houseprice < 1500000) {
+                totalsahay = houseprice / 100 * 3;
+                $('#Totalsahay').val(totalsahay);
+            }
+            else {
+                totalsahay = 1500000 / 100 * 3;
+                $('#Totalsahay').val(totalsahay);
+            }
+        }
+        else {
+            if (loanamount < 1500000) {
+                totalsahay = loanamount / 100 * 3;
+                $('#Totalsahay').val(totalsahay);
+            }
+            else {
+                totalsahay = 1500000 / 100 * 3;
+                $('#Totalsahay').val(totalsahay);
+            }
+        }
+    }
+
+</script>

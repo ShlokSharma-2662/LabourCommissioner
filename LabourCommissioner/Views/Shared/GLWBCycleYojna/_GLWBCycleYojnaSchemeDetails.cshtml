@@ -1,0 +1,183 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBCYCLE_Schemedetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+
+    //var enirmancardno = ViewBag.EnirmanCardNo;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBCycleYojna" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@ViewBag.TotalSahay" />
+    @*<input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />*@
+    @*<input type="hidden" asp-for="Schmename" value="@Model.Schmename" />*@
+    @*<input type="hidden" asp-for="Standard" value="@dropDownItems.SelectedValue" />
+    *@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>શ્રમયોગી સાઇકલ સબસીડી સહાય યોજના</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+
+                    <div id="body_innerbody_dv3" class="form-group row">
+                        <span id="body_innerbody_label7" class="control-label col-md-3">બીલ તારીખ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="billdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="billdate" class="text-danger"></span>                            
+
+                        </div>
+                        <span id="body_innerbody_label7" class="control-label col-md-3">બીલ નંબર:<span class="text-danger">*</span> </span>
+                        <div class="control-form col-md-3">
+                            <input id="billno" asp-for="billno" type="text" class="form-control" maxlength="7">
+                            <span asp-validation-for="billno" class="text-danger"></span>
+                            <span id="body_innerbody_ReqtxtDateofJoining" style="color:Red;display:none;">બીલ નંબર લખો.</span>
+                        </div>
+
+
+                    </div>
+                    <div id="body_innerbody_dv3" class="form-group row">
+                        <span id="body_innerbody_label8" class="control-label col-md-3">સાયકલની સાઈઝ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input id="cyclesize" asp-for="cyclesize" type="text" class="form-control allownumericwithoutdecimal" maxlength="7">
+                            <span asp-validation-for="cyclesize" class="text-danger"></span>
+                            <span id="body_innerbody_ReqtxtDateofJoining" style="color:Red;display:none;">સાયકલની સાઈઝ લખો.</span>
+                        </div>
+                        <span id="body_innerbody_label7" class="control-label col-md-3">ચેસીસ નંબર: <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="chasisno" type="text" class="form-control" maxlength="20">
+                            <span asp-validation-for="chasisno" class="text-danger"></span>
+                            <span id="body_innerbody_ReqtxtDateofJoining" style="color:Red;display:none;">ચેસીસ નંબર લખો.</span>
+                        </div>
+                    </div>
+                    <div id="body_innerbody_dv3" class="form-group row">
+                        <span id="body_innerbody_label8" class="control-label col-md-3">સાયકલની કિંમત:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="cyclers" type="text" class="form-control allownumericwithoutdecimal" maxlength="7">
+                            <span asp-validation-for="cyclers" class="text-danger"></span>
+                            <span id="body_innerbody_ReqtxtDateofJoining" style="color:Red;display:none;">સાયકલની કિંમત લખો.</span>
+                        </div>
+
+                        <span id="body_innerbody_label7" class="control-label col-md-3">બિલનો જી.એસ.ટી નંબર:<span class="text-danger">*</span> </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="gstno" type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="gstno" class="text-danger"></span>
+                            <span id="body_innerbody_Reqtxtysalary" class="message" style="color: Red; display: none;">બિલનો જી.એસ.ટી નંબર લખો</span>
+                            <span id="body_innerbody_rgvtxtysalary" style="color: Red; display: none;">બિલનો જી.એસ.ટી નંબર નથી.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">શ્રમયોગીની બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function() {
+        debugger;
+        
+        var date = new Date();
+        var currentYear = date.getFullYear();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDay();
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            startDate: new Date(currentYear, currentMonth - 6, currentDate),
+            endDate: new Date(),
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    //$(function() {
+    //    debugger;
+      
+
+    //    $('.datepicker').datepicker({
+    //        changeMonth: true,
+    //        changeYear: true,
+    //        format: "dd/mm/yyyy",
+    //        language: "local",
+    //        startDate: new Date(currentYear, currentMonth - 6, currentDate),
+    //        endDate: new Date(),
+    //        todayHighlight: 'TRUE',
+    //        autoclose: true
+    //    });
+    //});
+
+    let lastValid = "";
+    $("#cyclesize").on("keypress keyup blur", function(event) {
+        if (/^\d{0,2}(?:\.\d{0,8})?$/.test($(this).val())) {
+            lastValid = $(this).val();
+        } else {
+            event.preventDefault();
+            $(this).val(lastValid);
+        }
+    });
+    
+
+    $(".allownumericwithoutdecimal").on("keypress keyup blur", function(event) {
+        $(this).val($(this).val().replace(/[^\d].+/, ""));
+        if ((event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+</script>
+<script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>
+<link href="lib/jqueryui/themes/base/jquery-ui.min.css" />
+<link href="lib/jqueryui/themes/base/theme.min.css" />
+
+@*<script type="text/javascript">
+        function readURL() {
+
+        var file = document.getElementById("FormFile123").files[0];
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            debugger;
+            ValidateProfilePicture(reader.result);
+            debugger;
+        }
+        if (file) {
+            debugger;
+            reader.readAsDataURL(file);
+        }
+        else {
+        }
+
+
+    }
+</script>*@

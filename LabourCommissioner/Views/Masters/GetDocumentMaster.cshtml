@@ -1,0 +1,184 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model DocumentMaster
+
+
+@{
+    ViewData["Title"] = "Document Add Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    bool isfilled = ViewBag.isFilled;
+
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Add Document</h2>
+</section>
+
+
+<main id="main">
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <form asp-controller="Masters" asp-action="AddUpdateDeleteDocumentMaster" method="post">
+                        <input type="hidden" asp-for="documentmasterid" />
+                        <div class="card">
+                            <div class="card-header card-head-bg">
+                                <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                    <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Add Document</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal form-bordered">
+                                             <div class="form-group row">
+
+                                                <label class="control-label col-md-2">Service Name: <b id="body_B1" class="redAstric"><span class="text-danger">*</span></b></label>
+                                                <div class="control-form col-md-2">
+
+                                                    <select asp-items="@(new SelectList(@ViewBag.ServicesList, "Value", "Text"))" onchange="    bindservicemaster(this.value);" id="lstservicenames" class="form-control" name="serviceid" asp-for="serviceid" >
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+
+                                                    <span id="body_rfvddlService" class="code" style="color:Red;display:none;">Please Select Service Name</span>
+                                                </div>
+                                                <label class="control-label col-md-2">Service Document Type: <b id="body_B3" class="redAstric"><span class="text-danger">*</span></b></label>
+                                                <div class="control-form col-md-2">
+                                                    <input asp-for="servicedocumenttype" name="servicedocumenttype" type="text" maxlength="100" id="servicedocumenttype" class="form-control">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </div>
+                                                <label class="control-label col-md-2">Document Name In English: <b id="body_B10" class="redAstric"><span class="text-danger">*</span></b></label>
+                                                <div class="control-form col-md-2">
+                                                    <input asp-for="documentname" name="documentname" type="text" maxlength="100" id="documentname" class="form-control">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <label class="control-label col-md-2">Document Name In Gujarati: <b id="body_B4" class="redAstric"><span class="text-danger"></span></b></label>
+                                                <div class="control-form col-md-2">
+                                                    <input asp-for="documentnameguj" name="documentnameguj" type="text" maxlength="100" id="documentnameguj" class="form-control">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                               
+
+                                                </div>
+                                                <label class="control-label col-md-2">Document Short Name: <b id="body_B6" class="redAstric"><span class="text-danger"></span></b></label>
+                                                <div class="control-form col-md-2">
+                                                    <input asp-for="documentshortname" name="documentshortname" type="text" maxlength="100" id="documentshortname" class="form-control">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                               
+
+                                                </div>
+                                                <label class="control-label col-md-2">Document Type </label>
+                                                <div class="control-form col-md-2">
+                                                    <ol id="body_chkdocumentype">
+
+                                                        <li><input  asp-for="documenttypeids"   type="checkbox" value="1" name="Documenttype" >
+                                                            <label for="body_chkdocumentype_0">Pdf</label></li>
+                                                        <li><input  asp-for="documenttypeids"   type="checkbox" value="2" name="Documenttype" >
+                                                            <label for="body_chkdocumentype_1">Word</label></li>
+                                                        <li><input  asp-for="documenttypeids"   type="checkbox"  value="3" name="Documenttype" >
+                                                            <label for="body_chkdocumentype_2">Image</label></li>
+
+                                                    </ol>
+                                                    <span id="body_CustomValidator1" style="color:Red;visibility:hidden;">Please select at least one item.</span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+
+                                                <label class="control-label col-md-2">Order By: <b id="body_B5" class="redAstric"><span class="text-danger">*</span></b></label>
+                                                <div class="control-form col-md-2">
+                                                    <input asp-for="orderby" name="orderby" type="text" maxlength="100" id="orderby" class="form-control">
+                                                    
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </div>
+                                                <label class="control-label col-md-2">Display Number in Hash ? </label>
+                                                <div class="control-form col-md-2">
+                                                    <label class="c-checkbox">
+                                                        <input asp-for="isdisplayashash" id="isdisplayashash" type="checkbox" name="isdisplayashash"  checked="checked">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </label>
+                                                </div>
+                                                <label class="control-label col-md-2">Is Number Input ? </label>
+                                                <div class="control-form col-md-2">
+                                                    <label class="c-checkbox">
+                                                        <input asp-for="isnumberinput" id="isnumberinput" type="checkbox" name="isnumberinput"  checked="checked">
+                                                    <span id="body_rfvtxtDocumentNameGuj" style="color:Red;display:none;">Please Enter Document Name in Gujarati</span>
+                                                    <span id="body_revtxtDocumentNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <label class="control-label col-md-2">Is Compulsary ? </label>
+                                                <div class="control-form col-md-2">
+                                                    <label class="c-checkbox">
+                                                        <input asp-for="iscompulsary" id="iscompulsary" type="checkbox" name="iscompulsary"  checked="checked">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <label class="control-label col-md-2">Is Active ? </label>
+                                                <div class="control-form col-md-2">
+                                                    <label class="c-checkbox">
+                                                        <input asp-for="IsActive" id="IsActive" type="checkbox" name="IsActive"  checked="checked">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-footer clearfix">
+                                <div class="text-center">
+                                    <input type="submit" name="ctl00$body$btnSave" value="Save" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$btnSave&quot;, &quot;&quot;, true, &quot;vgSave&quot;, &quot;&quot;, false, false))" id="body_btnSave" class="btn btn-primary">
+                                    <input type="submit" name="ctl00$body$btnCancel" value="Cancel" id="body_btnCancel" class="btn btn-secondary">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<script src="~/js/Common.js"></script>

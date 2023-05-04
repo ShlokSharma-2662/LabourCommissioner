@@ -1,0 +1,101 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBMSL_SchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    var Totalsahay = ViewBag.TotalSahay;
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBMahilashramLagnaSahay" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div>
+            <fieldset class="custom-fieldset mb-4">
+                <legend>મહિલા શ્રમયોગી લગ્ન સહાય યોજના</legend>
+                <div class="">
+                    <div class="form-horizontal form-bordered">
+
+                        <div id="body_innerbody_dv3" class="form-group row">
+                            <span id="body_innerbody_label7" class="control-label col-md-3">લગ્ન થયા તારીખ:</span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="mdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                @* <input type="text" class="form-control datepicker1" placeholder="mm/dd/yyyy" />*@
+                                <span asp-validation-for="mdate" class="text-danger"></span>
+                                <span id="body_innerbody_reqtxtApplicantmdate" style="color: Red; display: none;">લગ્ન થયા તારીખ લખો.</span>
+
+                            </div>
+                            <span id="body_innerbody_label8" class="control-label col-md-3">લગ્ન નોંધણી નંબર   :</span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="mnum" type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="mnum" class="text-danger"></span>
+                                <span id="body_innerbody_ReqtxtDateofJoining" style="color:Red;display:none;">લગ્ન નોંધણી નંબર લખો.</span>
+                            </div>
+                        </div>
+                        @* <div id="body_innerbody_dv3" class="form-group row">
+
+                        <span id="body_innerbody_label7" class="control-label col-md-3">માસિક કુલ પગાર: </span>
+                        <div class="control-form col-md-3">
+                        <input asp-for="ysalary" type="text" class="form-control" maxlength="7">
+                        <span asp-validation-for="mnum" class="text-danger"></span></div>
+                        <span id="body_innerbody_reqtxtApplicantmdate" style="color: Red; display: none;">માસિક કુલ પગાર લખો.</span>
+
+                        </div>*@
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">મહિલા શ્રમયોગીના બેંકની વિગતો</span>
+                </legend>
+
+                <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+            </fieldset>
+
+        </div>
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(function() {
+
+            var date = new Date();
+            var currentYear = date.getFullYear();
+            var currentMonth = date.getMonth();
+            var currentDate = date.getDate();
+
+
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                startDate: new Date(currentYear, currentMonth - 12, currentDate),
+                endDate: new Date(),
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+    });
+
+</script>

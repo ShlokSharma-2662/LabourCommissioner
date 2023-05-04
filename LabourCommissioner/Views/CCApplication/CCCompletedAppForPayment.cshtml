@@ -1,0 +1,332 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model IEnumerable<CCApplicationDetails>
+@{
+    ViewData["Title"] = "View Aadesh Details";
+    Layout = "~/Views/Shared/_OtherLoginLayout.cshtml";
+    IEnumerable<CCApplicationDetails> distinctPaymentIdwiseDetails = null;
+    if (Model != null)
+    {
+        distinctPaymentIdwiseDetails = Model.DistinctBy(o => o.paymentinfotransid);
+    }
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">CSEE Collection Application Details</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="CCApplication" asp-action="CCCompletedAppForPayment" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Application Details</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">શરૂઆત તારીખ</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અંતિમ તારીખ</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    @*<div class="col-md-4">
+                                    <div class="form-group">
+                                    <label class="f-600">અરજી ની સ્થિતિ</label>
+                                    <select name="statusId" id="statusId" class="form-control">
+                                    <option value="0">- ALL -</option>
+                                    <option value="1">Pending</option>
+                                    <option value="2">Approved</option>
+                                    </select>
+                                    </div>
+                                    </div>*@
+                                    @*<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અરજી નંબર / મોબાઇલ નંબર: </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>*@
+                                    <div class="col-md-12 text-center mt-3">
+                                        <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Application</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-10">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-center table-responsive-md boldIcon">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Sr No.</th>
+                                                        <th>Transaction Id</th>
+                                                        <th>Registration No.</th>
+                                                        <th>Name</th>
+                                                        <th>Phone No.</th>
+                                                        <th>Token No.</th>
+                                                        <th>Total Application</th>
+                                                        <th>Total Amount</th>
+                                                        <th>Text Period</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (distinctPaymentIdwiseDetails.Count() > 0)
+                                                    {
+                                                        int maincnt = 1;
+
+                                                        foreach (var item in distinctPaymentIdwiseDetails)
+                                                        {
+                                                            int appcnt = 1;
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <div class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample_@item.paymentinfotransid" aria-expanded="false" style="cursor:pointer;" aria-controls="collapseExample">
+                                                                        <i class="bi bi-chevron-down text-primary fw-bold detail123" style="-webkit-text-stroke: 2px;"></i>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="row">@maincnt</th>
+                                                                <td>@item.transactionid</td>
+                                                                <td>@item.registrationno</td>
+                                                                <td>@item.name</td>
+                                                                <td>@item.phoneno</td>
+                                                                <td>@item.tokenno</td>
+                                                                <td>@Model.Where(x => x.paymentinfotransid == item.paymentinfotransid).Count()</td>
+                                                                <td>@item.totalamount</td>
+                                                                <td>@Convert.ToDateTime(item.taxperiodfrom).ToString("dd/MM/yyyy") To @Convert.ToDateTime(item.taxperiodto).ToString("dd/MM/yyyy")</td>
+                                                                <td>
+                                                                    <a class="text-primary h5" href="#" onclick="event.preventDefault(); return CTPMakePayment('@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.paymentinfotransid.ToString()))');"><i class="bi bi-credit-card-fill"></i></a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td colspan="50" class="p-0">
+                                                                    <div class="p-3 collapse" id="collapseExample_@item.paymentinfotransid" aria-expanded="false" style="background: #fff8ec;">
+                                                                        <table class="table table-bordered mb-0">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Sr No.</th>
+                                                                                    <th>Application No.</th>
+                                                                                    <th>CESS Payer Name</th>
+                                                                                    <th>Date of Collection</th>
+                                                                                    <th>Cost of Construction</th>
+                                                                                    <th>CESS Percentage</th>
+                                                                                    <th>Total CESS</th>
+                                                                                    <th>District</th>
+                                                                                    <th>Taluka</th>
+                                                                                    <th>Village</th>
+                                                                                    <th>PIN Code</th>
+                                                                                    <th>Address</th>
+                                                                                    <th>Submitted Date</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+
+                                                                                @foreach (var appitem in Model.Where(x => x.paymentinfotransid == item.paymentinfotransid).ToList())
+                                                                                {
+                                                                                    <tr>
+                                                                                        <td>@appcnt</td>
+                                                                                        <td>
+                                                                                            @appitem.applicationno
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.cesspayername
+                                                                                        </td>
+
+                                                                                        <td>
+                                                                                            @Convert.ToDateTime(appitem.dateofcollection).ToString("dd/MM/yyyy")
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.costofconstruction
+                                                                                        </td>
+                                                                                        <td>
+
+                                                                                            @appitem.cesspercentage
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.totalcess
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.DistrictName
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.TalukaName
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.VillageName
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.pincode
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @appitem.addressineng
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @Convert.ToDateTime(appitem.submitteddate).ToString("dd/MM/yyyy")
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    appcnt++;
+                                                                                }
+                                                                            </tbody>
+
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            maincnt++;
+                                                        }
+
+                                                    }
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                        @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            debugger;
+            $("#navbar ul li a").removeClass('active');
+            $("#menuPaymentSubmission").addClass('active');
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("", msg);
+            }
+        });
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        function CTPMakePayment(paymentinfoTransId) {
+            swal({
+                title: "Are you sure to make a payment?",
+                //text: "You will not be able to recover old password!",
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Proceed it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+                closeOnConfirm: false,
+            },
+                function(isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+                        $.ajax({
+                            type: "get",
+                            url: "/CCApplication/CTPMakePayment",
+                            data: { strPaymentinfoTransId: paymentinfoTransId },
+                            datatype: "json",
+                            traditional: true,
+                            async: false,
+                            success: function(response) {
+                                debugger;
+                                if (response != null && response.errorCode == 0) {
+                                    debugger;
+                                    swal({
+                                        title: "",
+                                        text: response.msg,
+                                        type: "success",
+                                        confirmButtonClass: "btn-primary",
+                                    });
+                                    //, function() {
+                                    //    window.location.href = "\CCCompletedAppForPayment"
+
+                                    //});
+                                }
+                                else {
+                                    swal({
+                                        title: "",
+                                        text: response.msg,
+                                        type: "error",
+                                        confirmButtonClass: "btn-primary",
+                                    });
+                                }
+                            },
+                            failure: function(response) {
+                                swal("Oops", "We couldn't connect to the server!", "error");
+                            },
+                            error: function(response) {
+                                swal("Oops", "We couldn't connect to the server!", "error");
+                            }
+
+                        });
+
+                    }
+
+                });
+        }
+
+    </script>
+}

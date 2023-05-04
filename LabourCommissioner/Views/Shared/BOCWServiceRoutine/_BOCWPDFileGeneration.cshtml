@@ -1,0 +1,152 @@
+﻿@model IEnumerable<AadeshPaymentDetailsModel>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow mb-4">
+
+
+                <form asp-controller="BOCWServiceRoutine" asp-action="SendForDisbursement" method="post">
+                    <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                        <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Payment Disbursement File Generation</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="f-600">શરૂઆત તારીખ</label>
+                                    <input name="fromDate" id="fromDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="f-600">અંતિમ તારીખ</label>
+                                    <input name="toDate" id="toDate" type="text" class="form-control datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center mt-3">
+                                <input type="button" id="btnSearch" value="Search" class="btn btn-secondary">
+                            </div>
+                            @if (Model != null && Model.Count() > 0)
+                            {
+                                <div class="col-md-2 text-center mt-3">
+                                    <button type="submit" id="btnSubmit" class="btn btn-success">
+                                        <i class="bi bi-check-lg me-1"></i>Send For Disbursement
+                                    </button>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-body">
+                            <fieldset class="custom-fieldset">
+                                <legend>Payment Disbursement File Generation</legend>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered text-center table-responsive-md boldIcon">
+                                        <thead>
+                                            @*<tr>
+                                            <th colspan="23" class="text-start">
+                                            <a class="btn btn-success" href="#" onclick="BOCWSendForPayment('')">
+                                            <i class="bi bi-check-lg me-1"></i>Send For Disbursement
+                                            </a>
+                                            </th>
+                                            </tr>*@
+                                            <tr>
+                                                <th scope="col">Sr No.</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Place</th>
+                                                <th scope="col">Application No.</th>
+                                                <th scope="col">Beneficiary Account No</th>
+                                                <th scope="col">IFSC Code</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Board Name</th>
+                                                <th scope="col">Board Account Number From Which Amount Transfer</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Unique Id</th>
+                                                <th scope="col">Scheme Name</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @if (Model != null && Model.Count() > 0)
+                                            {
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @item.srno
+                                                        </td>
+                                                        <td>
+                                                            @item.applicantname
+                                                        </td>
+                                                        <td>
+                                                            @item.districtname
+                                                        </td>
+                                                        <td>
+                                                            @item.applicationno
+                                                        </td>
+                                                        <td>
+                                                            @item.beneficiaryaccountno
+                                                        </td>
+                                                        <td>
+                                                            @item.ifsccode
+                                                        </td>
+                                                        <td>
+                                                            @Convert.ToDecimal(@item.amount).ToString("f2")
+                                                        </td>
+                                                        <td>
+                                                            @item.boardname
+                                                        </td>
+                                                        <td>
+                                                            @item.boardaccountno
+                                                        </td>
+                                                        <td>
+                                                            @item.accounttype
+                                                        </td>
+                                                        <td>
+                                                            @item.uniqueid
+                                                        </td>
+                                                        <td>
+                                                            @item.schemaname
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+    $("#btnSearch").click(function() {
+        var fromDate = $("#fromDate").val();
+        var toDate = $("#toDate").val();
+        LoadPaymentPartialView('BOCWServiceRoutine', 'BOCWPaymentDisbursement', fromDate, toDate);
+    });
+</script>

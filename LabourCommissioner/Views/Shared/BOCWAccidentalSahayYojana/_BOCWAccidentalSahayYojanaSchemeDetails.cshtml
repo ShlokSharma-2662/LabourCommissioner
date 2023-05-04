@@ -1,0 +1,477 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWACSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    //var Message = ViewBag.Message;
+    var ApplicationNo = "";
+    var Totalsahay = ViewBag.TotalSahay;
+    var isFilled = ViewBag.isFilled;
+    int state = 0;
+    if (Model != null)
+    {
+        state = Model.state;
+    }
+    var DOB = ViewBag.DOB;
+    // int val = 7;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWAccidentalSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજના વિગત</legend>
+            <fieldset class="custom-fieldset mb-4">
+                <div class="">
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+
+                            <span id="body_innerbody_label1" class="control-label col-md-3">આકસ્મિક મૃત્યુ/ કાયમી અશક્તતા :</span>
+                            <div class="control-form col-md-3">
+                                <table id="body_innerbody_rblCard" class="aspNetDisabled radio">
+                                    <tbody>
+                                        <tr>
+                                            <td><span><input asp-for="deathdisability" id="rblCard_0" type="radio" name="deathdisability" onchange="GettotalsahaybysahayId(@ServiceId, this.value );" value="11" />મૃત્યુ</span></td>
+                                            <td><span><input asp-for="deathdisability" id="rblCard_1" type="radio" name="deathdisability" onchange="GettotalsahaybysahayId(@ServiceId, this.value );" value="12" />કાયમી અશક્તતા</span></td>
+                                            <td><span><input asp-for="deathdisability" id="rblCard_2" type="radio" name="deathdisability" value="13" />અન્ય </span></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="accidentaldeathdiv">
+                <fieldset class="custom-fieldset mb-4">
+                    <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                        <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                            આકસ્મિક મૃત્યુ વિગત
+                        </span>
+                    </legend>
+                    <div class="form-horizontal form-bordered">
+
+                        <div class="form-group row">
+                            <span id="body_innerbody_label19" class="control-label col-md-3">શ્રમિકની મૃત્યુ પામ્યાની તારીખ  :<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="deathdate" type="text" id="exdate" placeholder="dd/MM/yyyy" onchange="    AgeValidation();" class="form-control dateValidateCls datepicker">
+                                <span asp-validation-for="deathdate" class="text-danger"></span>
+                            </div>
+
+
+
+                            <span id="body_innerbody_reqtxtApplicantdeathtimeage" class="control-label col-md-3">શ્રમિકની મરણ વખતે ઉમર  :<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input id="deathtimeage" asp-for="deathtimeage" class="form-control" readonly>
+
+                            </div>
+                        </div>
+                        <div id="body_innerbody_dv3" class="form-group row">
+                            <span id="body_innerbody_label8" class="control-label col-md-3">મૃત્યુનુ સ્થળ :</span>
+                            <div class="control-form col-md-3">
+                                <textarea asp-for="deathplace" class="form-control"></textarea>
+                                <span asp-validation-for="deathplace" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div id="accidentaldiv">
+                <fieldset class="custom-fieldset mb-4">
+                    <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                        <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                            આકસ્મિક ની વિગત
+                        </span>
+                    </legend>
+                    <div class="form-horizontal form-bordered">
+
+
+                        <div class="form-group row">
+                            <span id="body_innerbody_lblDOD" class="control-label col-md-3">અકસ્માતની તારીખ :<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="dateofaccident" type="text" id="exdate" placeholder="dd/MM/yyyy" class="form-control dateValidateCls datepicker">
+                                <span asp-validation-for="dateofaccident" class="text-danger"></span>
+                            </div>
+                            <span class="control-label col-md-3">
+                                દિવ્યાંગતાનો પ્રકાર :   <span class="text-danger"></span>
+                            </span>
+                            <div class="control-form col-md-3">
+                                <select asp-for="disabilitytypes" id="disabilitytypes" class="form-control">
+                                    <option selected disabled="disabled" hidden>--select--</option>
+                                    <option>સાંભળવાની ક્ષતિ</option>
+                                    <option>ક્રોનિક ન્યુરોલોજીકલ સ્થિતિ</option>
+                                    <option>ઓછી દ્રષ્ટિ</option>
+                                    <option>બૌધ્ધિક અસમર્થતા</option>
+                                    <option>હિમોગ્લોબિનની ઘટેલી માત્રા</option>
+                                    <option>રક્તપિત-સાજા થયેલ</option>
+                                    <option>અન્ય </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-3">
+                                દિવ્યાંગતાની ટકાવારી :   <span class="text-danger"></span>
+                            </span>
+                            <div class="control-form col-md-3">
+                                <select asp-for="disabilitypercentage" id="disabilitytypes" class="form-control">
+                                    <option selected disabled="disabled" hidden>--select--</option>
+                                    <option value="1">૯૦% - ૧૦૦%</option>
+                                    <option value="2">૯૦% થી ઓછું</option>
+                                </select>
+                                @*<input asp-for="disabilitypercentage" type="text" class="form-control">*@
+                                <span asp-validation-for="disabilitypercentage" class="text-danger"></span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </fieldset>
+            </div>
+
+            <fieldset class="custom-fieldset mb-4">
+                <legend>શ્રમિક નું સરનામું:</legend>
+                <div class="form-horizontal form-bordered">
+
+                    @*<div class="form-group row">
+                    @* <span id="body_innerbody_label1" class="control-label col-md-2">વારસદારનુ નામ:</span>
+                    <div class="control-form col-md-2">
+                    <input asp-for="nomineename" name="txtNomineeName" type="text" maxlength="100" id="body_innerbody_txtNomineeName" class="form-control" autocomplete="off">
+                    <span asp-validation-for="nomineename" class="text-danger"></span>
+                    </div>
+                    <span id="body_innerbody_Label1" class="control-label col-md-2">વારસદારનુ નામ:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                    <input asp-for="nomineename" class="form-control">
+                    <span asp-validation-for="nomineename" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-2">વારસદારનુ આધાર કાર્ડ નં:<span class="text-danger">*</span> </span>
+                    <div class="control-form col-md-3">
+                    <input asp-for="nomineeaadharcardno" type="text" class="form-control" maxlength="12">
+                    <span asp-validation-for="nomineeaadharcardno" class="text-danger"></span>
+                    </div>
+                    </div>*@
+
+                    @* <div class="form-group row">
+                    <span id="body_innerbody_label7" class="control-label col-md-2">લાભાર્થીનો શ્રમિક સાથેનો સબંધ :</span>
+                    <div class="control-form col-md-2">
+                    <select asp-for="relation" class="form-control">
+                    <option selected="selected" value="0">-Please Select-</option>
+                    <option value="1">પિતા/માતા</option>
+                    <option value="2">પતિ</option>
+                    <option value="3">પત્ની</option>
+                    <option value="4">પુત્ર</option>
+                    <option value="5">પુત્રી</option>
+                    <option value="6">અન્ય </option>
+                    </select>
+                    </div>
+                    </div>*@
+
+
+
+                    <div class="form-horizontal form-bordered" id="permanentAddress">
+
+                        <div class="form-group row">
+                            <span class="control-label col-md-2">
+                                રાજયનું નામ :  <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <select id="PlistState" onchange="    GetPDistrict(this.value);" asp-for="state" asp-items="@(isfilled == true ? new SelectList(@ViewBag.States, "Value", "Text", selectedValue: @Model.state) : new SelectList(@ViewBag.States, "Value", "Text"))" class="form-control">
+                                    <option value="0">- Please Select -</option>
+                                </select>
+                                <span asp-validation-for="state"></span>
+                            </div>
+
+                            <span class="control-label col-md-2">
+                                જિલ્લાનું નામ :  <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <div id="dvGuj">
+                                    <select id="PlistDistrict" asp-for="district" asp-items="@(isfilled == true ? new SelectList(@ViewBag.District, "Value", "Text", selectedValue: @Model.district) : null)" onchange="GetPTalukaByDistrictId(this.value);" class="form-control">
+                                        <option value="0">- Please Select -</option>
+                                    </select>
+                                    <span asp-validation-for="district" class="text-danger"></span>
+                                </div>
+                                <div id="dvWithoutGuj">
+                                    <input asp-for="pdistrictnameineng" type="text" id="PDistrictNameInEng" class="form-control">
+                                    <span asp-validation-for="pdistrictnameineng" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <span class="control-label col-md-2">
+                                તાલુકાનું નામ: <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <div id="dvGujTaluka">
+                                    <select asp-for="taluka" id="PlistTaluka" asp-items="@(isfilled == true ? new SelectList(@ViewBag.PTaluka, "Value", "Text", selectedValue: @Model.taluka) : null)" onchange="GetPVillageByDistrictIdAndTalukaId(this.value);" class="form-control">
+                                        <option value="0">- Please Select -</option>
+                                    </select>
+                                    <span asp-validation-for="taluka" class="text-danger"></span>
+                                </div>
+                                <div id="dvWithoutGujTaluka">
+                                    <input asp-for="ptalukanameineng" type="text" id="PTalukaNameInEng" class="form-control">
+                                    <span asp-validation-for="ptalukanameineng" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <span class="control-label col-md-2">
+                                ગામનું નામ :  <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <div id="dvGujVillage">
+                                    <select asp-for="village" id="PlistVillage" asp-items="@(isfilled == true ? new SelectList(@ViewBag.PVillage,"Value", "Text",selectedValue:@Model.village) : null)" class="form-control">
+                                        <option value="0">- Please Select -</option>
+                                    </select>
+                                    <span asp-validation-for="village" class="text-danger"></span>
+                                </div>
+                                <div id="dvWithoutGujVillage">
+                                    <input asp-for="pvillagenameineng" type="text" id="PVillageNameInEng" class="form-control">
+                                    <span asp-validation-for="pvillagenameineng" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <span class="control-label col-md-2">
+                                સરનામું : <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <textarea asp-for="address" rows="2" cols="20" id="PAddressInEnglish" class="form-control" style="height: auto !important"></textarea>
+                                <span asp-validation-for="address" class="text-danger"></span>
+                            </div>
+                            <span class="control-label col-md-2">
+                                પીનકોડ :  <span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-2">
+                                <input asp-for="pincode" type="text" maxlength="6" onkeypress="return AllowNumeric(event);" id="PPincode" class="form-control">
+                                <span asp-validation-for="pincode" class="text-danger"></span>
+                            </div>
+                        </div>
+                        @*<div class="form-group row">
+
+
+
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                        ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                        </div>
+
+                        </div>*@
+
+                    </div>
+                </div>
+            </fieldset>
+        </fieldset>
+    </div>
+
+    <fieldset class="custom-fieldset mb-4">
+        <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+            <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+        </legend>
+
+        <partial name="~/Views/Shared/_BankDetails.cshtml" />
+    </fieldset>
+
+
+    <div class="card-footer text-center border">
+        <button class="btn btn-sm btn-primary pl-3 pr-3" type="submit">Save</button>
+        <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+    </div>
+
+
+</form>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        if ('@isfilled' == 'True') {
+
+            if (@state != 7) {
+                $('#dvWithoutGuj').show();
+                $('#dvWithoutGujTaluka').show();
+                $('#dvWithoutGujVillage').show();
+
+                $('#dvGuj').hide();
+                $('#dvGujTaluka').hide();
+                $('#dvGujVillage').hide();
+
+                $('#PlistDistrict').val('0');
+                $('#PlistTaluka').val('0');
+                $('#PlistVillage').val('0');
+            } else {
+                $('#dvWithoutGuj').hide();
+                $('#dvWithoutGujTaluka').hide();
+                $('#dvWithoutGujVillage').hide();
+
+                $('#dvGuj').show();
+                $('#dvGujTaluka').show();
+                $('#dvGujVillage').show();
+            }
+
+        }
+
+        else {
+
+            if (@state != 7) {
+
+
+                $('#dvWithoutGuj').hide();
+                $('#dvWithoutGujTaluka').hide();
+                $('#dvWithoutGujVillage').hide();
+
+                $('#dvGuj').show();
+                $('#dvGujTaluka').show();
+                $('#dvGujVillage').show();
+            }
+            else {
+
+
+                $('#dvWithoutGuj').show();
+                $('#dvWithoutGujTaluka').show();
+                $('#dvWithoutGujVillage').show();
+
+                $('#dvGuj').hide();
+                $('#dvGujTaluka').hide();
+                $('#dvGujVillage').hide();
+
+                $('#PlistDistrict').val('0');
+                $('#PlistTaluka').val('0');
+                $('#PlistVillage').val('0');
+            }
+
+            //GetPDistricts();
+            GetDistrict();
+        }
+    });
+
+    $(document).ready(function() {
+        $("#accidentaldeathdiv").hide();
+        $("#accidentaldiv").hide();
+    });
+
+
+
+    $(function() {
+        $("input[name='deathdisability']").click(function() {
+            if ($("#rblCard_0").is(":checked")) {
+                $("#accidentaldeathdiv").show();
+                $("#accidentaldiv").hide();
+                $("#disabilitytypes").val("");
+            } else if ($("#rblCard_1").is(":checked")) {
+                $("#accidentaldeathdiv").hide();
+                $("#accidentaldiv").show();
+                $("#exdate").val("");
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        if ('@isfilled' == 'True' && $("#rblCard_0").is(":checked")) {
+
+            $("#accidentaldeathdiv").show();
+            $("#accidentaldiv").hide();
+        }
+        else if ('@isfilled' == 'True' && $("#rblCard_1").is(":checked")) {
+            $("#accidentaldeathdiv").hide();
+            $("#accidentaldiv").show();
+        }
+    });
+
+    function GettotalsahaybysahayId(serviceid, deathdisability) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/BOCWAccidentalSahayYojana/GettotalsahaybysahayId",
+            data: { serviceid: serviceid, deathdisability: deathdisability },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                console.log(data);
+                var totalsahay = data.data.result.totalsahay;
+                $('#Totalsahay').val(totalsahay);
+
+            }
+        });
+    }
+
+    function AgeValidation() {
+        debugger;
+
+        var today = new Date('@DOB');
+        //var today = ;
+        //var birthDate = new Date($('#dob').val());
+        var dateArray = $('#exdate').val().split('/');
+        var date = dateArray[2] + "-" + dateArray[1] + "-" + dateArray[0];
+        var birthDate = new Date(date);
+        var age = birthDate.getFullYear() - today.getFullYear();
+        // var isDisabled = $("radioDiv input[type='radio']:checked").val();
+        //if (isDisabled === "1" && age > 30 && e.keyCode !== 46 && e.keyCode !== 8) {
+        //    e.preventDefault();
+        //    $("#age").val(age);
+        //}
+        $("#deathtimeage").val(age);
+
+        var deathtimeage = $("#deathtimeage").val();
+        var msg = '@Html.Raw(@ViewBag.Message)';
+
+        //if (parseInt(age) < 1) {
+        //    // alert(msg);
+        //    debugger;
+        //    $("#body_innerbody_reqtxtApplicantAge").css("display", "block").html('વિદ્યાર્થીની ઉંમર ૧ અને ૩૦ વર્ષની વચ્ચે હોવી જોઈએ.');
+        //    return false;
+        //}
+
+        //if (parseInt(deathtimeage) > 60) {
+        //    // alert(msg);
+        //    ShowDynamicSwalAlert("", msg);
+        //    $("#exdate").val('');
+        //    $("#deathtimeage").val('');
+        //    return false;
+        //}
+        //else if (parseInt(deathtimeage) < 18) {
+        //    ShowDynamicSwalAlert("", msg);
+        //    $("#exdate").val('');
+        //    $("#deathtimeage").val('');
+        //    return false;
+        //}
+    }
+
+
+
+</script>
+
+

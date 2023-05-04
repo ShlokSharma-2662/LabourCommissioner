@@ -1,0 +1,960 @@
+﻿@using static LabourCommissioner.Abstraction.DataModels.ServiceMaster
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using System.Security.Claims
+@model IEnumerable<ApplicationDetailsModel>
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    ViewData["Title"] = "Application Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var i = 1;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ControllerName = "";
+    var ActionName = "";
+    var ServiceId = ViewBag.serviceId;
+    var ErrorCode = ViewBag.ErrorCode;
+    var isschemeopen = ViewBag.isschemeopen;
+    var isreverted = ViewBag.isreverted;
+    string ssdsd = (string)@TempData["Message"];
+
+    string UserType = "";
+    UserType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value;
+
+    //if (@Model != null && Model.Count() > 0)
+    //{
+    //    ControllerName = Convert.ToString(@Model.Select(s => s.ControllerName).FirstOrDefault());
+    //    ActionName = Convert.ToString(@Model.Select(s => s.ActionName).FirstOrDefault());
+    //}
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@ViewBag.SchemeName</h2>
+</section>
+<main id="main">
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                            @*શિક્ષણ સહાય/ પી.એચ.ડી યોજના - *@
+                            @ViewBag.SchemeName
+
+                            @*@foreach (var item in Model)
+                            {
+                            <h1 class="text-white">@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h1>
+                            }*@
+                            @if ((((@ServiceId > 0 && @ServiceId != 32) && UserType != "4") || (UserType == "4" && ServiceId == 36)) && (isschemeopen == true))
+                            {
+                                <span>
+                                    <a class="btn btn-primary"
+                                       onclick="return GetCount(@ErrorCode);"
+                                   asp-controller="@ControllerName"
+                                   asp-action="@ActionName"
+                                   asp-route-strid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(ServiceId.ToString()))">
+                                        <i class="bi bi-pencil"></i> Apply
+                                    </a>
+                                </span>
+                            }
+                        </div>
+                        <div class="card-body">
+                            @if (UserType == "4" && ServiceId == 12 && ServiceId != 24 && ServiceId != 34)
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                @* <th>Application Id</th>*@
+                                                <th>Application Date</th>
+                                                <th>Name</th>
+                                                @* <th>Name in Gujarati</th>*@
+                                                <th>District Name</th>
+                                                @* <th>District Name in Gujarati</th>*@
+                                                <th>Taluka Name</th>
+                                                @* <th>Taluka Name Gujarati</th>*@
+                                                <th>Current Address</th>
+                                                @* <th>Current Address in Gujarati</th>*@
+                                                <th>Mobile No.</th>
+                                                <th>Download Application Form</th>
+                                                <th>Schedule Time</th>
+                                                <th>Upload Application Report</th>
+                                                <th>From Date</th>
+                                                <th>To Date</th>
+                                                <th>From Time</th>
+                                                <th>To Time</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.ApplicationId
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.Name
+                                                        </td>
+                                                        @*<td scope="col">
+                                            @item.NameinGujarati
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.DistrictName
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.DistrictNameGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.TalukaName
+                                                        </td>
+                                                        @*  <td scope="col">
+                                            @item.TalukaNameGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.CAddressInEng
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.CAddressInGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.MobileNo
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+
+                                                            <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                <i class='bx bxs-file-pdf'></i>
+                                                            </a>
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            <a class="text-white" href="#" onclick="ViewHospitalScheduleTimePopUp('@item.ApplicationId','@item.ApplicationNo','@item.ServiceId')">
+                                                                <i class="bi bi-clock-history h4 text-warning"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            <a class="text-white" href="#" onclick="UploadApplicationReport('@item.ApplicationId','@item.ApplicationNo','@item.ServiceId')">
+                                                                <i class="bi bi-file-earmark-arrow-up-fill h4 text-warning"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.fromdate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.todate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @if (item.fromtime == null)
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.fromtime
+                                                            }
+                                                        </td>
+                                                        <td scope="col">
+                                                            @if (item.totime == null)
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.totime
+                                                            }
+                                                        </td>
+                                                        @*<td class="text-center" scope="col">
+                                            <a class="text-info" href="#" target="_blank" style="display :inline;">
+                                            <i class='bx bx-file'></i>
+                                            </a>
+                                            </td>*@
+                                                        @* <td class="text-center" scope="co   l">
+                                            <span id="ContentPlaceHolder1_rptServices_Label1_0" class="badge bg-danger">Pending</span>
+                                            </td>*@
+
+
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+
+                            else if (ServiceId != 24 && ServiceId != 34 && ServiceId != 36)
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                @* <th>Application Id</th>*@
+                                                <th>Application Date</th>
+                                                <th>Name</th>
+                                                @* <th>Name in Gujarati</th>*@
+                                                <th>District Name</th>
+                                                @* <th>District Name in Gujarati</th>*@
+                                                <th>Taluka Name</th>
+                                                @* <th>Taluka Name Gujarati</th>*@
+                                                <th>Current Address</th>
+                                                @* <th>Current Address in Gujarati</th>*@
+                                                <th>Mobile No.</th>
+                                                <th>Application Status</th>
+                                                <th>Remarks</th>
+                                                <th>Action</th>
+                                                <th>Download Application Form</th>
+                                                @if (ServiceId == 12)
+                                                {
+                                                    <th>From Date</th>
+                                                    <th>To Date</th>
+                                                    <th>From Time</th>
+                                                    <th>To Time</th>
+                                                }
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.ApplicationId
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.Name
+                                                        </td>
+                                                        @*<td scope="col">
+                                            @item.NameinGujarati
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.DistrictName
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.DistrictNameGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.TalukaName
+                                                        </td>
+                                                        @*  <td scope="col">
+                                            @item.TalukaNameGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.CAddressInEng
+                                                        </td>
+                                                        @* <td scope="col">
+                                            @item.CAddressInGuj
+                                            </td>*@
+                                                        <td scope="col">
+                                                            @item.MobileNo
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationStatus
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.Remarks
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (@item.EditVisible == 1)
+                                                            {
+                                                                if (ViewBag.OrgServiceId == 32)
+                                                                {
+                                                                    <a asp-controller="@ControllerName" asp-action="@ActionName" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strOrgServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))">Edit</a>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a asp-controller="@ControllerName" asp-action="@ActionName" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))">Edit</a>
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+
+                                                                if (ServiceId == 32)
+                                                                {
+
+                                                                    if (@item.isclaimsubmitted == true)
+                                                                    {
+                                                                        <span>-</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <a asp-controller="@ControllerName" asp-action="AppPersonalDetails" asp-route-strClaimApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strOrgServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))">Claim</a>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <span>-</span>
+                                                                }
+                                                            }
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (@item.EditVisible == 0)
+                                                            {
+                                                                if (ServiceId == 32)
+                                                                {
+                                                                    @if (item.isclaimsubmitted == true)
+                                                                    {
+                                                                        <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                            <i class='bx bxs-file-pdf'></i>
+                                                                        </a>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span>-</span>
+                                                                    }
+                                                                    @*
+                                                <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                <i class='bx bxs-file-pdf'></i>
+                                                </a>*@
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                        <i class='bx bxs-file-pdf'></i>
+                                                                    </a>
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                <span></span>
+                                                            }
+                                                        </td>
+                                                        @if (ServiceId == 12)
+                                                        {
+                                                            <td scope="col">
+                                                                @item.fromdate
+                                                            </td>
+                                                            <td scope="col">
+                                                                @item.todate
+                                                            </td>
+                                                            <td scope="col">
+                                                                @item.fromtime
+                                                            </td>
+                                                            <td scope="col">
+                                                                @item.totime
+                                                            </td>
+                                                        }
+                                                        @*<td class="text-center" scope="col">
+                                            <a class="text-info" href="#" target="_blank" style="display :inline;">
+                                            <i class='bx bx-file'></i>
+                                            </a>
+                                            </td>*@
+                                                        @* <td class="text-center" scope="co   l">
+                                            <span id="ContentPlaceHolder1_rptServices_Label1_0" class="badge bg-danger">Pending</span>
+                                            </td>*@
+
+
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                            else if (UserType == "4" && ServiceId != 34 && ServiceId != 12 && ServiceId != 36)
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                <th>Application Date</th>
+                                                <th>Company Name</th>
+                                                <th>Company Labour Welfare Account Number</th>
+                                                <th>Company District</th>
+                                                <th>Total Employees For Checkup</th>
+                                                <th>Download Application Form</th>
+                                                <th>Schedule Time</th>
+                                                <th>From Date</th>
+                                                <th>To Date</th>
+                                                <th>From Time</th>
+                                                <th>To Time</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.CompanyName
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.lwbaccountno
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.district
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.totalemployeesforcheckup
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+
+                                                            <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                <i class='bx bxs-file-pdf'></i>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a class="text-white" href="#" onclick="ViewHospitalScheduleTimePopUp('@item.ApplicationId','@item.ApplicationNo','@item.ServiceId')">
+                                                                <i class="bi bi-clock-history h4 text-warning"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.fromdate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.todate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.fromtime
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.totime
+                                                        </td>
+                                                        @*<td class="text-center" scope="col">
+                                            <a class="text-info" href="#" target="_blank" style="display :inline;">
+                                            <i class='bx bx-file'></i>
+                                            </a>
+                                            </td>*@
+                                                        @* <td class="text-center" scope="co   l">
+                                            <span id="ContentPlaceHolder1_rptServices_Label1_0" class="badge bg-danger">Pending</span>
+                                            </td>*@
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                            else if (UserType == "4" && ServiceId == 36 && ServiceId != 34 && ServiceId != 12)
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                <th>Application Date</th>
+                                                <th>Hospital Name</th>
+                                                <th>Hospital Mobile No.</th>
+                                                <th>Hospital Email</th>
+                                                <th>Download Application Form</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.hospitalname
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.hospitalmobile
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.hospitalemailid
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                <i class='bx bxs-file-pdf'></i>
+                                                            </a>
+                                                        </td>
+                                                         <td class="text-center" scope="col">
+                                                            @if (item.isemployeeclaimed == false)
+                                                            {
+                                                                <a asp-controller="@ControllerName" asp-action="AppPersonalDetails" asp-route-strClaimApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strOrgServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))">Claim</a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                        </td>
+                                                        @*<td class="text-center" scope="col">
+                                            <a class="text-info" href="#" target="_blank" style="display :inline;">
+                                            <i class='bx bx-file'></i>
+                                            </a>
+                                            </td>*@
+                                                        @* <td class="text-center" scope="co   l">
+                                            <span id="ContentPlaceHolder1_rptServices_Label1_0" class="badge bg-danger">Pending</span>
+                                            </td>*@
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                            else if (ServiceId == 34 && ServiceId != 12)
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                <th>Application Date</th>
+                                                <th>Company Name</th>
+                                                <th>Company Labour Welfare Account Number</th>
+                                                <th>Company District</th>
+                                                <th>Total Employees For Checkup</th>
+                                                <th>Action</th>
+                                                <th>Download Application Form</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.CompanyName
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.lwbaccountno
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.district
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.totalemployeesforcheckup
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (@item.EditVisible == 1)
+                                                            {
+                                                                if (ViewBag.OrgServiceId == 34)
+                                                                {
+                                                                    <a asp-controller="@ControllerName" asp-action="@ActionName" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strOrgServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))">Edit</a>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a asp-controller="@ControllerName" asp-action="@ActionName" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))">Edit</a>
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+
+                                                                if (ServiceId == 34)
+                                                                {
+                                                                    if (@item.isclaimsubmitted == true)
+                                                                    {
+                                                                        <span>-</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <a asp-controller="@ControllerName" asp-action="AppPersonalDetails" asp-route-strClaimApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strOrgServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))" asp-route-lwbaccountno="@item.lwbaccountno.ToString()">Claim</a>
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    <span>-</span>
+                                                                }
+                                                            }
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (item.isclaimsubmitted == true)
+                                                            {
+                                                                <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.claim_applicationid.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ViewBag.OrgServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                    <i class='bx bxs-file-pdf'></i>
+                                                                </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span>-</span>
+                                                            }
+
+                                                        </td>
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped DataTable table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Application No.</th>
+                                                <th>Application Date</th>
+                                                <th>Company Name</th>
+                                                <th>Company Labour Welfare Account Number</th>
+                                                <th>Company District</th>
+                                                <th>Total Employees For Checkup</th>
+                                                <th>Application Status</th>
+                                                <th>Remarks</th>
+                                                <th>Action</th>
+                                                <th>Download Application Form</th>
+                                                <th>From Date</th>
+                                                <th>To Date</th>
+                                                <th>From Time</th>
+                                                <th>To Time</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @if (Model != null)
+                                            {
+
+                                                @foreach (ApplicationDetailsModel item in Model)
+                                                {
+                                                    <tr>
+                                                        <td scope="col">
+                                                            @i
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationNo
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationDate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.CompanyName
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.lwbaccountno
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.district
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.totalemployeesforcheckup
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.ApplicationStatus
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.Remarks
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (@item.EditVisible == 1)
+                                                            {
+
+                                                                <a asp-controller="@ControllerName" asp-action="@ActionName" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))">Edit</a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (@item.EditVisible == 0)
+                                                            {
+                                                                <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ApplicationId.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                    <i class='bx bxs-file-pdf'></i>
+                                                                </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span></span>
+                                                            }
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.fromdate
+                                                        </td>
+                                                        <td scope="col">
+                                                            @item.todate
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (item.fromtime == null)
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.fromtime
+                                                            }
+                                                        </td>
+                                                        <td class="text-center" scope="col">
+                                                            @if (item.totime == null)
+                                                            {
+                                                                <span>-</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                @item.totime
+                                                            }
+                                                        </td>
+                                                        @*<td class="text-center" scope="col">
+                                            <a class="text-info" href="#" target="_blank" style="display :inline;">
+                                            <i class='bx bx-file'></i>
+                                            </a>
+                                            </td>*@
+                                                        @* <td class="text-center" scope="co   l">
+                                            <span id="ContentPlaceHolder1_rptServices_Label1_0" class="badge bg-danger">Pending</span>
+                                            </td>*@
+
+
+                                                    </tr>
+                                                    i++;
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="ViewHospitalSchedulePopup" tabindex="-1" aria-labelledby="viewHospitalSchedulePopup" aria-hidden="true">
+        <div id="_divHospitalScheduleContent"></div>
+    </div>
+</main>
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+
+            var eNExpMessage = '@Html.Raw(@ViewBag.eNExpMessage)';
+
+
+
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("Application Submitted..!!", msg);
+            }
+
+
+
+            $('#headerchkapprovereject').change(function () {
+                debugger;
+                if (this.checked) {
+                    $(".clschkApproveReject").prop("checked", true);
+                }
+                else {
+                    $(".clschkApproveReject").prop("checked", false);
+                }
+
+            });
+        });
+
+        function GetCount(ErrorCode) {
+            debugger;
+
+            var eNExpMessage = '@Html.Raw(@ViewBag.eNExpMessage)';
+            if (eNExpMessage != null && eNExpMessage != "") {
+                CheckENirmanCardExpiry(eNExpMessage);
+                return false;
+            }
+
+
+            var msg = '@Html.Raw(@ViewBag.Message)';
+            if (ErrorCode == 1) {
+                ShowDynamicSwalAlert("", msg);
+                return false;
+            }
+        }
+
+
+        function CheckENirmanCardExpiry(eNExpMessage) {
+            swal({
+                title: "Your e-Nirman Card No. is expire.Do you want to update it?",
+                text: eNExpMessage,
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Update it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+            },
+                function (isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+                        $.ajax({
+                            type: "get",
+                            url: "/Home/UpdateeNirmanCardExpiryDate",
+                            datatype: "json",
+                            traditional: true,
+                            async: false,
+                            success: function (data) {
+                            }
+
+                        }).done(function (data) {
+                            debugger;
+                            if (data != null && data.data.errorCode == 0) {
+                                debugger;
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "success",
+                                    confirmButtonClass: "btn-primary",
+                                }, function () {
+                                    window.location.reload();
+                                });
+                            }
+                            else {
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "error",
+                                    confirmButtonClass: "btn-primary",
+                                });
+                            }
+                        }).error(function (data) {
+                            debugger;
+                            swal("Oops", "We couldn't connect to the server!", "error");
+                        });
+
+
+                    }
+                });
+        }
+
+        function ViewHospitalScheduleTimePopUp(ApplicationId, ApplicationNo, ServiceId) {
+            debugger;
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.applicationno = ApplicationNo;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/ViewHospitalScheduleTimePopUp",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function (response) {
+                    debugger;
+                    $("#ViewHospitalSchedulePopup").find("#_divHospitalScheduleContent").html(response);
+                    $("#ViewHospitalSchedulePopup").modal('show');
+                    //GetApplicationHistory(ApplicationId);
+                },
+                failure: function (response) {
+                    //alert(response.responseText);
+                },
+                error: function (response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+        function UploadApplicationReport(ApplicationId, ApplicationNo, ServiceId) {
+            debugger;
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.applicationno = ApplicationNo;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/UploadApplicationReport",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function (response) {
+                    debugger;
+                    $("#ViewHospitalSchedulePopup").find("#_divHospitalScheduleContent").html(response);
+                    $("#ViewHospitalSchedulePopup").modal('show');
+                    //GetApplicationHistory(ApplicationId);
+                },
+                failure: function (response) {
+                    //alert(response.responseText);
+                },
+                error: function (response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+    </script>
+}

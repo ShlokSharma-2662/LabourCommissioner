@@ -1,0 +1,403 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBTSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var enirmancardno = ViewBag.EnirmanCardNo;
+    var Totalsahay = ViewBag.TotalSahay;
+    var modelCnt = 1;
+    var temp = modelCnt;
+
+    if (@Model != null && @Model.lstCompanyWorkerDetails != null)
+    {
+        modelCnt = @Model.lstCompanyWorkerDetails.Count();
+    }
+}
+<style>
+    .rb_disabled {
+        pointer-events: none;
+    }
+
+</style>
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBTabibiSahay" onsubmit="    return countRows();" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />
+    <input type="hidden" id="totalemployeesforcheckup" asp-for="totalemployeesforcheckup" />
+    <input type="hidden" id="totalsahay" asp-for="totalsahay" value="@Totalsahay" />
+    <input type="hidden" id="final_totalsahay" asp-for="finaltotalsahay" />
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+
+        <fieldset>
+            <legend>શ્રમયોગી તથા તેના આશ્રિતોની વિગત </legend>
+            <table class="table bg-white table-bordered text-center" id="tblWorker">
+
+                <th class="w-25">
+                    <span class="control-label">શ્રમયોગી નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">પુરૂષ/મહિલા<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">જન્મ તારીખ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ઉંમર વર્ષ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સન્માન પોર્ટલ કર્મચારી નોંધણી નંબર<span class="text-danger">*</span></span>
+                </th>
+
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstCompanyWorkerDetails != null && Model.lstCompanyWorkerDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstCompanyWorkerDetails.Count; i++)
+                    {
+                        string IsValidate = "false";
+
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeleted"+i)" asp-for="@Model.lstCompanyWorkerDetails[i].isDeleted" />
+                                <input type="hidden" asp-for="@Model.lstCompanyWorkerDetails[i].workerdetailsid" />
+
+                                <select asp-for="@Model.lstCompanyWorkerDetails[i].registrationid" asp-items="@(new SelectList(@ViewBag.EmployeeDetails, "Value", "Text", selectedValue:@ViewBag.EmployeeDetailsID))" onchange="GetglwbTSYEmployeeDetails(this,@i)" class="form-control" id="@("lstCompanyWorkerDetails"+(@i)+"__registrationid")">
+                                </select>
+                                @*<span id="@("lstCompanyWorkerDetails_registrationid_error"+(@i))" class="text-danger"></span>*@
+
+                            </td>
+
+                            <td class="rb_disabled">
+                                <input asp-for="@Model.lstCompanyWorkerDetails[i].gender" id="@("lstCompanyWorkerDetails"+(@i)+"__male")" type="radio" value="0" />પુરૂષ
+                                <input asp-for="@Model.lstCompanyWorkerDetails[i].gender" id="@("lstCompanyWorkerDetails"+(@i)+"__female")" type="radio" value="1" />મહિલા<br />
+
+                                <span asp-validation-for="@Model.lstCompanyWorkerDetails[i].gender" class="text-danger"></span>
+                                <span id="lstCompanyWorkerDetails_gender_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <input asp-for=@Model.lstCompanyWorkerDetails[i].DateOfBirth type="text" readonly class="form-control">
+                                <span asp-validation-for="@Model.lstCompanyWorkerDetails[i].DateOfBirth" class="text-danger"></span>
+                                <span id="lstCompanyWorkerDetails_DOB_error0" class="text-danger"></span>
+                            </td>
+                            <td>
+                                <input asp-for=@Model.lstCompanyWorkerDetails[i].ageyear type="text" readonly class="form-control ">
+                                <span asp-validation-for="@Model.lstCompanyWorkerDetails[i].ageyear" class="text-danger"></span>
+                                <span id="lstCompanyWorkerDetails_age_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <input asp-for=@Model.lstCompanyWorkerDetails[i].sanmanregistrationno type="text" readonly class="form-control">
+                                <span asp-validation-for="@Model.lstCompanyWorkerDetails[i].sanmanregistrationno" class="text-danger"></span>
+                                <span id="lstCompanyWorkerDetails_sanmanregistrationno_error0" class="text-danger"></span>
+
+                            </td>
+                            <td><input type="button" value="Remove" onclick="RemoveTextBox(this,'@i');"></td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td id="td0">
+                            <input type="hidden" id="@("hdnIsDeleted0")" asp-for="@Model.lstCompanyWorkerDetails[0].isDeleted" />
+                            <input type="hidden" asp-for="@Model.lstCompanyWorkerDetails[0].workerdetailsid" />
+                            <select asp-for="@Model.lstCompanyWorkerDetails[0].registrationid" onchange="GetglwbTSYEmployeeDetails(this,0)" asp-items="@(new SelectList(@ViewBag.EmployeeDetails, "Value", "Text", selectedValue:@ViewBag.EmployeeDetailsID))" class="form-control" id="@("lstCompanyWorkerDetails"+(@modelCnt - 1)+ "__registrationid")">
+                            </select>
+                            @*<span asp-validation-for="@Model.lstCompanyWorkerDetails[0].registrationid" class="text-danger"></span>*@
+                            <span id="lstCompanyWorkerDetails_registrationid_error0" class="text-danger"></span>
+
+                        </td>
+
+                        <td class="rb_disabled">
+
+                            <input asp-for="@Model.lstCompanyWorkerDetails[0].gender" id="@("lstCompanyWorkerDetails_"+(@modelCnt - 1)+"__male")" type="radio" value="0" />પુરૂષ
+                            <input asp-for="@Model.lstCompanyWorkerDetails[0].gender" id="@("lstCompanyWorkerDetails_"+(@modelCnt - 1)+"__female")" type="radio" value="1" />મહિલા<br />
+
+                            <span asp-validation-for="@Model.lstCompanyWorkerDetails[0].gender" class="text-danger"></span>
+                            <span id="lstCompanyWorkerDetails_gender_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for=@Model.lstCompanyWorkerDetails[0].DateOfBirth type="text" id="lstCompanyWorkerDetails_0__DateOfBirth" readonly class="form-control">
+                            <span asp-validation-for="@Model.lstCompanyWorkerDetails[0].DateOfBirth" class="text-danger"></span>
+                            <span id="lstCompanyWorkerDetails_DOB_error0" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for=@Model.lstCompanyWorkerDetails[0].ageyear type="text" id="lstCompanyWorkerDetails_0__ageyear" readonly class="form-control">
+                            <span asp-validation-for="@Model.lstCompanyWorkerDetails[0].ageyear" class="text-danger"></span>
+                            <span id="lstCompanyWorkerDetails_age_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for=@Model.lstCompanyWorkerDetails[0].sanmanregistrationno id="lstCompanyWorkerDetails_0__sanmanregistrationno" type="text" readonly class="form-control">
+                            <span asp-validation-for="@Model.lstCompanyWorkerDetails[0].sanmanregistrationno" class="text-danger"></span>
+                            <span id="lstCompanyWorkerDetails_sanmanregistrationno_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input type='button' value='Remove' onclick='RemoveTextBox(this,0);'>
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="Addbutton" type="button" value="Add" />
+                </span>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3" type="submit">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+<script type="text/javascript">
+    debugger;
+    var DataList = [];
+    var RegId = [];
+    var ttlCount = @modelCnt;
+    $(document).ready(function() {
+        debugger;
+        var statesAvailable = @Html.Raw(Json.Serialize(@ViewBag.EmployeeDetails));
+        $("#Addbutton").click(function() {
+            debugger;
+            var flag = false;
+            flag = ValidateControl(ttlCount);
+            if (flag) {
+                var strHTML = "";
+                strHTML += "<tr id='tr" + ttlCount + "'>";
+                strHTML += "<td id='td" + ttlCount + "'><input type='hidden' id='hdnIsDeleted" + ttlCount + "' name='lstCompanyWorkerDetails[" + ttlCount + "].isDeleted'>";
+                strHTML += "<input type='hidden' name='lstCompanyWorkerDetails[" + ttlCount + "].isDeleted'>";
+                strHTML += "<select name='lstCompanyWorkerDetails[" + ttlCount + "].registrationid' id='lstCompanyWorkerDetails" + ttlCount + "__registrationid'  onchange='GetglwbTSYEmployeeDetails(this," + ttlCount + ")' class='form-control employeeddl" + ttlCount + " ' >";
+                strHTML += "<span id='lstCompanyWorkerDetails_registrationid_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td class='rb_disabled'><input name='lstCompanyWorkerDetails[" + ttlCount + "].gender' id='lstCompanyWorkerDetails_" + ttlCount + "__male'   type='radio' value='0'>પુરૂષ";
+                strHTML += "<input name='lstCompanyWorkerDetails[" + ttlCount + "].gender' id='lstCompanyWorkerDetails_" + ttlCount + "__female'   type='radio' value='1'>મહિલા";
+                strHTML += "<span id='lstCompanyWorkerDetails_gender_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstCompanyWorkerDetails[" + ttlCount + "].DateOfBirth' id='lstCompanyWorkerDetails_" + ttlCount + "__DateOfBirth'  type='text'  readonly class='form-control '>";
+                strHTML += "<span id='lstCompanyWorkerDetails_DateOfBirth_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstCompanyWorkerDetails[" + ttlCount + "].ageyear' id='lstCompanyWorkerDetails_" + ttlCount + "__ageyear'  type='text' class='form-control ' readonly maxlength='15'>";
+                strHTML += "<span id='lstCompanyWorkerDetails_ageyear_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstCompanyWorkerDetails[" + ttlCount + "].sanmanregistrationno' id='lstCompanyWorkerDetails_" + ttlCount + "__sanmanregistrationno' type='text' readonly class='form-control'>";
+                strHTML += "<span id='lstCompanyWorkerDetails_sanmanregistrationno_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                //strHTML += "<td></td>";
+                strHTML += "<td><input type='button' value='Remove' onclick='RemoveTextBox(this," + ttlCount + ");'></td>";
+                strHTML += "</tr>";
+
+                ttlCount++;
+
+            }
+            $("#tblWorker").append(strHTML);
+
+            debugger;
+            GetLabourAccount();
+
+            function GetLabourAccount() {
+                debugger;
+                $.ajax({
+                    type: "get",
+                    url: "/GLWBTabibiSahay/BindEmployee",
+                    datatype: "json",
+                    traditional: true,
+                    success: function(data) {
+                        debugger;
+                        var LabourAccountList = "";
+                        LabourAccountList = LabourAccountList + '<option value="" >--Select--</option>';
+                        for (var i = 0; i < data.data.result.length; i++) {
+                            if (data.data.result[i].value != selectedVal) {
+                                LabourAccountList = LabourAccountList + '<option value=' + data.data.result[i].value + '>' + data.data.result[i].text + '</option>';
+                            }
+                            var item_ID = ttlCount - 1;
+                            $('#lstCompanyWorkerDetails' + item_ID + '__registrationid').html(LabourAccountList);
+
+                        }
+                        // Code For Removing Already Selected Values
+                        for (var i = 0; i < ttlCount; i++) {
+
+                            if ($("#hdnIsDeleted" + i).val() == false) {
+                                var selectedVal = $('#lstCompanyWorkerDetails' + i + '__registrationid').find(":selected").val();
+                                $('#lstCompanyWorkerDetails' + item_ID + '__registrationid option[value=' + selectedVal + ']').remove();
+                            }
+                        }
+                    }
+                });
+            }
+            var item_ID = ttlCount - 1;
+            $('#lstCompanyWorkerDetails' + item_ID + '__registrationid').select2();
+        });
+    });
+    function GetLabourAccount() {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/GLWBTabibiSahay/BindEmployee",
+            //data: { DepartmentId: $('#DepartmentId').val() },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var LabourAccountList = "";
+                LabourAccountList = LabourAccountList + '<option value="">--Select--</option>';
+                for (var i = 0; i < data.data.result.length; i++) {
+
+                    LabourAccountList = LabourAccountList + '<option value=' + data.data.result[i].value + '>' + data.data.result[i].text + '</option>';
+                }
+                var item_ID = ttlCount - 1;
+                $('#lstCompanyWorkerDetails' + item_ID + "__registrationid").html(LabourAccountList);
+            }
+        });
+    }
+    $(document).ready(function() {
+        debugger;
+        if ('@isfilled' == 'False') {
+            GetLabourAccount();
+        }
+    });
+
+    function GetglwbTSYEmployeeDetails(event, itemId) {
+        debugger;
+        var registrationid = event.id;
+        var employeeDetails = $("#" + registrationid + "").val();
+        if (employeeDetails != "") {
+
+            $.ajax({
+                type: "get",
+                url: "/GLWBTabibiSahay/GetGLWBEmployeeDetailsbyRegistrationid",
+                data: { registrationid: employeeDetails },
+                success: function(response) {
+                    debugger;
+
+                    //$('#lstCompanyWorkerDetails' + itemId + "__registrationid").attr("disabled","disabled");
+
+
+
+                    $("#lstCompanyWorkerDetails_" + itemId + "__gender").val(response.data.result[0].gender);
+                    if (response.data.result[0].gender == '0')
+                        $("#lstCompanyWorkerDetails_" + itemId + "__male").prop("checked", true);
+                    else
+                        $("#lstCompanyWorkerDetails_" + itemId + "__female").prop("checked", true);
+
+                    $("#lstCompanyWorkerDetails_" + itemId + "__DateOfBirth").val(response.data.result[0].strdateofbirth);
+                    $("#lstCompanyWorkerDetails_" + itemId + "__ageyear").val(response.data.result[0].age);
+                    $("#lstCompanyWorkerDetails_" + itemId + "__sanmanregistrationno").val(response.data.result[0].registrationno);
+                    $("#lstCompanyWorkerDetails" + itemId + "__registrationid-error").css("display", "none");
+                    $("#td" + itemId).addClass("rb_disabled");
+
+                }
+            });
+        }
+    }
+    function ValidateControl(rowCnt) {
+
+        for (var i = 0; i < rowCnt; i++) {
+            if ($("#hdnIsDeleted" + i).val() == 'False' || $("#hdnIsDeleted" + i).val() == undefined || $("#hdnIsDeleted" + i).val() == '') {
+                $("#lstCompanyWorkerDetails_registrationid_error" + i + "").html("");
+
+
+                if ($("#lstCompanyWorkerDetails" + i + "__registrationid").val() == 0) {
+                    $("#lstCompanyWorkerDetails_registrationid_error" + i + "").html("શ્રમયોગીનુ નામ પસંદ કરો");
+                    return false;
+                }
+
+            }
+        }
+        return true;
+    }
+    function isEmployeeSelected() {
+        debugger
+        var employee = ttlCount++;
+        $("#totalemployeesforcheckup").val(employee)
+    }
+    $(document).ready(function() {
+        debugger;
+        for (var i = 0; i < @modelCnt; i++) {
+            $("#lstCompanyWorkerDetails" + i + "__registrationid").select2();
+        }
+    });
+    function RemoveTextBox(button, rowId) {
+        debugger;
+        $("#hdnIsDeleted" + rowId).val(true);
+        $(button).parent().parent().css("display", "none");
+        var removedVal = $('#lstCompanyWorkerDetails' + rowId + '__registrationid').find(":selected").val();
+        var removedText = $('#lstCompanyWorkerDetails' + rowId + '__registrationid').find(":selected").text();
+        for (var i = 0; i < ttlCount; i++) {
+            if ($("#hdnIsDeleted" + i).val() == false) {
+                $('#lstCompanyWorkerDetails' + i + '__registrationid').append('<option value=' + removedVal + '>' + removedText + '</option>');
+            }
+        }
+
+    }
+
+    function countRows() {
+        debugger;
+        var table = $("#tblWorker");
+        //var rowCount = table.tBodies[0].rows.length;
+        var rowCount = $('#tblWorker tr').length;
+        rowCount = rowCount - 1;
+        var flag = 0;
+        var validationFlag = 0;
+        for (var i = 0; i < rowCount; i++) {
+            if ($("#hdnIsDeleted" + i).val() == false) {
+                flag = flag + 1;
+            }
+        }
+        if (flag > 0) {
+            validationFlag = ValidateControl(ttlCount);
+            if (validationFlag) {
+                return true;
+            }
+            else {
+                swal({
+                    icon: "error",
+                    title: "Error!",
+                    type: "error",
+                    text: 'You must add valid details of Workers.'
+                    
+                });
+                return false;
+            }
+
+        }
+        else {
+            swal({
+                title: "Error!",
+                text: 'You must add Details of one Worker.',
+                type: "error",
+                icon: "error",
+            });
+            return false;
+
+        }
+    }
+
+</script>
+
+

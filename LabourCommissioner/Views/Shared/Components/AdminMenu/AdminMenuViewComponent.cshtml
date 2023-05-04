@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AdminMenu>
+@{
+    var hodid = ViewBag.hodid;
+}
+@if (Model != null && Model.Count() > 0)
+{
+    @foreach (var menuItem in Model.Where(x => x.parentmenuid == 0))
+    {
+        string menuId = "menu" + Convert.ToString(@menuItem.title).Replace(" ", "");
+        <div class="container">
+
+            <ul>
+                <li class="dropdown">
+
+
+                    @if (Convert.ToString(menuItem.controllername) != null && Convert.ToString(menuItem.actionname) != null)
+                    {
+                        <a class="nav-link scrollto" id="@menuId" asp-controller="@menuItem.controllername" asp-route-hodid="@hodid" asp-action="@menuItem.actionname"><span class="bi @menuItem.menuicon h6 mb-0 me-1"></span> @menuItem.title</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link scrollto" id="@menuId" href="#"><span class="bi @menuItem.menuicon h6 mb-0 me-1"></span> @menuItem.title</a>
+                    }
+                    <ul>
+                        @foreach (var subMenuItem in Model.Where(x => x.parentmenuid == menuItem.menuid))
+                        {
+
+                            <li>
+                                <a class="nav-link" asp-controller="@subMenuItem.controllername" asp-route-hodid="@hodid" asp-action="@subMenuItem.actionname">
+                                    <span class="h6 mb-0 me-1"></span> @subMenuItem.title
+                                </a>
+                            </li>
+
+                        }
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    }
+}
+
+
+@* <li class="dropdown">
+        <a class="nav-link scrollto active" asp-controller="" asp-action="">
+            <span class="bx bx-home h6 mb-0 me-1"></span>HRED
+        </a>
+
+        <ul>
+            <li>
+                <a class="nav-link scrollto active">
+                    <span class="bx bx-home h6 mb-0 me-1"></span>TEST
+                </a>
+            </li>
+        </ul>
+    </li>*@
+
+@*</nav>*@

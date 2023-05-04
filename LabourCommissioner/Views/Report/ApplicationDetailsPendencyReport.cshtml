@@ -1,0 +1,250 @@
+﻿@using LabourCommissioner.Common.Utility
+@using System.Web
+
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+
+@model IEnumerable<EmpApplicationDetailsModel>
+@{
+    ViewData["Title"] = "ApplicationDetailsPendencyReport";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    var i = 1;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ControllerName = "";
+    var ActionName = "";
+    //var ServiceId = ViewBag.serviceId;
+    var count = ViewBag.Count;
+    var EDistrict = ViewBag.DistrictId;
+    var serviceId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ServiceId.ToString()));
+    var division = ViewBag.DivisionList;
+
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+
+    string BeneficiaryType = "";
+    //string decBeneficiaryId = CommonUtils.Decrypt(HttpUtility.UrlDecode(ViewBag.strbeneficiaryid));
+
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+    var isAdmin = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+    string PostId = "";
+    string DistrictId = "";
+    string TalukaId = "";
+    long Applicationid = 0;
+    if (@Model != null && Model.Count() > 0)
+    {
+        PostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+        //DistrictId = Convert.ToString(@Model.Select(s => s.cdistrictid).FirstOrDefault());
+        DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+        TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+        Applicationid = @Model.Select(s => s.applicationid).FirstOrDefault();
+    }
+    BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+
+
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@ViewBag.ServiceName</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="Report" asp-action="ApplicationDetailsPendencyReport" method="get">
+                            <div class="card-header py-2 text-white d-flex justify-content-between" style="background-color:#1c79d5 ">
+                                <span class=""><i class='@ViewBag.Faicon align-middle'></i> @ViewBag.ServiceName</span>
+                                @*<button type="submit" value="export" name="export" class="btn btn-primary">
+                                <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>*@
+                                @*<input type="button" value="export" id="btnExport" class="btn btn-primary" />*@
+                                @*<i class="bi bi-file-earmark-excel-fill"></i>Export*@
+                            </div>
+                            <input type="hidden" name="strServiceId" id="strServiceId" value="@serviceId" />
+                            <input type="hidden" name="districtId" id="districtId" value="@ViewBag.DistrictId" />
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">શરૂઆત તારીખ</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અંતિમ તારીખ</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 align-self-end mt-1">
+                                        <div class="form-group">
+                                            <input type="submit" value="Search" class="btn btn-secondary">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 align-self-end">
+                                        <div class="form-group">
+                                            <input type="button" value="Back" onclick="history.back()" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="row pl-1">
+                            <div class="card-body">
+                                <fieldset class="custom-fieldset">
+                                    <legend>View Application</legend>
+                                    <div class="row mb-2">
+                                        <div class="col-md-10">
+                                            <div class="d-flex align-items-center">
+                                                Row Per Page
+                                                <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this)"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr.No.</th>
+                                                    <th>Application No </th>
+                                                    <th>Full Name</th>
+                                                    <th>District</th>
+                                                    @*<th>Taluka</th>*@
+                                                    <th>Mobile No</th>
+                                                    <th>Application Date</th>
+                                                    @*<th>Status</th>*@
+                                                    <th>Duration (in Days)</th>
+                                                    <th>View Application</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if (Model.Count() > 0)
+                                                {
+                                                    int index = 1;
+                                                    foreach (var item in Model)
+                                                    {
+                                                        <tr>
+                                                            <td class="text-center">@item.srno</td>
+                                                            <td>@item.applicationno</td>
+                                                            <td>@item.name</td>
+                                                            <td>@item.districtname</td>
+                                                            @*<td>@item.talukaname</td>*@
+                                                            <td>@item.mobileno</td>
+                                                            <td>@Convert.ToDateTime(item.applicationdate).ToString("dd/MM/yyyy")</td>
+                                                            @*<td>@item.applicationstatus</td>*@
+                                                            <td>@item.pendingdays</td>
+                                                            <td class="text-center">
+                                                                <a asp-controller="Report" asp-action="DayWisePendencyReport" asp-route-strapplicationid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.applicationid.ToString()))" asp-route-applicationstatus="@item.applicationstatus" asp-route-strServiceId="@serviceId" class="text-teal">
+                                                                    Click Here
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        index++;
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <tr><td class="text-warning" colspan="8"><h6><i class="bi bi-search"></i> No Record Found</h6></td></tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                    @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                    @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                    </vc:search-bar>
+                                    <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                    </vc:search-bar>*@
+                                </fieldset>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+
+    @*<script src="~/js/table2csv.js"></script>*@
+   @* <script src="~/js/table2csv.min.js"></script>*@
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $("#status").val('@ViewBag.Status');
+        });
+
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        function ChangePageSize(obj) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&strServiceId=" + '@serviceId' + "&districtId=" + '@ViewBag.DistrictId' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate';
+        }
+        //$(function() {
+        //    $("#btnExport").click(function() {
+        //        $("#myTable").table2csv({
+        //            seperator: ',',
+        //            newline: '\n',
+        //            filename: 'test.csv',
+        //            quotaFields: true,
+        //            exportOptions: {
+        //                columns: ':gt(0)'
+        //            },
+        //            excludeRows: ''
+        //        });
+        //    });
+        //});
+
+    </script>
+
+}

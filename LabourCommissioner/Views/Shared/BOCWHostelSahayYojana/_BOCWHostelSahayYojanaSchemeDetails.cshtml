@@ -1,0 +1,614 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWHssySchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //var year = ViewBag.Year;
+    ////var std = ViewBag.Standard;
+    var enirmancardno = ViewBag.EnirmanCardNo;
+
+
+    var modelCnt = 1;
+    var modelCnt1 = 1;
+    var modelCnt2 = 1;
+
+
+    if (@Model != null && @Model.lstfamilymemberDetails != null && @Model != null && @Model.lstStudentMemberDetails != null && @Model != null && @Model.lstStudentHostelMemberDetails != null)
+    {
+
+        modelCnt = @Model.lstfamilymemberDetails.Count();
+        modelCnt1 = @Model.lstStudentMemberDetails.Count();
+        modelCnt2 = @Model.lstStudentHostelMemberDetails.Count();
+
+    }
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWHostelSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    @* <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<input type="hidden" asp-for="famillytotalno" />*@
+
+        @*familyDetails*@
+        <fieldset>
+            <legend>શ્રમયોગી તથા તેના આશ્રિતોની વિગત </legend>
+
+            <div class="control-form col-md-3">
+                <input asp-for="familymemberno" value="1" type="text" id="familymemberno" class="form-control" readonly="readonly">
+                <span asp-validation-for="familymemberno" style="color:Red;display:none;"></span>
+            </div>
+            <table class="table bg-white table-bordered text-center" id="tblFamily">
+
+                <th>
+                    <span class="control-label">
+                        કુટુંબ ના સભ્યોના નામ
+                        <span class="text-danger">*</span>
+                    </span>
+                </th>
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstfamilymemberDetails != null && Model.lstfamilymemberDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstfamilymemberDetails.Count; i++)
+                    {
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeleted"+i)" asp-for="@Model.lstfamilymemberDetails[i].isDeleted" />
+                                <input type="hidden" asp-for="@Model.lstfamilymemberDetails[i].familydetailsid" />
+                                <input asp-for=@Model.lstfamilymemberDetails[i].famillymembernames type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstfamilymemberDetails[i].famillymembernames" class="text-danger"></span>
+                                <span id="lstfamilymemberDetails_famillymembernames_error0" class="text-danger"></span>
+                            </td>
+
+                            <td>
+                                <input type="button" value="Remove" onclick="RemoveTextBox(this,'@i');">
+                            </td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeleted0")" asp-for="@Model.lstfamilymemberDetails[0].isDeleted" />
+                            <input type="hidden" asp-for="@Model.lstfamilymemberDetails[0].familydetailsid" />
+                            <input asp-for=@Model.lstfamilymemberDetails[0].famillymembernames type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstfamilymemberDetails[0].famillymembernames" class="text-danger"></span>
+                            <span id="lstfamilymemberDetails_famillymembernames_error0" class="text-danger"></span>
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="Addbutton" type="button" value="Add" />
+                </span>
+            </div>
+        </fieldset>
+
+
+        @*studentmemberDetails*@
+
+        <fieldset>
+            <legend>કુટુંબ માં ભણતા બાળકો ની વિગત </legend>
+            <table class="table bg-white table-bordered text-center" id="tblstudentfamilymember">
+
+                <th>
+                    <span class="control-label">નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ઉંમર<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ધોરણ/કોર્સ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">
+                        શાળા/કોલેજ/સંસ્થાનું નામ<span class="text-danger">*</span>
+                    </span>
+                </th>
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstStudentMemberDetails != null && Model.lstStudentMemberDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstStudentMemberDetails.Count; i++)
+                    {
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeletedChildren"+i)" asp-for="@Model.lstStudentMemberDetails[i].isDeleted" />
+                                <input asp-for=@Model.lstStudentMemberDetails[i].name type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentMemberDetails[i].name" class="text-danger"></span>
+                                <span id="lstStudentMemberDetails_name_error" class="text-danger"></span>
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentMemberDetails[i].age type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentMemberDetails[i].age" class="text-danger"></span>
+                                <span id="lstStudentMemberDetails_age_error" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentMemberDetails[i].stdorcourse type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentMemberDetails[i].stdorcourse" class="text-danger"></span>
+                                <span id="lstStudentMemberDetails_stdorcourse_error" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentMemberDetails[i].schoolcollagename type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentMemberDetails[i].schoolcollagename" class="text-danger"></span>
+                                <span id="lstStudentMemberDetails_schoolcollagename_error" class="text-danger"></span>
+
+                            </td>
+                            <td><input type="button" value="Remove" onclick="RemoveTextBoxs(this,'@i');"></td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeletedChildren0")" asp-for="@Model.lstStudentMemberDetails[0].isDeleted" />
+                            <input asp-for=@Model.lstStudentMemberDetails[0].name type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentMemberDetails[0].name" class="text-danger"></span>
+                            <span id="lstStudentMemberDetails_name_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentMemberDetails[0].age type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentMemberDetails[0].age" class="text-danger"></span>
+                            <span id="lstStudentMemberDetails_age_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentMemberDetails[0].stdorcourse type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentMemberDetails[0].stdorcourse" class="text-danger"></span>
+                            <span id="lstStudentMemberDetails_stdorcourse_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentMemberDetails[0].schoolcollagename type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentMemberDetails[0].schoolcollagename" class="text-danger"></span>
+                            <span id="lstStudentMemberDetails_schoolcollagename_error" class="text-danger"></span>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="addstudentmember" type="button" value="Add" />
+                </span>
+            </div>
+
+
+
+        </fieldset>
+
+        @*studentmemberDetails*@
+
+        <fieldset>
+            <legend>કુટુંબ  ના હોસ્ટેલ માં રહેતા બલાકો ની વિગત </legend>
+            <table class="table bg-white table-bordered text-center" id="studenthostelmember">
+
+                <th>
+                    <span class="control-label">વિદ્યાર્થિ નુ નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">હોસ્ટેલ મા રહે છે કે કેમ?<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">હોસ્ટેલનું નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સરનામુ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">
+                        હોસ્ટેલ નો પ્રકાર: સરકાર/ખાનગી/ગ્રાન્ટ-ઇન-એડ/જ્ઞા તિ ધ્વારા સંચાલિત<span class="text-danger">*</span>
+                    </span>
+                </th>
+
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstStudentHostelMemberDetails != null && Model.lstStudentHostelMemberDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstStudentHostelMemberDetails.Count; i++)
+                    {
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeletedHostel"+i)" asp-for="@Model.lstStudentHostelMemberDetails[i].isDeleted" />
+                                <input asp-for=@Model.lstStudentHostelMemberDetails[i].sname type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentHostelMemberDetails[i].sname" class="text-danger"></span>
+                                <span id="lstStudentHostelMemberDetails_sname_error" class="text-danger"></span>
+                            </td>
+                            <td>
+
+
+                                <input asp-for="@Model.lstStudentHostelMemberDetails[i].isstayhostel" type="radio" value="1" />હાં
+                                <input asp-for="@Model.lstStudentHostelMemberDetails[i].isstayhostel" type="radio" value="2" />નાં<br />
+
+                                <span asp-validation-for="@Model.lstStudentHostelMemberDetails[i].isstayhostel" class="text-danger"></span>
+                                <span id="lstStudentHostelMemberDetails_isstayhostel_error" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentHostelMemberDetails[i].hostelname type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentHostelMemberDetails[i].hostelname" class="text-danger"></span>
+                                <span id="lstStudentHostelMemberDetails_hostelname_error" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentHostelMemberDetails[i].hosteladdress type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentHostelMemberDetails[i].hosteladdress" class="text-danger"></span>
+                                <span id="lstStudentHostelMemberDetails_hosteladdress_error" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for=@Model.lstStudentHostelMemberDetails[i].hosteltype type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstStudentHostelMemberDetails[i].hosteltype" class="text-danger"></span>
+                                <span id="lstStudentHostelMemberDetails_hosteltype_error" class="text-danger"></span>
+
+                            </td>
+                            <td><input type="button" value="Remove" onclick="RemoveTextBoxss(this,'@i');"></td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeletedHostel0")" asp-for="@Model.lstStudentHostelMemberDetails[0].isDeleted" />
+                            <input asp-for=@Model.lstStudentHostelMemberDetails[0].sname type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentHostelMemberDetails[0].sname" class="text-danger"></span>
+                            <span id="lstStudentHostelMemberDetails_sname_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for="@Model.lstStudentHostelMemberDetails[0].isstayhostel" type="radio" value="1" />હાં
+                            <input asp-for="@Model.lstStudentHostelMemberDetails[0].isstayhostel" type="radio" value="2" />નાં<br />
+
+                            <span asp-validation-for="@Model.lstStudentHostelMemberDetails[0].isstayhostel" class="text-danger"></span>
+                            <span id="lstStudentHostelMemberDetails_isstayhostel_error" class="text-danger"></span>
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentHostelMemberDetails[0].hostelname type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentHostelMemberDetails[0].hostelname" class="text-danger"></span>
+                            <span id="lstStudentHostelMemberDetails_hostelname_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentHostelMemberDetails[0].hosteladdress type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentHostelMemberDetails[0].hosteladdress" class="text-danger"></span>
+                            <span id="lstStudentHostelMemberDetails_hosteladdress_error" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for=@Model.lstStudentHostelMemberDetails[0].hosteltype type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstStudentHostelMemberDetails[0].hosteltype" class="text-danger"></span>
+                            <span id="lstStudentHostelMemberDetails_hosteltype_error" class="text-danger"></span>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="addstudenthostelmember" type="button" value="Add" />
+                </span>
+            </div>
+
+
+
+        </fieldset>
+
+        @*Bankdetails*@
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+
+    $(function() {
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    var ttlCount = @modelCnt;
+    var removeCount = 0;
+
+
+    $("#Addbutton").on("click", function() {
+        debugger;
+        var flag = false;
+        flag = ValidateControl(ttlCount);
+        if (flag) {
+            $("#familymemberno").val(ttlCount);
+            var strHTML = "";
+            strHTML += "<tr id='tr" + ttlCount + "'>";
+            strHTML += "<td><input type='hidden' id='hdnIsDeleted" + ttlCount + "' name='lstfamilymemberDetails[" + ttlCount + "].isDeleted'>";
+            strHTML += "<input name='lstfamilymemberDetails[" + ttlCount + "].famillymembernames' id='lstfamilymemberDetails_" + ttlCount + "__famillymembernames' type='text' class='form-control' maxlength='15'>";
+            strHTML += "<span id='lstfamilymemberDetails_familymembersname_error" + ttlCount + "' class='text-danger'></span></td>";
+            strHTML += "<td><input type='button' value='Remove' onclick='RemoveTextBox(this," + ttlCount + ");'></td>";
+            strHTML += "</tr>";
+
+            ttlCount++;
+            var familymemberno = $("#familymemberno").val(ttlCount - removeCount)
+
+            $("#tblFamily").append(strHTML);
+        }
+    });
+
+    function RemoveTextBox(button, rowId) {
+        debugger;
+
+        $("#hdnIsDeleted" + rowId).val(true);
+        //$("#familymemberno").val(parseInt($("#familymemberno").val()) - 1);
+        $(button).parent().parent().css("display", "none");
+        removeCount++;
+        $("#familymemberno").val(ttlCount - removeCount);
+    }
+
+
+    function ValidateControl(rowCnt) {
+        debugger;
+        //var isDeleted = $("#hdnIsDeleted" + rowId).val();
+
+        for (var i = 0; i < rowCnt; i++) {
+            if ($("#hdnIsDeleted" + i).val() == 'False' || $("#hdnIsDeleted" + i).val() == undefined || $("#hdnIsDeleted" + i).val() == '') {
+                $("#lstfamilymemberDetails_famillymembernames_error" + i + "").html("");
+
+
+                if ($("#lstfamilymemberDetails_" + i + "__famillymembernames").val() == "") {
+                    $("#lstfamilymemberDetails_famillymembernames_error" + i + "").html("નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+            }
+        }
+        return true;
+
+
+    }
+
+
+    //Secound Table -- student familymember details
+
+
+    var ttlCountfamilymember = @modelCnt1;
+    $(document).ready(function() {
+        debugger;
+        +
+            $("#addstudentmember").on("click", function() {
+
+
+                var flags = false;
+                flags = ValidateControlM(ttlCountfamilymember);
+                if (flags) {
+
+                    var strHTMLs = "";
+                    strHTMLs += "<tr id='tr1" + ttlCountfamilymember + "'>";
+                    strHTMLs += "<td><input type='hidden' id='hdnIsDeletedChildren" + ttlCountfamilymember + "' name='lstStudentMemberDetails[" + ttlCountfamilymember + "].isDeleted'>";
+                    strHTMLs += "<input name='lstStudentMemberDetails[" + ttlCountfamilymember + "].name' id='lstStudentMemberDetails_" + ttlCountfamilymember + "__name' type='text' class='form-control' maxlength='15'>";
+                    strHTMLs += "<span id='lstStudentMemberDetails_name_error" + ttlCountfamilymember + "' class='text-danger'></span></td>";
+
+                    strHTMLs += "<td><input name='lstStudentMemberDetails[" + ttlCountfamilymember + "].age' id='lstStudentMemberDetails_" + ttlCountfamilymember + "__age' type='text' class='form-control' maxlength='15'>";
+                    strHTMLs += "<span id='lstStudentMemberDetails_age_error" + ttlCountfamilymember + "' class='text-danger'></span></td>";
+
+                    strHTMLs += "<td><input name='lstStudentMemberDetails[" + ttlCountfamilymember + "].stdorcourse' id='lstStudentMemberDetails_" + ttlCountfamilymember + "__stdorcourse' type='text' class='form-control' maxlength='15'>";
+                    strHTMLs += "<span id='lstStudentMemberDetails_stdorcourse_error" + ttlCountfamilymember + "' class='text-danger'></span></td>";
+
+                    strHTMLs += "<td><input name='lstStudentMemberDetails[" + ttlCountfamilymember + "].schoolcollagename' id='lstStudentMemberDetails_" + ttlCountfamilymember + "__schoolcollagename' type='text' class='form-control' maxlength='15'>";
+                    strHTMLs += "<span id='lstStudentMemberDetails_schoolcollagename_error" + ttlCountfamilymember + "' class='text-danger'></span></td>";
+                    strHTMLs += "<td><input type='button' value='Remove' onclick='RemoveTextBoxs(this," + ttlCountfamilymember + ");'></td>";
+                   /* strHTMLs += "<td></td>"*/;
+
+                    strHTMLs += "</tr>";
+                    ttlCountfamilymember++;
+                    $("#tblstudentfamilymember").append(strHTMLs);
+                }
+
+
+            });
+    });
+    //var removeList = "";
+    function RemoveTextBoxs(button, rowId) {
+        debugger;
+
+        $("#hdnIsDeletedChildren" + rowId).val(true);
+        $(button).parent().parent().css("display", "none");
+
+    }
+
+    function ValidateControlM(rowCnts) {
+        debugger;
+        //--i;
+
+        for (var i = 0; i < rowCnts; i++) {
+            if ($("#hdnIsDeletedChildren" + i).val() == 'False' || $("#hdnIsDeletedChildren" + i).val() == undefined || $("#hdnIsDeletedChildren" + i).val() == '') {
+                $("#lstStudentMemberDetails_name_error" + i + "").html("");
+                $("#lstStudentMemberDetails_age_error" + i + "").html("");
+                $("#lstStudentMemberDetails_stdorcourse_error" + i + "").html("");
+                $("#lstStudentMemberDetails_schoolcollagename_error" + i + "").html("");
+
+
+
+                if ($("#lstStudentMemberDetails_" + i + "__name").val() == "") {
+                    $("#lstStudentMemberDetails_name_error" + i + "").html("નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstStudentMemberDetails_" + i + "__age").val() == "") {
+                    $("#lstStudentMemberDetails_age_error" + i + "").html("ઉંમર નાખો");
+                    //alert("Cannot Insert");
+                    return false; " + i + "
+                }
+                if ($("#lstStudentMemberDetails_" + i + "__stdorcourse").val() == "") {
+                    $("#lstStudentMemberDetails_stdorcourse_error" + i + "").html("ધોરણ/કોર્સ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstStudentMemberDetails_" + i + "__schoolcollagename").val() == "") {
+                    $("#lstStudentMemberDetails_schoolcollagename_error" + i + "").html(" શાળા/કોલેજ/સંસ્થાનું નામ નાખો ");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+
+
+    //third Table -- student hostelmember details
+
+    var ttlCounthostelmember = @modelCnt2;
+    $(document).ready(function() {
+        //var i = 1;
+
+        debugger;
+
+        $("#addstudenthostelmember").click(function() {
+
+
+            var flagss = false;
+            flagss = ValidateControlH(ttlCounthostelmember);
+            if (flagss) {
+
+                var strHTMLss = "";
+                strHTMLss += "<tr id='tr2" + ttlCounthostelmember + "'>";
+                strHTMLss += "<td><input type='hidden' id='hdnIsDeletedHostel" + ttlCounthostelmember + "' name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].isDeleted'>";
+                strHTMLss += "<input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].sname' id='lstStudentHostelMemberDetails_" + ttlCounthostelmember + "__sname' type='text' class='form-control' maxlength='15'>";
+                strHTMLss += "<span id='lstStudentHostelMemberDetails_sname_error" + ttlCounthostelmember + "' class='text-danger'></span></td>";
+
+
+                strHTMLss += "<td><input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].isstayhostel' id='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].isstayhostel' type='radio' value='1'>હાં";
+                strHTMLss += "<input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].isstayhostel' id='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].isstayhostel' type='radio'value='2'>નાં";
+                strHTMLss += "<span id='lstStudentHostelMemberDetails_isstayhostel_error" + ttlCounthostelmember + "' class='text-danger'></span></td>";
+
+                strHTMLss += "<td><input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].hostelname' id='lstStudentHostelMemberDetails_" + ttlCounthostelmember + "__hostelname' type='text' class='form-control' maxlength='15'>";
+                strHTMLss += "<span id='lstStudentHostelMemberDetails_hostelname_error" + ttlCounthostelmember + "' class='text-danger'></span></td>";
+
+                strHTMLss += "<td><input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].hosteladdress' id='lstStudentHostelMemberDetails_" + ttlCounthostelmember + "__hosteladdress' type='text' class='form-control' maxlength='15'>";
+                strHTMLss += "<span id='lstStudentHostelMemberDetails_hosteladdress_error" + ttlCounthostelmember + "' class='text-danger'></span></td>";
+
+                strHTMLss += "<td><input name='lstStudentHostelMemberDetails[" + ttlCounthostelmember + "].hosteltype' id='lstStudentHostelMemberDetails_" + ttlCounthostelmember + "__hosteltype' type='text' class='form-control' maxlength='15'>";
+                strHTMLss += "<span id='lstStudentHostelMemberDetails_hosteltype_error" + ttlCounthostelmember + "' class='text-danger'></span></td>";
+
+                strHTMLss += "<td><input type='button' value='Remove' onclick='RemoveTextBoxss(this," + ttlCounthostelmember + ");'></td>";
+
+                //strHTMLss += "<td></td>";
+                strHTMLss += "</tr>";
+                ttlCounthostelmember++;
+
+                $("#studenthostelmember").append(strHTMLss);
+            }
+
+
+
+
+        });
+    });
+    //var removeList = "";
+    function RemoveTextBoxss(button, rowId) {
+        $("#hdnIsDeletedHostel" + rowId).val(true);
+        $(button).parent().parent().css("display", "none");
+
+    }
+
+    function ValidateControlH(rowCntss) {
+        debugger;
+        //--i;
+
+        for (var i = 0; i < rowCntss; i++) {
+            if ($("#hdnIsDeletedHostel" + i).val() == 'False' || $("#hdnIsDeletedHostel" + i).val() == undefined || $("#hdnIsDeletedHostel" + i).val() == '') {
+                $("#lstStudentHostelMemberDetails_sname_error" + i + "").html("");
+                $("#lstStudentHostelMemberDetails_isstayhostel_error" + i + "").html("");
+                $("#lstStudentHostelMemberDetails_hostelname_error" + i + "").html("");
+                $("#lstStudentHostelMemberDetails_hosteladdress_error" + i + "").html("");
+                $("#lstStudentHostelMemberDetails_hosteltype_error" + i + "").html("");
+
+
+                if ($("#lstStudentHostelMemberDetails_" + i + "__sname").val() == "") {
+                    $("#lstStudentHostelMemberDetails_sname_error" + i + "").html("નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("input:radio[name='lstStudentHostelMemberDetails[" + i + "].isstayhostel']:checked").val() == undefined) {
+                    $("#lstStudentHostelMemberDetails_isstayhostel_error" + i + "").html("હોસ્ટેલ મા રહે છે કે કેમ? નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstStudentHostelMemberDetails_" + i + "__hostelname").val() == "") {
+                    $("#lstStudentHostelMemberDetails_hostelname_error" + i + "").html("હોસ્ટેલનું નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstStudentHostelMemberDetails_" + i + "__hosteladdress").val() == "") {
+                    $("#lstStudentHostelMemberDetails_hosteladdress_error" + i + "").html("સરનામુ નાખો ");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstStudentHostelMemberDetails_" + i + "__hosteltype").val() == "") {
+                    $("#lstStudentHostelMemberDetails_hosteltype_error" + i + "").html("હોસ્ટેલ નો પ્રકાર: સરકાર/ખાનગી/ગ્રાન્ટ-ઇન-એડ/જ્ઞા તિ ધ્વારા સંચાલિત છે  નાખો ");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+
+
+</script>

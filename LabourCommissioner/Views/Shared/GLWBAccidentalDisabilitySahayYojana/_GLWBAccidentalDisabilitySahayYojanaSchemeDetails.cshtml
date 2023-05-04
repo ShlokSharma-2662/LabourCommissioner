@@ -1,0 +1,194 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBADSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //var Totalsahay = ViewBag.TotalSahay;
+    var enirmancardno = ViewBag.EnirmanCardNo;
+    //int val = 7;
+    int state = 0;
+    if (Model != null)
+    {
+        state = Model.state;
+    }
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+    long Totalsahay = 0;
+    if (Model != null)
+    {
+        Totalsahay = Model.totalsahay;
+    }
+
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBAccidentalDisabilitySahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" id="Totalsahay" value="@Totalsahay" />
+    <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />
+    @*<input type="hidden" asp-for="Schmename" value="@Model.Schmename" />*@
+
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજના વિગત</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span id="body_innerbody_lblDOD" class="control-label col-md-3">અકસ્માત થયા તારીખ :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="dateofaccident" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+
+                            <span asp-validation-for="dateofaccident" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <span class="control-label col-md-3">
+                            દિવ્યાંગતાની ટકાવારી :   <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="disabilitypercentage" type="text" class="form-control" id="disabilitypercentage" onblur="gettotalsahay();" onkeypress="return AllowNumeric(event);" maxlength="2">
+                            <span asp-validation-for="disabilitypercentage" class="text-danger"></span>
+
+                        </div>
+                        <span class="control-label col-md-3">
+                            અકસ્માતની વિગત (ટુંકમાં)  :   <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <textarea rows="5" cols="5" asp-for="accidentdetails" class="form-control"></textarea>
+                            <span asp-validation-for="accidentdetails" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div id="body_innerbody_dv3" class="form-group row">
+                        <span id="body_innerbody_lblAge" class="control-label col-md-3">FIR નં. : <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="firnum" type="text" maxlength="100" id="body_innerbody_txtAge" class="form-control ">
+                            <span asp-validation-for="firnum" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_label8" class="control-label col-md-3">FIR તારીખ :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="firdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy">
+                            <span asp-validation-for="firdate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>સંસ્થા દ્વારા ચૂકવવામાં આવેલ સહાયની વિગત:</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span id="body_innerbody_lblDOD" class="control-label col-md-3">રકમ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="amount" type="text" class="form-control">
+                            <span asp-validation-for="amount" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_lblDOD" class="control-label col-md-3">બેંક નુ નામ:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="banknames" type="text" class="form-control">
+                            <span asp-validation-for="banknames" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <span class="control-label col-md-3">
+                            બ્રાન્ચ :  <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="branchname" type="text" class="form-control">
+                            <span asp-validation-for="branchname" class="text-danger"></span>
+
+                        </div>
+                        <span class="control-label col-md-3">
+                            ચેક / ટ્રાન્સેકશન નંબર:   <span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="checknumber" type="text" class="form-control" maxlength="9">
+                            <span asp-validation-for="checknumber" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div id="body_innerbody_dv3" class="form-group row">
+                        <span id="body_innerbody_lblAge" class="control-label col-md-3">તારીખ :<span class="text-danger">*</span> </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="BDate" type="text" id="exdate" placeholder="dd/MM/yyyy" class="form-control dateValidateCls datepicker">
+                            <span asp-validation-for="BDate" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+        <fieldset classs="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    function gettotalsahay() {
+        debugger;
+        var disabilitypercentage = $("#disabilitypercentage").val();
+
+        if (disabilitypercentage > 70) {
+            $('#Totalsahay').val(50000);
+        }
+        else if (disabilitypercentage > 40 && disabilitypercentage < 70) {
+            $('#Totalsahay').val(25000);
+        }
+        else {
+            $('#Totalsahay').val('');
+        }
+
+    };
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+
+    });
+
+
+</script>

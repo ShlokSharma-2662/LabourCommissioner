@@ -1,0 +1,251 @@
+﻿@model IEnumerable<EmpApplicationDetailsModel>
+@using System.Security.Claims
+
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (EmpApproveApplication)ViewBag.ApproveApplication;
+    var docData = (DocumentDetails.DocumentFileDetails)ViewBag.DocumentsList;
+
+
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string approvalstate = "";
+    string FromPostId = "";
+    string approvalstatus = "";
+    string DistrictId = "";
+    string TalukaId = "";
+    string[]? applicationidlist = null;
+    string SubServiceId = "";
+    string BeneficiaryType = "";
+    string LevelNo = "";
+    string isIndividual = "false";
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.serviceid);
+        ApplicationNo = Convert.ToString(Data.applicationno);
+        ApplicationId = Convert.ToString(Data.applicationid);
+        approvalstate = Convert.ToString(Data.isapproved);
+        applicationidlist = Data.applicationidlist;
+        FromPostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+        SubServiceId = Convert.ToString(Data.subserviceid != null ? Data.subserviceid : "0");
+        isIndividual = Data.isIndividual.ToString().ToLower();
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+    BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+    LevelNo = identity?.Claims.FirstOrDefault(x => x.Type.Equals("OrderBy", StringComparison.OrdinalIgnoreCase))?.Value;
+
+    string ddlDisplay = "";
+    string textDisplay = "";
+    string submitBtnName = "";
+    bool isLastLevel = (bool)ViewBag.isLastLevel;
+    if (isLastLevel == true)
+    {
+        ddlDisplay = "none";
+        textDisplay = "block";
+        submitBtnName = "Submit & Generate Aadesh";
+    }
+    else
+    {
+        ddlDisplay = "block";
+        textDisplay = "none";
+        submitBtnName = "Submit";
+    }
+
+}
+
+
+<form asp-action="ApproveApplication" asp-controller="EmployeeHome" data-ajax="true" data-ajax-method="POST" data-ajax-begin="OnBegin" data-ajax-success="OnSuccess" enctype="multipart/form-data">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">Approve Application
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            @for (int i = 0; i < applicationidlist.Count(); i++)
+            {
+                @Html.HiddenFor(m => applicationidlist[i])
+            }
+
+            <input type="hidden" id="applicationid" name="applicationid" value="@ApplicationId" />
+            <input type="hidden" id="approvalstate" name="approvalstate" value="@approvalstate" />
+            <input type="hidden" id="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="approvalstatus" name="approvalstatus" value="@approvalstatus" />
+            <input type="hidden" id="ServiceId" name="ServiceId" value="@ServiceId" />
+            <input type="hidden" id="fromPostId" name="fromPostId" value="@FromPostId" />
+            <div class="modal-body bocw_bg">
+                <div class="form-group">
+                    <div style="display:@textDisplay">
+                        <p>
+                            <span>To Role :</span><span> To Applicant</span>
+                        </p>
+                    </div>
+                    <div class="ddlRole" style="display:@ddlDisplay">
+                        <span>To Role:</span><span class="text-danger">*</span>
+                        <select name="toRole" asp-items="@(new SelectList(@ViewBag.NextRoles,"Value", "Text"))" id="toRole" tabindex="3" class="form-control sendBack"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span id="lblOTP">Remarks</span><span class="text-red"></span>
+                    </label>
+                    <div class="">
+                        <textarea id="remarks" name="remarks" cols="20" rows="2" class="form-control"></textarea>
+                    </div>
+                </div>
+                @if (ServiceId == "6" && LevelNo == "10")
+                {
+                    //string IsValidate = "false";
+                    string required = "required";
+
+                    if (docData != null)
+                    {
+                        //IsValidate = (docData.CouchDBDocId != null) ? "false" : "true";
+                        required = (docData.CouchDBDocId != null) ? "" : "required";
+                    }
+                    <div class="form-group">
+                        <label>
+                            <span id="lblOTP">ડીશ કચેરીનો અહેવાલ:</span><span class="text-red"></span>
+                        </label>
+                        <div class="">
+
+                            <input type="file" id="IdImage" name="IdImage" accept="img/*,png/*,pdf/*" onchange="fileValidation(this.value)" class="fileupload custom-file-input form-control h-auto fs-75" @required />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    if (docData != null)
+                    {
+                        <div class="">
+                            <a asp-controller="BOCWAccidentalSahayYojana" asp-action="DownloadDocument" asp-route-id="@docData.CouchDBDocId" asp-route-filename="@docData.DocumentName">@docData.DocumentName</a>
+                        </div>
+                    }
+                }
+
+                <br />
+                <input type="submit" value="@submitBtnName" class="btn btn-warning">
+                @if (isLastLevel == true && BeneficiaryType == "1")
+                {
+                    <a class="btn btn-success" href="#" onclick="DownloadBOCWAadeshReport(@ServiceId,@SubServiceId,@isIndividual,@ApplicationId)">
+                        <i class="bi bi-eye me-1"></i> View Aadesh
+                    </a>
+                }
+                else if (isLastLevel == true && BeneficiaryType == "2")
+                {
+                    <a class="btn btn-success" href="#" onclick="DownloadGLWBAadeshReport(@ServiceId,@SubServiceId,@isIndividual,@ApplicationId)">
+                        <i class="bi bi-eye me-1"></i> View Aadesh
+                    </a>
+                }
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        ValidateDocumentFile();
+        //GetEmpRole(@ServiceId, @FromPostId, @DistrictId, @TalukaId);
+
+    });
+    function GetEmpRole(ServiceId, PostId, DistrictId, TalukaId) {
+        $.ajax({
+            type: "get",
+            url: "/EmployeeHome/GetNextRole",
+            data: { serviceid: ServiceId, postid: PostId, districtid: DistrictId, talukaid: TalukaId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var ToRole = "";
+                //ToRole = ToRole + '<option value="0"  >--Select--</option>';
+                for (var i = 0; i < data.data.result.length; i++) {
+                    //if (PostId >= 36) {
+                    //    $("select").remove(".approve");
+                    //    $("p").append("Applicant");
+                    //}
+                    ToRole = ToRole + '<option value=' + data.data.result[i].value + ' selected>' + data.data.result[i].text + '</option>';
+                }
+                $('#toRole').html(ToRole);
+                //$('#PlistDistrict').html(DistrictList);
+            }
+        });
+    }
+    function OnBegin() {
+        $('.btn-close').click();
+        debugger;
+
+    }
+    function OnSuccess(response) {
+        debugger;
+
+        //if (response.aadeshreport != null && response.aadeshreport != "") {
+        //    var bytes = Base64ToBytes(response.aadeshreport);
+
+        //    //Convert Byte Array to BLOB.
+        //    var blob = new Blob([bytes], { type: "application/pdf" });
+
+        //    //Check the Browser type and download the File.
+        //    var isIE = false || !!document.documentMode;
+        //    if (isIE) {
+        //        window.navigator.msSaveBlob(blob, "AadeshDetails.pdf");
+        //    } else {
+        //        var url = window.URL || window.webkitURL;
+        //        link = url.createObjectURL(blob);
+        //        var a = $("<a />");
+        //        a.attr("download", "AadeshDetails.pdf");
+        //        a.attr("href", link);
+        //        a.attr('target', '_blank')
+        //        $("body").append(a);
+        //        a[0].click();
+        //        //let newWindow = window.open(link);
+        //        $("body").remove(a);
+        //        //$("#viewpdf").attr("href", link);
+        //        //$("#viewpdf").click();
+        //    }
+
+        //var msg = response.msg;
+        //swal({
+        //    title: "",
+        //    text: msg,
+        //    type: "success",
+        //    showCancelButtonClass: "btn-primary",
+        //    confirmButtonText: 'OK'
+        //}, function() {
+        //    window.location.reload();
+        //});
+        //}
+        //else {
+        var msg = response.msg;
+        swal({
+            title: "",
+            text: msg,
+            type: "success",
+            showCancelButtonClass: "btn-primary",
+            confirmButtonText: 'OK',
+            closeOnConfirm: false
+        }, function() {
+            window.location.reload();
+        });
+        //}
+    }
+    function Base64ToBytes(base64) {
+        var s = window.atob(base64);
+        var bytes = new Uint8Array(s.length);
+        for (var i = 0; i < s.length; i++) {
+            bytes[i] = s.charCodeAt(i);
+        }
+        return bytes;
+    };
+
+</script>
+
+

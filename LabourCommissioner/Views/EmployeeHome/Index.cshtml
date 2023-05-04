@@ -1,0 +1,38 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+}
+<section id="hero" class="hero2">
+    @if ((identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "1") || (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "4"))
+    {
+       if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value == "56")
+        {
+            <h2 class="animate__animated animate__fadeInDown">CM Dashboard</h2>
+        }
+        else
+        {
+            <h2 class="animate__animated animate__fadeInDown">ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડ</h2>
+        }
+    }
+    else
+    {
+        <h2 class="animate__animated animate__fadeInDown">ગુજરાત શ્રમયોગી કલ્યાણ બોર્ડ</h2>
+    }
+</section>
+
+
+
+
+<section id="portfolio" class="portfoio">
+    <div class="container" data-aos="fade-up">
+        <partial name="~/Views/Shared/_SchemeDetails.cshtml" />
+    </div>
+</section>
+@*modal start*@
+<div class="modal fade" id="dynamicSchemeModel" tabindex="-1" role="dialog" aria-labelledby="dynamicSchemeModelLabel" aria-hidden="true">
+    <div id="divContent"></div>
+</div>
+@*modal end*@

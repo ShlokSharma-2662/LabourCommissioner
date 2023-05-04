@@ -1,0 +1,125 @@
+﻿@model IEnumerable<EmpApplicationDetailsModel>
+@using System.Security.Claims
+
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (EmpApproveApplication)ViewBag.ViewHistoryApplication;
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string approvalstate = "";
+    string FromPostId = "";
+    string approvalstatus = "";
+    string DistrictId = "";
+    string TalukaId = "";
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.serviceid);
+        ApplicationNo = Convert.ToString(Data.applicationno);
+        ApplicationId = Convert.ToString(Data.applicationid);
+        approvalstate = Convert.ToString(Data.isapproved);
+        FromPostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+
+}
+<form>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    Approval History
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <input type="hidden" id="ApplicationId" name="ApplicationId" value="@ApplicationId" />
+            <input type="hidden" id="approvalstate" name="approvalstate" value="@approvalstate" />
+            <input type="hidden" id="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="approvalstatus" name="approvalstatus" value="@approvalstatus" />
+            <input type="hidden" id="ServiceId" name="ServiceId" value="@ServiceId" />
+            <input type="hidden" id="fromPostId" name="fromPostId" value="@FromPostId" />
+            <div class="modal-body bocw_bg">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover text-center w-100">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. NO</th>
+                                        <th>Application Status</th>
+                                        <th>From Level</th>
+                                        <th>To Level</th>
+                                        <th>Approved Date</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="records_table">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        GetApplicationHistory(@ApplicationId,@ServiceId);
+
+    });
+
+    function GetApplicationHistory(ApplicationId,ServiceId) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/EmployeeHome/GetApplicationHistory",
+            data: { applicationid: ApplicationId, serviceid : ServiceId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var trHTML = "";
+                for (var i = 0; i < data.response.length; i++) {
+                    //$.each(response, function(i, item) {
+                    //var date = new Date(data.response[i].approveddate);
+                    //var approveddate = (date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear());
+                    var date = data.response[i].approveddate.split('T')[0].split('-');
+                    var approveddate = (date[2] + '/' + date[1] + '/' + date[0]);
+                    if (data.response[i].remarks == null) {
+                        data.response[i].remarks = '-';
+                    }
+                    var srno = i + 1;
+                    trHTML += '<tr><td>' + srno + '</td><td>' + data.response[i].applicationstatus + '</td><td>' + data.response[i].fromlevelname + '</td><td>' + data.response[i].tolevelname + '</td><td>' + approveddate + '</td><td>' + data.response[i].remarks + '</td></tr>';
+
+                };
+                //$('#records_table').append('');
+                $('#records_table').html(trHTML);
+                //$('#PlistDistrict').html(DistrictList);
+            },
+            error: (error) => {
+                debugger;
+                console.log(JSON.stringify(error));
+            }
+        });
+
+    };
+
+    function OnBegin() {
+        $('.btn-close').click();
+        debugger;
+    }
+    function OnSuccess(response) {
+        debugger;
+        var msg = response.msg;
+        ShowDynamicSwalAlert("", msg);
+        //window.location.reload();
+    }
+</script>

@@ -1,0 +1,506 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@using System.Globalization
+@model CMDApplicationDetails
+@{
+    ViewData["Title"] = "CMD Application";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    long AppYearId = 0;
+    long AppMonthId = 0;
+    long ServiceId = 0;
+    long Action = 0;
+    long statusId = 0;
+    string clslabel = "";
+    string clssearchlabel = "form-control";
+
+    decimal FinancialTarget = 0;
+    decimal PhysicalTarget = 0;
+    decimal PhysicalAchievement = 0;
+    decimal FinancialAchievement = 0;
+    decimal ApplicationReceived = 0;
+    decimal SanctionDispose = 0;
+    decimal RejectDispose = 0;
+    decimal Pending = 0;
+    decimal Pending90days = 0;
+
+    @if (ViewBag.AppYearId != null)
+    {
+        AppYearId = Convert.ToInt64(HttpUtility.UrlEncode(CommonUtils.Decrypt(ViewBag.AppYearId)));
+    }
+    @if (ViewBag.AppMonthId != null)
+    {
+        AppMonthId = Convert.ToInt64(HttpUtility.UrlEncode(CommonUtils.Decrypt(ViewBag.AppMonthId)));
+    }
+    @if (ViewBag.ServiceId != null)
+    {
+        ServiceId = Convert.ToInt64(HttpUtility.UrlEncode(CommonUtils.Decrypt(ViewBag.ServiceId)));
+    }
+    @if (ViewBag.Action != null)
+    {
+        Action = Convert.ToInt64(HttpUtility.UrlEncode(CommonUtils.Decrypt(ViewBag.Action)));
+    }
+    @if (ViewBag.Status != null)
+    {
+        statusId = Convert.ToInt64(HttpUtility.UrlEncode(CommonUtils.Decrypt(ViewBag.Status)));
+    }
+    @if (Action == 1)
+    {
+        clslabel = "form-control-plaintext";
+        clssearchlabel = "form-control-plaintext";
+    }
+    else if (Action == 2)
+    {
+        clslabel = "form-control";
+        clssearchlabel = "form-control-plaintext";
+    }
+    else
+    {
+        clslabel = "form-control";
+    }
+
+    if (Model != null && Model.lstCMDApplicationDetails.Count > 0 && Action == 1)
+    {
+        FinancialTarget = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.fintarget));
+        PhysicalTarget = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.phytarget));
+        PhysicalAchievement = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.phyachievement));
+        FinancialAchievement = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.finachievement));
+        ApplicationReceived = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.appreceived));
+        SanctionDispose = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.appsanction));
+        RejectDispose = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.appreject));
+        Pending = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.apppending));
+        Pending90days = @Model.lstCMDApplicationDetails.ToList().Sum(s => Convert.ToDecimal(s.appdaypending));
+    }
+}
+
+<style type="text/css">
+     .header1 {
+        position: sticky;
+        top: 0px;
+    }
+
+    .container4 {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        margin: auto;
+        overflow: auto;
+        height: 60vh;
+        border-top: solid 1px black;
+        border-bottom: solid 1px black;
+    }
+
+        .container4 tr, .container4 th, .container4 td {
+            border-color: black;
+        }
+
+        .container4 thead th {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        /* safari and ios need the tfoot itself to be position:sticky also */
+        .container4 tfoot,
+        .container4 tfoot th,
+        .container4 tfoot td {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            z-index: 4;
+        }
+
+    th:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        z-index: 2;
+    }
+
+    thead th:first-child,
+    tfoot th:first-child {
+        z-index: 5;
+    }
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero3">
+    @*<h2 class="animate__animated animate__fadeInDown">Application</h2>*@
+</section>
+<!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2 my-4">
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+                        <form asp-controller="CMDashboard" asp-action="CMDApplication" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Application Details</span>
+                                @* <a asp-controller="CMDashboard" asp-action="GenerateCMDApplicationCSVReport" asp-route-strappYear="@ViewBag.AppYearId" asp-route-strappMonth="@ViewBag.AppMonthId" asp-route-strserviceId="@ViewBag.ServiceId" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("1"))" class="text-success" title="Export Details" style="display :inline;font-size: 1.55rem;" value="export">
+                                <i class="bi bi-filetype-csv"></i>Export
+                                </a>*@
+                                @if (statusId == 2)
+                                {
+                                    <a asp-controller="CMDashboard" asp-action="GenerateCMDApplicationCSVReport" asp-route-strappYear="@ViewBag.AppYearId" asp-route-strappMonth="@ViewBag.AppMonthId" asp-route-strserviceId="@ViewBag.ServiceId" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("1"))" value="export" name="export" class="btn btn-primary">
+                                        <i class="bi bi-filetype-csv"></i>Export
+                                    </a>
+                                }
+                            </div>
+                            <div class="card-body">
+
+                                @if (Action == 0)
+                                {
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+
+                                                <label class="f-600">Year</label>
+                                                <select name="strappYear" id="appYear" tabindex="1" required asp-items="@(new SelectList(@ViewBag.YearList, "Value", "Text", selectedValue: @ViewBag.AppYearId))" class="form-control">
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                                <label id="lblYearMsg" class="text-danger"></label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="f-600">Month</label>
+                                                <select name="strappMonth" id="appMonth" tabindex="1" required asp-items="@(new SelectList(@ViewBag.MonthList, "Value", "Text", selectedValue: @ViewBag.AppMonthId))" class="form-control">
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                            </div>
+                                            <label id="lblMonthMsg" class="text-danger"></label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="f-600">Scheme Name</label>
+                                                <select name="strServiceId" id="ServiceId" tabindex="1" asp-items="@(new SelectList(@ViewBag.ServiceList, "Value", "Text", selectedValue: @ViewBag.ServiceId))" class="form-control">
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                            </div>
+                                            <label id="lblServiceMsg" class="text-danger"></label>
+                                        </div>
+                                        <div class="col-md-12 text-center mt-3">
+                                            <input type="submit" id="btnSearch" value="Search" class="btn btn-secondary">
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+
+                                                <label class="f-600">Year</label>
+                                                <select name="strappYear" id="appYear" tabindex="1" required asp-items="@(new SelectList(@ViewBag.YearList, "Value", "Text", selectedValue: @ViewBag.AppYearId))" class="form-control" disabled>
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                                <label id="lblYearMsg" class="text-danger"></label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="f-600">Month</label>
+                                                <select name="strappMonth" id="appMonth" tabindex="1" required asp-items="@(new SelectList(@ViewBag.MonthList, "Value", "Text", selectedValue: @ViewBag.AppMonthId))" class="form-control" disabled>
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                            </div>
+                                            <label id="lblMonthMsg" class="text-danger"></label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="f-600">Scheme Name</label>
+                                                <select name="strServiceId" id="ServiceId" tabindex="1" asp-items="@(new SelectList(@ViewBag.ServiceList, "Value", "Text", selectedValue: @ViewBag.ServiceId))" class="form-control" disabled>
+                                                    <option value="0" selected>--- Please Select ---</option>
+                                                </select>
+                                            </div>
+                                            <label id="lblServiceMsg" class="text-danger"></label>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+                        </form>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            @if (Model != null && Model.lstCMDApplicationDetails != null && Model.lstCMDApplicationDetails.Count() > 0 && @AppYearId > 0 && @AppMonthId > 0 && @ServiceId > 0)
+            {
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-0">
+                            <form asp-controller="CMDashboard" asp-action="AddCMDApplication" method="post">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header py-2 d-flex justify-content-between" style="background: var(--navy-primary) !important;">
+                                                <span class="text-white"><i class='bx bxs-pencil align-middle'></i> <small> ( * marks fields are Mandatory)</small> </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <fieldset class="custom-fieldset">
+                                                            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                                                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">Details</span>
+                                                            </legend>
+
+                                                            @*<div class="tab-pane fade show" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">*@
+                                                            <div class="container4">
+                                                                <table class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon mb-0">
+                                                                    <thead class="text-center" style="position: sticky;top: 0px">
+                                                                        <tr class="bg-warning">
+                                                                            <th>District Name</th>
+                                                                            <th>Financial<br>Target<span class="text-danger">*</span></th>
+                                                                            <th>Physical<br>Target<span class="text-danger">*</span></th>
+                                                                            <th>Physical<br>Achievement<span class="text-danger">*</span></th>
+                                                                            <th>Financial<br>Achievement<span class="text-danger">*</span></th>
+                                                                            <th>Application<br>Received<span class="text-danger">*</span></th>
+                                                                            <th>Sanction<br>Dispose<span class="text-danger">*</span></th>
+                                                                            <th>Reject<br>Dispose<span class="text-danger">*</span></th>
+                                                                            <th>Pending<span class="text-danger">*</span></th>
+                                                                            <th>Pending<br>90days<span class="text-danger">*</span></th>
+                                                                            <th>Dcode<span class="text-danger">*</span></th>
+                                                                            <th>AsonDate<span class="text-danger">*</span></th>
+                                                                        </tr>
+                                                                    </thead>
+
+
+                                                                    <input type="hidden" asp-for="@Model.appyear">
+                                                                    <input type="hidden" asp-for="@Model.appmonth">
+                                                                    <input type="hidden" asp-for="@Model.serviceid">
+
+                                                                    <tbody>
+                                                                        @if (Model != null && Model.lstCMDApplicationDetails.Count() > 0)
+                                                                        {
+                                                                            for (int i = 0; i < Model.lstCMDApplicationDetails.Count; i++)
+                                                                            {
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <input type="hidden" asp-for="@Model.lstCMDApplicationDetails[i].applicationid">
+                                                                                        <input type="hidden" asp-for="@Model.lstCMDApplicationDetails[i].districtid">
+                                                                                        @Model.lstCMDApplicationDetails[i].districtname
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].fintarget" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].fintarget" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].phytarget" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].phytarget" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].phyachievement" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].phyachievement" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].finachievement" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].finachievement" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].appreceived" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].appreceived" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].appsanction" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].appsanction" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].appreject" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].appreject" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].apppending" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].apppending" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].appdaypending" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:111px;" class="@clslabel">
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].appdaypending" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input type="hidden" asp-for="@Model.lstCMDApplicationDetails[i].dcode">
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].dcode" type="text" onkeypress="return AllowNumeric(event);" maxlength="9" style="width:60px;" class="@clslabel" disabled>
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].dcode" class="text-danger"></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input type="text" asp-for="@Model.lstCMDApplicationDetails[i].asondate" class="datepicker" style="display:none;">
+                                                                                        <input asp-for="@Model.lstCMDApplicationDetails[i].asondate" type="text" style="width:110px;" class="@clslabel datepicker" disabled>
+                                                                                        <span asp-validation-for="@Model.lstCMDApplicationDetails[i].asondate" class="text-danger"></span>
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                            }
+                                                                        }
+                                                                    </tbody>
+                                                                    @if (Action == 1)
+                                                                    {
+                                                                        <tfoot class="text-white" style="background:#9d6c30;">
+                                                                            <tr>
+                                                                                <td><b>TOTAL</b></td>
+                                                                                <td>@FinancialTarget</td>
+                                                                                <td>@PhysicalTarget</td>
+                                                                                <td>@PhysicalAchievement</td>
+                                                                                <td>@FinancialAchievement</td>
+                                                                                <td>@ApplicationReceived</td>
+                                                                                <td>@SanctionDispose</td>
+                                                                                <td>@RejectDispose</td>
+                                                                                <td>@Pending</td>
+                                                                                <td>@Pending90days</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    }
+
+                                                                </table>
+                                                            </div>
+
+                                                            @*</div>*@
+
+                                                        </fieldset>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="card-footer text-center">
+                                                @*<button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">નોંધણી કરો</button>*@
+                                                @if (Action == 0)
+                                                {
+                                                    <button type="submit" class="btn btn-primary">
+                                                        Submit
+                                                    </button>
+                                                    <a href="/CMDashboard/ApplicationDetails" class="btn btn-secondary cancel">
+                                                        Cancel
+                                                    </a>
+                                                }
+                                                else if (Action == 2)
+                                                {
+                                                    <button type="submit" class="btn btn-primary">
+                                                        Update
+                                                    </button>
+                                                    <a href="/CMDashboard/ApplicationDetails" class="btn btn-secondary cancel">
+                                                        Cancel
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <input type="button" value="Back" onclick="history.back()" class="btn btn-primary">
+                                                }
+
+                                                @*<button type="button" class="btn btn-secondary cancel" onclick="closeoncancel();">
+                                            Cancel
+                                            </button>*@
+
+                                            </div>
+                                            @*<button class="btn btn-sm btn-primary pl-3 pr-3">Back</button>*@
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+@section Scripts {
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            var msg = '@Html.Raw(ViewBag.Message)';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("", msg);
+            }
+
+
+            $("#btnSearch").click(function(e) {
+                debugger;
+                $("#appYear").val()
+                if ($("#appYear").val() == "" || $("#appYear").val() == undefined || $("#appYear").val() == "0") {
+                    $("#lblYearMsg").text('Please select year');
+                    return false;
+                }
+                if ($("#appMonth").val() == "" || $("#appMonth").val() == undefined || $("#appMonth").val() == "0") {
+                    $("#lblMonthMsg").text('Please select month');
+                    return false;
+                }
+                if ($("#ServiceId").val() == "" || $("#ServiceId").val() == undefined || $("#ServiceId").val() == "0") {
+                    $("#lblServiceMsg").text('Please select scheme');
+                    return false;
+                }
+            });
+
+            $("#appYear").change(function() {
+                if ($("#appYear").val() == "" || $("#appYear").val() == undefined || $("#appYear").val() == "0") {
+                    $("#lblYearMsg").text('Please select year');
+                }
+                else {
+                    $("#lblYearMsg").text('');
+                }
+            });
+            $("#appMonth").change(function() {
+                if ($("#appMonth").val() == "" || $("#appMonth").val() == undefined || $("#appMonth").val() == "0") {
+                    $("#lblMonthMsg").text('Please select month');
+                }
+                else {
+                    $("#lblMonthMsg").text('');
+                }
+            });
+            $("#ServiceId").change(function() {
+                if ($("#ServiceId").val() == "" || $("#ServiceId").val() == undefined || $("#ServiceId").val() == "0") {
+                    $("#lblServiceMsg").text('Please select scheme');
+                }
+                else {
+                    $("#lblServiceMsg").text('');
+                }
+            });
+
+        });
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                endDate: new Date(),
+                autoclose: true
+            });
+        });
+    </script>
+}

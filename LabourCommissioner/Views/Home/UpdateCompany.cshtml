@@ -1,0 +1,308 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using System.Security.Claims
+@model PersonalDetailsModel;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Update Company";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var UserType = claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value;
+
+    string GLWBRegistrationAPI = (string)ViewBag.GLWBRegistrationAPI;
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Company Update</h2>
+</section>
+
+
+<main id="main">
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                            Company Details
+                        </div>
+                        <div class="card-body">
+
+                            <form enctype="multipart/form-data" method="post" asp-controller="Home" asp-action="UpdateCompany">
+                                <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                    <fieldset class="custom-fieldset mb-4">
+                                        <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                            <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                                                Company Details
+                                            </span>
+                                        </legend>
+                                        <div class="form-horizontal form-bordered">
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું નામ :</span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationName)
+                                                </div>
+
+                                                <span class="control-label col-md-3">લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    <input type="hidden" asp-for="@Model.LwbAccountNo" id="hdnOLDLwbAccountNo" />
+                                                    @Html.DisplayFor(item => item.LwbAccountNo)
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું ઈમેલ :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationEmail)
+                                                </div>
+
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું સરનામું :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationAddress)
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">શહેર :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationCity)
+                                                </div>
+
+                                                <span class="control-label col-md-3">જિલ્લાનું નામ :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationDistrict)
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">તાલુકાનું નામ :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationTaluka)
+                                                </div>
+
+                                                <span class="control-label col-md-3">પીનકોડ :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    @Html.DisplayFor(item => item.OrganizationPincode)
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="custom-fieldset mb-4">
+                                        <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                            <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                                                Update Company Details
+                                            </span>
+                                        </legend>
+                                        <div class="form-horizontal form-bordered">
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="FLwbAccountNo" type="text" maxlength="100" class="form-control">
+                                                    <span asp-validation-for="FLwbAccountNo" class="text-danger"></span>
+                                                </div>
+                                                <div class="control-form col-md-2">
+                                                    <button type="button" class="btn btn-sm btn-primary pl-3 pr-3" id="btnLWB">Fetch</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="custom-fieldset mb-4" id="divGLWBUserDetails" style="display:none;">
+                                        <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                            <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                                                New Company Details
+                                            </span>
+                                        </legend>
+                                        <div class="form-horizontal form-bordered">
+                                            <input asp-for="Udistrict_id" type="hidden" />
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું નામ :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationName" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationName" class="text-danger"></span>
+                                                </div>
+
+                                                <span class="control-label col-md-3">લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર :<span class="text-danger">*</span></span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="ULwbAccountNo" type="text" maxlength="100" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="ULwbAccountNo" class="text-danger"></span>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું ઈમેલ :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationEmail" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationEmail" class="text-danger"></span>
+                                                </div>
+
+                                                <span class="control-label col-md-3">કારખાના/સંસ્થાનું સરનામું :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationAddress" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationAddress" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">શહેર :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationCity" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationCity" class="text-danger"></span>
+                                                </div>
+
+                                                <span class="control-label col-md-3">જિલ્લાનું નામ :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationDistrict" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationDistrict" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <span class="control-label col-md-3">તાલુકાનું નામ :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationTaluka" class="form-control" readonly="readonly" />
+                                                    <span asp-validation-for="UOrganizationTaluka" class="text-danger"></span>
+                                                </div>
+
+                                                <span class="control-label col-md-3">પીનકોડ :</span>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="UOrganizationPincode" type="text" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="UOrganizationPincode" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer text-center border">
+                                            <button class="btn btn-sm btn-primary pl-3 pr-3">Update</button>
+                                            @if (UserType == "1")
+                                            {
+                                                <button type="submit" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" asp-controller="Home" asp-action="Home">Cancel</button>
+                                            }
+                                            else
+                                            {
+                                                <button type="submit" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" asp-controller="EmployeeHome" asp-action="Index">Cancel</button>
+                                            }
+
+                                        </div>
+
+
+
+                                    </fieldset>
+
+
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@section Scripts {
+    <script type="text/javascript">
+        var msg = '@Html.Raw(@TempData["Message"])';
+        if (msg != null && msg != '') {
+            ShowDynamicSwalAlert("", msg);
+        }
+        $("#btnLWB").click(function (e) {
+            debugger;
+            var OLDLwbAccountNo = $("#hdnOLDLwbAccountNo").val().trim();
+            var LWBAccountNo = $("#FLwbAccountNo").val().trim();
+            if (LWBAccountNo != undefined && LWBAccountNo != "") {
+
+                if (OLDLwbAccountNo.toLowerCase() != LWBAccountNo.toLowerCase()) {
+                    if (LWBAccountNo.length != 0) {
+                        var model = {
+                            "data": { "account": LWBAccountNo }
+                        };
+                        $.ajax({
+                            url: '@GLWBRegistrationAPI',
+                            headers: {
+
+                                username: "glwbapp",
+                                password: "36d4f5a12f0b9bb05ba3e75348e4ec9a",
+                                token: "ABX78955-082E-42D4-8C88-FB420EF83113",
+                                Authorization1: "Bearer eyJ4NXQiOiJNell4TW1Ga09HWXdNV0kwWldObU5EY3hOR1l3WW1NNFpUQTNNV0kyTkRBelpHUXpOR00wWkdSbE5qSmtPREZrWkRSaU9URmtNV0ZoTXpVMlpHVmxOZyIsImtpZCI6Ik16WXhNbUZrT0dZd01XSTBaV05tTkRjeE5HWXdZbU00WlRBM01XSTJOREF6WkdRek5HTTBaR1JsTmpKa09ERmtaRFJpT1RGa01XRmhNelUyWkdWbE5nX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJnc2RjYXBpZ3dzdSIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoieDRSdUowckF3U01FUWVaaGRFYkV4REpVak9FYSIsIm5iZiI6MTYzMDU3OTMyMCwiYXpwIjoieDRSdUowckF3U01FUWVaaGRFYkV4REpVak9FYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9nc2RjYXBpZ2F0ZXdheWV4dC5ndWphcmF0Lmdvdi5pbjo5NDQzXC9vYXV0aDJcL3Rva2VuIiwiZXhwIjoxOTkwNTc5MzIwLCJpYXQiOjE2MzA1NzkzMjAsImp0aSI6IjNlZmU5NjUwLThhZjctNGMyYy1iMTFiLTY3N2Y1Yzk4ZGIxYSJ9.B4hWR0Yt-j7X1nutDj1LNIJfUflpmLYN_Kd5dh-sxJwJHqHUAIQglW_TGx0tnigNzUqwo9nx4z_2kVEewg9s6GNcvImARVtNRtlH2Lw22Bbr2lywLrL3_GsZPVktNu8_869JsyZhpfsuf7cUrYIm6ufxhrorzk57PrB76RrjtWrmIiKwJ7lxFP65wbjPLsYYqBzmjyN_TD6PKI40oC_bnfiqym2m0bfetFj1HLyXsdC_anC0zXyCw3jKIniFLZZgYQSM1ASbpRfkuPAMJEhn6eMOoAzhSKln4vzcRlTt7Ru_Uncfd8EZuVAKjiUdQRw8-2P9rK36sjDEGN8pYSR8hw"
+
+                            },
+                            type: 'post',
+                            crossDomain: true,
+                            contentType: 'application/json',
+                            data:
+                                JSON.stringify(model),
+                            success: function (data) {
+
+                                if (data != null) {
+                                    var objData = JSON.parse(data);
+                                    if (objData != null && objData.success == '1') {
+                                        $("#divGLWBUserDetails").show();
+                                        debugger;
+                                        var organization_name = objData.data.organization_name;
+                                        var organization_account_number = objData.data.organization_account_number;
+                                        var email = objData.data.email;
+                                        var organization_address = objData.data.organization_address;
+                                        var city = objData.data.city;
+                                        var district = objData.data.district;
+                                        var taluka = objData.data.taluka;
+                                        var pincode = objData.data.pincode;
+                                        var districtId = objData.data.district_id;
+
+                                        $("#UOrganizationName").val(organization_name);
+                                        $("#ULwbAccountNo").val(objData.data.organization_account_number);
+                                        $("#UOrganizationEmail").val(email);
+                                        $("#UOrganizationAddress").val(organization_address);
+                                        $("#UOrganizationCity").val(city);
+                                        $("#UOrganizationDistrict").val(district);
+                                        $("#UOrganizationTaluka").val(taluka);
+                                        $("#UOrganizationPincode").val(pincode);
+                                        $("#Udistrict_id").val(districtId);
+                                    }
+                                    else {
+                                        alert("તમારી વિગત અમાન્ય છે.");
+                                    }
+                                }
+                                else {
+                                    alert("તમારી વિગત અમાન્ય છે.");
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.log(xhr)
+                                alert("તમારી વિગત અમાન્ય છે.")
+                            }
+                        });
+                    }
+                    else {
+                        alert("કૃપા કરીને લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર દાખલ કરો");
+                        return;
+                    }
+                }
+                else {
+                    alert("કૃપા કરીને નવો લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર દાખલ કરો");
+                    return;
+                }
+
+
+            }
+            else {
+                alert("કૃપા કરીને લેબર વેલ્ફેર ફંડ એકાઉન્ટ નંબર દાખલ કરો");
+                return;
+
+            }
+        });
+    </script>
+
+}

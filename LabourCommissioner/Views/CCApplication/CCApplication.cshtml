@@ -1,0 +1,252 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model CCApplicationDetails
+@{
+    ViewData["Title"] = "CESS Collection Application";
+    Layout = "~/Views/Shared/_OtherLoginLayout.cshtml";
+    var Totalsahay = ViewBag.TotalSahay;
+    string ApplicationNo = "0";
+    bool isfilled = false;
+    if (Model != null && Model.isfilled == true)
+    {
+        ApplicationNo = Model.applicationno;
+        isfilled = Model.isfilled;
+    }
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero3">
+    @*<h2 class="animate__animated animate__fadeInDown">Application</h2>*@
+</section>
+<!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2 my-4">
+        <div class="container-fluid">
+
+
+            @*<div class="text-danger" asp-validation-summary="All"></div>*@
+            <form asp-controller="CCApplication" asp-action="AddCCApplication" asp-route-strApplicationNo="@ApplicationNo" method="post">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bxs-pencil align-middle'></i> <small> ( * marks fields are Mandatory)</small> </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+
+                                        <fieldset class="custom-fieldset mb-4">
+                                            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">CESS Calculation</span>
+                                            </legend>
+
+                                            <div class="form-horizontal form-bordered">
+                                                <div class="form-group row">
+                                                    <label asp-for="cesspayername" class="control-label col-md-2">
+                                                        Name of CESS Payer<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-10">
+                                                        <input asp-for="cesspayername" type="text" maxlength="100" class="form-control">
+                                                        <span asp-validation-for="cesspayername" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label asp-for="dateofcollection" class="control-label col-md-2">
+                                                        Date of Collection<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-4">
+                                                        <input asp-for="dateofcollection" type="text" maxlength="100" class="form-control datepicker">
+                                                        <span asp-validation-for="dateofcollection" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="costofconstruction" class="control-label col-md-2">
+                                                        Cost of Construction<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-4">
+                                                        <input asp-for="costofconstruction" type="text" onchange="CalculateTotalCESS(this.value)" maxlength="100" class="form-control">
+                                                        <span asp-validation-for="costofconstruction" class="text-danger"></span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label asp-for="cesspercentage" class="control-label col-md-2">
+                                                        CESS Percentage<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-4">
+                                                        <input asp-for="cesspercentage" type="text" value="@Totalsahay" maxlength="100" class="form-control" readonly="readonly">
+                                                        <span asp-validation-for="cesspercentage" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="totalcess" class="control-label col-md-2">
+                                                        Total CESS<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-4">
+                                                        <input asp-for="totalcess" type="text" maxlength="100" class="form-control" readonly="readonly">
+                                                        <span asp-validation-for="totalcess" class="text-danger"></span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </fieldset>
+
+                                        <fieldset class="custom-fieldset mb-4">
+                                            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                                                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">Address of Project Site</span>
+                                            </legend>
+
+                                            <div class="form-horizontal form-bordered">
+                                                <div class="form-group row">
+                                                    <label asp-for="stateid" class="control-label col-md-2">
+                                                        State Name<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <select id="listState" asp-for="stateid" asp-items="@(new SelectList(@ViewBag.States, "Value", "Text", selectedValue: 7))" class="form-control" disabled>
+                                                            @*<option value="7">
+                                                            Gujrat - ગુજરાત
+                                                            </option>*@
+                                                        </select>
+                                                        <span asp-validation-for="stateid" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="districtid" class="control-label col-md-2">
+                                                        District Name<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <select asp-for="districtid" asp-items="@(@isfilled == true ? new SelectList(@ViewBag.District, "Value", "Text", selectedValue:@Model.districtid) : new SelectList(@ViewBag.District, "Value", "Text"))" class="form-control" onchange="GetTalukaByDistrictId(this.value);">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                        <span asp-validation-for="districtid" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="talukaid" class="control-label col-md-2">
+                                                        Taluka Name<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <select asp-for="talukaid" asp-items="@(@isfilled == true ? new SelectList(@ViewBag.Taluka,"Value", "Text",selectedValue:@Model.talukaid) : null)" class="form-control" id="listTaluka" onchange="GetVillageByDistrictIdAndTalukaId(this.value);">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                        <span asp-validation-for="talukaid" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label asp-for="villageid" class="control-label col-md-2">
+                                                        Village Name<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <select asp-for="villageid" asp-items="@(@isfilled == true ? new SelectList(@ViewBag.Village,"Value", "Text",selectedValue:@Model.villageid) : null)" class="form-control" id="villageId">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                        <span asp-validation-for="villageid" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="addressineng" class="control-label col-md-2">
+                                                        Address (In English)<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <textarea asp-for="addressineng" rows="2" cols="20" class="form-control" style="height: auto !important"></textarea>
+                                                        <span asp-validation-for="addressineng" class="text-danger"></span>
+                                                    </div>
+
+                                                    <label asp-for="addressinguj" class="control-label col-md-2">
+                                                        Address (In Gujarati)<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <textarea asp-for="addressinguj" rows="2" cols="20" class="form-control" style="height: auto !important"></textarea>
+                                                        <span asp-validation-for="addressinguj" class="text-danger"></span>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label asp-for="pincode" class="control-label col-md-2">
+                                                        Pin Code<span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="control-form col-md-2">
+                                                        <input asp-for="pincode" type="text" maxlength="100" class="form-control">
+                                                        <span asp-validation-for="pincode" class="text-danger"></span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </fieldset>
+
+                                    </div>
+
+                                    <div class="card-footer text-center">
+                                        @*<button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">નોંધણી કરો</button>*@
+                                        <button type="submit" class="btn btn-primary">
+                                            Submit
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary cancel" onclick="closeoncancel();">
+                                            Cancel
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            @*<button class="btn btn-sm btn-primary pl-3 pr-3">Back</button>*@
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+
+
+</main>
+@section Scripts {
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+        });
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                endDate:new Date(),
+                autoclose: true
+            });
+        });
+        function GetVillageByDistrictIdAndTalukaId(talukaId) {
+            var districtid = $("#districtid").val();
+            GetEVillageByDistrictIdAndTalukaId(districtid, talukaId);
+        }
+        function CalculateTotalCESS(costofconstruction) {
+
+            debugger
+            var cesspercentage = $("#cesspercentage").val();
+            var totalsahay = "0";
+            if (costofconstruction != null && costofconstruction != "" && costofconstruction != undefined &&
+                cesspercentage != null && cesspercentage != "" && cesspercentage != undefined) {
+
+                cesspercentage = parseFloat(cesspercentage);
+                costofconstruction = parseFloat(costofconstruction);
+                if (cesspercentage != NaN && costofconstruction != NaN) {
+                    totalsahay = (costofconstruction / 100) * (cesspercentage);
+                }
+            }
+            $("#totalcess").val(parseFloat(totalsahay));
+
+        }
+    </script>
+}

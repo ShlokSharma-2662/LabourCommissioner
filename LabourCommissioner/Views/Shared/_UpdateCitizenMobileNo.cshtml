@@ -1,0 +1,52 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model RegisteredApplicant
+
+
+<form asp-controller="EmployeeHome" asp-action="UpdateCitizenMobileNo" id="UpdateMobileNo">
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center justify-content-between flex-row-reverse" id="dynamicSchemeModelLabel">
+                    Update Citizen Data
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <div class="modal-body bocw_bg">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <label>
+                                <span id="lblUserId">User ID: </span><span class="text-danger">*</span>
+                            </label>
+                            <div class="">
+                                <input asp-for="registrationid" class="form-control" readonly autocomplete="off" />
+                                <span asp-validation-for="registrationid" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span id="lblMobileNo">Mobile No.: </span><span class="text-danger">*</span>
+                            </label>
+                            <div class="">
+                                <input asp-for="mobileno" onkeypress="return AllowNumeric(event);" class="form-control" autocomplete="off" />
+                                <span asp-validation-for="mobileno" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                 <input type="submit" value="Submit" class="btn btn-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>

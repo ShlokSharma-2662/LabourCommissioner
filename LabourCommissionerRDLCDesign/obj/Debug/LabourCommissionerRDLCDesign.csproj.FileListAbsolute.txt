@@ -1,0 +1,14 @@
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\bin\Debug\LabourCommissionerRDLCDesign.exe.config
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\bin\Debug\LabourCommissionerRDLCDesign.exe
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\bin\Debug\LabourCommissionerRDLCDesign.pdb
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.AssemblyReference.cache
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.SuggestedBindingRedirects.cache
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.Properties.Resources.resources
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.GenerateResource.cache
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.CoreCompileInputs.cache
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.exe
+D:\Shlok\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.pdb
+D:\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.AssemblyReference.cache
+D:\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.csproj.SuggestedBindingRedirects.cache
+D:\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.exe
+D:\Azure DevOps\LabourCommissioner\LabourCommissionerRDLCDesign\obj\Debug\LabourCommissionerRDLCDesign.pdb

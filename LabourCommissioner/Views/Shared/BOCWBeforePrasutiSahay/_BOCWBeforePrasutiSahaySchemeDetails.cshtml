@@ -1,0 +1,154 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWBPSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    var Totalsahay = ViewBag.TotalSahay;
+    var DOB = ViewBag.DOB;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWBeforePrasutiSahay" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row" style="display:none;">
+
+                        <span id="body_innerbody_label1" class="control-label col-md-3">અરાજદાર સાથેનો સબંધ :<span class="text-danger">*</span> </span>
+                        <div class="control-form col-md-3">
+                            <select asp-for="Relation" class="form-control">
+                                @*<option selected="selected" value="">પોતે</option>*@
+                                <option selected="selected" value="1">પોતે</option>
+                                @*<option value="2">પત્ની</option>*@
+                            </select>
+                            <span asp-validation-for="Relation" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">પ્રસુતિની સંભવિત તારીખ:</span>
+                        <div class="control-form col-md-3">
+                            <input type="text" asp-for="ExpectedDeliveryDate" placeholder="dd/MM/yyyy" onchange="CalculateAge('@DOB',this.value, 'Age');" class="form-control dateValidateCls date_picker" id="exdate">
+                            <span asp-validation-for="ExpectedDeliveryDate" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_label2" class="control-label col-md-3">કેટલામી પ્રસુતિ છે? :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3 d-flex align-items-center">
+                            <input asp-for="PrasutiNo" type="radio" value="1" id="rbFirst" name="PrasutiNo" />પ્રથમ<br />
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="2" id="rbSecond" name="PrasutiNo" />બીજી<br /></span>
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="3" id="rbThird" name="PrasutiNo" />ત્રીજી<br /></span>
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="4" id="rbForth" name="PrasutiNo" />ચોથી<br /></span>
+                            <span asp-validation-for="PrasutiNo" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row" style="display:none;">
+                        <span id="body_innerbody_label2" class="control-label col-md-3">પ્રસુતિ વખતે ઉંમર(૧૯ વર્ષ મર્યાદા) :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="Age" class="form-control" readonly="readonly">
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                            ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="Totalsahay" asp-for="totalsahay" value="@Totalsahay" class="form-control" readonly />
+                            <span asp-validation-for="totalsahay" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+    var date = new Date();
+    var currentYear = date.getFullYear();
+    var currentMonth = date.getMonth();
+    var currentDate = date.getDate();
+    $('.date_picker').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        format: "dd/mm/yyyy",
+        language: "local",
+        startDate: new Date(),
+        endDate: new Date(currentYear, currentMonth + 6, currentDate),
+        todayHighlight: 'TRUE',
+        autoclose: true
+    });
+
+    //$('#exdate').on('change', function () {
+    //    debugger;
+    //    var start = new Date();
+    //    var curr_date = start.getDate() < 10 ? '0' + start.getDate() : start.getDate();
+    //    var curr_month = start.getMonth() < 10 ? '0' + (start.getMonth() + 1) : (start.getMonth() + 1);
+    //    var curr_year = start.getFullYear();
+    //    var startDate = curr_date + "/" + curr_month + "/" + curr_year;
+
+    //    var end = $('#exdate').val();
+
+    //    var today = new Date();     
+    //    var dateArray = end.split('/');
+    //    var start_Date = dateArray[2] + "-" + dateArray[1] + "-" + dateArray[0];
+    //    start_Date = new Date(start_Date);
+    //    var monthDiff = today.getDay() - start_Date.getDay();
+
+
+    //    //var startDay = new Date(startDate);
+    //    //var endDay = new Date(end);
+
+    //    //var millisBetween = startDay.getTime() - endDay.getTime();
+
+    //    //var days = millisBetween / (1000 * 3600 * 24);
+
+    //    //var diff = end - startDate;
+    //    //var days = diff / 1000 / 60 / 60 / 24;
+    //});
+
+
+</script>

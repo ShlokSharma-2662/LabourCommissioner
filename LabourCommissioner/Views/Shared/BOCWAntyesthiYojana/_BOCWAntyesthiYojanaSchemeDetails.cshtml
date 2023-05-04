@@ -1,0 +1,204 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@using System.Security.Claims
+@model BOCWASYSchemeDetails
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var Totalsahay = ViewBag.TotalSahay;
+    var isFilled = ViewBag.isFilled;
+    var DOB = ViewBag.DOB;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    var BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWAntyesthiYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+
+
+        @* //new design for antyesthi *@
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>શ્રમિકની વિગત</legend>
+            <div class="form-horizontal form-bordered">
+
+                <div class="form-group row">
+                    <span id="" class="control-label col-md-3">મૃત્યુ પામ્યા શ્રમિકનું નામ :<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="name" class="form-control">
+                        <span asp-validation-for="name" class="text-danger"> </span>
+
+
+                    </div>
+                    <span id="body_innerbody_reqtxtApplicantRelation" class="control-label col-md-3">લાભાર્થીનો શ્રમિક સાથેનો સબંધ:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <select asp-for="Relation" id="ddlList" class="form-select" required>
+                            <option value="">-Please Select-</option>
+                            <option value="1">પિતા/માતા</option>
+                            <option value="2">પતિ</option>
+                            <option value="3">પત્ની</option>
+                            <option value="4">પુત્ર</option>
+                            <option value="5">પુત્રી</option>
+                            <option value="6">અન્ય</option>
+                        </select>
+                        <span asp-validation-for="Relation" class="text-danger"></span>
+                        <span id="body_innerbody_reqtxtApplicantRelation" style="color:Red;display:none;">લાભાર્થીનો શ્રમિક સાથેનો સબંધ પસંદ કરો</span>
+
+
+                    </div>
+                    @if (BeneficiaryType != "6")
+                    {
+                        <span id="body_innerbody_label19" class="control-label col-md-3">શ્રમિક મૃત્યુ પામ્યાની તારીખ  :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="deathdate" type="text" class="form-control dateValidateCls datepicker" id="exdate" placeholder="dd/MM/yyyy" onchange="CalculateAge('@DOB',this.value, 'deathtimeage');" />
+
+                            <span asp-validation-for="deathdate" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_reqtxtApplicantdeathtimeage" class="control-label col-md-3">શ્રમિક મરણ વખતે ઉમર  :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="deathtimeage" class="form-control" readonly>
+
+                        </div>
+                    }
+                    else
+                    {
+                        <span id="body_innerbody_label19" class="control-label col-md-3">શ્રમિક મૃત્યુ પામ્યાની તારીખ  :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="deathdate" type="text" class="form-control dateValidateCls datepicker" id="exdate" placeholder="dd/MM/yyyy" />
+
+                            <span asp-validation-for="deathdate" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_reqtxtApplicantdeathtimeage" class="control-label col-md-3">શ્રમિક મરણ વખતે ઉમર  :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="deathtimeage" class="form-control">
+
+                        </div>
+                    }
+
+                    <span id="body_innerbody_label19" class="control-label col-md-3">મૃત્યુ પ્રમાણપત્ર નં  :<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="deathcertino" class="form-control">
+                        <span asp-validation-for="deathcertino" class="text-danger"></span>
+
+
+                    </div>
+                    <span id="body_innerbody_label19" class="control-label col-md-3">શ્રમિકનો મોબાઈલ નં  :<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="mobileno" class="form-control" type="tel">
+                        <span asp-validation-for="mobileno" class="text-danger"></span>
+
+
+                    </div>
+                    <span class="control-label col-md-3">શ્રમિકનો ઈ-મેઇલ :</span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="email" class="form-control">
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @* total saahaay of antyesthi is total --- 10,000*@
+                <div class="form-group row">
+                    <label asp-for="totalsahay" class="control-label col-md-3">
+                        ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                    </label>
+
+                    <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" value="@Totalsahay" class="form-control" readonly />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </fieldset>
+
+
+
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3" type="submit">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+    });
+
+    $(function() {
+        var today = new Date();
+        $('.datepickers').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true,
+            endDate: "today",
+            maxDate: today
+        });
+    });
+
+    function validate() {
+        if (document.getElementById("ddlList").value == "") {
+            alert("લાભાર્થીનો શ્રમિક સાથેનો સબંધ પસંદ કરો"); // prompt user
+            document.getElementById("ddlList").focus(); //set focus back to control
+            return false;
+        }
+    }
+
+    $("#dob").change(function() {
+        debugger;
+        var today = new Date();
+        var birthDate = new Date($('#dob').val());
+        var age = today.getFullYear() - birthDate.getFullYear();
+        $("#age").val(age);
+    });
+
+                        //jQuery for mandatory for dropsdown compuslory manual query
+
+
+
+</script>
+
+

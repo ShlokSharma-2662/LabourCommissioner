@@ -1,0 +1,419 @@
+﻿@using LabourCommissioner.Common.Utility
+@using System.Web
+
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@*@model IPagedList<ApplicationDetailsModel>*@
+@*@model IPagedList<EmpApplicationDetailsModel>*@
+@model IEnumerable<EmpApplicationDetailsModel>
+@*@model SPager*@
+
+
+
+@{
+    ViewData["Title"] = "View Aadesh Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    IEnumerable<EmpApplicationDetailsModel> distinctAadeshIdwiseDetails = null;
+    if (Model != null)
+    {
+        distinctAadeshIdwiseDetails = Model.DistinctBy(o => o.aadeshid);
+    }
+    var serviceId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ServiceId.ToString()));
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@ViewBag.SchemeName</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="EmployeeHome" asp-action="GLWBCompletedAadeshForPayment" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i> @ViewBag.SchemeName નાં આદેશની વિગતો</span>
+                                <button type="submit" value="export" name="export" class="btn btn-primary">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    @* <div class="col-md-4">
+                                    <div class="form-group ">
+                                    <label class="f-600">જિલ્લાનું નામ</label>
+                                    <select id="districtId" name="districtId" asp-items="@(new SelectList(@ViewBag.DistrictList, "Value", "Text", selectedValue: @ViewBag.DistrictId))" tabindex="2" class="aspNetDisabled form-control">
+                                    <option value="0">- ALL -</option>
+                                    </select>
+                                    </div>
+                                    </div>*@
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">શરૂઆત તારીખ</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અંતિમ તારીખ</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">યોજનાનું  નામ</label>
+                                            <select id="serviceId" name="serviceId" asp-items="@(new SelectList(@ViewBag.ServiceList, "Value", "Text", selectedValue: @ViewBag.ServiceId))" tabindex="2" class="aspNetDisabled form-control">
+                                                @* <option value="0">-- ALL --</option>*@
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">આદેશ નંબર : </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                            <span id="body_revtxtUserID" style="color: Red; display: none;">Invalid Application Number / Mobile Number.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">આદેશ ની સ્થિતિ</label>
+                                            <select name="statusId" id="statusId" class="form-control">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Sent For Payment</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-3">
+                                        <input type="submit" id="btnSubmit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Aadesh</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-10">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-center table-responsive-md boldIcon">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="23" class="text-start">
+                                                            <a class="btn btn-success" href="#" onclick="GLWBSendForPayment('@CommonUtils.Decrypt(HttpUtility.UrlDecode(serviceId))')">
+                                                                <i class="bi bi-check-lg me-1"></i>Send For Payment
+                                                            </a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th><input type="checkbox" id="headerchkSendforpayment" /><br />Select</th>
+                                                        <th scope="col">Sr No.</th>
+                                                        <th scope="col">Aadesh No.</th>
+                                                        <th scope="col">Financial Year</th>
+                                                        <th scope="col">Aadesh Generated Date</th>
+                                                         <th scope="col">Send For Payment Date</th>
+                                                        <th scope="col">Total Sahay</th>
+                                                        <th scope="col">Application Count</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">View Aadesh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (distinctAadeshIdwiseDetails.Count() > 0)
+                                                    {
+                                                        int maincnt = 1;
+
+                                                        foreach (var item in distinctAadeshIdwiseDetails)
+                                                        {
+                                                            int appcnt = 1;
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <div class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample_@item.aadeshid" aria-expanded="false" style="cursor:pointer;" aria-controls="collapseExample">
+                                                                        <i class="bi bi-chevron-down text-primary fw-bold detail123" style="-webkit-text-stroke: 2px;"></i>
+                                                                    </div>
+                                                                </th>
+                                                                <td>
+                                                                    @if (item.sendforpaymentstatus == 1)
+                                                                    {
+                                                                        <input type="checkbox" id="chkapprovereject" class="clschkSendforpayment" value="@item.aadeshid" />
+                                                                    }
+                                                                </td>
+                                                                <th scope="row">@maincnt</th>
+                                                                <td>@item.aadeshno</td>
+                                                                <td>@item.financialyear</td>
+                                                                <td>@Convert.ToDateTime(item.aadeshcreateddate).ToString("dd/MM/yyyy")</td>
+                                                                 <td>
+                                                                    @if (item.sendforpaymentdate != null)
+                                                                    {
+                                                                        @Convert.ToDateTime(item.sendforpaymentdate).ToString("dd/MM/yyyy")
+                                                                    }
+                                                                </td>
+                                                                <td>@Model.Where(x => x.aadeshid == item.aadeshid).Sum(s => Convert.ToInt64(s.totalsahay))</td>
+                                                                <td>@Model.Where(x => x.aadeshid == item.aadeshid).Count()</td>
+                                                                <td>
+                                                                    @if (item.sendforpaymentstatus == 1)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FFC100 ;">
+                                                                            Pending
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.sendforpaymentstatus == 2)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            Sent For Payment
+                                                                        </span>
+                                                                    }
+                                                                    else
+                                                                    {
+
+                                                                    }
+                                                                </td>
+                                                                <td>
+                                                                    <a asp-controller="EmployeeHome" asp-action="GenerateGLWBAadeshReport" asp-route-straadeshId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.aadeshid.ToString()))" asp-route-strapplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt("0"))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                        <i class="bi bi-file-earmark-pdf-fill"></i>
+                                                                    </a>
+                                                                    <a asp-controller="EmployeeHome" asp-action="GenerateGLWBAadeshReport" asp-route-straadeshId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.aadeshid.ToString()))" class="text-success" title="Application Details" style="display :inline;font-size: 1.55rem;" value="export" asp-route-export="export">
+                                                                        <i class="bi bi-filetype-csv"></i>
+                                                                    </a>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td colspan="50" class="p-0">
+                                                                    <div class="p-3 collapse" id="collapseExample_@item.aadeshid" aria-expanded="false" style="background: #fff8ec;">
+                                                                        <table class="table table-bordered mb-0">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">Sr No.</th>
+                                                                                    <th scope="col">View Application</th>
+                                                                                    @* <th scope="col">e-Nirman Card No.</th>*@
+                                                                                    <th scope="col">Applicatio No.</th>
+                                                                                    <th scope="col">Applicant Name</th>
+                                                                                    <th scope="col">DateOfBirth</th>
+                                                                                    <th scope="col">District</th>
+                                                                                    <th scope="col">Taluka</th>
+                                                                                    <th scope="col">Village</th>
+                                                                                    <th scope="col">Mobile No.</th>
+                                                                                    <th scope="col">Application Date</th>
+                                                                                    <th scope="col">Approved Date</th>
+                                                                                    <th scope="col">Total Sahay</th>
+                                                                                      <th scope="col">Payment Disbursement Date</th>
+                                                                                    <th scope="col">Transaction Date</th>
+                                                                                    <th scope="col">View Aadesh</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+
+                                                                                @foreach (var appitem in Model.Where(x => x.aadeshid == item.aadeshid).ToList())
+                                                                                {
+                                                                                    <tr>
+                                                                                        <td>@appcnt</td>
+                                                                                        <td class="text-center">
+                                                                                            <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.applicationid.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                                                <i class="bi bi-eye-fill"></i>
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        @* <td>@appitem.enirmancardno</td>*@
+                                                                                        <td>@appitem.applicationno</td>
+                                                                                        <td>@appitem.name</td>
+                                                                                        <td>@Convert.ToDateTime(@appitem.dateofbirth).ToString("dd/MM/yyyy")</td>
+                                                                                        <td>@appitem.cDistrictName</td>
+                                                                                        <td>@appitem.ctalukaname</td>
+                                                                                        <td>@appitem.cvillagename</td>
+                                                                                        <td>@appitem.mobileno</td>
+                                                                                        <td>@Convert.ToDateTime(appitem.applicationdate).ToString("dd/MM/yyyy")</td>
+                                                                                        <td>
+                                                                                            @if (appitem.approveddate != null)
+                                                                                            {
+                                                                                                @Convert.ToDateTime(appitem.approveddate).ToString("dd/MM/yyyy")
+                                                                                            }
+                                                                                        </td>
+                                                                                        <td>@appitem.totalsahay</td>
+                                                                                        <td>
+                                                                                            @if (item.confirmuploadeddate != null)
+                                                                                            {
+                                                                                                @Convert.ToDateTime(item.confirmuploadeddate).ToString("dd/MM/yyyy")
+                                                                                            }
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            @if (appitem.transactiondate != null)
+                                                                                            {
+                                                                                                @Convert.ToDateTime(appitem.transactiondate).ToString("dd/MM/yyyy")
+                                                                                            }
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <a asp-controller="EmployeeHome" asp-action="GenerateGLWBIndividualAadeshReport" asp-route-straadeshId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.aadeshid.ToString()))" asp-route-strapplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(Convert.ToString(appitem.applicationid)))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                                                <i class="bi bi-file-earmark-pdf-fill"></i>
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    appcnt++;
+                                                                                }
+                                                                            </tbody>
+
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            maincnt++;
+                                                        }
+
+                                                    }
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                        @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#statusId").val('@ViewBag.Status');
+            $('#headerchkSendforpayment').change(function () {
+                if (this.checked) {
+                    $(".clschkSendforpayment").prop("checked", true);
+                }
+                else {
+                    $(".clschkSendforpayment").prop("checked", false);
+                }
+
+            });
+
+        });
+
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+
+        function ChangePageSize(obj, searchtext) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&districtId=" + '@ViewBag.DistrictId' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate' + "&statusId=" + '@ViewBag.Status' + "&search=" + '@ViewBag.Search' + "&serviceId=" + '@ViewBag.ServiceId';
+        }
+
+        function GLWBSendForPayment(ServiceId) {
+            debugger;
+            var valSelected = [];
+            $('#chkapprovereject:checked').each(function (i) {
+                valSelected[i] = $(this).val();
+            });
+
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for payment.')
+                return false;
+            }
+
+            var data = new Object();
+            data.aadeshidlist = valSelected;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GLWBSendForPayment",
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                //dataType: "html",
+                traditional: true,
+                success: function (data) {
+                    debugger;
+                    if (data != null && data.errorCode == 0) {
+                        debugger;
+                        swal({
+                            title: "",
+                            text: data.msg,
+                            type: "success",
+                            confirmButtonClass: "btn-primary",
+                        }, function () {
+                            $("#statusId").val('2');
+                            $("#btnSubmit").click();
+
+                        });
+                    }
+                    else {
+                        swal({
+                            title: "",
+                            text: data.msg,
+                            type: "error",
+                            confirmButtonClass: "btn-primary",
+                        });
+                    }
+                },
+                failure: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        }
+
+    </script>
+
+}

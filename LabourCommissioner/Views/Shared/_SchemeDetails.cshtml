@@ -1,0 +1,387 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using System.Security.Claims
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@model IEnumerable<ServiceMaster>
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    bool isLastLevel = ViewBag.LastLevel;
+}
+
+<div class="row mt-5">
+    <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+            <li class="lnk_filter0 filter-active">All</li>
+            @*<li class="lnk_filter1">Factory Workers</li>
+            <li class="lnk_filter2">Construction Workers</li>
+            <li class="lnk_filter3">Educational Scheme</li>*@
+        </ul>
+        <span>Total Scheme:<b>@Model.Count()</b></span>
+    </div>
+</div>
+
+@if (@Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "1" || identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "4"))
+{
+    @*Constructions  Workers (Building and Other Constructions Workers Welfare Board)*@
+    <div class="constructions">
+        <p class="h5 d-flex align-items-center"><i class='bx bx-building-house me-2'>&nbsp;ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડ</i></p>
+        <hr />
+        <div class="row portfolio-container portfolio-container2">
+            @*@foreach (var item in Model.Where(i => i.BeneficiaryTypeId == "1"))*@
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+                        @if (@Model != null && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "2")
+                        {
+                            @if (item.ServiceId == 1)
+                            {
+                                <a asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" asp-route-beneficiarytype="@item.BeneficiaryTypeId" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                    <i class='@item.Faicon'></i>
+                                    <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                </a>
+                            }
+                            else
+                            {
+                                if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value == "36") //BOCW Account Officer
+                                {
+                                    <a asp-controller="EmployeeHome" asp-action="BOCWCompletedAadeshForPayment" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value == "56") //CM-HOD
+                                {
+                                    <a asp-controller="CMDashboard" asp-action="ApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+@if ((@Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "2" || identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "5")) && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value != "3" && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value != "4")
+{
+    @*Factory Workers (Labour Welfare Board)*@
+
+    <div class="labour">
+        <p class="h5 d-flex align-items-center"><i class='bx bxs-user-circle me-2'></i>&nbsp;ગુજરાત શ્રમયોગી કલ્યાણ બોર્ડ</p><hr />
+
+        <div class="row portfolio-container portfolio-container2">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+
+                        @if (@Model != null && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "2")
+                        {
+                            @if (item.ServiceId == 31)
+                            {
+                                <a asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" asp-route-beneficiarytype="@item.BeneficiaryTypeId" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                    <i class='@item.Faicon'></i>
+                                    <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                </a>
+                            }
+                            else
+                            {
+                                if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value == "45") //GLWB Account Officer
+                                {
+                                    <a asp-controller="EmployeeHome" asp-action="GLWBCompletedAadeshForPayment" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else if (item.ServiceId == 24)
+                                {
+                                    @*<a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strbeneficiaryid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.BeneficiaryTypeId.ToString()))" class="@item.BackgroundColor">*@
+                                    <a asp-controller="EmployeeHome" asp-action="GLWBHospitalApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else if (item.ServiceId == 34)
+                                {
+                                    @*<a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strbeneficiaryid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.BeneficiaryTypeId.ToString()))" class="@item.BackgroundColor">*@
+                                    <a asp-controller="EmployeeHome" asp-action="GLWBHospitalApplicationDetailsClaim" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else
+                                {
+                                    @*<a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strbeneficiaryid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.BeneficiaryTypeId.ToString()))" class="@item.BackgroundColor">*@
+                                    <a asp-controller="EmployeeHome" asp-action="GLWBEmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+
+@if (@Model != null && identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "3")
+{
+    @*Admin*@
+    <div class="labour">
+        <p class="h5 d-flex align-items-center"><i class='bx bxs-user-circle me-2'></i>&nbsp;ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડ</p><hr />
+
+        <div class="row portfolio-container portfolio-container2">
+
+            @foreach (var item in Model.Where(i => i.BeneficiaryTypeId == "4" || i.BeneficiaryTypeId == "1"))
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+                        @if (@Model != null && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "2")
+                        {
+                            @if (item.ServiceId == 1)
+                            {
+                                <a asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" asp-route-beneficiarytype="@item.BeneficiaryTypeId" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                    <i class='@item.Faicon'></i>
+                                    <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strbeneficiaryid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.BeneficiaryTypeId.ToString()))" class="@item.BackgroundColor">
+                                    <i class='@item.Faicon'></i>
+                                    <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                </a>
+                            }
+                        }
+                        else
+                        {
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="labour">
+        <p class="h5 d-flex align-items-center"><i class='bx bxs-user-circle me-2'></i>&nbsp;ગુજરાત શ્રમયોગી કલ્યાણ બોર્ડ</p><hr />
+
+        <div class="row portfolio-container portfolio-container2">
+
+            @foreach (var item in Model.Where(i => i.BeneficiaryTypeId == "2" || i.BeneficiaryTypeId == "5"))
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+                        @if (item.ServiceId == 31)
+                        {
+                            <a asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" asp-route-beneficiarytype="@item.BeneficiaryTypeId" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strbeneficiaryid="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.BeneficiaryTypeId.ToString()))" class="@item.BackgroundColor">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+
+@if ((@Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "3") || @Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "4")) && identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "2")
+{
+    @*Constructions  Workers (Building and Other Constructions Workers Welfare Board)*@
+    <div class="constructions">
+        <p class="h5 d-flex align-items-center"><i class='bx bx-building-house me-2'>&nbsp;ગુજરાત શ્રમયોગી કલ્યાણ બોર્ડ</i></p>
+        <hr />
+        <div class="row portfolio-container portfolio-container2">
+            @*@foreach (var item in Model.Where(i => i.BeneficiaryTypeId == "1"))*@
+            @foreach (var item in Model)
+            {
+                @if (item.ServiceId == 24 || item.ServiceId == 34)
+                {
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="scheme">
+                            @*<a href="@Url.Action("GetSchemeDescription","Scheme", new { ServiceId = @item.ServiceId })">*@
+                            @*bg-primary
+                bg-danger
+                bg-secondary
+                bg-info
+                bg-dark
+                bg-success*@
+
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+
+
+    <div class="constructions">
+        @if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "1")
+        {
+            <p class="h5 d-flex align-items-center"><i class='bx bx-building-house me-2'>&nbsp;ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડ</i></p>
+        }
+        <hr />
+        <div class="row portfolio-container portfolio-container2">
+            @* @foreach (var item in Model.Where(i => i.BeneficiaryTypeId == "1"))*@
+            @foreach (var item in Model)
+            {
+                @if (item.ServiceId == 12 || item.ServiceId == 36)
+                {
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <div class="scheme">
+                            @*<a href="@Url.Action("GetSchemeDescription","Scheme", new { ServiceId = @item.ServiceId })">*@
+                            @*bg-primary
+                bg-danger
+                bg-secondary
+                bg-info
+                bg-dark
+                bg-success*@
+
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+
+
+}
+@if (@Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "6"))
+{
+    @*Constructions  Workers (Building and Other Constructions Workers Welfare Board)*@
+    <div class="constructions">
+        <p class="h5 d-flex align-items-center"><i class='bx bx-building-house me-2'>&nbsp;ગુજરાત મકાન અને અન્ય બાંધકામ શ્રમયોગી કલ્યાણ બોર્ડ</i></p>
+        <hr />
+        <div class="row portfolio-container portfolio-container2">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+                        @if (@Model != null && identity?.Claims.FirstOrDefault(x => x.Type.Equals("UserType", StringComparison.OrdinalIgnoreCase))?.Value == "2")
+                        {
+                            @if (item.ServiceId == 1)
+                            {
+                                <a asp-controller="EmployeeHome" asp-action="AdminEmployeeDashboard" asp-route-beneficiarytype="@item.BeneficiaryTypeId" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                    <i class='@item.Faicon'></i>
+                                    <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                </a>
+                            }
+                            else
+                            {
+                                if (identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value == "36") //BOCW Account Officer
+                                {
+                                    <a asp-controller="EmployeeHome" asp-action="BOCWCompletedAadeshForPayment" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="EmployeeHome" asp-action="EmployeeApplicationDetails" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.ServiceId.ToString()))" class="@item.BackgroundColor">
+                                        <i class='@item.Faicon'></i>
+                                        <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                                    </a>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <a href="#" class="@item.BackgroundColor" onclick="return getSchemeDescription(@item.ServiceId,'dynamicSchemeModel');">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@*For CESS Collector*@
+@if (@Model != null && (identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value == "7"))
+{
+    <div class="constructions">
+        <p class="h5 d-flex align-items-center"><i class='bx bx-building-house me-2'>&nbsp;CESS Collector</i></p>
+        <hr />
+        <div class="row portfolio-container portfolio-container2">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="scheme">
+                        @if ((identity?.Claims.FirstOrDefault(x => x.Type.Equals("isFilledAuthority", StringComparison.OrdinalIgnoreCase))?.Value == "0"))
+                        {
+                            <a href="#" class="@item.BackgroundColor" onclick="return LoadLocalAuthorityPopUp();">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="CCApplication" asp-action="ApplicationDetails" class="@item.BackgroundColor">
+                                <i class='@item.Faicon'></i>
+                                <h5>@Html.DisplayFor(modelItem=>item.ServiceNameGujarati)</h5>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+

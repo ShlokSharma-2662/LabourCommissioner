@@ -1,0 +1,456 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model IEnumerable<CCApplicationDetails>
+
+@{
+    ViewData["Title"] = "Application Details";
+    Layout = "~/Views/Shared/_OtherLoginLayout.cshtml";
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">CSEE Collection Application Details</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+                        <div class="loader"></div>
+                        <form asp-controller="CCApplication" asp-action="ApplicationDetails" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Application Details</span>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a class="text-black hover-underline d-flex justify-content-between align-items-center  me-2" asp-controller="CCApplication" asp-action="CCApplication"
+                                       asp-route-strid="">
+                                        <i class="bi bi-plus h3 mb-0"></i> New Application
+                                    </a>
+                                    <button type="submit" value="export" name="export" class="btn btn-primary">
+                                        <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+
+                                            <label class="f-600">જિલ્લાનું નામ</label>
+                                            <select id="districtId" name="districtId" asp-items="@(new SelectList(@ViewBag.DistrictList, "Value", "Text", selectedValue: @ViewBag.DistrictId))" tabindex="2" class="aspNetDisabled form-control" onchange="GetTalukaByDistrictId(this.value);">
+                                                <option value="0">- ALL -</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">તાલુકાનું નામ</label>
+                                            <select name="talukaId" id="listTaluka" asp-items="@(new SelectList(@ViewBag.TalukaList, "Value", "Text", selectedValue: @ViewBag.TalukaId))" onchange="GetVillageByDistrictIdAndTalukaId(this.value);" tabindex="3" class="form-control">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">ગામનું નામ</label>
+                                            <select name="villageId" id="villageId" tabindex="3" asp-items="@(new SelectList(@ViewBag.VillageList, "Value", "Text", selectedValue: @ViewBag.VillageId))" class="form-control">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">શરૂઆત તારીખ</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અંતિમ તારીખ</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અરજી ની સ્થિતિ</label>
+                                            <select name="statusId" id="statusId" class="form-control">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Initiated for Payment</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અરજી નંબર / મોબાઇલ નંબર: </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                            <span id="body_revtxtUserID" style="color: Red; display: none;">Invalid Application Number / Mobile Number.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-3">
+                                        <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Application</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-9">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="23" class="text-start">
+                                                            <a class="btn btn-success" href="#" onclick="OpenCTPPaymentSummary()">
+                                                                <i class="bi bi-check-lg me-1"></i>Initiate Payment
+                                                            </a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><input type="checkbox" id="headerchkSendforpayment" /><br />Select </th>
+                                                        <th>Sr No.</th>
+                                                        <th>Application No.</th>
+                                                        <th>CESS Payer Name</th>
+                                                        <th>Date of Collection</th>
+                                                        <th>Cost of Construction</th>
+                                                        <th>CESS Percentage</th>
+                                                        <th>Total CESS</th>
+                                                        <th>District</th>
+                                                        <th>Taluka</th>
+                                                        <th>Village</th>
+                                                        <th>PIN Code</th>
+                                                        <th>Address</th>
+                                                        <th>Submitted Date</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            string amtId = "spn" + @item.applicationid;
+                                                            <tr>
+                                                                <td>
+                                                                    @if (@item.isinitforpayment == false)
+                                                                    {
+                                                                        <input type="checkbox" id="chkapprovereject" class="clschkSendforpayment" value="@item.applicationid" />
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+                                                                <td>
+                                                                    @item.applicationno
+                                                                </td>
+                                                                <td>
+                                                                    @item.cesspayername
+                                                                </td>
+
+                                                                <td>
+                                                                    @Convert.ToDateTime(item.dateofcollection).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td>
+                                                                    @item.costofconstruction
+                                                                </td>
+                                                                <td>
+
+                                                                    @item.cesspercentage
+                                                                </td>
+                                                                <td>
+                                                                    <span id="@amtId">@item.totalcess</span>
+                                                                </td>
+                                                                <td>
+                                                                    @item.DistrictName
+                                                                </td>
+                                                                <td>
+                                                                    @item.TalukaName
+                                                                </td>
+                                                                <td>
+                                                                    @item.VillageName
+                                                                </td>
+                                                                <td>
+                                                                    @item.pincode
+                                                                </td>
+                                                                <td>
+                                                                    @item.addressineng
+                                                                </td>
+                                                                <td>
+                                                                    @Convert.ToDateTime(item.submitteddate).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td>
+                                                                    @if (item.isinitforpayment == false)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FFC100 ;">
+                                                                            Pending
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isinitforpayment == true)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            Initiated for Payment
+                                                                        </span>
+                                                                    }
+                                                                    else
+                                                                    {
+
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center" scope="col">
+                                                                    @if (item.isinitforpayment == false)
+                                                                    {
+                                                                        <a asp-controller="CCApplication" asp-action="CCApplication" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.applicationid.ToString()))">Edit</a>
+                                                                    }
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+
+<div class="modal fade" id="CTPSummaryPopup" tabindex="-1" role="dialog" aria-labelledby="CTPSummaryPopupPopupLabel" aria-hidden="true">
+    <div id="divContent">
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#statusId").val('@ViewBag.Status');
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("Application Submitted..!!", msg);
+            }
+            $('#headerchkSendforpayment').change(function () {
+                if (this.checked) {
+                    $(".clschkSendforpayment").prop("checked", true);
+                }
+                else {
+                    $(".clschkSendforpayment").prop("checked", false);
+                }
+
+            });
+        });
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        function ChangePageSize(obj, searchtext) {
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&search=" + searchtext + "&districtId=" + '@ViewBag.DistrictId' + "&talukaId=" + '@ViewBag.TalukaId' + "&villageId=" + '@ViewBag.VillageId' + "&statusId=" + '@ViewBag.Status' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate';
+        }
+        function GetVillageByDistrictIdAndTalukaId(talukaId) {
+            var districtid = $("#districtId").val();
+            GetEVillageByDistrictIdAndTalukaId(districtid, talukaId);
+        }
+        function OpenCTPPaymentSummary() {
+            var valSelected = [];
+            let TotalAmount = 0;
+            $('#chkapprovereject:checked').each(function (i) {
+                valSelected[i] = $(this).val();
+                TotalAmount = TotalAmount + parseFloat($("#spn" + valSelected[i]).text());
+            });
+            var fromDate = $("#fromDate").val();
+            var toDate = $("#toDate").val();
+            if (fromDate == "" || toDate == "" || fromDate == undefined || toDate == undefined) {
+                alert('Please select From Date & To Date for initiate payment.')
+                return false;
+            }
+
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for initiate payment.')
+                return false;
+            }
+
+            var data = new Object();
+            data.applicationidlist = valSelected;
+            data.fromdate = fromDate;
+            data.todate = toDate;
+            data.amount = TotalAmount;
+            $.ajax({
+                type: "GET",
+                url: "/CCApplication/GetCTPPaymentSummaryPopUp",
+                dataType: "html",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                traditional: true,
+                success: function (response) {
+                    debugger;
+                    $("#CTPSummaryPopup").find("#divContent").html(response);
+                    $("#CTPSummaryPopup").modal('show');
+                },
+                failure: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        }
+        function SendCESSForCTPPayment() {
+            var valSelected = [];
+            let TotalAmount = 0;
+            $('#chkapprovereject:checked').each(function (i) {
+                valSelected[i] = $(this).val();
+                TotalAmount = TotalAmount + parseFloat($("#spn" + valSelected[i]).text());
+            });
+            var fromDate = $("#fromDate").val();
+            var toDate = $("#toDate").val();
+            //if (fromDate == "" || toDate == "" || fromDate == undefined || toDate == undefined) {
+            //    alert('Please select From Date & To Date for payment.')
+            //    return false;
+            //}
+
+            //if (valSelected.length == 0) {
+            //    alert('Please select atleast one application for payment.')
+            //    return false;
+            //}
+
+            var data = new Object();
+            data.applicationidlist = valSelected;
+            data.fromdate = fromDate;
+            data.todate = toDate;
+            data.amount = TotalAmount;
+
+
+            swal({
+                title: "Are you sure to initiate a payment?",
+                //text: "You will not be able to recover old password!",
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Proceed it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+                closeOnConfirm: false,
+            },
+                function (isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+
+                        $("#CTPSummaryPopup").modal('hide');
+                        $.ajax({
+                            type: "get",
+                            url: "/CCApplication/SendCESSForCTPPayment",
+                            data: data,
+                            datatype: "json",
+                            contentType: "application/json; charset=utf-8",
+                            traditional: true,
+                            async: false,
+                            success: function (response) {
+                                debugger;
+                                if (response != null && response.errorCode == 0) {
+                                    debugger;
+                                    swal({
+                                        title: "",
+                                        text: response.msg,
+                                        type: "success",
+                                        confirmButtonClass: "btn-primary",
+                                    }, function () {
+                                        window.location.href = "\CCCompletedAppForPayment"
+
+                                    });
+                                }
+                                else {
+                                    swal({
+                                        title: "",
+                                        text: response.msg,
+                                        type: "error",
+                                        confirmButtonClass: "btn-primary",
+                                    });
+                                }
+                            },
+                            failure: function (response) {
+                                swal("Oops", "We couldn't connect to the server!", "error");
+                            },
+                            error: function (response) {
+                                swal("Oops", "We couldn't connect to the server!", "error");
+                            }
+                        });
+
+                    }
+                });
+
+        }
+    </script>
+}

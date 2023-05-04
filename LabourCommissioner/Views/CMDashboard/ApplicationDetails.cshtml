@@ -1,0 +1,293 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using System.Globalization
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model IEnumerable<CMDApplicationDetails>
+
+@{
+    ViewData["Title"] = "Application Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    //string fullMonthName = new DateTime(2015,  2, 1).ToString("MMMM", CultureInfo.InvariantCulture);
+    int intMonth = 0;
+    string fullMonthName = "";
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">CM Dashboard</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+                        <div class="loader"></div>
+                        <form asp-controller="CMDashboard" asp-action="ApplicationDetails" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Application Details</span>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a class="text-black hover-underline d-flex justify-content-between align-items-center  me-2" asp-controller="CMDashboard" asp-action="CMDApplication"
+                                       asp-route-strid="">
+                                        <i class="bi bi-plus h3 mb-0"></i> New Application
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group ">
+
+                                            <label class="f-600">Year</label>
+                                            <select name="strappYear" id="appYear" tabindex="1" required asp-items="@(new SelectList(@ViewBag.YearList, "Value", "Text", selectedValue: @ViewBag.AppYearId))" class="form-control">
+                                                <option value="0" selected>--- Please Select ---</option>
+                                            </select>
+                                            <label id="lblYearMsg" class="text-danger"></label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Month</label>
+                                            <select name="strappMonth" id="appMonth" tabindex="1" required asp-items="@(new SelectList(@ViewBag.MonthList, "Value", "Text", selectedValue: @ViewBag.AppMonthId))" class="form-control">
+                                                <option value="0" selected>--- Please Select ---</option>
+                                            </select>
+                                        </div>
+                                        <label id="lblMonthMsg" class="text-danger"></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Status</label>
+                                            <select name="statusId" id="statusId" class="form-control">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">Pending</option>
+                                                <option value="2">Submitted</option>
+                                                <option value="3">Entry Pending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <input type="submit" id="btnSearch" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Application</legend>
+
+                                        <div class="table-responsive">
+                                            <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+
+                                                <thead>
+
+                                                    <tr>
+                                                        <th>Sr No.</th>
+                                                        <th>Scheme Name</th>
+                                                        <th>Year</th>
+                                                        <th>Month</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            @*@fullMonthName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(2)*@
+                                                            <tr>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+                                                                <td class="text-start">
+                                                                    @item.servicename
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.appyear
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(Convert.ToInt32(@item.appmonth.ToString()))
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @if (item.status == 1)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FFC100 ;">
+                                                                            Pending
+                                                                        </span>
+
+                                                                    }
+                                                                    else if (item.status == 2)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            Submitted
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.status == 3)
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FF4003 ;">
+                                                                            Entry Pending
+                                                                        </span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span></span>
+                                                                    }
+                                                                </td>
+                                                                <td>
+
+                                                                    @if (item.status == 1)
+                                                                    {
+                                                                        <a asp-controller="CMDashboard" asp-action="CMDApplication" asp-route-strappYear="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appyear.ToString()))" asp-route-strappMonth="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appmonth.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.serviceid.ToString()))" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("1"))" asp-route-strstatusId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.status.ToString()))" class="text-primary" title="View Application" style="display :inline;font-size: 1.55rem;">
+                                                                            <i class="bi bi-eye-fill"></i>
+                                                                        </a>
+                                                                        <a asp-controller="CMDashboard" asp-action="CMDApplication" asp-route-strappYear="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appyear.ToString()))" asp-route-strappMonth="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appmonth.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.serviceid.ToString()))" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("2"))" class="text-primary h5" title="Edit Application"><i class="bi bi-pencil-square"></i></a>
+                                                                        <a class="text-primary h5" href="#" onclick="event.preventDefault(); return CMDSubmitApplication(@item.appyear,@item.appmonth,@item.serviceid);" title="Submit Application"><i class="bi bi-check-square-fill"></i></a>
+
+                                                                    }
+                                                                    else if (item.status == 2)
+                                                                    {
+                                                                        <a asp-controller="CMDashboard" asp-action="CMDApplication" asp-route-strappYear="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appyear.ToString()))" asp-route-strappMonth="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appmonth.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.serviceid.ToString()))" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("1"))" asp-route-strstatusId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.status.ToString()))" class="text-primary" title="View Application" style="display :inline;font-size: 1.55rem;">
+                                                                            <i class="bi bi-eye-fill"></i>
+                                                                        </a>
+                                                                        <a asp-controller="CMDashboard" asp-action="GenerateCMDApplicationCSVReport" asp-route-strappYear="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appyear.ToString()))" asp-route-strappMonth="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appmonth.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.serviceid.ToString()))" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("1"))" class="text-success" title="Export Details" style="display :inline;font-size: 1.55rem;" value="export">
+                                                                            <i class="bi bi-filetype-csv"></i>
+                                                                        </a>
+                                                                    }
+                                                                    else if (item.status == 3)
+                                                                    {
+                                                                        <a asp-controller="CMDashboard" asp-action="CMDApplication" asp-route-strappYear="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appyear.ToString()))" asp-route-strappMonth="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.appmonth.ToString()))" asp-route-strserviceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(@item.serviceid.ToString()))" asp-route-strAction="@HttpUtility.UrlEncode(CommonUtils.Encrypt("0"))" class="text-primary hover-underline d-flex justify-content-center align-items-center  me-2" title="Add Application">
+                                                                            <i class="bi bi-plus h2 mb-0"></i>Add
+                                                                        </a>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span>-</span>
+                                                                    }
+
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr><td class="text-warning" colspan="8"><h6><i class="bi bi-search"></i> No Record Found</h6></td></tr>
+                                                    }
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        @* <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $("#statusId").val('@ViewBag.Status');
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("", msg);
+            }
+        });
+        function CMDSubmitApplication(appYear, appMonth, serviceId) {
+            swal({
+                title: "Are you sure you want to submit application?",
+                text: "You will not be able to change application after submission!",
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Reset it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+            },
+                function(isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+                        $.ajax({
+                            type: "get",
+                            url: "/CMDashboard/CMDSubmitApplication",
+                            data: { appYear: appYear, appMonth: appMonth, serviceId: serviceId },
+                            datatype: "json",
+                            traditional: true,
+                            async: false,
+                            success: function(data) {
+
+                            }
+
+                        }).done(function(data) {
+                            debugger;
+                            if (data != null && data.data.error == 1) {
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "success",
+                                    confirmButtonClass: "btn-primary",
+                                }, function() {
+                                    window.location.reload();
+                                });
+                            }
+                            else {
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "error",
+                                    confirmButtonClass: "btn-primary",
+                                });
+                            }
+                        }).error(function(data) {
+                            debugger;
+                            swal("Oops", "We couldn't connect to the server!", "error");
+                        });
+                    }
+
+                });
+
+        }
+    </script>
+}

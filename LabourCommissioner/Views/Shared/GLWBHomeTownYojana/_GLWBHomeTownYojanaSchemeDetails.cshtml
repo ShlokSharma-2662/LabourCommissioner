@@ -1,0 +1,466 @@
+﻿.@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBhtySchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //var year = ViewBag.Year;
+    ////var std = ViewBag.Standard;
+    var enirmancardno = ViewBag.EnirmanCardNo;
+    ////if (isfilled == true)
+    ////{
+    ////    ApplicationNo = Model.ApplicationNo;
+    ////}
+    //var dropDownItems = new SelectList(std, "Value", "Text", "12");
+
+
+    var modelCnt = 1;
+
+
+    if (@Model != null && @Model.lstFamilyMemberDetails != null)
+    {
+        modelCnt = @Model.lstFamilyMemberDetails.Count();
+    }
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHomeTownYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <input type="hidden" asp-for="TotalFamilyMemberCount" />
+        <fieldset>
+            <legend>શ્રમયોગી તથા તેના આશ્રિતોની વિગત </legend>
+            <table class="table bg-white table-bordered text-center" id="tblFamily">
+
+                <th>
+                    <span class="control-label">નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ઉંમર<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">અરજદાર સાથે સંબઘ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">નોકરી/ઘંઘો કરે છે કે કેમ?<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">અરજદારના આશ્રિત છે કે કેમ ?<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">આધારકાર્ડ નંબર<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">આશ્રિતોના પુરાવા સ્‍વરુપે રેશનીંગ કાર્ડ,જન્‍મનું પ્રમાણપત્ર,લગ્‍નનું પ્રમાણપત્ર, આધાર કાર્ડ, ચુંટણી કાર્ડ, (પુત્ર/પુત્રીના કિસ્‍સામાં) તથા સરકારશ્રી ઘ્‍વારા જારી કરવામાં આવેલ ઓળખપત્રોની સ્વપ્રમાણીત નકલ બીડવી. <span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">Download File<span class="text-danger"></span></span>
+                </th>
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstFamilyMemberDetails != null && Model.lstFamilyMemberDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstFamilyMemberDetails.Count; i++)
+                    {
+                        string IsValidate = "false";
+                        IsValidate = (@Model.lstFamilyMemberDetails[i].CouchDBDocId != null && @Model.lstFamilyMemberDetails[i].CouchDBDocId != "") ? "false" : "true";
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeleted"+i)" asp-for="@Model.lstFamilyMemberDetails[i].isDeleted" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[i].familydetailsid" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[i].DocumentName" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[i].CouchDBDocId" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[i].CouchDBDocRevId" />
+                                <input asp-for=@Model.lstFamilyMemberDetails[i].name type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].name" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_name_error0" class="text-danger"></span>
+                            </td>
+                            <td>
+                                <input asp-for=@Model.lstFamilyMemberDetails[i].age type="text" class="form-control" maxlength="15">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].age" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_age_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <div class="control-form">
+                                    <select asp-for="@Model.lstFamilyMemberDetails[i].relation" class="form-select" required>
+                                        <option value="">-Please Select-</option>
+                                        <option value="1">પોતે</option>
+                                        <option value="2">પત્ની</option>
+                                        <option value="3">પુત્ર</option>
+                                        <option value="4">પુત્રી</option>
+                                        <option value="5">ભાઈ</option>
+                                        <option value="6">બહેન</option>
+                                        <option value="7">માતા</option>
+                                        <option value="8">પિતા</option>
+                                    </select>
+                                    <span asp-validation-for="@Model.lstFamilyMemberDetails[i].relation" class="text-danger"></span>
+                                    <span id="lstFamilyMemberDetails_relation_error0" class="text-danger"></span>
+
+                                </div>
+
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberDetails[i].joborcor" type="radio" value="1" />હાં
+                                <input asp-for="@Model.lstFamilyMemberDetails[i].joborcor" type="radio" value="2" />નાં<br />
+
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].joborcor" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_joborcor_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberDetails[i].islabour" type="radio" value="1" />હાં
+                                <input asp-for="@Model.lstFamilyMemberDetails[i].islabour" type="radio" value="2" />નાં<br />
+
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].islabour" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_islabour_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberDetails[i].aadharcard" type="text" class="form-control allownumericwithoutdecimal" maxlength="12">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].aadharcard" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_aadharcard_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <div class="">
+                                    <input asp-for="@Model.lstFamilyMemberDetails[i].File" type="file" data-val="@IsValidate" class="form-control file-validate border p-1">
+                                    <span asp-validation-for="@Model.lstFamilyMemberDetails[i].File" class="text-danger"></span>
+                                    <span id="lstFamilyMemberDetails_file_error0" class="text-danger"></span>
+                                </div>
+                            </td>
+                            <td scope="col">
+                                <a asp-controller="GLWBHomeTownYojana" asp-action="DownloadDocument" asp-route-id="@Model.lstFamilyMemberDetails[i].CouchDBDocId" asp-route-filename="@Model.lstFamilyMemberDetails[i].DocumentName">@Model.lstFamilyMemberDetails[i].DocumentName</a>
+                            </td>
+                            <td><input type="button" value="Remove" onclick="RemoveTextBox(this,'@i');"></td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeleted0")" asp-for="@Model.lstFamilyMemberDetails[0].isDeleted" />
+                            <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[0].familydetailsid" />
+                            <input asp-for=@Model.lstFamilyMemberDetails[0].name type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].name" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_name_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for=@Model.lstFamilyMemberDetails[0].age type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].age" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_age_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <div class="control-form">
+                                <select asp-for="@Model.lstFamilyMemberDetails[0].relation" class="form-select" required>
+                                    <option value="">-Please Select-</option>
+                                    <option value="1">પોતે</option>
+                                    <option value="2">પત્ની</option>
+                                    <option value="3">પુત્ર</option>
+                                    <option value="4">પુત્રી</option>
+                                    <option value="5">ભાઈ</option>
+                                    <option value="6">બહેન</option>
+                                    <option value="7">માતા</option>
+                                    <option value="8">પિતા</option>
+                                </select>
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[0].relation" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_relation_error0" class="text-danger"></span>
+
+                            </div>
+
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberDetails[0].joborcor" type="radio" value="1" />હાં
+                            <input asp-for="@Model.lstFamilyMemberDetails[0].joborcor" type="radio" value="2" />નાં<br />
+
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].joborcor" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_joborcor_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberDetails[0].islabour" type="radio" value="1" />હાં
+                            <input asp-for="@Model.lstFamilyMemberDetails[0].islabour" type="radio" value="2" />નાં<br />
+
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].islabour" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_islabour_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberDetails[0].aadharcard" type="text" class="form-control allownumericwithoutdecimal" maxlength="12">
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].aadharcard" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_aadharcard_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <div class="">
+                                <input asp-for="@Model.lstFamilyMemberDetails[0].File" type="file" class="form-control file-validate border p-1">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[0].File" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_file_error0" class="text-danger"></span>
+
+                            </div>
+                        </td>
+
+
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="Addbutton" type="button" value="Add" />
+                </span>
+            </div>
+
+
+
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend> મુસાફરીની વિગતો</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span id="body_innerbody_label2" class="control-label col-md-3">મુસાફરી શરુ કરવાનું સ્‍થળ :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="startlocation" type="text" class="form-control" maxlength="200">
+                            <span asp-validation-for="startlocation" class="text-danger"></span>
+                            <span id="body_innerbody_txtDOB" style="color:Red;display:none;">યોજનામાં જોડાવાની તારીખ લખો.</span>
+                        </div>
+                        <span id="body_innerbody_label2" class="control-label col-md-3">વતન નું સ્‍થળ :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="homelandlocation" type="text" class="form-control" maxlength="200">
+                            <span asp-validation-for="homelandlocation" class="text-danger"></span>
+                            <span id="body_innerbody_txtDOB" style="color:Red;display:none;">વતન નું સ્‍થળ લખો.</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="form-group row">
+                            <span id="body_innerbody_label2" class="control-label col-md-3">વતન પ્રવાસ શરુ કરવાની સંભવિત તારીખ:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+
+                                <input asp-for="journeystartdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="journeystartdate" class="text-danger"></span>
+                                <span id="body_innerbody_txtDOB" style="color:Red;display:none;">યોજનામાં જોડાવાની તારીખ લખો.</span>
+                            </div>
+                            <span id="body_innerbody_label2" class="control-label col-md-3">વતન પ્રવાસથી પરત આવવાની સંભવિત તારીખ :<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="journeyenddate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="journeyenddate" class="text-danger"></span>
+                                <span id="body_innerbody_txtDOB" style="color:Red;display:none;">યોજનામાં જોડાવાની તારીખ લખો.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+
+    $(function() {
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+    var ttlCount = @modelCnt;
+    $(document).ready(function() {
+        debugger;
+        $("#Addbutton").click(function() {
+            debugger;
+            var flag = false;
+            flag = ValidateControl(ttlCount);
+            if (flag) {
+                var strHTML = "";
+                strHTML += "<tr id='tr" + ttlCount + "'>";
+                strHTML += "<td><input type='hidden' id='hdnIsDeleted" + ttlCount + "' name='lstFamilyMemberDetails[" + ttlCount + "].isDeleted'>";
+                strHTML += "<input type='hidden' name='lstFamilyMemberDetails[" + ttlCount + "].isDeleted'>";
+                strHTML += "<input name='lstFamilyMemberDetails[" + ttlCount + "].name' id='lstFamilyMemberDetails_" + ttlCount + "__name' type='text' class='form-control' maxlength='15'>";
+                strHTML += "<span id='lstFamilyMemberDetails_name_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].age' id='lstFamilyMemberDetails_" + ttlCount + "__age' type='text' class='form-control' maxlength='15'>";
+                strHTML += "<span id='lstFamilyMemberDetails_age_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><select name='lstFamilyMemberDetails[" + ttlCount + "].relation' id='lstFamilyMemberDetails_" + ttlCount + "__relation' class='form-select' required>";
+                strHTML += "<option value=''>-Please Select-</option>"
+                strHTML += "<option value='1'>પોતે</option>"
+                strHTML += "<option value='2'>પત્ની</option>"
+                strHTML += "<option value='3'>પુત્ર</option>"
+                strHTML += "<option value='4'>પુત્રી</option>"
+                strHTML += "<option value='5'>ભાઈ</option>"
+                strHTML += "<option value='6'>બહેન</option>"
+                strHTML += "<option value='7'>માતા</option>"
+                strHTML += "<option value='8'>પિતા</option>"
+                strHTML += "</select><span id='lstFamilyMemberDetails_relation_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].joborcor' id='lstFamilyMemberDetails[" + ttlCount + "].joborcor' type='radio' value='1'>હાં";
+                strHTML += "<input name='lstFamilyMemberDetails[" + ttlCount + "].joborcor' id='lstFamilyMemberDetails[" + ttlCount + "].joborcor' type='radio'value='2'>નાં";
+                strHTML += "<span id='lstFamilyMemberDetails_joborcor_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].islabour' id='lstFamilyMemberDetails[" + ttlCount + "].islabour' type='radio'value='1'>હાં";
+                strHTML += "<input name='lstFamilyMemberDetails[" + ttlCount + "].islabour' id='lstFamilyMemberDetails[" + ttlCount + "].islabour' type='radio'value='2'>નાં";
+                strHTML += "<span id='lstFamilyMemberDetails_islabour_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].aadharcard' id='lstFamilyMemberDetails_" + ttlCount + "__aadharcard' type='text'  class='form-control allownumericwithoutdecimal' maxlength='12'>";
+                strHTML += "<span id='lstFamilyMemberDetails_aadharcard_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].file' id='lstFamilyMemberDetails_" + ttlCount + "__file' type='file' class='form-control file-validate border p-1' data-val='true' maxlength='15'>";
+                strHTML += "<span id='lstFamilyMemberDetails_file_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td></td>";
+                strHTML += "<td><input type='button' value='Remove' onclick='RemoveTextBox(this," + ttlCount + ");'></td>";
+                strHTML += "</tr>";
+                ttlCount++;
+            }
+            $("#tblFamily").append(strHTML);
+        });
+    });
+    function RemoveTextBox(button, rowId) {
+        debugger;
+        $("#hdnIsDeleted" + rowId).val(true);
+        $(button).parent().parent().css("display", "none");
+    }
+
+    function ValidateControl(rowCnt) {
+        debugger;
+        for (var i = 0; i < rowCnt; i++) {
+            if ($("#hdnIsDeleted" + i).val() == 'False' || $("#hdnIsDeleted" + i).val() == undefined || $("#hdnIsDeleted" + i).val() == '') {
+                $("#lstFamilyMemberDetails_name_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_age_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_relation_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_joborcor_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_islabour_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_aadharcard_error" + i + "").html("");
+                $("#lstFamilyMemberDetails_file_error" + i + "").html("");
+
+                if (i > 0) {
+                    if ($("#lstFamilyMemberDetails_" + i + "__aadharcard").val() != "" && $("#hdnIsDeleted" + i).val() == 'False') {
+                        var chkaadharcard = $("#lstFamilyMemberDetails_" + (rowCnt - 1) + "__aadharcard").val();
+                        for (var j = (rowCnt - 1); j >= 0; j--) {
+
+                            if (chkaadharcard == $("#lstFamilyMemberDetails_" + (j - 1) + "__aadharcard").val()) {
+                                $("#lstFamilyMemberDetails_aadharcard_error" + (rowCnt - 1) + "").html("આધારકાર્ડ નંબર અમાન્ય છે.");
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+                if ($("#lstFamilyMemberDetails_" + i + "__name").val() == "") {
+                    $("#lstFamilyMemberDetails_name_error" + i + "").html("નામ નાખો");
+                    return false;
+                }
+                if ($("#lstFamilyMemberDetails_" + i + "__age").val() == "") {
+                    $("#lstFamilyMemberDetails_age_error" + i + "").html("ઉંમર નાખો");
+                    return false; " + i + "
+                }
+                if ($("#lstFamilyMemberDetails_" + i + "__relation").val() == "") {
+                    $("#lstFamilyMemberDetails_relation_error" + i + "").html("અરજદાર સાથે સંબઘ પસંદ કરો ");
+                    return false;
+                }
+                if ($("input:radio[name='lstFamilyMemberDetails[" + i + "].joborcor']:checked").val() == undefined) {
+                    $("#lstFamilyMemberDetails_joborcor_error" + i + "").html("નોકરી/ઘંઘો કરે છે કે કેમ");
+                    return false;
+                }
+                if ($("input:radio[name='lstFamilyMemberDetails[" + i + "].islabour']:checked").val() == undefined) {
+                    $("#lstFamilyMemberDetails_islabour_error" + i + "").html("અરજદારના આશ્રિત છે કે કેમ");
+                    return false;
+                }
+                if ($("#lstFamilyMemberDetails_" + i + "__aadharcard").val() == "") {
+                    $("#lstFamilyMemberDetails_aadharcard_error" + i + "").html("આધારકાર્ડ નંબર નાખો");
+
+                    return false;
+                }
+
+                if ($("#lstFamilyMemberDetails_" + i + "__file  ").val() == "" && $("#lstFamilyMemberDetails_" + i + "__file  ").attr("data-val") == "true") {
+                    $("#lstFamilyMemberDetails_file_error" + i + "").html("ઓળખપત્રોની સ્વપ્રમાણીત નકલ બીડવી..");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    $(document).ready(function() {
+
+        $(".file-validate").on("change", function() {
+
+            var fileName = $(this).val();
+            // Allowing file type
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+            if (!allowedExtensions.exec(fileName)) {
+                alert('Invalid file type');
+                $(this).val('');
+                return false;
+            }
+            if (this.files[0].size > 1000000) {
+                alert('અપલોડ કરેલ દસ્તાવેજ ની સાઇઝ 1 MB કરતાં ઓછી હોવી જોઈએ');
+                $(this).val('');
+                return false;
+            }
+
+        });
+    });
+
+
+
+    $(".allownumericwithoutdecimal").on("keypress keyup blur", function(event) {
+        $(this).val($(this).val().replace(/[^\d].+/, ""));
+        if ((event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+
+
+
+
+</script>
+
+
+@*<script>
+    function Validate() {
+
+
+        var user = document.getElementById("adhar");
+        for (let i = 0; i < adhar.length; i++) {
+            if (adhar[i] === user.value) {
+                alert('The name already exist')
+            }
+        }
+};
+</script>*@

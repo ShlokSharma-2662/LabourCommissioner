@@ -1,0 +1,235 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model ApplicationStatusModel
+
+
+@{
+    ViewData["Title"] = "Registered Applicant Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    var i = 1;
+    var ControllerName = "";
+    var ActionName = "";
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+
+</style>
+<link href="~/assets/css/style.css" rel="stylesheet">
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Applicantion Status</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form id="myForm" asp-controller="EmployeeHome" asp-action="EmployeeApplicationSearch" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Application Status   </span>
+                                @*<button type="submit" value="export" name="export" class="btn btn-primary">
+                                <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>*@
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Application Search</label>
+                                            <input name="applicationno" id="applicationno" type="text" maxlength="16" value="@ViewBag.ApplicationNo" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-center mt-3">
+                                        <input type="submit" id="search" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        @if (Model != null)
+                        {
+                            <div id="body_divInformation" class="row">
+                                <div class="col-md-12">
+                                    <div class="card mt-2">
+                                        <div class="card-body">
+                                            <div class="row mt-1">
+                                                <div class="col-md-8 offset-md-2">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered bg-white mb-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>અરજી નંબર :</th>
+                                                                    <td>
+                                                                        @Model.ApplicationNo
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>યુઝર આઇ-ડી :</th>
+                                                                    <td>
+                                                                        @Model.UserId
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>યોજનાનું નામ :</th>
+                                                                    <td>
+                                                                        @Model.ServiceName
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>અરજદારનું નામ :</th>
+                                                                    <td>
+                                                                        @Model.ApplicantName
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>અરજીની તારીખ :</th>
+                                                                    <td>
+                                                                        @Convert.ToDateTime(Model.ApplicationDate).ToString("dd/MM/yyyy")
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>સ્થિતિ :</th>
+                                                                    <td>
+                                                                        @Model.StatusName
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2" class="text-center">
+                                                                        <a class="btn btn-danger" onclick="    clearForm();">Clear</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr id="body_officeDetails">
+                                                                    <td colspan="2" class="">
+                                                                        <b>@Model.OfficeName</b><br>
+                                                                        @Model.line1<br>
+                                                                        @Model.line2<br>
+
+                                                                        <b><span>સંપર્ક વ્યક્તિનું નામ :</span></b>
+                                                                        @Model.ContactPersonName<br>
+
+                                                                        <b><span>સંપર્ક વ્યક્તિની પોસ્ટ :</span></b>
+                                                                        @Model.ContactPersonPost<br>
+
+                                                                        <b><span>સંપર્ક વ્યક્તિનો ફોન નંબર :</span></b>
+                                                                        @Model.ContactNo
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-12">
+                                                    @if (Model != null && Model.applicationStatusDetails.Count() > 0)
+                                                    {
+                                                        string clsTimeline = "";
+                                                        <ul class="timeline" id="timeline">
+                                                            @foreach (var item in Model.applicationStatusDetails)
+                                                            {
+                                                                if (item.TimelineStatus == 1)
+                                                                {
+                                                                    clsTimeline = "complete";
+                                                                }
+                                                                else if (item.TimelineStatus == 2)
+                                                                {
+                                                                    clsTimeline = "pending";
+                                                                }
+                                                                else if (item.TimelineStatus == 0)
+                                                                {
+                                                                    clsTimeline = "";
+                                                                }
+
+
+
+                                                                <li class="li @clsTimeline">
+                                                                    <div class="timestamp">
+                                                                        <span class="author">@item.role_name</span>
+                                                                    </div>
+                                                                    <div class="status">
+                                                                        <h4>@item.description</h4>
+                                                                    </div>
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="card-body">
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-12">
+                                        <div class="text-danger text-center"><h6><i class="bi bi-search"></i> No Record Found</h6></div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script>
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+    </script>
+}

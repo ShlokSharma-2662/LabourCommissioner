@@ -1,0 +1,897 @@
+﻿@using LabourCommissioner.Common.Utility
+@using System.Web
+
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@*@model IPagedList<ApplicationDetailsModel>*@
+@*@model IPagedList<EmpApplicationDetailsModel>*@
+@model IEnumerable<EmpApplicationDetailsModel>
+@*@model SPager*@
+
+
+
+@{
+    ViewData["Title"] = "Application Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    var i = 1;
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ControllerName = "";
+    var ActionName = "";
+    var ServiceId = ViewBag.serviceId;
+    var count = ViewBag.Count;
+    //var EDistrict = ViewBag.DistrictId;
+    var serviceId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ServiceId.ToString()));
+    var division = ViewBag.DivisionList;
+    var hodid = ViewBag.hodid;
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+
+    string BeneficiaryType = "";
+    //string decBeneficiaryId = CommonUtils.Decrypt(HttpUtility.UrlDecode(ViewBag.strbeneficiaryid));
+
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+    var isAdmin = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+    string PostId = "";
+    //string DistrictId = "";
+    //string TalukaId = "";
+    long Applicationid = 0;
+    if (@Model != null && Model.Count() > 0)
+    {
+        PostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+        //DistrictId = Convert.ToString(@Model.Select(s => s.cdistrictid).FirstOrDefault());
+        //DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+        //TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+        Applicationid = @Model.Select(s => s.applicationid).FirstOrDefault();
+    }
+    BeneficiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    /*.boldIcon i:before {
+                                                                    font-weight: bold !important;
+                                                                }*/
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@ViewBag.SchemeName</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="EmployeeHome" asp-action="GLWBHospitalApplicationDetails" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i> @ViewBag.SchemeName ની અરજીઓ</span>
+                                <button type="submit" value="export" name="export" class="btn btn-primary">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>
+                            </div>
+                            @*<div class="card-body">
+                            <div class="row">
+                            <input type="hidden" name="strServiceId" id="strServiceId" value="@ViewBag.ServiceId" />
+
+                            <div class="col-md-4">
+                            <div class="form-group">
+                            <label class="f-600">અરજી નંબર / મોબાઇલ નંબર: </label>
+                            <input type="text" maxlength="16" id="txtSearch" name="search" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                            </div>
+                            </div>
+                            <div class="col-md-12 text-center mt-3">
+                            <input type="submit" value="Search" class="btn btn-secondary">
+                            </div>
+                            </div>
+                            </div>*@
+                            @*<input type="hidden" name="districtId" id="districtId" value="@ViewBag.DistrictId" />*@
+                            <input type="hidden" name="strServiceId" id="strServiceId" value="@serviceId" />
+                            @*<input type="hidden" name="strbeneficiaryid" id="strbeneficiaryid" value="@ViewBag.strbeneficiaryid" />*@
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="f-600">જિલ્લાનુ નામ</label>
+                                            <select id="divisionId" name="divisionId" asp-items="@(new SelectList(@ViewBag.DivisionList, "Value", "Text", selectedValue: @ViewBag.DivisionId))" tabindex="2" class="aspNetDisabled form-control">
+                                                <option value="0">- ALL -</option>
+                                                @*<option selected="selected" value="9">Ahmadabad - અમદાવાદ</option>*@
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    @*<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">જિલ્લાનું નામ</label>
+                                            <select name="districtId" id="districtId" tabindex="3" asp-items="@(new SelectList(@ViewBag.DistrictList, "Value", "Text", selectedValue: @ViewBag.DistrictId))" class="form-control" id="listDistrict" onchange="GetTalukaByDistrictId(this.value);">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>*@
+
+                                    @*<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">તાલુકાનું નામ</label>
+                                            <select name="talukaId" id="listTaluka" asp-items="@(new SelectList(@ViewBag.TalukaList, "Value", "Text", selectedValue: @ViewBag.TalukaId))" onchange="GetEVillageByDistrictIdAndTalukaId(@EDistrict, this.value);" tabindex="3" class="form-control">
+                                                @*<select name="talukaId" id="listTaluka" onchange="GetEVillageByDistrictIdAndTalukaId(@EDistrict, this.value);" tabindex="3" class="form-control">*@
+                                                @*<option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>*@
+
+
+                                    @*<div class="col-md-4">
+                                    <div class="form-group">
+                                    <label class="f-600">જિલ્લાનું નામ</label>
+                                    <select name="districtId" id="districtId" tabindex="3" asp-items="@(new SelectList(@ViewBag.DistrictList, "Value", "Text", selectedValue: @ViewBag.DistrictId))" class="form-control">
+                                    <option value="0">--Select--</option>
+                                    </select>
+                                    </div>
+                                    </div>*@
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">શરૂઆત તારીખ</label>
+                                            @*<input name="ctl00$body$ucEmpViewFilterUptoVillage$txtFromDate" type="text" value="01/09/2022" id="body_ucEmpViewFilterUptoVillage_txtFromDate" class="form-control">*@
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અંતિમ તારીખ</label>
+                                            @*<input name="ctl00$body$ucEmpViewFilterUptoVillage$txtEndDate" type="text" value="22/09/2022" id="body_ucEmpViewFilterUptoVillage_txtEndDate" class="form-control">*@
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અરજી ની સ્થિતિ</label>
+                                            <select name="statusId" id="statusId" class="form-control">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">Pending</option>
+                                                @if (PostId != "37" && PostId != "39" && PostId != "38")
+                                                {
+                                                    <option value="2">Approved</option>
+                                                }
+                                                <option value="3">Reject</option>
+                                                <option value="4">Completed</option>
+                                                <option value="5">SentBack</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">અરજી નંબર / મોબાઇલ નંબર: </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                            <span id="body_revtxtUserID" style="color: Red; display: none;">Invalid Application Number / Mobile Number.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">User Type</label>
+                                            <select name="" id="" class="form-control" disabled="disabled">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">CSC</option>
+                                                <option value="2">Mobile User</option>
+                                                <option selected="selected" value="3">Self Registration</option>
+                                                <option value="4">Egram</option>
+                                                <option value="5">Dhanvantri</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-3">
+                                        <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+
+                        <div class="row pl-1">
+                            <div class="card-body">
+                                <fieldset class="custom-fieldset">
+                                    <legend>View Application</legend>
+                                    <div class="row mb-2">
+                                        <div class="col-md-10">
+                                            <div class="d-flex align-items-center">
+                                                Row Per Page
+                                                <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                            </div>
+                                        </div>
+
+                                        @* <div class="col-md-2">
+                                        <a class="btn btn-primary" asp-controller="Report" asp-action="PendencyReport" asp-route-strserviceId="@serviceId" class="text-teal">
+                                        <h7>Pendency Report</h7>
+                                        </a>
+                                        </div>*@
+
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+                                            @if (isAdmin == "3")
+                                            {
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sr No.</th>
+                                                        <th>View Documents</th>
+                                                        <th>Application No </th>
+                                                        <th>Company Name</th> 
+                                                        <th>Total Employees for Chekup</th> 
+                                                        <th>Address</th>
+                                                        <th>City</th>
+                                                        <th>District</th>
+                                                        <th>Taluka</th>
+                                                        <th>Village</th>
+                                                        <th>Mobile No.</th>
+                                                        <th>Application Date</th>
+                                                        <th>ApprovedDate</th>
+                                                        <th>Total Sahay</th>
+                                                        <th>Application Status</th>
+                                                        <th>View History</th>
+                                                    </tr>
+                                                </thead>
+                                            }
+                                            else
+                                            {
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="21" class="text-start">
+                                                            <a class="btn btn-success" href="#" onclick="getEmployeePopUp('0','1','0','0','@CommonUtils.Decrypt(HttpUtility.UrlDecode(serviceId))',false)">
+                                                                <i class="bi bi-check-lg me-1"></i>@ViewBag.ApproveBtnName
+                                                            </a>
+
+                                                            <a class="btn btn-danger" href="#" onclick="getRejectPopUp('0','3','0','3','@CommonUtils.Decrypt(HttpUtility.UrlDecode(serviceId))',false)">
+                                                                <i class="bi bi-x me-1"></i>Reject Applications
+                                                            </a>
+
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <th><input type="checkbox" id="headerchkapprovereject" />Select </th>
+                                                        <th>Sr No.</th>
+                                                        <th>Approve </th>
+                                                        <th>Reject</th>
+                                                        <th>Send Back</th>
+                                                        <th>View Application (Eng)</th>
+                                                        @* <th>View Application (Guj)</th>*@
+                                                        <th>View Documents</th>
+                                                        <th>Application No </th>
+                                                        <th>Company Name</th>                                                        
+                                                        <th>Total Employees for Chekup</th>                                                        
+                                                        <th>Address</th>
+                                                        <th>City</th>
+                                                        <th>District</th>
+                                                        <th>Taluka</th>
+                                                        <th>Mobile No.</th>
+                                                        <th>Application Date</th>
+                                                        <th>ApprovedDate</th>                                                        
+                                                        <th>Application Status</th>
+                                                        <th>View History</th>
+                                                    </tr>
+                                                </thead>
+                                            }
+                                            @if (isAdmin == "3")
+                                            {
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            <tr>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+                                                                <td>
+
+                                                                    <a href="#" class="text-primary h5" onclick="return getUploadedDocumentForEmployee(@item.applicationid,@item.serviceid,'popupEmployeeDocumentView');"><i class="bi bi-file-earmark-text"></i></a>
+                                                                    @*<a class="text-primary h5" onclick="OpenEmpDocumentView('@item.applicationid','@item.serviceid','popupEmployeeDocumentView')"><i class="bi bi-file-earmark-text"></i></a>*@
+                                                                </td>
+                                                                <td>
+                                                                    @item.applicationno
+                                                                </td>
+                                                                <td>
+                                                                    @item.companyname
+                                                                </td>   
+                                                                <td>
+                                                                    @item.totalemployeesforcheckup
+                                                                </td>
+                                                                <td>
+                                                                    @item.address
+                                                                </td>
+                                                                 <td>
+                                                                    @item.city
+                                                                </td>
+                                                                <td>
+                                                                    @item.district
+                                                                </td>
+                                                                <td>
+                                                                    @item.taluka
+                                                                </td>                                                               
+                                                                <td>
+                                                                    @item.hrManagerMobile
+                                                                </td>
+                                                                <td>
+                                                                    @Convert.ToDateTime(item.applicationdate).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td>
+                                                                    @if (item.approveddate != null)
+                                                                    {
+                                                                        @Convert.ToDateTime(item.approveddate).ToString("dd/MM/yyyy")
+                                                                    }
+                                                                </td>                                                               
+                                                                <td>
+                                                                    @if (item.isapprovestatus == "Approved")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Rejected")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FF4003 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Pending")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FFC100 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Completed")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+
+                                                                </td>
+                                                                <td>
+                                                                    <a class="text-white" href="#" onclick="viewHistoryPopUp('@item.applicationid','@item.isapproved','@item.applicationno','@item.applicationstatus','@item.serviceid');">
+                                                                        <i class="bi bi-clock-history h4 text-warning"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            }
+                                            else
+                                            {
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            <tr>
+                                                                <td>
+                                                                    @if (@item.isapprovestatus.ToLower() == "pending" && @item.levelno == @item.emplevelno)
+                                                                    {
+                                                                        <input type="checkbox" id="chkapprovereject" class="clschkApproveReject" value="@item.applicationid" />
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+
+                                                                <td>
+                                                                    @if (@item.isapprovestatus.ToLower() == "pending" && @item.levelno == @item.emplevelno)
+                                                                    {
+
+                                                                        <a class="text-white" href="#" onclick="getEmployeePopUp('@item.applicationid','@item.isapproved','@item.applicationno','@item.applicationstatus','@item.serviceid',true)">
+                                                                            <i class="bi bi-check-lg h4 text-success"></i>
+                                                                        </a>
+                                                                    }
+
+                                                                </td>
+                                                                <td>
+                                                                    @if (@item.isapprovestatus.ToLower() == "pending" && @item.levelno == @item.emplevelno)
+                                                                    {
+                                                                        <a class="text-white" href="#" onclick="getRejectPopUp('@item.applicationid','3','@item.applicationno','3','@item.serviceid')">
+                                                                            <i class="bi bi-x-lg h5 text-danger"></i>
+                                                                        </a>
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @if (@item.isapprovestatus.ToLower() == "pending" && @item.levelno == @item.emplevelno)
+                                                                    {
+                                                                        <a class="text-white" href="#" onclick="getSendBackPopUp('@item.applicationid','2','@item.applicationno','2','@item.serviceid')">
+                                                                            <i class="bi bi-reply-fill h4 text-warning"></i>
+                                                                        </a>
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a asp-controller="Report" asp-action="DownloadApplicationReport" asp-route-strApplicationId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.applicationid.ToString()))" asp-route-strServiceId="@HttpUtility.UrlEncode(CommonUtils.Encrypt(item.serviceid.ToString()))" class="text-danger" target="_blank" style="display :inline;font-size: 1.55rem;">
+                                                                        <i class="bi bi-eye-fill"></i>
+                                                                    </a>
+                                                                </td>
+                                                                @* <td class="text-center">
+                                                    --
+                                                    </td>*@
+                                                                <td>
+                                                                    <a href="#" class="text-primary h5" onclick="return getUploadedDocumentForEmployee(@item.applicationid,@item.serviceid,'popupEmployeeDocumentView');"><i class="bi bi-file-earmark-text"></i></a>
+                                                                    @*<a class="text-primary h5" onclick="OpenEmpDocumentView('@item.applicationid','@item.serviceid','popupEmployeeDocumentView')"><i class="bi bi-file-earmark-text"></i></a>*@
+                                                                </td>
+                                                                <td>
+                                                                    @item.applicationno
+                                                                </td>
+                                                                <td>
+                                                                    @item.companyname
+                                                                </td>
+                                                                <td>
+                                                                    @item.totalemployeesforcheckup
+                                                                </td>
+                                                                <td>
+                                                                    @item.address
+                                                                </td>
+                                                                <td>
+                                                                    @item.city
+                                                                </td>
+                                                                <td>
+                                                                    @item.district
+                                                                </td>
+                                                                <td>
+                                                                    @item.taluka
+                                                                </td>                                                                
+                                                                <td>
+                                                                    @item.hrManagerMobile
+                                                                </td>
+                                                                <td>
+                                                                    @Convert.ToDateTime(item.applicationdate).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td>
+                                                                    @if (item.approveddate != null)
+                                                                    {
+                                                                        @Convert.ToDateTime(item.approveddate).ToString("dd/MM/yyyy")
+                                                                    }
+                                                                </td>
+                                                                @*<td>@Convert.ToDecimal(@item.totalsahay).ToString("f2")</td>*@
+                                                                <td>
+                                                                    @if (item.isapprovestatus == "Approved")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Rejected")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FF4003 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Pending")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FFC100 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.isapprovestatus == "Completed")
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            @item.isapprovestatus
+                                                                        </span>
+                                                                    }
+
+                                                                </td>
+                                                                <td>
+                                                                    <a class="text-white" href="#" onclick="viewHistoryPopUp('@item.applicationid','@item.isapproved','@item.applicationno','@item.applicationstatus','@item.serviceid');">
+                                                                        <i class="bi bi-clock-history h4 text-warning"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            }
+
+
+                                        </table>
+                                    </div>
+                                    @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                    @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                    @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                    </vc:search-bar>
+                                    <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                    </vc:search-bar>*@
+                                </fieldset>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--start: Pagination-->
+                @* <div class="row">
+                @Html.PagedListPager(Model,
+                pages => Url.Action("EmployeeApplicationDetails",
+                new { pages,districtId=ViewBag.DistrictId,talukaId=ViewBag.TalukaId }),
+                new PagedListRenderOptions()
+                {
+                DisplayItemSliceAndTotal = true,
+                ItemSliceAndTotalPosition = ItemSliceAndTotalPosition.End
+                })
+
+                </div>*@
+                <!--end: Pagination-->
+                @*</form>*@
+                @* }*@
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="popupEmployeeDocumentView" tabindex="-1" role="dialog" aria-labelledby="popupEmployeeDocumentView" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+
+    <div class="modal fade" id="ApprovePopup" tabindex="-1" role="dialog" aria-labelledby="acceptPopupLabel" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+
+    <div class="modal fade" id="RejectPopup" tabindex="-1" role="dialog" aria-labelledby="rejectPopupLabel" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+
+    <div class="modal fade" id="SendBackPopup" tabindex="-1" aria-labelledby="sentBackPopupLabel" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+
+    <div class="modal fade" id="ViewHistoryPopup" tabindex="-1" aria-labelledby="viewHistoryPopupLabel" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+
+    @*<partial name="_RejectActions" />*@
+    @* <partial name="_SendBackActions" />
+    <partial name="_ViewHistoryActions" />*@
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            debugger;
+            //$("#chkapprovereject").prop("checked", true);
+            $("#statusId").val('@ViewBag.Status');
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("Registration", msg);
+            }
+
+            $('#headerchkapprovereject').change(function() {
+                debugger;
+                if (this.checked) {
+                    $(".clschkApproveReject").prop("checked", true);
+                }
+                else {
+                    $(".clschkApproveReject").prop("checked", false);
+                }
+
+            });
+
+        });
+
+        function GetCount(count) {
+            debugger;
+            var msg = '@Html.Raw(@ViewBag.Message)';
+            if (count > 2) {
+                ShowDynamicSwalAlert("", msg);
+                return false;
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript">
+
+        function ChangePageSize(obj, searchtext) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&strServiceId=" + '@serviceId' + "&search=" + searchtext + "&districtId=" + '@ViewBag.DistrictId' + "&talukaId=" + '@ViewBag.TalukaId' + "&villageId=" + '@ViewBag.VillageId' + "&divisionId=" + '@ViewBag.DivisionId' + "&statusId=" + '@ViewBag.Status' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate';
+        }
+
+        function getUploadedDocumentForEmployee(applicationId, serviceId, divId) {
+            var objData = new Object()
+            objData.ServiceId = serviceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GetUploadedDocumentForEmployee",
+                data: { ApplicationId: applicationId, ServiceId: serviceId },
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function(response) {
+                    debugger;
+                    $("#" + divId).find("#divContent").html(response);
+                    $("#" + divId).modal('show');
+                },
+                failure: function(response) {
+                    alert(response.responseText);
+                },
+                error: function(response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+
+        $(function() {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+
+
+        function OpenEmpDocumentView(applicationId, serviceId) {
+            var url = "/EmployeeHome/GetUploadedDocumentForEmployee?ApplicationId=" + applicationId + "&ServiceId=" + serviceId;
+            window.open(url, "_blank");
+            //window.open('/EmployeeHome/DownloadDocument?, "_blank");
+        };
+
+
+        function getEmployeePopUp(ApplicationId, approvalstate, ApplicationNo, approvalstatus, ServiceId, isIndividual) {
+            debugger;
+            var valSelected = [];
+            if (isIndividual == false) {
+                $('#chkapprovereject:checked').each(function(i) {
+                    valSelected[i] = $(this).val();
+                });
+            }
+            else {
+                valSelected[0] = ApplicationId;
+            }
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for approve.')
+                return false;
+            }
+
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.isapproved = approvalstate;
+            data.applicationno = ApplicationNo;
+            data.isapprovestatus = approvalstatus;
+            data.serviceid = ServiceId;
+            data.applicationidlist = valSelected;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GetEmployeePopUp",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function(response) {
+                    debugger;
+                    $("#ApprovePopup").find("#divContent").html(response);
+                    $("#ApprovePopup").modal('show');
+                },
+                failure: function(response) {
+                    //alert(response.responseText);
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+
+        function getRejectPopUp(ApplicationId, approvalstate, ApplicationNo, approvalstatus, ServiceId, isIndividual) {
+            debugger;
+            var valSelected = [];
+            if (isIndividual == false) {
+                $('#chkapprovereject:checked').each(function(i) {
+                    valSelected[i] = $(this).val();
+                });
+            }
+            else {
+                valSelected[0] = ApplicationId;
+            }
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for reject.')
+                return false;
+            }
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.isapproved = approvalstate;
+            data.applicationno = ApplicationNo;
+            data.isapprovestatus = approvalstatus;
+            data.serviceid = ServiceId;
+            data.applicationidlist = valSelected;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GetRejectPopUp",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function(response) {
+                    debugger;
+                    $("#RejectPopup").find("#divContent").html(response);
+                    $("#RejectPopup").modal('show');
+                },
+                failure: function(response) {
+                    //alert(response.responseText);
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+        function getSendBackPopUp(ApplicationId, approvalstate, ApplicationNo, approvalstatus, ServiceId) {
+            debugger;
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.isapproved = approvalstate;
+            data.applicationno = ApplicationNo;
+            data.isapprovestatus = approvalstatus;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GetSendBackPopUp",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function(response) {
+                    debugger;
+                    $("#SendBackPopup").find("#divContent").html(response);
+                    $("#SendBackPopup").modal('show');
+                },
+                failure: function(response) {
+                    //alert(response.responseText);
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+
+        function viewHistoryPopUp(ApplicationId, approvalstate, ApplicationNo, approvalstatus, ServiceId) {
+            debugger;
+            var data = new Object();
+            data.applicationid = ApplicationId;
+            data.isapproved = approvalstate;
+            data.applicationno = ApplicationNo;
+            data.isapprovestatus = approvalstatus;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/ViewHistoryPopUp",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function(response) {
+                    debugger;
+                    $("#ViewHistoryPopup").find("#divContent").html(response);
+                    $("#ViewHistoryPopup").modal('show');
+                    //GetApplicationHistory(ApplicationId);
+                },
+                failure: function(response) {
+                    //alert(response.responseText);
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                }
+            });
+        }
+
+        function DownloadGLWBAadeshReport(ServiceId, SubServiceId) {
+            debugger;
+
+
+            var valSelected = [];
+            $('#chkapprovereject:checked').each(function(i) {
+                valSelected[i] = $(this).val();
+            });
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for view aadesh.')
+                return false;
+            }
+
+            var data = new Object();
+            data.serviceid = ServiceId;
+            data.applicationidlist = valSelected;
+            data.subserviceid = SubServiceId;
+
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/DownloadGLWBAadeshReport",
+                //data: { applicationid: applicationid },
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                //async: false,
+                beforeSend: function() {
+                    $(".loader").addClass("d-block");
+                },
+                success: function(response) {
+                    debugger;
+                    var bytes = Base64ToBytes(response);
+
+                    //Convert Byte Array to BLOB.
+                    var blob = new Blob([bytes], { type: "application/pdf" });
+
+                    //Check the Browser type and download the File.
+                    var isIE = false || !!document.documentMode;
+                    if (isIE) {
+                        window.navigator.msSaveBlob(blob, "AadeshDetails.pdf");
+                    } else {
+                        var url = window.URL || window.webkitURL;
+                        link = url.createObjectURL(blob);
+                        var a = $("<a />");
+                        a.attr("download", "AadeshDetails.pdf");
+                        a.attr("href", link);
+                        a.attr('target', '_blank')
+                        $("body").append(a);
+                        a[0].click();
+                        //let newWindow = window.open(link);
+                        $("body").remove(a);
+                        //$("#viewpdf").attr("href", link);
+                        //$("#viewpdf").click();
+                    }
+                    $(".loader").removeClass("d-block");
+                },
+                failure: function(response) {
+                    //alert(response.responseText);
+                    $(".loader").removeClass("d-block");
+                },
+                error: function(response) {
+                    // alert(response.responseText);
+                    $(".loader").removeClass("d-block");
+                }
+            });
+
+            //$(".loader").removeClass("d-block");
+        }
+    </script>
+
+}

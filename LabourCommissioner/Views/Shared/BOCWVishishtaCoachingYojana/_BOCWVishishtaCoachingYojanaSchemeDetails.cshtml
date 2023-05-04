@@ -1,0 +1,179 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@model BOCWVCYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    //var Totalsahay = ViewBag.TotalSahay;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWVishishtaCoachingYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    @*<input type="hidden" asp-for="totalsahay" value="@Totalsahay" />*@
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>વિશિષ્ટ કોચિંગ વર્ગ </legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">વિદ્યાર્થીનું નામ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="studentname" type="text" class="form-control">
+                            <span asp-validation-for="studentname" style="color:Red;display:none;"></span>
+                        </div>
+                        <span class="control-label col-md-3">જન્મ તારીખ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="dateofbirth" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="dateofbirth" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">સ્પધાત્મક કોચિંગ વર્ગની વિગત <span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="compcoachingdetails" type="text" class="form-control">
+                            <span asp-validation-for="compcoachingdetails" style="color:Red;display:none;"></span>
+                        </div>
+                        <span class="control-label col-md-3">અભ્યાસનું વર્ષ/સેમ.<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="acadmicyearsem" type="text" class="form-control">
+                            <span asp-validation-for="acadmicyearsem" style="color:Red;display:none;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <span class="control-label col-md-3">એડમીશન મળ્યા/સત્ર શરુ થયા તારીખ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="admissionstartdate" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="admissionstartdate" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">યુનિવર્સીટી /ઇન્સ્ટીટયુટ ઓફ ચાર્ટર્ડ એકાઉન્ટ ઓફ ઇન્ડિયાની સંસ્થાનું નામ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="institutename" type="text" class="form-control">
+                            <span asp-validation-for="institutename" style="color:Red;display:none;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">ઓળખકાર્ડ રિન્યુઅલ થયેલ છે?<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <table id="body_innerbody_rblHouseOwner" class="aspNetDisabled radio">
+                                <tbody>
+                                    <tr>
+                                        <input asp-for="identitycardrenewal" type="radio" value="0" name="identitycardrenewal" />હાં
+                                        <span class="px-2">
+                                            <input asp-for="identitycardrenewal" type="radio" value="1" name="identitycardrenewal" />ના<br />
+                                        </span>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <span asp-validation-for="identitycardrenewal" style="color:Red;display:none;">ઓળખકાર્ડ રિન્યુઅલ થયેલ છે કે કેમ તે પસંદ કરો.</span>
+                        </div>
+
+                        <span class="control-label col-md-3">રિન્યુઅલ તારીખ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="renewaldate" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="renewaldate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="registrationfee" class="control-label col-md-3">
+                            રજીસ્ટ્રેશન ફી(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="registrationid" asp-for="registrationfee" onblur="GetTotalsahay(this.value);" class="form-control" />
+                            <span asp-validation-for="registrationfee" class="text-danger"></span>
+                        </div>
+
+                        <label asp-for="coachingfee" class="control-label col-md-3">
+                            કોચિંગ ફી/ટુશન ફી.(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="coachingid" asp-for="coachingfee"  onblur="GetTotalsahay(this.value);" class="form-control" />
+                            <span asp-validation-for="coachingfee" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="trainingfee" class="control-label col-md-3">
+                            તાલીમ ફી(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="trainingid" asp-for="trainingfee"  onblur="GetTotalsahay(this.value);" class="form-control" />
+                            <span asp-validation-for="trainingfee" class="text-danger"></span>
+                        </div>
+                        <label asp-for="examfee" class="control-label col-md-3">
+                            પરીક્ષા ફી(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="examid" asp-for="examfee"  onblur="GetTotalsahay(this.value);" class="form-control" />
+                            <span asp-validation-for="examfee" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                            ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">Cancel</button>
+        </div>
+
+    </div>
+</form>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+    });
+
+    function GetTotalsahay() {
+        var totalsahay = parseInt($('#registrationid').val()) + parseInt($('#coachingid').val()) + parseInt($('#trainingid').val()) + parseInt($('#examid').val());
+        $('#Totalsahay').val(totalsahay);
+    };
+
+
+</script>

@@ -1,0 +1,106 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model CCRegistration
+@{
+
+
+}
+
+
+<form asp-action="AddLocalAuthority" asp-controller="CCRegistration" method="post">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">Responsible Person & Local Authority
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <div class="modal-body bocw_bg">
+
+
+                <fieldset class="custom-fieldset mb-4">
+                    <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                        <span id="body_innerbody_ucApplicantBankdetails_lblLegend">Responsible Person Details</span>
+                    </legend>
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Responsible Person Name :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="resname" class="form-control" maxlength="100" autocomplete="off" />
+                                <span asp-validation-for="resname" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Responsible Person Designation :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="resdesignation" class="form-control" maxlength="100" autocomplete="off" />
+                                <span asp-validation-for="resdesignation" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Responsible Person MobileNo. :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="resmobileno" class="form-control" maxlength="10" autocomplete="off" onkeypress="return AllowNumeric(event);" />
+                                <span asp-validation-for="resmobileno" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="custom-fieldset mb-4">
+                    <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                        <span id="body_innerbody_ucApplicantBankdetails_lblLegend">Local Authority Details</span>
+                    </legend>
+
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Local Authority Name :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="locname" class="form-control" maxlength="100" autocomplete="off" />
+                                <span asp-validation-for="locname" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Local Authority Designation :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="locdesignation" class="form-control" maxlength="100" autocomplete="off" />
+                                <span asp-validation-for="locdesignation" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="control-label col-md-5">
+                                Local Authority MobileNo. :<span class="text-danger">*</span>
+                            </span>
+                            <div class="control-form col-md-6">
+                                <input asp-for="locmobileno" class="form-control" maxlength="10" autocomplete="off" onkeypress="return AllowNumeric(event);" />
+                                <span asp-validation-for="locmobileno" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+               <input type="submit" value="Save"  class="btn btn-warning text-center">
+            </div>
+             
+            <div class="modal-footer bg-warning">
+                
+                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+

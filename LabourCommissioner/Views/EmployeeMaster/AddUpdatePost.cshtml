@@ -1,0 +1,269 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model PostMaster
+
+
+
+@{
+    ViewData["Title"] = "Registered Applicant Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    string action = ViewBag.Action;
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+@if (action == "U")
+{
+    <section id="hero" class="hero2">
+        <h2 class="animate__animated animate__fadeInDown">Update Post</h2>
+    </section>
+
+}
+else
+{
+    <section id="hero" class="hero2">
+        <h2 class="animate__animated animate__fadeInDown">Post Master</h2>
+    </section>
+
+}
+
+
+<main id="main">
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <form asp-controller="EmployeeMaster" asp-action="AddUpdateDeletePost" onsubmit="return ValidateForm();" method="post">
+                        <input type="hidden" name="isActive" id="hdnIsActive" />
+                        <input type="hidden" name="action" id="hdnAction" value="@ViewBag.Action" />
+                        @if (action == "U")
+                        {
+                            <input type="hidden" name="districtId" value="@ViewBag.DistrictId" />
+                            <input type="hidden" name="roleId" value="@ViewBag.RoleId" />
+                            <input type="hidden" name="postshortname" value="@Model.username" />
+                            <input type="hidden" name="postId" value="@Model.postid" />
+                        }
+
+
+                        <div class="card">
+                            <div class="card-header card-head-bg">
+                                <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                    @if (action == "U")
+                                    {
+                                        <span class="text-white">
+                                            <i class='bx bx-list-ul align-middle'></i>Update
+                                            Post
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Add Post</span>
+                                    }
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal form-bordered">
+                                            <div class="form-group row">
+
+                                                <label class="control-label col-md-3">District Name : <span class="text-danger font-weight-bolder">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <select asp-items="@(action == "U" ? new SelectList(@ViewBag.DistrictList, "Value", "Text",selectedValue:@ViewBag.DistrictId) : null)" class="form-control" disabled id="listDistrict">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                    }
+                                                    else
+                                                    {
+                                                        <select asp-items="@(new SelectList(@ViewBag.DistrictList, "Value", "Text"))" onchange="    GetRole(this.value);" class="form-control" name="districtId" id="listDistrict">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                    }
+                                                    <span id="body_rfvdistrict" class="code" style="color:Red;display:none;">Please Select District</span>
+                                                </div>
+                                                <label class="control-label col-md-3">Post Role : <span class="text-danger font-weight-bolder">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <select asp-items="@(action == "U" ? new SelectList(@ViewBag.RoleList, "Value", "Text",selectedValue:@ViewBag.RoleId) : null)" class="form-control" name="roleId" disabled id="listRole">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                    }
+                                                    else
+                                                    {
+                                                        <select asp-items="@(action == "U" ? new SelectList(@ViewBag.RoleList, "Value", "Text",selectedValue:@ViewBag.RoleId) : null)" class="form-control" name="roleId" id="listRole">
+                                                            <option value="0">- Please Select -</option>
+                                                        </select>
+                                                    }
+                                                    <span id="body_rfvrole" class="code" style="color:Red;display:none;">Please Select Role</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <label class="control-label col-md-3">Post short name/UserName : <span class="text-danger font-weight-bolder">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <input value="@Model.username" type="text" maxlength="50" disabled id="username" class="form-control" placeholder="Short name/UserName">
+                                                    }
+                                                    else
+                                                    {
+                                                        <input name="postshortname" type="text" maxlength="50" id="username" class="form-control" placeholder="Short name/UserName">
+                                                    }
+                                                    <span id="body_rfvusername" class="code" style="color:Red;display:none;">Please enter username</span>
+
+                                                </div>
+                                                <label class="control-label col-md-3">Post Name : <span class="text-danger font-weight-bolder">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <input name="postname" type="text" value="@Model.postname" maxlength="100" id="postname" class="form-control" placeholder="Post Name">
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <input name="postname" type="text" maxlength="100" id="postname" class="form-control" placeholder="Post Name">
+                                                    }
+                                                    <span id="body_rfvpostname" class="code" style="color:Red;display:none;">Please enter postname</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+
+                                                <label class="control-label col-md-3">Email-ID : <span class="text-danger font-weight-bolder">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <input name="emailid" type="text" maxlength="100" id="emailid" value="@Model.emailid" class="form-control" placeholder="Email-ID">
+                                                    }
+                                                    else
+                                                    {
+                                                        <input name="emailid" type="text" maxlength="100" id="emailid" class="form-control" placeholder="Email-ID">
+                                                    }
+                                                    <span id="body_rfvemailid" class="code" style="color:Red;display:none;">Please enter emailid</span>
+
+                                                </div>
+                                                <label class="control-label col-md-3">Contact Number : </label>
+                                                <div class="control-form col-md-3">
+                                                    @if (action == "U")
+                                                    {
+                                                        <input name="contactno" type="text" value="@Model.contactno" maxlength="13" id="contactno" class="form-control" placeholder="Contact Number">
+                                                    }
+                                                    else
+                                                    {
+                                                        <input name="contactno" type="text" maxlength="13" id="contactno" class="form-control" placeholder="Contact Number">
+                                                    }
+                                                    <span id="body_rfvcontactno" class="code" style="color:Red;display:none;">Please enter Contact No</span>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                @if (action != "U")
+                                                {
+                                                    <label class="control-label col-md-3">Password : <span class="text-danger font-weight-bolder">*</span></label>
+                                                    <div class="control-form col-md-3">
+                                                        <input name="password" type="password" id="password" class="form-control" placeholder="Password">
+                                                    </div>
+                                                }
+                                                <span id="body_rfvpassword" class="code" style="color:Red;display:none;">Please Enter Password</span>
+
+                                                @if (action != "U")
+                                                {
+                                                    <label class="control-label col-md-3">Is Active ? </label>
+                                                    <div class="control-form col-md-3">
+                                                        <label class="c-checkbox">
+                                                            <input id="chkisActive" type="checkbox">
+                                                        </label>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer clearfix">
+                                <div class="text-center">
+                                    <input type="submit" name="ctl00$body$btnSave" value="Save" id="body_btnSave" class="btn btn-primary">
+                                    <input type="submit" name="ctl00$body$btnCancel" value="Cancel" id="body_btnCancel" class="btn btn-secondary">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    @*</div*@
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<script src="~/js/Common.js"></script>
+<script>
+    $("#chkisActive").change(function() {
+        if (this.checked) {
+            $("#hdnIsActive").val(true);
+        }
+    });
+
+    function ValidateForm() {
+
+        if ($("#listDistrict").val() == 0) {
+            $("#body_rfvdistrict").css('display', 'block');
+            return false;
+        }
+        else if ($("#listRole").val() == 0) {
+            $("#body_rfvrole").css('display', 'block');
+            return false;
+        }
+        else if ($("#username").val() == "") {
+            $("#body_rfvusername").css('display', 'block');
+            return false;
+        }
+        else if ($("#password").val() == "") {
+            $("#body_rfvpassword").css('display', 'block');
+            return false;
+        }
+        else if ($("#postname").val() == "") {
+            $("#body_rfvpostname").css('display', 'block');
+            return false;
+        }
+        else if ($("#contactno").val() == "") {
+            $("#body_rfvcontactno").css('display', 'block');
+            return false;
+        }
+        else if ($("#emailid").val() == "") {
+            $("#body_rfvemailid").css('display', 'block');
+            return false;
+        }
+
+
+
+    }
+
+
+</script>

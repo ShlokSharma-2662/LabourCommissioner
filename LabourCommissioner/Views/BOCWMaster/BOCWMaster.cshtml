@@ -1,0 +1,190 @@
+﻿@{
+    ViewData["Title"] = "BOCW Master";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+@model OfficeDetailsModel
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Office Master</h2>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col position-relative">
+
+                    <div class="tab-content border p-3" id="pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <br />
+                            <form id="personalDetailsForm" method="post" asp-controller="BOCWMaster" asp-action="AddOfficeDetails">
+                                <fieldset class="custom-fieldset mb-4">
+                                    <legend>
+                                        Office Details
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <div class="form-horizontal form-bordered">
+                                                <div class="form-group row">
+                                                    <div class="col-md-10 p-0 align-self-center">
+                                                        <div class="form-horizontal form-bordered border-0">
+                                                            <div class="form-group row border-top">
+                                                                <span id="body_innerbody_lblApplicantFullName" class="control-label col-md-2">ઓફિસનું નામ : <span class="text-danger">*</span></span>
+                                                                <div class="control-form col-md-3">
+                                                                    <input asp-for="officeName" class="aspNetDisabled form-control">
+                                                                    <span asp-validation-for="officeName" class="text-danger"></span>
+                                                                </div>
+                                                                @*<span id="body_innerbody_Label1" class="control-label col-md-2">વિદ્યાર્થીનું પુરુ નામ (ગુજરાતીમાં):<span class="text-danger">*</span></span>
+                                                                <div class="control-form col-md-3">
+                                                                <input asp-for="officedistrictid" class="form-control">
+                                                                <span asp-validation-for="officedistrictid" class="text-danger"></span>
+                                                                </div>*@
+
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <span id="body_innerbody_lblFathernm" class="control-label col-md-2">સંપર્ક કરતાં વ્યક્તિ નું નામ : <span class="text-danger">*</span></span>
+                                                                <div class="control-form col-md-3">
+                                                                    <input asp-for="contactpersonname" class="form-control">
+                                                                    <span asp-validation-for="contactpersonname" class="text-danger"></span>
+
+                                                                </div>
+                                                                <span id="body_innerbody_lblFathernmguj" class="control-label col-md-2">સંપર્ક કરતાં વ્યક્તિ નો નંબર: <span class="text-danger">*</span></span>
+                                                                <div class="control-form col-md-3">
+                                                                    <input asp-for="contactpersoncontactno" class="form-control">
+                                                                    <span asp-validation-for="contactpersoncontactno" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <span id="body_innerbody_lblFathernm" class="control-label col-md-2">સંપર્ક કરતાં વ્યક્તિ ની પોસ્ટ: <span class="text-danger">*</span></span>
+                                                                <div class="control-form col-md-3">
+                                                                    <input asp-for="contactpersonpost" class="form-control">
+                                                                    <span asp-validation-for="contactpersonpost" class="text-danger"></span>
+
+                                                                </div>
+                                                                <span id="body_innerbody_lblFathernmguj" class="control-label col-md-2">ઓફિસ નો ફેક્સ નંબર:</span>
+                                                                <div class="control-form col-md-3">
+                                                                    <input asp-for="faxno" class="form-control">
+                                                                    <span asp-validation-for="faxno" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="custom-fieldset mb-4">
+                                    <legend>ઓફિસનું સરનામું</legend>
+                                    <div class="form-horizontal form-bordered">
+
+                                        <div class="form-group row">
+                                            <span class="control-label col-md-2">
+                                                રાજયનું નામ :  <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                @*<select id="listState" onload="GetDistrict();" asp-for="CStateId" asp-items="@(new SelectList{Value = "7", Text = "Gujrat", Selected = true})" class="form-control"></select>*@
+                                                <select id="listState" asp-for="OfficeStateId" class="form-control">
+                                                    <option value="7">
+                                                        Gujrat - ગુજરાત
+                                                    </option>
+                                                </select>
+                                                <span id="listState" class="text-danger" style="color:Red;display:none;">રાજયનું નામ પસંદ કરો.</span>
+                                                <span asp-validation-for="OfficeStateId" class="text-danger"></span>
+                                            </div>
+                                            <span class="control-label col-md-2">
+                                                જિલ્લાનું નામ :  <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                @*<select id="listDistrict" asp-for="CDistrictId" asp-items="@(isfilled == true ? new SelectList(@ViewBag.District, "Value", "Text", selectedValue: @Model.CDistrictId) : null)" onchange="GetTalukaByDistrictId(this.value);" class="form-control">*@
+                                                <select asp-for="officedistrictid" class="form-control" id="listDistrict" onchange="GetTalukaByDistrictId(this.value);">
+                                                    <option value="0">- Please Select -</option>
+                                                </select>
+                                                <span id="listDistrict" class="text-danger" style="color:Red;display:none;">જિલ્લાનું નામ પસંદ કરો.</span>
+                                                <span asp-validation-for="officedistrictid" class="text-danger"></span>
+                                            </div>
+
+                                            <span class="control-label col-md-2">
+                                                તાલુકાનું નામ: <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                <select asp-for="OfficeTalukaId" id="listTaluka" onchange="GetVillageByDistrictIdAndTalukaId(this.value);" class="form-control">
+                                                    <option value="0">- Please Select -</option>
+                                                </select>
+                                                <span id="listTaluka" class="text-danger" style="color:Red;display:none;">તાલુકાનું નામ પસંદ કરો.</span>
+                                                <span asp-validation-for="OfficeTalukaId" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <span class="control-label col-md-2">
+                                                ગામનું નામ :  <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                <select asp-for="OfficeVillageId" id="listVillage" class="form-control">
+                                                    <option value="0">- Please Select -</option>
+                                                </select>
+                                                <span id="listVillage" class="text-danger" style="color:Red;display:none;">ગામ નું નામ પસંદ કરો.</span>
+                                                <span asp-validation-for="OfficeVillageId" class="text-danger"></span>
+
+                                            </div>
+                                            <span class="control-label col-md-2">
+                                                ઓફિસનું સરનામું : <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                <textarea asp-for="officeaddress" rows="2" cols="20" id="CAddressInEnglish" class="form-control" style="height: auto !important">Ahmedabad</textarea>
+                                                <span asp-validation-for="officeaddress" class="text-danger"></span>
+                                            </div>
+                                            <span class="control-label col-md-2">
+                                                પીનકોડ :  <span class="text-danger">*</span>
+                                            </span>
+                                            <div class="control-form col-md-2">
+                                                <input asp-for="OfficePinCode" type="text" maxlength="6" onkeypress="return AllowNumeric(event);" id="CPincode" class="form-control">
+                                                <span asp-validation-for="OfficePinCode" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+                                <div class="card-footer text-center border">
+
+                                    <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+                                    <button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->
+@*<script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>
+<link href="lib/jqueryui/themes/base/jquery-ui.min.css" />
+<link href="lib/jqueryui/themes/base/theme.min.css" />*@
+<script src="~/js/Common.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        GetDistrict();
+    });
+
+</script>

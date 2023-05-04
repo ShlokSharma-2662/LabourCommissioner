@@ -1,0 +1,328 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWBPSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    var DOB = ViewBag.DOB;
+    var Date = ViewBag.Date;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    var gender = 0;
+    if (Model != null)
+    {
+        gender = Model.Gender;
+    }
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWBhagyaLaxmiBondYojna" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" id="hdnIsBPSY" asp-for="IsBPSY" />
+    <input type="text" asp-for="PsDateOfBirth" class="form-control dateValidateCls datepicker" id="hdnDateOfBirth" style="display:none;" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+            <div class="">
+
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">અરાજદાર સાથેનો સબંધ : </span>
+                        <div class="control-form col-md-3">
+                            <select id="Relation" asp-for="Relation" class="form-control" onchange="Cleartotalsahay();">
+                                <option selected="selected" value="">--Select--</option>
+                                <option value="2">પોતે</option>
+                                <option value="4">પત્ની</option>
+                            </select>
+                            <span asp-validation-for="Relation" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_lblApplicantDOB" class="control-label col-md-3">પ્રસુતાર્થીની જન્મ તારીખ :<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input type="text" id="psdob" asp-for="PsDateOfBirth" placeholder="dd/MM/yyyy" class="form-control dateValidateCls datepicker">
+                            <span asp-validation-for="PsDateOfBirth" class="text-danger"></span>
+                            <span id="body_innerbody_reqtxtApplicantDOB" style="color:Red;display:none;">અરજદારની જન્મ તારીખ પસંદ કરો.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">પ્રસુતિની તારીખ:</span>
+                        <div class="control-form col-md-3">
+                            <input type="text" asp-for="ExpectedDeliveryDate" placeholder="dd/MM/yyyy" onchange="CalculateAge('@DOB',this.value, 'Age');" class="form-control dateValidateCls date_picker" id="exdate">
+                            <span asp-validation-for="ExpectedDeliveryDate" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_label2" class="control-label col-md-3">કેટલામી પ્રસુતિ છે? :</span>
+                        <div class="control-form col-md-3 d-flex align-items-center">
+                            <input asp-for="PrasutiNo" type="radio" value="1" id="rbFirst" name="PrasutiNo" />પ્રથમ<br />
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="2" id="rbSecond" name="PrasutiNo" />બીજી<br /></span>
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="3" id="rbThird" name="PrasutiNo" />ત્રીજી<br /></span>
+                            <span class="px-2"><input asp-for="PrasutiNo" type="radio" value="4" id="rbForth" name="PrasutiNo" />ચોથી<br /></span>
+                            <span asp-validation-for="PrasutiNo" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span id="body_innerbody_label2" class="control-label col-md-3">પ્રસુતિ વખતે ઉંમર(૧૯ વર્ષ મર્યાદા) :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="Age" class="form-control" readonly="readonly">
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_label1" class="control-label col-md-3">જન્મનુ પ્રમાણપત્ર નંબર:</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="BirthCertificateNo" class="form-control">
+                            <span asp-validation-for="BirthCertificateNo" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">બાળકની જાતિ:</span>
+                        <div class="control-form col-md-3 d-flex align-items-center">
+                            <input asp-for="Gender" type="radio" value="5" id="rbSon" name="Gender" onchange="GettotalsahaybysahayId(@ServiceId);" />પુત્ર<br />
+                            <span class="px-2">
+                                <input asp-for="Gender" type="radio" value="3" id="rbDaughter" name="Gender" onchange="GettotalsahaybysahayId(@ServiceId);" />પુત્રી<br />
+                            </span>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+
+                        <span id="body_innerbody_label1" class="control-label col-md-3">જન્મનુ પ્રમાણપત્રની તારીખ:</span>
+                        <div class="control-form col-md-3">
+                            <input type="text" asp-for="BirthCertificateIssueDate" placeholder="dd/MM/yyyy" class="form-control dateValidateCls datepicker" id="datepicker1">
+                            <span asp-validation-for="BirthCertificateIssueDate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row dvAlreadyApplied">
+                        <span id="body_innerbody_label2" class="control-label col-md-3">પહેલા મુખ્યમંત્રી ભાગ્યલક્ષ્મી બોન્ડનો લાભલીધેલ છે કે કેમ?:</span>
+                        <div class="control-form col-md-3 d-flex align-items-center">
+                            <input asp-for="AlreadyApplied" type="radio" value="1" id="rbYes" name="AlreadyApplied" onchange="GettotalsahaybysahayId(@ServiceId);" />હાં<br />
+                            <span class="px-2"><input asp-for="AlreadyApplied" type="radio" value="2" id="rbNo" name="AlreadyApplied" onchange="GettotalsahaybysahayId(@ServiceId);" />નાં<br /></span>
+                            <span asp-validation-for="AlreadyApplied" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">દિકરી / દીકરા નું નામ:</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="KidsName" class="form-control">
+                            <span asp-validation-for="KidsName" class="text-danger"></span>
+                        </div>
+                        <span id="body_innerbody_label1" class="control-label col-md-3">વારસદારનું નામ: <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="NomineeName" class="form-control">
+                            <span asp-validation-for="NomineeName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">જન્મના પ્રમાણપત્ર ઈશ્યૂ કરનાર સંસ્થાનું નામ:</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="BirthCertificateIssueCompany" class="form-control">
+                            <span asp-validation-for="BirthCertificateIssueCompany" class="text-danger"></span>
+                        </div>
+
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                            ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+                        <div class="control-form col-md-3">
+                            <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly />
+                            <span asp-validation-for="totalsahay" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(function () {
+        var start = new Date('29/04/2022');
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+
+
+        $('.date_picker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            startDate: new Date('04/29/2022'),
+            endDate: new Date(),
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+
+    });
+
+    $(document).ready(function () {
+        debugger;
+
+        if ('@isfilled' == 'True' && '@gender' == 3) {
+            $(".dvAlreadyApplied").show();
+        }
+        else {
+            $(".dvAlreadyApplied").hide();
+        }
+
+
+
+        var option = $('#Relation').find('option:selected').val();
+        if (option == 2) {
+            $("#psdob").attr("value", '@Date');
+            $("#psdob").attr("disabled", 'disabled');
+        }
+        else {
+            $("#psdob").removeAttr("disabled");
+        }
+    });
+
+
+    $(document).on('change', '#Relation', function () {
+        debugger;
+        var option = $('#Relation').find('option:selected').val();
+        if (option == 2) {
+            $("#psdob").attr("value", '@Date');
+            $("#psdob").attr("disabled", 'disabled');
+            $("#hdnDateOfBirth").val('@Date');
+        }
+        else {
+            $("#psdob").removeAttr("disabled");
+        }
+    });
+
+    $(document).on('change', '#psdob', function () {
+        debugger;
+        $("#hdnDateOfBirth").val(this.value);
+    });
+
+    function Cleartotalsahay() {
+        debugger;
+        //$('#Relation').children("option:selected").val('');
+        $('#rbSon').prop('checked', false);
+        $('#rbDaughter').prop('checked', false);
+        $('#rbYes').prop('checked', false);
+        $('#rbNo').prop('checked', false);
+        $('#Totalsahay').val('');
+    }
+    function GettotalsahaybysahayId(serviceid) {
+        debugger;
+        var gender = $('input[name="Gender"]:checked').val();
+        var relations = $('#Relation').children("option:selected").val();
+        var isApplied = $('input[name="AlreadyApplied"]:checked').val();
+        var deliveryDate = $('#exdate').val();
+        var tharavDate = "20/06/2022";
+        var date1 = getDateObj(deliveryDate);
+        var date2 = getDateObj(tharavDate);
+
+        if (date1 > date2) {
+
+            if (gender == 3) {
+                $(".dvAlreadyApplied").show();
+                $("#hdnIsBPSY").val(true);
+            }
+            else {
+                $(".dvAlreadyApplied").hide();
+            }
+
+            var tharavid = 1;
+            $.ajax({
+                type: "get",
+                url: "/BOCWBhagyaLaxmiBondYojna/GettotalsahaybysahayId",
+                data: { serviceid: serviceid, relation: relations, gender: gender, isApplied: isApplied, tharavId: tharavid },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    debugger;
+                    var totalsahay = data.data.result.totalsahay;
+                    $('#Totalsahay').val(totalsahay);
+
+                }
+            });
+        }
+        else {
+
+            if (gender == 3) {
+                $(".dvAlreadyApplied").show();
+                $("#hdnIsBPSY").val(true);
+            }
+            else {
+                $(".dvAlreadyApplied").hide();
+            }
+
+            var tharavid = 2;
+            $.ajax({
+                type: "get",
+                url: "/BOCWBhagyaLaxmiBondYojna/GettotalsahaybysahayId",
+                data: { serviceid: serviceid, relation: relations, gender: gender, isApplied: isApplied, tharavId: tharavid },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    debugger;
+                    var totalsahay = data.data.result.totalsahay;
+                    $('#Totalsahay').val(totalsahay);
+
+                }
+            });
+        }
+
+
+
+
+
+        //$.ajax({
+        //    type: "get",
+        //    url: "/BOCWBhagyaLaxmiBondYojna/GettotalsahaybysahayId",
+        //    data: { serviceid: serviceid, relation: relations, gender: gender, isApplied: isApplied },
+        //    datatype: "json",
+        //    traditional: true,
+        //    success: function(data) {
+        //        debugger;
+        //        var totalsahay = data.data.result.totalsahay;
+        //        $('#Totalsahay').val(totalsahay);
+
+        //    }
+        //});
+    }
+
+    function getDateObj(dateString) {
+        var parts = dateString.split('/');
+        var date = parts[0];
+        var month = parts[1];
+        var year = parts[2];
+        return new Date(year, month, date);
+    }
+
+</script>

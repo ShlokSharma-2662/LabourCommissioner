@@ -1,0 +1,378 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@model BOCWNanjiSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var Totalsahay = ViewBag.TotalSahay;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    var modelCnt = 1;
+
+
+    if (@Model != null && @Model.lstFamilyMemberDetails != null)
+    {
+        modelCnt = @Model.lstFamilyMemberDetails.Count();
+    }
+
+}
+<link rel="stylesheet" href="~/css/sweetalert.css" />
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWNanajiYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+
+        @* //new design for antyesthi *@
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>કુટુંબની વિગતો</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    @*<div class="form-group row">
+                    <span id="body_innerbody_label1" class="control-label col-md-3">કુટુંબ ના કુલ સભ્યો<span class="text-danger">*</span> :</span>
+                    <div class="control-form col-md-3">
+                    <input asp-for="familymemberno" value="1" type="text" id="familymemberno" class="form-control" readonly="readonly">
+                    <span asp-validation-for="familymemberno" style="color:Red;display:none;"></span>
+                    </div>
+                    </div>*@
+                    <div class="form-group row">
+                        <span class="control-label col-md-3">મકાન ફાળવનાર સંસ્થાનુ નામ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="schemeorg" name="schemeorg" type="text" class="form-control">
+                            <span asp-validation-for="schemeorg" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">મકાન ફાળવણી થયેલ યોજનાનુ નામ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <div class="">
+                                <table id="body_innerbody_rblHousingScheme" class="radio">
+                                    <tbody>
+                                        <tr>
+                                            <input asp-for="housingscheme" type="radio" name="housingscheme" value="0">LIG
+                                            <span class="px-2"><input asp-for="housingscheme" type="radio" name="housingscheme" value="1">MIG</span>
+                                            <span class="px-2"><input asp-for="housingscheme" type="radio" name="housingscheme" value="2">EWS</span>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span asp-validation-for="housingscheme" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">મકાન ફાળવનારની તારીખ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="housegetdate" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                            <span asp-validation-for="housegetdate" class="text-danger"></span>
+                        </div>
+                        <span id="" class="control-label col-md-3">જીલ્લા કચેરીમાં અરજી કર્યાની તારીખ<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="districtapplydate" id="dob" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                            <span asp-validation-for="districtapplydate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">પોતાની માલિકીનું મકાન/ફ્લેટ છે?<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+
+                            <input asp-for="houseowner" type="radio" value="0" name="houseowner" />હાં
+                            <span class="px-2">
+                                <input asp-for="houseowner" type="radio" value="1" name="houseowner" />ના<br />
+                            </span>
+
+                            <span asp-validation-for="houseowner" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            મકાન/ફ્લેટ ની વિગત<span class="text-danger">*</span> :
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="housedetails" type="text" class="form-control">
+                            <span asp-validation-for="housedetails" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">ઘરના અન્ય સભ્યના નામે મકાન/ફ્લેટ છે?<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+
+                            <input asp-for="otherhouse" type="radio" value="0" name="otherhouse" />હાં
+                            <span class="px-2">
+                                <input asp-for="otherhouse" type="radio" value="1" name="otherhouse" />ના<br />
+                            </span>
+
+                            <span asp-validation-for="otherhouse" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            મકાન/ફ્લેટ ની વિગત<span class="text-danger">*</span> :
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="otherhousedetails" name="otherhousedetails" type="text" class="form-control">
+                            <span asp-validation-for="otherhousedetails" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">ફાળવેલ મકાન પર અન્ય કોઈ લોન લીધેલ છે?<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <table id="body_innerbody_rblHouseLoan" class="aspNetDisabled radio">
+                                <tbody>
+                                    <tr>
+                                        <input asp-for="houseloan" type="radio" value="0" name="houseloan" />હાં
+                                        <span class="px-2">
+                                            <input asp-for="houseloan" type="radio" value="1" name="houseloan" />ના<br />
+                                        </span>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <span asp-validation-for="houseloan" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            લોનની વિગત<span class="text-danger">*</span> :
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="loandetails" name="loandetails" type="text" class="form-control">
+                            <span asp-validation-for="loandetails" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">અન્ય કોઈ સરકારી /સ્થાનિક સ્વરાજયની સંસ્થાની આવાસ યોજના હેઠળ લાભ મેળવેલ છે?<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <table id="body_innerbody_rblIsScheme" class="aspNetDisabled radio">
+                                <tbody>
+                                    <tr>
+                                        <input asp-for="otherschemuse" type="radio" value="0" name="otherschemuse" />હાં
+                                        <span class="px-2">
+                                            <input asp-for="otherschemuse" type="radio" value="1" name="otherschemuse" />ના<br />
+                                        </span>
+                                    </tr>
+                                </tbody>
+                            </table>
+                           <span asp-validation-for="otherschemuse" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            યોજનાનું નામ<span class="text-danger">*</span> :
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="otherschemename" name="otherschemename" type="text" class="form-control">
+                           <span asp-validation-for="otherschemename" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span id="" class="control-label col-md-3">મકાન ફાળવણી થયા બાદ કેટલા હપ્તા ભરેલ છે.<span class="text-danger">*</span> :</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="instalments" name="instalments" type="text" class="form-control">
+                            <span asp-validation-for="instalments" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">
+                            મકાન ફાળવણી થયા બાદ કેટલા નાણાં ભરેલ છે.<span class="text-danger">*</span> :
+                        </span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="money" name="money" type="text" class="form-control">
+                            <span asp-validation-for="money" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                            ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="Totalsahay" asp-for="totalsahay" value="@Totalsahay" class="form-control" readonly />
+                            <span asp-validation-for="totalsahay" class="text-danger"></span>
+                            @*<span asp-validation-for="totalsahay" class="text-danger"></span>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>કુટુંબના સભ્યો નું નામ</legend>
+            <table class="table bg-white table-bordered text-center" id="tblFamily">
+                <th>
+                    <span class="control-label">સભ્યો ના નામ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સંબંધ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstFamilyMemberDetails != null && Model.lstFamilyMemberDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstFamilyMemberDetails.Count; i++)
+                    {
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeleted"+i)" asp-for="@Model.lstFamilyMemberDetails[i].isDeleted" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberDetails[i].familydetailsid" />
+                                <input asp-for=@Model.lstFamilyMemberDetails[i].familymembersname type="text" class="form-control">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].familymembersname" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_familymembersname_error0" class="text-danger"></span>
+                            </td>
+
+                            <td>
+                                <input asp-for=@Model.lstFamilyMemberDetails[i].relation type="text" class="form-control">
+                                <span asp-validation-for="@Model.lstFamilyMemberDetails[i].relation" class="text-danger"></span>
+                                <span id="lstFamilyMemberDetails_relation_error0" class="text-danger"></span>
+                            </td>
+                            <td><input type="button" value="Remove" onclick="RemoveTextBox(this,'@i');"></td>
+                        </tr>
+                    }
+
+                }
+                else
+                {
+                    <tr>
+
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeleted0")" asp-for="@Model.lstFamilyMemberDetails[0].isDeleted" />
+                            <input asp-for=@Model.lstFamilyMemberDetails[0].familymembersname type="text" class="form-control">
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].familymembersname" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_familymembersname_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for=@Model.lstFamilyMemberDetails[0].relation type="text" class="form-control" maxlength="15">
+                            <span asp-validation-for="@Model.lstFamilyMemberDetails[0].relation" class="text-danger"></span>
+                            <span id="lstFamilyMemberDetails_relation_error0" class="text-danger"></span>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="Addbutton" type="button" value="Add" />
+                </span>
+            </div>
+
+        </fieldset>
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">Cancel</button>
+        </div>
+
+    </div>
+</form>
+
+<script type="text/javascript" src="~/js/sweetalert.js"></script>
+<script type="text/javascript" src="~/js/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    var ttlCount = @modelCnt;
+    var removeCount = 0;
+    function Cleartotalsahay() {
+        //$('#Relation').children("option:selected").val('');
+        $('#schemetype').prop('checked', true);
+        $('#Totalsahay').val('');
+    }
+    function GettotalsahaybysahayId(serviceid, schemetype) {
+
+        var schemetype = $('#schemetype').children("option:selected").val();
+
+        $.ajax({
+            type: "get",
+            url: "/BOCWPIPSahayYojana/GettotalsahaybysahayId",
+            data: { serviceid: serviceid, schemetype: schemetype },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var totalsahay = data.data.result.totalsahay;
+                $('#Totalsahay').val(totalsahay);
+
+            }
+        });
+    }
+
+    $("#Addbutton").on("click", function() {
+        debugger;
+        var flag = false;
+        flag = ValidateControl(ttlCount);
+        if (flag) {
+            debugger;
+            $("#familymemberno").val(ttlCount);
+            var strHTML = "";
+            strHTML += "<tr id='tr" + ttlCount + "'>";
+            strHTML += "<td><input type='hidden' id='hdnIsDeleted" + ttlCount + "' name='lstFamilyMemberDetails[" + ttlCount + "].isDeleted'>";
+            strHTML += "<input name='lstFamilyMemberDetails[" + ttlCount + "].familymembersname' id='lstFamilyMemberDetails_" + ttlCount + "__familymembersname' type='text' class='form-control' maxlength='15'>";
+            strHTML += "<span id='lstFamilyMemberDetails_familymembersname_error" + ttlCount + "' class='text-danger'></span></td>";
+
+            strHTML += "<td><input name='lstFamilyMemberDetails[" + ttlCount + "].relation' id='lstFamilyMemberDetails_" + ttlCount + "__relation' type='text' class='form-control' maxlength='15'>";
+            strHTML += "<span id='lstFamilyMemberDetails_relation_error" + ttlCount + "' class='text-danger'></span></td>";
+
+            strHTML += "<td><input type='button' value='Remove' onclick='RemoveTextBox(this," + ttlCount + ");'></td>";
+            strHTML += "</tr>";
+
+            ttlCount++;
+            var familymemberno = $("#familymemberno").val(ttlCount - removeCount);
+
+
+            $("#tblFamily").append(strHTML);
+        }
+    });
+
+    function RemoveTextBox(button, rowId) {
+        debugger;
+        $(button).parent().parent().css("display", "none");
+        $("#hdnIsDeleted" + rowId).val(true);
+        //$("#familymemberno").val(parseInt($("#familymemberno").val()) - 1);
+
+        removeCount++;
+        $("#familymemberno").val(ttlCount - removeCount);
+    }
+
+
+    function ValidateControl(rowCnt) {
+        debugger;
+        //var isDeleted = $("#hdnIsDeleted" + rowId).val();
+
+        for (var i = 0; i < rowCnt; i++) {
+            if ($("#hdnIsDeleted" + i).val() == 'False' || $("#hdnIsDeleted" + i).val() == undefined || $("#hdnIsDeleted" + i).val() == '') {
+                $("#lstFamilyMemberDetails_familymembersname_error" + i + "").html("");
+
+
+                if ($("#lstFamilyMemberDetails_" + i + "__familymembersname").val() == "") {
+                    $("#lstFamilyMemberDetails_familymembersname_error" + i + "").html("નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+
+                if ($("#lstFamilyMemberDetails_" + i + "__relation").val() == "") {
+                    $("#lstFamilyMemberDetails_relation_error" + i + "").html("સંબંધ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+            }
+        }
+        return true;
+
+
+    }
+
+
+
+</script>

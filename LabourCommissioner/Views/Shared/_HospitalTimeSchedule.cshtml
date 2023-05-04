@@ -1,0 +1,185 @@
+﻿@using System.Security.Claims
+@model HospitalScheduleTime
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (HospitalScheduleTime)ViewBag.HospitalScheduleTime;
+
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string DistrictId = "";
+    string TalukaId = "";
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.ServiceId);
+        ApplicationNo = Convert.ToString(Data.ApplicationNo);
+        ApplicationId = Convert.ToString(Data.ApplicationId);
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    //TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+
+}
+<form asp-action="AddTimeScheduleHospital" asp-controller="EmployeeHome" data-ajax="true" data-ajax-method="POST" data-ajax-begin="OnBegin" data-ajax-success="OnSuccess">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    Schedule Time
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <input type="hidden" id="ApplicationId" name="ApplicationId" value="@ApplicationId" />
+            <input type="hidden" id="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="ServiceId" name="ServiceId" value="@ServiceId" />
+            <div class="modal-body bocw_bg">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group row">
+                            <span class="control-label col-md-2">From Date:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="fromdate" id="fromdate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" required />
+                                @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                                <span asp-validation-for="fromdate" class="text-danger"></span>
+
+                                <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">Please Select Date</span>
+                            </div>
+
+                            <span id="body_innerbody_lblApplicantDOB" class="control-label col-md-2">To Date:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+
+                                <input asp-for="todate" id="todate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" required />
+                                @*  <input  class="form-control datepicker" id="clsdatepicker" placeholder="dd/mm/yyyy" />*@
+                                <span asp-validation-for="todate" class="text-danger"></span>
+
+                                <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">Please Select Date</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <span id="body_innerbody_lblApplicantDOB" class="control-label col-md-2">From Time:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="fromtime" id="fromtime" type="text" type="time" class="form-control" placeholder="HH:MM" required />
+                                <span asp-validation-for="fromtime" class="text-danger"></span>
+
+                                <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">Please Select Time</span>
+                            </div>
+
+                            <span id="body_innerbody_lblApplicantDOB" class="control-label col-md-2">To Time:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="totime" id="totime" type="text" type="time" class="form-control" placeholder="HH:MM" required />
+                                <span asp-validation-for="totime" class="text-danger"></span>
+
+                                <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">Please Select Time</span>
+                            </div>
+
+                            @if (ServiceId == "12")
+                            {
+                                <div class="form-group">
+                                    <label>
+                                        <span id="lblOTP">Remarks</span><span class="text-danger">*</span>
+                                    </label>
+                                    <div class="">
+                                        <textarea id="remarks" name="remarks" cols="20" rows="2" class="form-control" maxlength="2400" required></textarea>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                        <br />
+                        <input type="submit" value="Submit" class="btn btn-warning">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$(function() {
+        //    $('.datepicker').datepicker({
+        //        changeMonth: true,
+        //        changeYear: true,
+        //        format: "dd/mm/yyyy",
+        //        language: "local",
+        //        todayHighlight: 'TRUE',
+        //        autoclose: true
+        //    });
+        //});
+        $(function() {
+            var today = new Date();
+            debugger
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true,
+                startDate: "today"
+
+            });
+        });
+    });
+
+
+    $(document).ready(function() {
+        debugger;
+        GetHospitalScheduleTime(@ApplicationId, @ServiceId);
+
+    });
+
+    function GetHospitalScheduleTime(ApplicationId, ServiceId) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/EmployeeHome/GetHospitalScheduleTime",
+            data: { applicationid: ApplicationId, serviceid: ServiceId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+
+                var dateArray = data.response[0].fromdate.split('T')[0].split('-');
+                var date = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+                $('#fromdate').val(date);
+
+                var dateArray = data.response[0].todate.split('T')[0].split('-');
+                var date1 = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+                $('#todate').val(date1);
+                $('#fromtime').val(data.response[0].fromtime);
+                $('#totime').val(data.response[0].totime);
+            },
+            error: (error) => {
+                debugger;
+                console.log(JSON.stringify(error));
+            }
+        });
+
+    };
+
+    function OnBegin() {
+        $('.btn-close').click();
+        debugger;
+    }
+    function OnSuccess(response) {
+        debugger;
+        var msg = response.msg;
+        swal({
+            title: "",
+            text: msg,
+            type: "success",
+            showCancelButtonClass: "btn-primary",
+            confirmButtonText: 'OK'
+        }, function() {
+            window.location.reload();
+        });
+    }
+</script>

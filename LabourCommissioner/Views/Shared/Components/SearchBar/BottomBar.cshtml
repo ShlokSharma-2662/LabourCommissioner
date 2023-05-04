@@ -1,0 +1,26 @@
+﻿@using LabourCommissioner.Views.Shared.Components.SearchBar
+@model SPager
+
+<div class="container m-0 p-0 btn-group">
+    <div class="clo-4 m-2 btn-group">
+        Showing @Model.StartRecord to @Model.EndRecord of @Model.TotalItems Rows | Page @Model.CurrentPage of @Model.TotalPages
+    </div>
+    @*<div class="clo-4 btn-group">
+        <span class="col-8 mt-2 p-0">
+            Row Per Page
+        </span>
+        <span class="col-5 p-1">
+            <select class="form-control" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@Model.SearchText')"></select>
+        </span>
+    </div>*@
+   @* <div class="col-5 btn-group m-4 mt-2">
+        Showing @Model.CurrentPage / @Model.TotalPages Pages
+    </div>*@
+</div>
+@*<script type="text/javascript">
+
+    function ChangePageSize(obj, searchtext) {
+        debugger;
+        window.location.href = "/@Model.Controller/@Model.Action" + "?pageSize=" + obj.value + "&strServiceId=" + '@Model.strServiceId' + "&SearchText=" + searchtext;
+    }
+</script>*@

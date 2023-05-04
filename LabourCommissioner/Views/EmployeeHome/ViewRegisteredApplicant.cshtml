@@ -1,0 +1,386 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model IEnumerable<RegisteredApplicant>
+
+
+
+@{
+    ViewData["Title"] = "Registered Applicant Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    var i = 1;
+    var ControllerName = "";
+    var ActionName = "";
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Registered Applicant</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="EmployeeHome" asp-action="ViewRegisteredApplicant" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Registered Applicant</span>
+                                <button type="submit" value="export" name="export" class="btn btn-primary">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Registration From Date</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Registration To Date</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">UserID / Mobile No. / Aadhar No. / Name </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-center mt-3">
+                                        <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Application</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-10">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sr. No.</th>
+                                                        <th>UserID</th>
+                                                        <th>Applicant Name</th>
+                                                        <th>Gender</th>
+                                                        <th>BirthDate</th>
+                                                        <th>Aadhar Card Number</th>
+                                                        <th>Mobile No.</th>
+                                                        <th>Email ID</th>
+                                                        <th>Registration Date</th>
+                                                        <th>Reset Password</th>
+                                                        <th>Update Mobile No.</th>
+                                                        <th>Delete Registration</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            <tr>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.registrationno
+                                                                </td>
+                                                                <td class="text-start">
+                                                                    @item.name
+                                                                </td>
+
+                                                                <td class="text-start">
+                                                                    @item.gender
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @Convert.ToDateTime(item.dateofbirth).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.aadharno
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.mobileno
+                                                                </td>
+                                                                <td class="text-start">
+                                                                    @item.emailid
+                                                                </td>
+                                                                <td>
+                                                                    @Convert.ToDateTime(item.registrationdate).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td>
+                                                                    <a class="text-primary h5" href="#" onclick="event.preventDefault(); return ResetPassword(@item.registrationid);"><i class="bi bi-arrow-clockwise"></i></a>
+                                                                    @*<input type="button" class="text-primary h5" onclick="return ResetPassword(@item.registrationid);"><i class="bi bi-arrow-clockwise"></i>*@
+                                                                </td>
+                                                                <td>
+                                                                    @*<a href="#" class="text-primary h5" onclick="return getUploadedDocumentForEmployee();"><i class="bi bi-pencil-square"></i></a>*@
+                                                                    <a href="#" class="text-primary h5" onclick="return UpdateCitizenMobileNo(@item.registrationid,@item.mobileno,'popupUpdateCitizenMobile');"><i class="bi bi-pencil-square"></i></a>
+                                                                </td>
+                                                                <td>
+                                                                    <a class="text-primary h5" href="#" onclick="event.preventDefault(); return DeleteRegistration(@item.registrationid);"><i class="bi bi-trash3"></i></a>
+                                                                </td>
+
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                        @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="popupUpdateCitizenMobile" tabindex="-1" role="dialog" aria-labelledby="popupUpdateCitizenMobile" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("Done!", msg);
+            }
+        });
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        function ChangePageSize(obj, searchtext) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&search=" + searchtext + "&districtId=" + '@ViewBag.DistrictId' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate';
+        }
+        function ResetPassword(registrationId) {
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover old password!",
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Reset it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+            },
+                function (isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+                        $.ajax({
+                            type: "get",
+                            url: "/EmployeeHome/ResetPassword",
+                            data: { RegistrationId: registrationId },
+                            datatype: "json",
+                            traditional: true,
+                            async: false,
+                            success: function (data) {
+
+                                //OpenSwal(data);
+                                //return false;
+                            }
+
+                        }).done(function (data) {
+                            debugger;
+                            //swal("Canceled!", "Your order was successfully canceled!", "success");
+                            //$('#orders-history').load(document.URL + ' #orders-history');
+                            if (data != null && data.data.error == 1) {
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "success",
+                                    confirmButtonClass: "btn-primary",
+                                });
+                            }
+                            else {
+                                swal({
+                                    title: data.data.msg,
+                                    text: data.data.email,
+                                    type: "error",
+                                    confirmButtonClass: "btn-primary",
+                                });
+                            }
+                        }).error(function (data) {
+                            debugger;
+                            swal("Oops", "We couldn't connect to the server!", "error");
+                        });
+
+
+                    }
+                    //else {
+                    //    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    //    e.preventDefault();
+                    //}
+                });
+
+        }
+
+        function UpdateCitizenMobileNo(registrationid, mobileNo, divId) {
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/ViewUpdateCitizenMobileNo",
+                data: { Registrationid: registrationid, MobileNo: mobileNo },
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function (response) {
+                    debugger;
+
+                    $("#" + divId).find("#divContent").html(response);
+                    $("#" + divId).modal('show');
+                    $("form").removeData("validator").removeData("unobtrusiveValidation");
+                    $.validator.unobtrusive.parse($("form"));
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+
+        function DeleteRegistration(registrationId) {
+            swal({
+                title: "Are you sure? You want to delete registration?",
+                text: "User will not longer available after delete registration!",
+                type: "warning",
+                confirmButtonClass: "btn-secondary",
+                confirmButtonText: 'Yes, Delete it!',
+                showCancelButton: true,
+                cancelButtonText: 'No, cancel!',
+                cancelButtonClass: 'btn-danger',
+            },
+                function (isConfirm) {
+                    debugger;
+                    if (isConfirm) {
+                        $.ajax({
+                            type: "get",
+                            url: "/EmployeeHome/DeleteRegistration",
+                            data: { RegistrationId: registrationId },
+                            datatype: "json",
+                            traditional: true,
+                            async: false,
+                            success: function (data) {
+
+                                //OpenSwal(data);
+                                //return false;
+                            }
+
+                        }).done(function (data) {
+                            debugger;
+                            //swal("Canceled!", "Your order was successfully canceled!", "success");
+                            //$('#orders-history').load(document.URL + ' #orders-history');
+                            if (data != null && data.data.error == 1) {
+                                swal({
+                                    title: data.data.msg,
+                                    text: "",
+                                    type: "success",
+                                    confirmButtonClass: "btn-primary",
+                                }, function () {
+                                    window.location.reload();
+                                });
+                            }
+                            else {
+                                swal({
+                                    title: data.data.msg,
+                                    text: "",
+                                    type: "error",
+                                    confirmButtonClass: "btn-primary",
+                                });
+                            }
+                        }).error(function (data) {
+                            debugger;
+                            swal("Oops", "We couldn't connect to the server!", "error");
+                        });
+
+
+                    }
+                    //else {
+                    //    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    //    e.preventDefault();
+                    //}
+                });
+
+        }
+    </script>
+
+}

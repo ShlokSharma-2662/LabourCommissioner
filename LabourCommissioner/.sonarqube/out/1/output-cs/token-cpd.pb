@@ -1,0 +1,24660 @@
+¢N
+JD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\aadharcard.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+{ 
+public		 
+
+class		 
+
+aadharcard		 
+{
+
+ 
+static 
+int 
+[ 
+, 
+] 
+d 
+= 
+new 
+int !
+[! "
+," #
+]# $
+{ 
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+,  !
+{ 
+$num 
+, 
+$num 
+, 
+$num	 
+
+,
+ 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+}  
+} 
+; 
+static 
+int 
+[ 
+, 
+] 
+p 
+= 
+new 
+int !
+[! "
+," #
+]# $
+{	 
+
+{ 
+$num 	
+,	 
+
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num  !
+,! "
+$num# $
+}$ %
+,% &
+{ 
+$num 	
+,	 
+
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num  !
+,! "
+$num# $
+}$ %
+,% &
+{ 
+$num 	
+,	 
+
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num  !
+,! "
+$num# $
+}$ %
+,% &
+{ 
+$num 	
+,	 
+
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num  !
+,! "
+$num# $
+}$ %
+,% &
+{ 
+$num 	
+,	 
+
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num 
+, 
+$num  !
+,! "
+$num# $
+}$ %
+,% &
+{   
+$num   	
+,  	 
+
+$num   
+,   
+$num   
+,   
+$num   
+,   
+$num   
+,   
+$num   
+,   
+$num   
+,   
+$num   
+,   
+$num    !
+,  ! "
+$num  # $
+}  $ %
+,  % &
+{!! 
+$num!! 	
+,!!	 
+
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!! 
+,!! 
+$num!!  !
+,!!! "
+$num!!# $
+}!!$ %
+,!!% &
+{"" 
+$num"" 	
+,""	 
+
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num"" 
+,"" 
+$num""  !
+,""! "
+$num""# $
+}""$ %
+}##	 
+
+;##
+ 
+static%% 
+int%% 
+[%% 
+]%% 
+inv%% 
+=%% 
+{%% 
+$num%% 
+,%% 
+$num%%  !
+,%%! "
+$num%%# $
+,%%$ %
+$num%%& '
+,%%' (
+$num%%) *
+,%%* +
+$num%%, -
+,%%- .
+$num%%/ 0
+,%%0 1
+$num%%2 3
+,%%3 4
+$num%%5 6
+,%%6 7
+$num%%8 9
+}%%: ;
+;%%; <
+public'' 
+static'' 
+bool'' 
+validateVerhoeff'' +
+(''+ ,
+string'', 2
+num''3 6
+)''6 7
+{(( 	
+int)) 
+c)) 
+=)) 
+$num)) 
+;)) 
+int)) 
+[)) 
+])) 
+myArray)) $
+=))% &$
+StringToReversedIntArray))' ?
+())? @
+num))@ C
+)))C D
+;))D E
+for** 
+(** 
+int** 
+i** 
+=** 
+$num** 
+;** 
+i** 
+<** 
+myArray**  '
+.**' (
+Length**( .
+;**. /
+i**0 1
+++**1 3
+)**3 4
+{++ 
+c,, 
+=,, 
+d,, 
+[,, 
+c,, 
+,,, 
+p,, 
+[,, 
+(,, 
+i,, 
+%,, 
+$num,,  !
+),,! "
+,,," #
+myArray,,$ +
+[,,+ ,
+i,,, -
+],,- .
+],,. /
+],,/ 0
+;,,0 1
+}-- 
+return.. 
+c.. 
+==.. 
+$num.. 
+;.. 
+}00 	
+private11 
+static11 
+int11 
+[11 
+]11 $
+StringToReversedIntArray11 5
+(115 6
+string116 <
+num11= @
+)11@ A
+{22 	
+int33 
+[33 
+]33 
+myArray33 
+=33 
+new33 
+int33  #
+[33# $
+num33$ '
+.33' (
+Length33( .
+]33. /
+;33/ 0
+for44 
+(44 
+int44 
+i44 
+=44 
+$num44 
+;44 
+i44 
+<44 
+num44  #
+.44# $
+Length44$ *
+;44* +
+i44, -
+++44- /
+)44/ 0
+{55 
+myArray66 
+[66 
+i66 
+]66 
+=66 
+int66  
+.66  !
+Parse66! &
+(66& '
+num66' *
+.66* +
+	Substring66+ 4
+(664 5
+i665 6
+,666 7
+$num668 9
+)669 :
+)66: ;
+;66; <
+}77 
+Array88 
+.88 
+Reverse88 
+(88 
+myArray88 !
+)88! "
+;88" #
+return88$ *
+myArray88+ 2
+;882 3
+}99 	
+}:: 
+};; ì
+FD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Class1.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+{ 
+public 
+
+class 
+Class1 
+{ 
+} 
+} Õ
+ND:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\CouchDBRequest.cs
+	namespace		 	
+LabourCommissioner		
+ 
+.		 
+Common		 #
+{
+
+ 
+public 
+
+class 
+CouchDBRequest 
+{ 
+[ 	
+
+JsonIgnore	 
+] 
+public 
+string 
+Id 
+{ 	
+get 
+; 
+set 
+; 
+} 	
+[ 	
+
+JsonIgnore	 
+] 
+public 
+string 
+Rev 
+{ 	
+get 
+; 
+set 
+; 
+} 	
+public 
+string 
+Name 
+{ 	
+get 
+; 
+set 
+; 
+} 	
+public 
+string 
+EmailAddress "
+{ 	
+get   
+;   
+set!! 
+;!! 
+}"" 	
+public## 
+string## 
+
+CourseName##  
+{$$ 	
+get%% 
+;%% 
+set&& 
+;&& 
+}'' 	
+public(( 
+string(( 
+Comments(( 
+{)) 	
+get** 
+;** 
+set++ 
+;++ 
+},, 	
+[-- 	
+
+JsonIgnore--	 
+]-- 
+public.. 
+	IFormFile.. 
+File.. 
+{// 	
+get00 
+;00 
+set11 
+;11 
+}22 	
+public33 
+string33 
+FileName33 
+{44 	
+get55 
+;55 
+set66 
+;66 
+}77 	
+public88 
+string88 
+FileExtension88 #
+{99 	
+get:: 
+;:: 
+set;; 
+;;; 
+}<< 	
+[== 	
+
+JsonIgnore==	 
+]== 
+public>> 
+byte>> 
+[>> 
+]>> 
+AttachmentData>> $
+{?? 	
+get@@ 
+;@@ 
+setAA 
+;AA 
+}BB 	
+publicCC 
+stringCC 
+	CreatedOnCC 
+{DD 	
+getEE 
+;EE 
+setFF 
+;FF 
+}GG 	
+}HH 
+}II 
+OD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\CouchDBResponse.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+{ 
+public 
+
+class 
+CouchDBResponse  
+{ 
+public 
+bool 
+	IsSuccess 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+public 
+string 
+Id 
+{ 
+get 
+; 
+set  #
+;# $
+}% &
+public 
+string 
+Rev 
+{ 
+get 
+;  
+set! $
+;$ %
+}& '
+public 
+string 
+Result 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public		 
+Task		 
+<		 
+byte		 
+[		 
+]		 
+>		 
+	ImageData		 %
+{		& '
+get		( +
+;		+ ,
+set		- 0
+;		0 1
+}		2 3
+}
+
+ 
+} ∂
+JD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Procedures.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+{ 
+public		 
+
+class		 
+
+Procedures		 
+{
+
+ 
+public 
+static 
+string !
+AddUpdateRegistration 2
+=3 4
+$str5 F
+;F G
+public 
+static 
+string )
+BOCW_SSY_AddUpdateApplication :
+=; <
+$str= ]
+;] ^
+public 
+static 
+string  
+GetLevelNoFromPostId 1
+=2 3
+$str4 H
+;H I
+public 
+static 
+string %
+BOCW_SSY_AddSchemeDetails 6
+=7 8
+$str9 W
+;W X
+public 
+static 
+string &
+GetApplicationCountByRegId 7
+=8 9
+$str: V
+;V W
+public 
+static 
+string 2
+&GetApplicationCountByRegIdAndServiceId C
+=D E
+$strF n
+;n o
+public 
+static 
+string 
+	GetUserId &
+=' (
+$str) 9
+;9 :
+public 
+static 
+string -
+!BOCW_SSY_AddUpdateDocumentDetails >
+=? @
+$strA a
+;a b
+public 
+static 
+string 2
+&BOCW_SSY_InsertTabEntryDocumentDetails C
+=D E
+$strF Y
+;Y Z
+public 
+static 
+string 
+AthenticateUser ,
+=- .
+$str/ C
+;C D
+public 
+static 
+string 
+AthenticateEmployee 0
+=1 2
+$str3 I
+;I J
+public 
+static 
+string !
+authenticateotheruser 2
+=3 4
+$str5 L
+;L M
+public 
+static 
+string 
+ChangePassword +
+=, -
+$str. >
+;> ?
+public 
+static 
+string &
+BindServicesUserWiseFilter 7
+=8 9
+$str: V
+;V W
+public 
+static 
+string 6
+*BindAppcountDistrictTalukaWiseForDashboard G
+=H I
+$strJ v
+;v w
+public 
+static 
+string $
+BindAppCountForDashboard 5
+=6 7
+$str8 R
+;R S
+public 
+static 
+string )
+BindCountForDashboardGLWB_tsy :
+=; <
+$str= _
+;_ `
+public 
+static 
+string "
+BindAdminDashBoardData 3
+=4 5
+$str6 N
+;N O
+public 
+static 
+string .
+"BindAppCountSchemeWiseForDashboard ?
+=@ A
+$strB f
+;f g
+public 
+static 
+string 
+BindMenuRoleWise -
+=. /
+$str0 B
+;B C
+public 
+static 
+string 
+CheckPermission ,
+=- .
+$str/ @
+;@ A
+public!! 
+static!! 
+string!!  
+GetSchemeByServiceId!! 1
+=!!2 3
+$str!!4 J
+;!!J K
+public## 
+static## 
+string## 
+GetServiceId## )
+=##* +
+$str##, :
+;##: ;
+public$$ 
+static$$ 
+string$$ $
+GetSchemeByBeneficiaryId$$ 5
+=$$6 7
+$str$$8 V
+;$$V W
+public%% 
+static%% 
+string%% #
+CitizenPasswordRecovery%% 4
+=%%5 6
+$str%%7 P
+;%%P Q
+public&& 
+static&& 
+string&& $
+GetServiceTabByServiceId&& 5
+=&&6 7
+$str&&8 R
+;&&R S
+public'' 
+static'' 
+string'' )
+GetTabSequenceByApplicationId'' :
+=''; <
+$str''= \
+;''\ ]
+public(( 
+static(( 
+string(( %
+GetPersonalDetailsByRegNo(( 6
+=((7 8
+$str((9 T
+;((T U
+public)) 
+static)) 
+string)) #
+GetWorkerDetailsByRegNo)) 4
+=))5 6
+$str))7 P
+;))P Q
+public** 
+static** 
+string** '
+GetCompanyDetailsByUserName** 8
+=**9 :
+$str**; X
+;**X Y
+public++ 
+static++ 
+string++ (
+GetHospitalDetailsByUserName++ 9
+=++: ;
+$str++< Z
+;++Z [
+public,, 
+static,, 
+string,, (
+GetApplicationDetailsByAppId,, 9
+=,,: ;
+$str,,< Z
+;,,Z [
+public-- 
+static-- 
+string-- -
+!GLWB_GetApplicationDetailsByAppId-- >
+=--? @
+$str--A d
+;--d e
+public.. 
+static.. 
+string.. 1
+%GLWB_TSY_GetApplicationDetailsByAppId.. B
+=..C D
+$str..E l
+;..l m
+public// 
+static// 
+string// 7
++GLWB_TSY_Claim_GetApplicationDetailsByAppId// H
+=//I J
+$str//K x
+;//x y
+public00 
+static00 
+string00 .
+"GetApplicationSchemeDetailsByAppId00 ?
+=00@ A
+$str00B f
+;00f g
+public11 
+static11 
+string11 8
+,bocw_Hssy_getapplicationschemedetailsbyappid11 I
+=11J K
+$str11L z
+;11z {
+public22 
+static22 
+string22 8
+,BOCW_ACSY_GetApplicationSchemeDetailsByAppId22 I
+=22J K
+$str22L z
+;22z {
+public33 
+static33 
+string33 8
+,GetBocw_Tbsy_Claim_ApplicationDetailsByAppId33 I
+=33J K
+$str33L z
+;33z {
+public44 
+static44 
+string44 .
+"getbocw_tbsyapplicationforhospital44 ?
+=44@ A
+$str44B f
+;44f g
+public55 
+static55 
+string55 /
+#getemployeeuploadeddocumentsbyappid55 @
+=55A B
+$str55C r
+;55r s
+public66 
+static66 
+string66 /
+#gethospitaluploadeddocumentsbyappid66 @
+=66A B
+$str66C r
+;66r s
+public88 
+static88 
+string88 5
+)Bocw_vrgetapplicationschemedetailsbyappid88 F
+=88G H
+$str88I t
+;88t u
+public99 
+static99 
+string99 G
+;Bocw_vrgetapplicationschemedetailsbyappidotherschemedetails99 X
+=99Y Z
+$str	99[ ô
+;
+99ô ö
+public:: 
+static:: 
+string:: -
+!getrpt_bocw_vr_otherschemedetails:: >
+=::? @
+$str::A d
+;::d e
+public<< 
+static<< 
+string<< 9
+-BOCW_Nanji_GetApplicationSchemeDetailsByAppId<< J
+=<<K L
+$str<<M |
+;<<| }
+public== 
+static== 
+string== 7
++BOCW_VCY_GetApplicationSchemeDetailsByAppId== H
+===I J
+$str==K x
+;==x y
+public>> 
+static>> 
+string>> 6
+*GLWBHSC_GetApplicationSchemeDetailsByAppId>> G
+=>>H I
+$str>>J v
+;>>v w
+public?? 
+static?? 
+string?? 6
+*GLWBSSC_GetApplicationSchemeDetailsByAppId?? G
+=??H I
+$str??J v
+;??v w
+public@@ 
+static@@ 
+string@@  
+GetUploadedDocuments@@ 1
+=@@2 3
+$str@@4 J
+;@@J K
+publicAA 
+staticAA 
+stringAA 
+GetDistrictAA (
+=AA) *
+$strAA+ ?
+;AA? @
+publicBB 
+staticBB 
+stringBB  
+GetDistrictForMasterBB 1
+=BB2 3
+$strBB4 Q
+;BBQ R
+publicCC 
+staticCC 
+stringCC 
+GetRoleCC $
+=CC% &
+$strCC' 7
+;CC7 8
+publicDD 
+staticDD 
+stringDD 
+GetPostDataDD (
+=DD) *
+$strDD+ 8
+;DD8 9
+publicEE 
+staticEE 
+stringEE 
+getpostmasterdataEE .
+=EE/ 0
+$strEE1 D
+;EED E
+publicFF 
+staticFF 
+stringFF 
+getmenumasterdataFF .
+=FF/ 0
+$strFF1 D
+;FFD E
+publicGG 
+staticGG 
+stringGG 
+getdistrictdataGG ,
+=GG- .
+$strGG/ @
+;GG@ A
+publicHH 
+staticHH 
+stringHH #
+getserviceschedulerdataHH 4
+=HH5 6
+$strHH7 P
+;HHP Q
+publicII 
+staticII 
+stringII 
+getvillagedataII +
+=II, -
+$strII. >
+;II> ?
+publicJJ 
+staticJJ 
+stringJJ !
+getdocumentmasterdataJJ 2
+=JJ3 4
+$strJJ5 L
+;JJL M
+publicKK 
+staticKK 
+stringKK 
+getresourcedataKK ,
+=KK- .
+$strKK/ @
+;KK@ A
+publicLL 
+staticLL 
+stringLL %
+getServicebybenificiaryidLL 6
+=LL7 8
+$strLL9 M
+;LLM N
+publicMM 
+staticMM 
+stringMM 
+bindresourcevaluesMM /
+=MM0 1
+$strMM2 F
+;MMF G
+publicNN 
+staticNN 
+stringNN 
+bindresourcevaluessNN 0
+=NN1 2
+$strNN3 H
+;NNH I
+publicOO 
+staticOO 
+stringOO 
+getdocumentmasterOO .
+=OO/ 0
+$strOO1 D
+;OOD E
+publicPP 
+staticPP 
+stringPP 
+gettalukadataPP *
+=PP+ ,
+$strPP- <
+;PP< =
+publicQQ 
+staticQQ 
+stringQQ 
+gettalukamasterdataQQ 0
+=QQ1 2
+$strQQ3 H
+;QQH I
+publicRR 
+staticRR 
+stringRR 
+GetDistrictMasterRR .
+=RR/ 0
+$strRR1 D
+;RRD E
+publicSS 
+staticSS 
+stringSS %
+getServiceschedulermasterSS 6
+=SS7 8
+$strSS9 T
+;SST U
+publicTT 
+staticTT 
+stringTT 
+getvillagemastersTT .
+=TT/ 0
+$strTT1 D
+;TTD E
+publicUU 
+staticUU 
+stringUU )
+binddiseasesandinjuriesmasterUU :
+=UU; <
+$strUU= \
+;UU\ ]
+publicVV 
+staticVV 
+stringVV  
+GetFinancialYearListVV 1
+=VV2 3
+$strVV4 M
+;VVM N
+publicWW 
+staticWW 
+stringWW 
+bindglwbemployeeWW -
+=WW. /
+$strWW0 B
+;WWB C
+publicXX 
+staticXX 
+stringXX 2
+&GetGLWBEmployeeDetailsbyRegistrationidXX C
+=XXD E
+$strXXF n
+;XXn o
+publicYY 
+staticYY 
+stringYY 
+GetDivisionYY (
+=YY) *
+$strYY+ ?
+;YY? @
+publicZZ 
+staticZZ 
+stringZZ %
+GetEmployeeRoleForApproveZZ 6
+=ZZ7 8
+$strZZ9 P
+;ZZP Q
+public[[ 
+static[[ 
+string[[ &
+GetEmployeeRoleForSendBack[[ 7
+=[[8 9
+$str[[: R
+;[[R S
+public\\ 
+static\\ 
+string\\ #
+GetSendBackRoleGLWb_TSY\\ 4
+=\\5 6
+$str\\7 W
+;\\W X
+public]] 
+static]] 
+string]] !
+GetApplicationHistory]] 2
+=]]3 4
+$str]]5 R
+;]]R S
+public^^ 
+static^^ 
+string^^ 0
+$GetApplicationHistory_Glwb_Tsy_claim^^ A
+=^^B C
+$str^^D g
+;^^g h
+public__ 
+static__ 
+string__ #
+GetHospitalScheduleTime__ 4
+=__5 6
+$str__7 P
+;__P Q
+public`` 
+static`` 
+string`` 
+GetAllStates`` )
+=``* +
+$str``, =
+;``= >
+publicaa 
+staticaa 
+stringaa !
+GetTalukaByDistrictIdaa 2
+=aa3 4
+$straa5 G
+;aaG H
+publicbb 
+staticbb 
+stringbb $
+GetSubServiceByServiceIdbb 5
+=bb6 7
+$strbb8 N
+;bbN O
+publiccc 
+staticcc 
+stringcc '
+GetDistrictNamebyDivisionIdcc 8
+=cc9 :
+$strcc; X
+;ccX Y
+publicdd 
+staticdd 
+stringdd !
+GetSemesterbyCourseIddd 2
+=dd3 4
+$strdd5 C
+;ddC D
+publicee 
+staticee 
+stringee  
+GetBenifitByCourseIdee 1
+=ee2 3
+$stree4 C
+;eeC D
+publicgg 
+staticgg 
+stringgg $
+GetTotalsahayByServiceIDgg 5
+=gg6 7
+$strgg8 R
+;ggR S
+publicii 
+staticii 
+stringii /
+#Get_BOCW_BPSY_TotalsahayByServiceIDii @
+=iiA B
+$striiC h
+;iih i
+publicjj 
+staticjj 
+stringjj -
+!GetVillageByDistrictIdAndTalukaIdjj >
+=jj? @
+$strjjA T
+;jjT U
+publickk 
+statickk 
+stringkk .
+"GetVillageByDistrictIdAndTalukaIdskk ?
+=kk@ A
+$strkkB V
+;kkV W
+publicll 
+staticll 
+stringll 
+BindResourceValuell .
+=ll/ 0
+$strll1 D
+;llD E
+publicmm 
+staticmm 
+stringmm 
+GetFileDocumentsmm -
+=mm. /
+$strmm0 B
+;mmB C
+publicnn 
+staticnn 
+stringnn 
+GetSchemeUsersnn +
+=nn, -
+$strnn. >
+;nn> ?
+publicoo 
+staticoo 
+stringoo 
+
+GetCitizenoo '
+=oo( )
+$stroo* :
+;oo: ;
+publicpp 
+staticpp 
+stringpp 
+GetApplicationpp +
+=pp, -
+$strpp. >
+;pp> ?
+publicqq 
+staticqq 
+stringqq "
+GetGLWB_HTYApplicationqq 3
+=qq4 5
+$strqq6 N
+;qqN O
+publicrr 
+staticrr 
+stringrr )
+Glwb_TSY_Claim_GetApplicationrr :
+=rr; <
+$strrr= \
+;rr\ ]
+publicss 
+staticss 
+stringss #
+GetBocw_TBSYApplicationss 4
+=ss5 6
+$strss7 P
+;ssP Q
+publictt 
+statictt 
+stringtt #
+Glwb_TSY_GetApplicationtt 4
+=tt5 6
+$strtt7 P
+;ttP Q
+publicuu 
+staticuu 
+stringuu $
+Bocw_Tbsy_GetApplicationuu 5
+=uu6 7
+$struu8 R
+;uuR S
+publicvv 
+staticvv 
+stringvv ,
+ Glwb_TSY_Hospital_GetApplicationvv =
+=vv> ?
+$strvv@ b
+;vvb c
+publicww 
+staticww 
+stringww #
+GLWB_HSC_GetApplicationww 4
+=ww5 6
+$strww7 P
+;wwP Q
+publicxx 
+staticxx 
+stringxx  
+GetDegreeBySubjectIdxx 1
+=xx2 3
+$strxx4 F
+;xxF G
+publicyy 
+staticyy 
+stringyy 
+GetLastLevelyy )
+=yy* +
+$stryy, <
+;yy< =
+publiczz 
+staticzz 
+stringzz +
+GetReportPersonalDetailsByAppIdzz <
+=zz= >
+$strzz? V
+;zzV W
+public{{ 
+static{{ 
+string{{ 4
+(GetReportGLWB_SSC_PersonalDetailsByAppId{{ E
+={{F G
+$str{{H i
+;{{i j
+public|| 
+static|| 
+string|| 4
+(GetReportGLWB_PSY_PersonalDetailsByAppId|| E
+=||F G
+$str||H i
+;||i j
+public}} 
+static}} 
+string}} +
+getrpt_glwb_asy_personaldetails}} <
+=}}= >
+$str}}? `
+;}}` a
+public~~ 
+static~~ 
+string~~ 4
+(GetReportGLWB_Hsc_PersonalDetailsByAppId~~ E
+=~~F G
+$str~~H i
+;~~i j
+public 
+static 
+string 5
+)GetReportGLWB_adsy_PersonalDetailsByAppId F
+=G H
+$strI k
+;k l
+public
+ÅÅ 
+static
+ÅÅ 
+string
+ÅÅ 6
+(GetReportGLWB_MSL_PersonalDetailsByAppId
+ÅÅ E
+=
+ÅÅF G
+$str
+ÅÅH i
+;
+ÅÅi j
+public
+ÇÇ 
+static
+ÇÇ 
+string
+ÇÇ 6
+(GetReportGLWB_CSY_PersonalDetailsByAppId
+ÇÇ E
+=
+ÇÇF G
+$str
+ÇÇH i
+;
+ÇÇi j
+public
+ÑÑ 
+static
+ÑÑ 
+string
+ÑÑ %
+GetSchemeDetailsByAppId
+ÑÑ 4
+=
+ÑÑ5 6
+$str
+ÑÑ7 L
+;
+ÑÑL M
+public
+ÖÖ 
+static
+ÖÖ 
+string
+ÖÖ '
+GetdocumentDetailsByAppId
+ÖÖ 6
+=
+ÖÖ7 8
+$str
+ÖÖ9 P
+;
+ÖÖP Q
+public
+ÜÜ 
+static
+ÜÜ 
+string
+ÜÜ %
+GetSmsContentForService
+ÜÜ 4
+=
+ÜÜ5 6
+$str
+ÜÜ7 P
+;
+ÜÜP Q
+public
+áá 
+static
+áá 
+string
+áá .
+ GLWB_TSY_GetSmsContentForService
+áá =
+=
+áá> ?
+$str
+áá@ b
+;
+ááb c
+public
+àà 
+static
+àà 
+string
+àà 4
+&GLWB_TSY_claim_GetSmsContentForService
+àà C
+=
+ààD E
+$str
+ààF n
+;
+ààn o
+public
+ãã 
+static
+ãã 
+string
+ãã 8
+*GLWBPSY_GetApplicationSchemeDetailsByAppId
+ãã G
+=
+ããH I
+$str
+ããJ w
+;
+ããw x
+public
+åå 
+static
+åå 
+string
+åå 8
+*GLWBASY_GetApplicationSchemeDetailsByAppId
+åå G
+=
+ååH I
+$str
+ååJ w
+;
+ååw x
+public
+çç 
+static
+çç 
+string
+çç 9
++GLWBADSY_GetApplicationSchemeDetailsByAppId
+çç H
+=
+ççI J
+$str
+ççK y
+;
+ççy z
+public
+éé 
+static
+éé 
+string
+éé 9
++glwb_hty_getapplicationschemedetailsbyappid
+éé H
+=
+ééI J
+$str
+ééK x
+;
+ééx y
+public
+èè 
+static
+èè 
+string
+èè ?
+1glwb_hty_claim_getapplicationschemedetailsbyappid
+èè N
+=
+èèO P
+$strèèQ Ñ
+;èèÑ Ö
+public
+íí 
+static
+íí 
+string
+íí ,
+getrpt_bocw_bpsy_schemedetails
+íí ;
+=
+íí< =
+$str
+íí> ^
+;
+íí^ _
+public
+ìì 
+static
+ìì 
+string
+ìì ,
+getrpt_bocw_tbsy_schemedetails
+ìì ;
+=
+ìì< =
+$str
+ìì> ^
+;
+ìì^ _
+public
+îî 
+static
+îî 
+string
+îî +
+getrpt_bocw_psy_schemedetails
+îî :
+=
+îî; <
+$str
+îî= \
+;
+îî\ ]
+public
+ïï 
+static
+ïï 
+string
+ïï +
+getrpt_glwb_hsc_schemedetails
+ïï :
+=
+ïï; <
+$str
+ïï= \
+;
+ïï\ ]
+public
+ññ 
+static
+ññ 
+string
+ññ +
+getrpt_glwb_psy_schemedetails
+ññ :
+=
+ññ; <
+$str
+ññ= \
+;
+ññ\ ]
+public
+óó 
+static
+óó 
+string
+óó +
+getrpt_glwb_ssc_schemedetails
+óó :
+=
+óó; <
+$str
+óó= \
+;
+óó\ ]
+public
+òò 
+static
+òò 
+string
+òò +
+getrpt_bocw_asy_schemedetails
+òò :
+=
+òò; <
+$str
+òò= \
+;
+òò\ ]
+public
+ôô 
+static
+ôô 
+string
+ôô +
+getrpt_bocw_tsy_schemedetails
+ôô :
+=
+ôô; <
+$str
+ôô= \
+;
+ôô\ ]
+public
+öö 
+static
+öö 
+string
+öö +
+getrpt_bocw_vcy_schemedetails
+öö :
+=
+öö; <
+$str
+öö= \
+;
+öö\ ]
+public
+õõ 
+static
+õõ 
+string
+õõ +
+getrpt_bocw_pip_schemedetails
+õõ :
+=
+õõ; <
+$str
+õõ= \
+;
+õõ\ ]
+public
+úú 
+static
+úú 
+string
+úú *
+getrptglwb_hty_schemedetails
+úú 9
+=
+úú: ;
+$str
+úú< [
+;
+úú[ \
+public
+ùù 
+static
+ùù 
+string
+ùù 0
+"getrptglwb_hty_claim_schemedetails
+ùù ?
+=
+ùù@ A
+$str
+ùùB g
+;
+ùùg h
+public
+ûû 
+static
+ûû 
+string
+ûû +
+getrpt_glwb_asy_schemedetails
+ûû :
+=
+ûû; <
+$str
+ûû= \
+;
+ûû\ ]
+public
+†† 
+static
+†† 
+string
+†† '
+getrptbocwvrschemedetails
+†† 6
+=
+††7 8
+$str
+††9 W
+;
+††W X
+public
+°° 
+static
+°° 
+string
+°° ,
+getrpt_bocw_acsy_schemedetails
+°° ;
+=
+°°< =
+$str
+°°> ^
+;
+°°^ _
+public
+¢¢ 
+static
+¢¢ 
+string
+¢¢ .
+ GetReportGLWB_adsy_SchemeDetails
+¢¢ =
+=
+¢¢> ?
+$str
+¢¢@ `
+;
+¢¢` a
+public
+•• 
+static
+•• 
+string
+•• 6
+(GetReportGLWB_tsy_PersonalDetailsByAppId
+•• E
+=
+••F G
+$str
+••H r
+;
+••r s
+public
+¶¶ 
+static
+¶¶ 
+string
+¶¶ 6
+(GetReportGLWB_HTY_PersonalDetailsByAppId
+¶¶ E
+=
+¶¶F G
+$str
+¶¶H i
+;
+¶¶i j
+public
+®® 
+static
+®® 
+string
+®® *
+getrptglwb_msl_schemedetails
+®® 9
+=
+®®: ;
+$str
+®®< [
+;
+®®[ \
+public
+©© 
+static
+©© 
+string
+©© *
+getrptglwb_csy_schemedetails
+©© 9
+=
+©©: ;
+$str
+©©< [
+;
+©©[ \
+public
+¨¨ 
+static
+¨¨ 
+string
+¨¨ :
+,BOCW_BPSY_GetApplicationSchemeDetailsByAppId
+¨¨ I
+=
+¨¨J K
+$str
+¨¨L z
+;
+¨¨z {
+public
+≠≠ 
+static
+≠≠ 
+string
+≠≠ 9
++BOCW_PSY_GetApplicationSchemeDetailsByAppId
+≠≠ H
+=
+≠≠I J
+$str
+≠≠K x
+;
+≠≠x y
+public
+ÆÆ 
+static
+ÆÆ 
+string
+ÆÆ 9
++GLWB_CSY_GetApplicationSchemeDetailsByAppId
+ÆÆ H
+=
+ÆÆI J
+$str
+ÆÆK w
+;
+ÆÆw x
+public
+≤≤ 
+static
+≤≤ 
+string
+≤≤ '
+BOCW_asy_AddSchemeDetails
+≤≤ 6
+=
+≤≤7 8
+$str
+≤≤9 W
+;
+≤≤W X
+public
+≥≥ 
+static
+≥≥ 
+string
+≥≥ +
+BOCW_asy_AddUpdateApplication
+≥≥ :
+=
+≥≥; <
+$str
+≥≥= ]
+;
+≥≥] ^
+public
+¥¥ 
+static
+¥¥ 
+string
+¥¥ 9
++BOCW_asy_GetApplicationSchemeDetailsByAppId
+¥¥ H
+=
+¥¥I J
+$str
+¥¥K x
+;
+¥¥x y
+public
+µµ 
+static
+µµ 
+string
+µµ :
+,BOCW_tbsy_GetApplicationSchemeDetailsByAppId
+µµ I
+=
+µµJ K
+$str
+µµL z
+;
+µµz {
+public
+∂∂ 
+static
+∂∂ 
+string
+∂∂ :
+,bocw_hssy_getapplicationschemedetailsbyappid
+∂∂ I
+=
+∂∂J K
+$str
+∂∂L z
+;
+∂∂z {
+public
+ππ 
+static
+ππ 
+string
+ππ @
+2bocw_hssy_getapplicationschemedetailsbyappidHostel
+ππ O
+=
+ππP Q
+$strππR Ü
+;ππÜ á
+public
+∫∫ 
+static
+∫∫ 
+string
+∫∫ G
+9bocw_hssy_getapplicationschemedetailsbyappidfamilydetails
+∫∫ V
+=
+∫∫W X
+$str∫∫Y î
+;∫∫î ï
+public
+ΩΩ 
+static
+ΩΩ 
+string
+ΩΩ 9
++glwb_tsy_GetApplicationSchemeDetailsByAppId
+ΩΩ H
+=
+ΩΩI J
+$str
+ΩΩK x
+;
+ΩΩx y
+public
+ææ 
+static
+ææ 
+string
+ææ ?
+1glwb_tsy_claim_GetApplicationSchemeDetailsByAppId
+ææ N
+=
+ææO P
+$strææQ Ñ
+;ææÑ Ö
+public
+øø 
+static
+øø 
+string
+øø >
+0Glwb_Tsy_getapplicationschemedetailsbyappidclaim
+øø M
+=
+øøN O
+$strøøP Ç
+;øøÇ É
+public
+¿¿ 
+static
+¿¿ 
+string
+¿¿ *
+getrptglwb_tsy_schemedetails
+¿¿ 9
+=
+¿¿: ;
+$str
+¿¿< [
+;
+¿¿[ \
+public
+¡¡ 
+static
+¡¡ 
+string
+¡¡ 1
+#getrptglwb_tsy_companyWorkerDetails
+¡¡ @
+=
+¡¡A B
+$str
+¡¡C i
+;
+¡¡i j
+public
+¬¬ 
+static
+¬¬ 
+string
+¬¬ )
+getrpt_glwb_tsy_getagecount
+¬¬ 8
+=
+¬¬9 :
+$str
+¬¬; X
+;
+¬¬X Y
+public
+≈≈ 
+static
+≈≈ 
+string
+≈≈ 9
++BOCW_tsy_GetApplicationSchemeDetailsByAppId
+≈≈ H
+=
+≈≈I J
+$str
+≈≈K x
+;
+≈≈x y
+public
+∆∆ 
+static
+∆∆ 
+string
+∆∆ '
+BOCW_tsy_AddSchemeDetails
+∆∆ 6
+=
+∆∆7 8
+$str
+∆∆9 W
+;
+∆∆W X
+public
+«« 
+static
+«« 
+string
+«« +
+BOCW_tsy_AddUpdateApplication
+«« :
+=
+««; <
+$str
+««= ]
+;
+««] ^
+public
+   
+static
+   
+string
+   9
++BOCW_pip_GetApplicationSchemeDetailsByAppId
+   H
+=
+  I J
+$str
+  K x
+;
+  x y
+public
+ÀÀ 
+static
+ÀÀ 
+string
+ÀÀ '
+BOCW_pip_AddSchemeDetails
+ÀÀ 6
+=
+ÀÀ7 8
+$str
+ÀÀ9 W
+;
+ÀÀW X
+public
+ÃÃ 
+static
+ÃÃ 
+string
+ÃÃ +
+BOCW_pip_AddUpdateApplication
+ÃÃ :
+=
+ÃÃ; <
+$str
+ÃÃ= ]
+;
+ÃÃ] ^
+public
+ŒŒ 
+static
+ŒŒ 
+string
+ŒŒ 8
+*GLWBMSL_GetApplicationSchemeDetailsByAppId
+ŒŒ G
+=
+ŒŒH I
+$str
+ŒŒJ v
+;
+ŒŒv w
+public
+—— 
+static
+—— 
+string
+—— ,
+BOCW_GetApplicationDetailsList
+—— ;
+=
+——< =
+$str
+——> ^
+;
+——^ _
+public
+““ 
+static
+““ 
+string
+““ ,
+GLWB_GetApplicationDetailsList
+““ ;
+=
+““< =
+$str
+““> ^
+;
+““^ _
+public
+”” 
+static
+”” 
+string
+”” 5
+'GLWB_Hospital_GetApplicationDetailsList
+”” D
+=
+””E F
+$str
+””G k
+;
+””k l
+public
+‘‘ 
+static
+‘‘ 
+string
+‘‘ 1
+#GLWBHospitalApplicationDetailsClaim
+‘‘ @
+=
+‘‘A B
+$str
+‘‘C m
+;
+‘‘m n
+public
+’’ 
+static
+’’ 
+string
+’’ ,
+GetUploadedDocumentForEmployee
+’’ ;
+=
+’’< =
+$str
+’’> _
+;
+’’_ `
+public
+÷÷ 
+static
+÷÷ 
+string
+÷÷ 4
+&GetGlwb_TsyUploadedDocumentForEmployee
+÷÷ C
+=
+÷÷D E
+$str
+÷÷F o
+;
+÷÷o p
+public
+◊◊ 
+static
+◊◊ 
+string
+◊◊ (
+AddMultipleApprovalDetails
+◊◊ 7
+=
+◊◊8 9
+$str
+◊◊: V
+;
+◊◊V W
+public
+ÿÿ 
+static
+ÿÿ 
+string
+ÿÿ 8
+*bocw_tbsy_claim_addmultipleapprovaldetails
+ÿÿ G
+=
+ÿÿH I
+$str
+ÿÿJ v
+;
+ÿÿv w
+public
+ŸŸ 
+static
+ŸŸ 
+string
+ŸŸ 1
+#GLWB_HTY_AddMultipleApprovalDetails
+ŸŸ @
+=
+ŸŸA B
+$str
+ŸŸC h
+;
+ŸŸh i
+public
+‹‹ 
+static
+‹‹ 
+string
+‹‹ *
+GLWB_HLS_Insertschemedetails
+‹‹ 9
+=
+‹‹: ;
+$str
+‹‹< Z
+;
+‹‹Z [
+public
+›› 
+static
+›› 
+string
+›› '
+GLWB_HLS_Getschemedetails
+›› 6
+=
+››7 8
+$str
+››9 T
+;
+››T U
+public
+ﬁﬁ 
+static
+ﬁﬁ 
+string
+ﬁﬁ -
+getrpt_glwb_hls_personaldetails
+ﬁﬁ <
+=
+ﬁﬁ= >
+$str
+ﬁﬁ? `
+;
+ﬁﬁ` a
+public
+ﬂﬂ 
+static
+ﬂﬂ 
+string
+ﬂﬂ +
+getrpt_glwb_hls_schemedetails
+ﬂﬂ :
+=
+ﬂﬂ; <
+$str
+ﬂﬂ= \
+;
+ﬂﬂ\ ]
+public
+ÂÂ 
+static
+ÂÂ 
+string
+ÂÂ 8
+*GLWBHSS_GetApplicationSchemeDetailsByAppId
+ÂÂ G
+=
+ÂÂH I
+$str
+ÂÂJ v
+;
+ÂÂv w
+public
+ÊÊ 
+static
+ÊÊ 
+string
+ÊÊ 6
+(GetReportGLWB_Hss_PersonalDetailsByAppId
+ÊÊ E
+=
+ÊÊF G
+$str
+ÊÊH i
+;
+ÊÊi j
+public
+ÁÁ 
+static
+ÁÁ 
+string
+ÁÁ +
+getrpt_glwb_hss_schemedetails
+ÁÁ :
+=
+ÁÁ; <
+$str
+ÁÁ= \
+;
+ÁÁ\ ]
+public
+ÍÍ 
+static
+ÍÍ 
+string
+ÍÍ .
+ RPTBOCWGETApplicationDetailsList
+ÍÍ =
+=
+ÍÍ> ?
+$str
+ÍÍ@ b
+;
+ÍÍb c
+public
+ÎÎ 
+static
+ÎÎ 
+string
+ÎÎ 6
+(GetRPTBOCWApplicationDetailsListGLWB_TSY
+ÎÎ E
+=
+ÎÎF G
+$str
+ÎÎH r
+;
+ÎÎr s
+public
+ÏÏ 
+static
+ÏÏ 
+string
+ÏÏ ,
+GetRPTDistrictWisePendencyData
+ÏÏ ;
+=
+ÏÏ< =
+$str
+ÏÏ> [
+;
+ÏÏ[ \
+public
+ÌÌ 
+static
+ÌÌ 
+string
+ÌÌ (
+RPTBOCWGETPendencyDaysList
+ÌÌ 7
+=
+ÌÌ8 9
+$str
+ÌÌ: R
+;
+ÌÌR S
+public
+ 
+static
+ 
+string
+ )
+GetApplicationSchemeDetails
+ 8
+=
+9 :
+$str
+; X
+;
+X Y
+public
+ÛÛ 
+static
+ÛÛ 
+string
+ÛÛ 8
+*GLWBLSY_GetApplicationSchemeDetailsByAppId
+ÛÛ G
+=
+ÛÛH I
+$str
+ÛÛJ v
+;
+ÛÛv w
+public
+ÙÙ 
+static
+ÙÙ 
+string
+ÙÙ 6
+(GetReportGLWB_Lsy_PersonalDetailsByAppId
+ÙÙ E
+=
+ÙÙF G
+$str
+ÙÙH i
+;
+ÙÙi j
+public
+ıı 
+static
+ıı 
+string
+ıı +
+getrpt_glwb_lsy_schemedetails
+ıı :
+=
+ıı; <
+$str
+ıı= \
+;
+ıı\ ]
+public
+¯¯ 
+static
+¯¯ 
+string
+¯¯ 6
+(GetReportGLWB_Tsy_PersonalDetailsByAppId
+¯¯ E
+=
+¯¯F G
+$str
+¯¯H i
+;
+¯¯i j
+public
+¸¸ 
+static
+¸¸ 
+string
+¸¸ <
+.GetReportGLWB_Tsy_Claim_PersonalDetailsByAppId
+¸¸ K
+=
+¸¸L M
+$str
+¸¸N u
+;
+¸¸u v
+public
+˝˝ 
+static
+˝˝ 
+string
+˝˝ 0
+"getrptglwb_tsy_claim_schemedetails
+˝˝ ?
+=
+˝˝@ A
+$str
+˝˝B g
+;
+˝˝g h
+public
+˛˛ 
+static
+˛˛ 
+string
+˛˛ 7
+)getrptglwb_tsy_claim_companyWorkerDetails
+˛˛ F
+=
+˛˛G H
+$str
+˛˛I u
+;
+˛˛u v
+public
+ˇˇ 
+static
+ˇˇ 
+string
+ˇˇ /
+!getrpt_glwb_tsy_claim_getagecount
+ˇˇ >
+=
+ˇˇ? @
+$str
+ˇˇA d
+;
+ˇˇd e
+public
+ÑÑ 
+static
+ÑÑ 
+string
+ÑÑ +
+getrptbocw_hssy_schemedetails
+ÑÑ :
+=
+ÑÑ; <
+$str
+ÑÑ= ]
+;
+ÑÑ] ^
+public
+ÖÖ 
+static
+ÖÖ 
+string
+ÖÖ .
+ getrpt_bocw_nanaji_schemedetails
+ÖÖ =
+=
+ÖÖ> ?
+$str
+ÖÖ@ b
+;
+ÖÖb c
+public
+ÜÜ 
+static
+ÜÜ 
+string
+ÜÜ 2
+$getrpt_bocw_hssy_familyschemedetails
+ÜÜ A
+=
+ÜÜB C
+$str
+ÜÜD j
+;
+ÜÜj k
+public
+áá 
+static
+áá 
+string
+áá :
+,getrpt_bocw_hssy_childrenfamilyschemedetails
+áá I
+=
+ááJ K
+$str
+ááL z
+;
+ááz {
+public
+àà 
+static
+àà 
+string
+àà :
+,getrpt_bocw_hssy_childrenhostelschemedetails
+àà I
+=
+ààJ K
+$str
+ààL z
+;
+ààz {
+public
+ââ 
+static
+ââ 
+string
+ââ B
+4getrpt_bocw_nanaji_Familymembersdetailsschemedetails
+ââ Q
+=
+ââR S
+$strââT ä
+;ââä ã
+public
+ää 
+static
+ää 
+string
+ää 3
+%getrpt_glwb_hty_Familyssschemedetails
+ää B
+=
+ääC D
+$str
+ääE l
+;
+ääl m
+public
+ãã 
+static
+ãã 
+string
+ãã 9
++getrpt_glwb_hty_claim_Familyssschemedetails
+ãã H
+=
+ããI J
+$str
+ããK x
+;
+ããx y
+public
+åå 
+static
+åå 
+string
+åå +
+GetRegisteredApplicantDetails
+åå :
+=
+åå; <
+$str
+åå= \
+;
+åå\ ]
+public
+çç 
+static
+çç 
+string
+çç &
+ViewApplicationStatusNew
+çç 5
+=
+çç6 7
+$str
+çç8 R
+;
+ççR S
+public
+éé 
+static
+éé 
+string
+éé )
+GetRoleForApplicationStatus
+éé 8
+=
+éé9 :
+$str
+éé; X
+;
+ééX Y
+public
+èè 
+static
+èè 
+string
+èè (
+GetTotalApplicationDetails
+èè 7
+=
+èè8 9
+$str
+èè: V
+;
+èèV W
+public
+êê 
+static
+êê 
+string
+êê -
+GetServiceMasterByBeneficiaryId
+êê <
+=
+êê= >
+$str
+êê? R
+;
+êêR S
+public
+ëë 
+static
+ëë 
+string
+ëë 3
+%GetServiceMasterByBeneficiaryIdforCMD
+ëë B
+=
+ëëC D
+$str
+ëëE ^
+;
+ëë^ _
+public
+íí 
+static
+íí 
+string
+íí $
+CheckENirmanCardExpiry
+íí 3
+=
+íí4 5
+$str
+íí6 N
+;
+ííN O
+public
+ìì 
+static
+ìì 
+string
+ìì (
+UpdateeNirmanCardxpiryDate
+ìì 7
+=
+ìì8 9
+$str
+ìì: W
+;
+ììW X
+public
+îî 
+static
+îî 
+string
+îî +
+ViewApplicationEmployeeSearch
+îî :
+=
+îî; <
+$str
+îî= \
+;
+îî\ ]
+public
+ïï 
+static
+ïï 
+string
+ïï 4
+&GetRoleForApplicationStatusForEmployee
+ïï C
+=
+ïïD E
+$str
+ïïF n
+;
+ïïn o
+public
+ññ 
+static
+ññ 
+string
+ññ 6
+(getaadharcardcountbyaadharnoandserviceid
+ññ E
+=
+ññF G
+$str
+ññH r
+;
+ññr s
+public
+óó 
+static
+óó 
+string
+óó 3
+%BOCWGetCompletedApplicationForPayment
+óó B
+=
+óóC D
+$str
+óóE m
+;
+óóm n
+public
+òò 
+static
+òò 
+string
+òò /
+!GetAppDetailsByAppIdForViewAadesh
+òò >
+=
+òò? @
+$str
+òòA d
+;
+òòd e
+public
+ôô 
+static
+ôô 
+string
+ôô #
+BOCWViewAadeshDetails
+ôô 2
+=
+ôô3 4
+$str
+ôô5 M
+;
+ôôM N
+public
+öö 
+static
+öö 
+string
+öö (
+GetAadeshDetailsbyAadeshid
+öö 7
+=
+öö8 9
+$str
+öö: V
+;
+ööV W
+public
+õõ 
+static
+õõ 
+string
+õõ  
+BOCWSendForPayment
+õõ /
+=
+õõ0 1
+$str
+õõ2 F
+;
+õõF G
+public
+úú 
+static
+úú 
+string
+úú )
+BOCWGetAadeshDataForRoutine
+úú 8
+=
+úú9 :
+$str
+úú; X
+;
+úúX Y
+public
+ùù 
+static
+ùù 
+string
+ùù #
+UpdateBOCWPaymentInfo
+ùù 2
+=
+ùù3 4
+$str
+ùù5 L
+;
+ùùL M
+public
+üü 
+static
+üü 
+string
+üü 3
+%GetAppDetailsByAppIdForGLWBViewAadesh
+üü B
+=
+üüC D
+$str
+üüE l
+;
+üül m
+public
+†† 
+static
+†† 
+string
+†† #
+GLWBViewAadeshDetails
+†† 2
+=
+††3 4
+$str
+††5 M
+;
+††M N
+public
+°° 
+static
+°° 
+string
+°° (
+Glwb_Tsy_ViewAadeshDetails
+°° 7
+=
+°°8 9
+$str
+°°: V
+;
+°°V W
+public
+¢¢ 
+static
+¢¢ 
+string
+¢¢ ,
+GetGLWBAadeshDetailsbyAadeshid
+¢¢ ;
+=
+¢¢< =
+$str
+¢¢> ^
+;
+¢¢^ _
+public
+££ 
+static
+££ 
+string
+££ /
+!GetGlwbTSYAadeshDetailsbyAadeshid
+££ >
+=
+££? @
+$str
+££A d
+;
+££d e
+public
+•• 
+static
+•• 
+string
+•• 4
+&BOCWGetAadeshDataForFetchReturnCSVFile
+•• C
+=
+••D E
+$str
+••F i
+;
+••i j
+public
+¶¶ 
+static
+¶¶ 
+string
+¶¶ %
+SaveBOCWPaymentResponse
+¶¶ 4
+=
+¶¶5 6
+$str
+¶¶7 P
+;
+¶¶P Q
+public
+ßß 
+static
+ßß 
+string
+ßß #
+GetBOCWPaymentHistory
+ßß 2
+=
+ßß3 4
+$str
+ßß5 L
+;
+ßßL M
+public
+®® 
+static
+®® 
+string
+®®  
+GLWBSendForPayment
+®® /
+=
+®®0 1
+$str
+®®2 F
+;
+®®F G
+public
+™™ 
+static
+™™ 
+string
+™™ )
+GLWBGetAadeshDataForRoutine
+™™ 8
+=
+™™9 :
+$str
+™™; X
+;
+™™X Y
+public
+´´ 
+static
+´´ 
+string
+´´ #
+UpdateGLWBPaymentInfo
+´´ 2
+=
+´´3 4
+$str
+´´5 L
+;
+´´L M
+public
+¨¨ 
+static
+¨¨ 
+string
+¨¨ 4
+&GLWBGetAadeshDataForFetchReturnCSVFile
+¨¨ C
+=
+¨¨D E
+$str
+¨¨F i
+;
+¨¨i j
+public
+≠≠ 
+static
+≠≠ 
+string
+≠≠ #
+GetGLWBPaymentHistory
+≠≠ 2
+=
+≠≠3 4
+$str
+≠≠5 L
+;
+≠≠L M
+public
+ÆÆ 
+static
+ÆÆ 
+string
+ÆÆ ,
+BOCWSendForPaymentFailedRecord
+ÆÆ ;
+=
+ÆÆ< =
+$str
+ÆÆ> ^
+;
+ÆÆ^ _
+public
+ØØ 
+static
+ØØ 
+string
+ØØ ,
+GLWBSendForPaymentFailedRecord
+ØØ ;
+=
+ØØ< =
+$str
+ØØ> ^
+;
+ØØ^ _
+public
+∞∞ 
+static
+∞∞ 
+string
+∞∞ %
+GetCCApplicationDetails
+∞∞ 4
+=
+∞∞5 6
+$str
+∞∞7 _
+;
+∞∞_ `
+public
+±± 
+static
+±± 
+string
+±± )
+GetCCCompletedAppForPayment
+±± 8
+=
+±±9 :
+$str
+±±; g
+;
+±±g h
+public
+≤≤ 
+static
+≤≤ 
+string
+≤≤ ,
+GetCCApplicationDetailsByAppId
+≤≤ ;
+=
+≤≤< =
+$str
+≤≤> m
+;
+≤≤m n
+public
+≥≥ 
+static
+≥≥ 
+string
+≥≥ *
+InsertPaymentTransactionInfo
+≥≥ 9
+=
+≥≥: ;
+$str
+≥≥< i
+;
+≥≥i j
+public
+¥¥ 
+static
+¥¥ 
+string
+¥¥ -
+CheckTransactionTokenExistorNot
+¥¥ <
+=
+¥¥= >
+$str
+¥¥? o
+;
+¥¥o p
+public
+µµ 
+static
+µµ 
+string
+µµ *
+UpdatePaymentTransactionInfo
+µµ 9
+=
+µµ: ;
+$str
+µµ< i
+;
+µµi j
+public
+∂∂ 
+static
+∂∂ 
+string
+∂∂ &
+GetDataForCTPMakePayment
+∂∂ 5
+=
+∂∂6 7
+$str
+∂∂8 a
+;
+∂∂a b
+public
+∏∏ 
+static
+∏∏ 
+string
+∏∏ 
+GetYear
+∏∏ $
+=
+∏∏% &
+$str
+∏∏' 8
+;
+∏∏8 9
+public
+ππ 
+static
+ππ 
+string
+ππ 
+GetMonth
+ππ %
+=
+ππ& '
+$str
+ππ( 9
+;
+ππ9 :
+public
+∫∫ 
+static
+∫∫ 
+string
+∫∫ *
+GetCMDApplicationDetailslist
+∫∫ 9
+=
+∫∫: ;
+$str
+∫∫< f
+;
+∫∫f g
+public
+ªª 
+static
+ªª 
+string
+ªª /
+!GetCMDApplicationDetailsForInsert
+ªª >
+=
+ªª? @
+$str
+ªªA p
+;
+ªªp q
+public
+ºº 
+static
+ºº 
+string
+ºº *
+GetBOCWCMDApplicationDetails
+ºº 9
+=
+ºº: ;
+$str
+ºº< f
+;
+ººf g
+}
+ææ 
+}øø ¬◊
+SD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+.# $
+Utility$ +
+{ 
+public 
+
+class 
+CommonUtils 
+{ 
+private 
+readonly 
+IConfiguration '
+	appConfig( 1
+;1 2
+private 
+readonly 
+IHttpClientFactory +
+_clientFactory, :
+;: ;
+private   
+readonly   
+string   
+_couchDbUrl    +
+;  + ,
+private!! 
+readonly!! 
+string!! 
+_couchDbName!!  ,
+;!!, -
+private"" 
+readonly"" 
+string"" 
+_couchDbUser""  ,
+;"", -
+private$$ 
+readonly$$ 
+string$$ $
+_sMTPConfigSenderAddress$$  8
+;$$8 9
+private%% 
+readonly%% 
+string%% (
+_sMTPConfigSenderDisplayName%%  <
+;%%< =
+private&& 
+readonly&& 
+string&& 
+_sMTPConfigUserName&&  3
+;&&3 4
+private'' 
+readonly'' 
+string'' 
+_sMTPConfigPassword''  3
+;''3 4
+private(( 
+readonly(( 
+string(( 
+_sMTPConfigHost((  /
+;((/ 0
+private)) 
+readonly)) 
+int)) 
+_sMTPConfigPort)) ,
+;)), -
+private** 
+readonly** 
+bool**  
+_sMTPConfigEnableSSL** 2
+;**2 3
+private++ 
+readonly++ 
+string++ ,
+ _sMTPConfigUseDefaultCredentials++  @
+;++@ A
+private,, 
+readonly,, 
+string,, !
+_sMTPConfigIsBodyHTML,,  5
+;,,5 6
+private-- 
+static-- 
+string--  
+_otherKeyValueEncKey-- 2
+;--2 3
+private.. 
+readonly.. 
+string.. 
+_isSMSRequired..  .
+;... /
+private// 
+readonly// 
+string// 
+_messageUrl//  +
+;//+ ,
+private00 
+readonly00 
+string00 
+_messageUserName00  0
+;000 1
+private11 
+readonly11 
+string11 
+_messagePassword11  0
+;110 1
+private22 
+readonly22 
+string22 
+_messageSenderId22  0
+;220 1
+private33 
+readonly33 
+string33 
+
+_secureKey33  *
+;33* +
+private44 
+readonly44 
+string44 
+_emailforexception44  2
+;442 3
+private55 
+readonly55 
+string55  
+_bocwRegistrationAPI55  4
+;554 5
+private66 
+readonly66 
+string66 
+_bocwAuthHeader66  /
+;66/ 0
+private88 
+readonly88 
+string88 &
+_sftpDestinationUploadPath88  :
+;88: ;
+private99 
+readonly99 
+string99 $
+_sftpDestinationReadPath99  8
+;998 9
+private:: 
+readonly:: 
+string:: 
+	_sftpHost::  )
+;::) *
+private;; 
+readonly;; 
+int;; 
+	_sftpPort;; &
+;;;& '
+private<< 
+readonly<< 
+string<< 
+_sftpUserName<<  -
+;<<- .
+private== 
+readonly== 
+string== 
+_sftpPassword==  -
+;==- .
+private>> 
+readonly>> 
+string>> 
+_BOCWResponsePath>>  1
+;>>1 2
+private?? 
+readonly?? 
+string?? 
+_BOCWCorporateId??  0
+;??0 1
+privateAA 
+readonlyAA 
+stringAA 
+_GLWBResponsePathAA  1
+;AA1 2
+privateBB 
+readonlyBB 
+stringBB 
+_GLWBCorporateIdBB  0
+;BB0 1
+publicFF 
+CommonUtilsFF 
+(FF 
+IConfigurationFF )
+configFF* 0
+)FF0 1
+{GG 	
+	appConfigHH 
+=HH 
+configHH 
+??HH !
+throwHH" '
+newHH( +!
+ArgumentNullExceptionHH, A
+(HHA B
+nameofHHB H
+(HHH I
+configHHI O
+)HHO P
+)HHP Q
+;HHQ R
+_couchDbUrlII 
+=II 
+	appConfigII #
+[II# $
+$strII$ 1
+]II1 2
+;II2 3
+_couchDbNameJJ 
+=JJ 
+	appConfigJJ $
+[JJ$ %
+$strJJ% 5
+]JJ5 6
+;JJ6 7
+_couchDbUserKK 
+=KK 
+	appConfigKK $
+[KK$ %
+$strKK% 3
+]KK3 4
+;KK4 5$
+_sMTPConfigSenderAddressMM $
+=MM% &
+	appConfigMM' 0
+[MM0 1
+$strMM1 L
+]MML M
+;MMM N(
+_sMTPConfigSenderDisplayNameNN (
+=NN) *
+	appConfigNN+ 4
+[NN4 5
+$strNN5 T
+]NNT U
+;NNU V
+_sMTPConfigUserNameOO 
+=OO  !
+	appConfigOO" +
+[OO+ ,
+$strOO, B
+]OOB C
+;OOC D
+_sMTPConfigPasswordPP 
+=PP  !
+	appConfigPP" +
+[PP+ ,
+$strPP, B
+]PPB C
+;PPC D
+_sMTPConfigHostQQ 
+=QQ 
+	appConfigQQ '
+[QQ' (
+$strQQ( :
+]QQ: ;
+;QQ; <
+_sMTPConfigPortRR 
+=RR 
+ConvertRR %
+.RR% &
+ToInt32RR& -
+(RR- .
+	appConfigRR. 7
+[RR7 8
+$strRR8 J
+]RRJ K
+)RRK L
+;RRL M 
+_sMTPConfigEnableSSLSS  
+=SS! "
+ConvertSS# *
+.SS* +
+	ToBooleanSS+ 4
+(SS4 5
+	appConfigSS5 >
+[SS> ?
+$strSS? V
+]SSV W
+)SSW X
+;SSX Y,
+ _sMTPConfigUseDefaultCredentialsTT ,
+=TT- .
+	appConfigTT/ 8
+[TT8 9
+$strTT9 \
+]TT\ ]
+;TT] ^!
+_sMTPConfigIsBodyHTMLUU !
+=UU" #
+	appConfigUU$ -
+[UU- .
+$strUU. F
+]UUF G
+;UUG H 
+_otherKeyValueEncKeyVV  
+=VV! "
+	appConfigVV# ,
+[VV, -
+$strVV- C
+]VVC D
+;VVD E
+_isSMSRequiredWW 
+=WW 
+	appConfigWW &
+[WW& '
+$strWW' @
+]WW@ A
+;WWA B
+_messageUrlXX 
+=XX 
+	appConfigXX #
+[XX# $
+$strXX$ :
+]XX: ;
+;XX; <
+_messageUserNameYY 
+=YY 
+	appConfigYY (
+[YY( )
+$strYY) D
+]YYD E
+;YYE F
+_messagePasswordZZ 
+=ZZ 
+	appConfigZZ (
+[ZZ( )
+$strZZ) D
+]ZZD E
+;ZZE F
+_messageSenderId[[ 
+=[[ 
+	appConfig[[ (
+[[[( )
+$str[[) D
+][[D E
+;[[E F
+
+_secureKey\\ 
+=\\ 
+	appConfig\\ "
+[\\" #
+$str\\# 8
+]\\8 9
+;\\9 :
+_emailforexception^^ 
+=^^  
+	appConfig^^! *
+[^^* +
+$str^^+ J
+]^^J K
+;^^K L 
+_bocwRegistrationAPI__  
+=__! "
+	appConfig__# ,
+[__, -
+$str__- C
+]__C D
+;__D E
+_bocwAuthHeader`` 
+=`` 
+	appConfig`` '
+[``' (
+$str``( H
+]``H I
+;``I J&
+_sftpDestinationUploadPathbb &
+=bb' (
+	appConfigbb) 2
+[bb2 3
+$strbb3 R
+]bbR S
+;bbS T$
+_sftpDestinationReadPathcc $
+=cc% &
+	appConfigcc' 0
+[cc0 1
+$strcc1 N
+]ccN O
+;ccO P
+	_sftpHostdd 
+=dd 
+	appConfigdd !
+[dd! "
+$strdd" 0
+]dd0 1
+;dd1 2
+	_sftpPortee 
+=ee 
+Convertee 
+.ee  
+ToInt32ee  '
+(ee' (
+	appConfigee( 1
+[ee1 2
+$stree2 @
+]ee@ A
+)eeA B
+;eeB C
+_sftpUserNameff 
+=ff 
+	appConfigff %
+[ff% &
+$strff& 8
+]ff8 9
+;ff9 :
+_sftpPasswordgg 
+=gg 
+	appConfiggg %
+[gg% &
+$strgg& 8
+]gg8 9
+;gg9 :
+_BOCWResponsePathhh 
+=hh 
+	appConfighh  )
+[hh) *
+$strhh* D
+]hhD E
+;hhE F
+_BOCWCorporateIdii 
+=ii 
+	appConfigii (
+[ii( )
+$strii) B
+]iiB C
+;iiC D
+_GLWBResponsePathjj 
+=jj 
+	appConfigjj  )
+[jj) *
+$strjj* D
+]jjD E
+;jjE F
+_GLWBCorporateIdkk 
+=kk 
+	appConfigkk (
+[kk( )
+$strkk) B
+]kkB C
+;kkC D
+}mm 	
+publicnn 
+CommonUtilsnn 
+(nn 
+IConfigurationnn )
+confignn* 0
+,nn0 1
+IHttpClientFactorynn2 D
+clientFactorynnE R
+)nnR S
+{oo 	
+	appConfigpp 
+=pp 
+configpp 
+??pp !
+throwpp" '
+newpp( +!
+ArgumentNullExceptionpp, A
+(ppA B
+nameofppB H
+(ppH I
+configppI O
+)ppO P
+)ppP Q
+;ppQ R
+_clientFactoryqq 
+=qq 
+clientFactoryqq *
+;qq* +
+_couchDbUrlrr 
+=rr 
+	appConfigrr #
+[rr# $
+$strrr$ 1
+]rr1 2
+;rr2 3
+_couchDbNamess 
+=ss 
+	appConfigss $
+[ss$ %
+$strss% 5
+]ss5 6
+;ss6 7
+_couchDbUsertt 
+=tt 
+	appConfigtt $
+[tt$ %
+$strtt% 3
+]tt3 4
+;tt4 5
+}vv 	
+publicyy 
+boolyy 
+SendPasswordMailyy $
+(yy$ %
+stringyy% +
+DisplayNameyy, 7
+,yy7 8
+stringyy9 ?
+emailAddressyy@ L
+,yyL M
+stringyyN T
+OTP_CodeyyU ]
+,yy] ^
+stringyy_ e
+UserNameyyf n
+,yyn o
+stringyyp v
+Passwordyyw 
+,	yy Ä
+int
+yyÅ Ñ
+UserType
+yyÖ ç
+,
+yyç é
+string
+yyè ï
+	ImagePath
+yyñ ü
+,
+yyü †
+string
+yy° ß
+URL
+yy® ´
+,
+yy´ ¨
+string
+yy≠ ≥
+beneficiarytype
+yy¥ √
+)
+yy√ ƒ
+{zz 	
+string{{ 
+strMailBody{{ 
+={{  
+$str{{! #
+;{{# $
+string
+ÅÅ 
+path
+ÅÅ 
+=
+ÅÅ 
+string
+ÅÅ  
+.
+ÅÅ  !
+Empty
+ÅÅ! &
+;
+ÅÅ& '
+if
+ÉÉ 
+(
+ÉÉ 
+UserType
+ÉÉ 
+==
+ÉÉ 
+$num
+ÉÉ 
+)
+ÉÉ 
+{
+ÑÑ 
+if
+ÖÖ 
+(
+ÖÖ 
+OperatingSystem
+ÖÖ #
+.
+ÖÖ# $
+	IsWindows
+ÖÖ$ -
+(
+ÖÖ- .
+)
+ÖÖ. /
+)
+ÖÖ/ 0
+path
+ÜÜ 
+=
+ÜÜ 
+Path
+ÜÜ 
+.
+ÜÜ  
+Combine
+ÜÜ  '
+(
+ÜÜ' (
+	ImagePath
+ÜÜ( 1
++
+ÜÜ2 3
+$str
+ÜÜ4 [
+)
+ÜÜ[ \
+;
+ÜÜ\ ]
+else
+áá 
+if
+áá 
+(
+áá 
+OperatingSystem
+áá (
+.
+áá( )
+IsLinux
+áá) 0
+(
+áá0 1
+)
+áá1 2
+)
+áá2 3
+path
+àà 
+=
+àà 
+Path
+àà 
+.
+àà  
+Combine
+àà  '
+(
+àà' (
+	ImagePath
+àà( 1
++
+àà2 3
+$str
+àà4 [
+)
+àà[ \
+;
+àà\ ]
+else
+ââ 
+{
+ää 
+path
+ãã 
+=
+ãã 
+$str
+ãã 
+;
+ãã 
+}
+åå 
+}
+éé 
+else
+èè 
+{
+êê 
+if
+ëë 
+(
+ëë 
+OperatingSystem
+ëë #
+.
+ëë# $
+	IsWindows
+ëë$ -
+(
+ëë- .
+)
+ëë. /
+)
+ëë/ 0
+path
+íí 
+=
+íí 
+Path
+íí 
+.
+íí  
+Combine
+íí  '
+(
+íí' (
+	ImagePath
+íí( 1
++
+íí2 3
+$str
+íí4 [
+)
+íí[ \
+;
+íí\ ]
+else
+ìì 
+if
+ìì 
+(
+ìì 
+OperatingSystem
+ìì (
+.
+ìì( )
+IsLinux
+ìì) 0
+(
+ìì0 1
+)
+ìì1 2
+)
+ìì2 3
+path
+îî 
+=
+îî 
+Path
+îî 
+.
+îî  
+Combine
+îî  '
+(
+îî' (
+	ImagePath
+îî( 1
++
+îî2 3
+$str
+îî4 [
+)
+îî[ \
+;
+îî\ ]
+else
+ïï 
+{
+ññ 
+path
+óó 
+=
+óó 
+$str
+óó 
+;
+óó 
+}
+òò 
+}
+ôô 
+StreamReader
+úú 
+IDDSbody
+úú !
+=
+úú" #
+new
+úú$ '
+StreamReader
+úú( 4
+(
+úú4 5
+path
+úú5 9
+)
+úú9 :
+;
+úú: ;
+string
+ùù 
+beneficiaryname
+ùù "
+=
+ùù# $
+$str
+ùù% '
+;
+ùù' (
+if
+ûû 
+(
+ûû 
+beneficiarytype
+ûû 
+==
+ûû  "
+$str
+ûû# &
+)
+ûû& '
+{
+üü 
+beneficiaryname
+†† 
+=
+††  !
+$str
+††" X
+;
+††X Y
+}
+°° 
+else
+¢¢ 
+{
+££ 
+beneficiaryname
+§§ 
+=
+§§  !
+$str
+§§" @
+;
+§§@ A
+}
+•• 
+strMailBody
+™™ 
+=
+™™ 
+IDDSbody
+™™ "
+.
+™™" #
+	ReadToEnd
+™™# ,
+(
+™™, -
+)
+™™- .
+;
+™™. /
+strMailBody
+´´ 
+=
+´´ 
+strMailBody
+´´ %
+.
+´´% &
+Replace
+´´& -
+(
+´´- .
+$str
+´´. 6
+,
+´´6 7
+DisplayName
+´´8 C
+)
+´´C D
+;
+´´D E
+strMailBody
+¨¨ 
+=
+¨¨ 
+strMailBody
+¨¨ %
+.
+¨¨% &
+Replace
+¨¨& -
+(
+¨¨- .
+$str
+¨¨. 9
+,
+¨¨9 :
+OTP_Code
+¨¨; C
+)
+¨¨C D
+;
+¨¨D E
+strMailBody
+≠≠ 
+=
+≠≠ 
+strMailBody
+≠≠ %
+.
+≠≠% &
+Replace
+≠≠& -
+(
+≠≠- .
+$str
+≠≠. A
+,
+≠≠A B
+beneficiaryname
+≠≠C R
+)
+≠≠R S
+;
+≠≠S T
+strMailBody
+ÆÆ 
+=
+ÆÆ 
+strMailBody
+ÆÆ %
+.
+ÆÆ% &
+Replace
+ÆÆ& -
+(
+ÆÆ- .
+$str
+ÆÆ. 5
+,
+ÆÆ5 6
+URL
+ÆÆ7 :
+)
+ÆÆ: ;
+;
+ÆÆ; <
+strMailBody
+ØØ 
+=
+ØØ 
+strMailBody
+ØØ %
+.
+ØØ% &
+Replace
+ØØ& -
+(
+ØØ- .
+$str
+ØØ. :
+,
+ØØ: ;
+UserName
+ØØ< D
+)
+ØØD E
+;
+ØØE F
+strMailBody
+∞∞ 
+=
+∞∞ 
+strMailBody
+∞∞ %
+.
+∞∞% &
+Replace
+∞∞& -
+(
+∞∞- .
+$str
+∞∞. :
+,
+∞∞: ;
+Password
+∞∞< D
+)
+∞∞D E
+;
+∞∞E F
+strMailBody
+±± 
+=
+±± 
+strMailBody
+±± %
+.
+±±% &
+Replace
+±±& -
+(
+±±- .
+$str
+±±. ;
+,
+±±; <
+	ImagePath
+±±= F
+)
+±±F G
+;
+±±G H
+bool
+≥≥ 
+Chk
+≥≥ 
+=
+≥≥ 
+SendMail
+≥≥ 
+(
+≥≥  &
+_sMTPConfigSenderAddress
+≥≥  8
+,
+≥≥8 9*
+_sMTPConfigSenderDisplayName
+≥≥: V
+,
+≥≥V W
+emailAddress
+≥≥X d
+,
+≥≥d e&
+_sMTPConfigSenderAddress
+≥≥f ~
+,
+≥≥~ 
+strMailBody≥≥Ä ã
+,≥≥ã å
+$str≥≥ç •
+,≥≥• ¶
+$str≥≥ß ©
+,≥≥© ™
+$str≥≥´ ≠
+,
+¥¥ 
+true
+¥¥ 
+,
+¥¥ 
+$str
+¥¥ 
+,
+¥¥ !
+_sMTPConfigUserName
+¥¥ /
+,
+¥¥/ 0!
+_sMTPConfigPassword
+¥¥1 D
+,
+¥¥D E
+_sMTPConfigHost
+¥¥F U
+,
+¥¥U V
+_sMTPConfigPort
+¥¥W f
+,
+¥¥f g"
+_sMTPConfigEnableSSL
+¥¥h |
+)
+¥¥| }
+;
+¥¥} ~
+return
+∂∂ 
+Chk
+∂∂ 
+;
+∂∂ 
+}
+∑∑ 	
+public
+ππ 
+bool
+ππ '
+SendCitizenRegisteredMail
+ππ -
+(
+ππ- .
+string
+ππ. 4
+DisplayName
+ππ5 @
+,
+ππ@ A
+string
+ππB H
+emailAddress
+ππI U
+,
+ππU V
+string
+ππW ]
+UserId
+ππ^ d
+,
+ππd e
+string
+ππf l
+Password
+ππm u
+,
+ππu v
+string
+ππw }
+	emailLogoππ~ á
+,ππá à
+stringππâ è
+RootPathππê ò
+,ππò ô
+stringππö †
+TemplateNameππ° ≠
+,ππ≠ Æ
+intππØ ≤
+?ππ≤ ≥
+beneficiarytypeππ¥ √
+)ππ√ ƒ
+{
+∫∫ 	
+string
+ªª 
+strMailBody
+ªª 
+=
+ªª  
+$str
+ªª! #
+;
+ªª# $
+string
+øø 
+path
+øø 
+=
+øø 
+string
+øø  
+.
+øø  !
+Empty
+øø! &
+;
+øø& '
+if
+¿¿ 
+(
+¿¿ 
+OperatingSystem
+¿¿ 
+.
+¿¿  
+	IsWindows
+¿¿  )
+(
+¿¿) *
+)
+¿¿* +
+)
+¿¿+ ,
+path
+¡¡ 
+=
+¡¡ 
+Path
+¡¡ 
+.
+¡¡ 
+Combine
+¡¡ #
+(
+¡¡# $
+RootPath
+¡¡$ ,
++
+¡¡- .
+$str
+¡¡/ A
++
+¡¡B C
+TemplateName
+¡¡D P
+)
+¡¡P Q
+;
+¡¡Q R
+else
+¬¬ 
+if
+¬¬ 
+(
+¬¬ 
+OperatingSystem
+¬¬ $
+.
+¬¬$ %
+IsLinux
+¬¬% ,
+(
+¬¬, -
+)
+¬¬- .
+)
+¬¬. /
+path
+√√ 
+=
+√√ 
+Path
+√√ 
+.
+√√ 
+Combine
+√√ #
+(
+√√# $
+RootPath
+√√$ ,
++
+√√- .
+$str
+√√/ A
++
+√√B C
+TemplateName
+√√D P
+)
+√√P Q
+;
+√√Q R
+else
+ƒƒ 
+{
+≈≈ 
+path
+∆∆ 
+=
+∆∆ 
+$str
+∆∆ 
+;
+∆∆ 
+}
+«« 
+StreamReader
+   
+IDDSbody
+   !
+=
+  " #
+new
+  $ '
+StreamReader
+  ( 4
+(
+  4 5
+path
+  5 9
+)
+  9 :
+;
+  : ;
+string
+ÀÀ 
+beneficiaryname
+ÀÀ "
+=
+ÀÀ# $
+$str
+ÀÀ% '
+;
+ÀÀ' (
+if
+ÃÃ 
+(
+ÃÃ 
+beneficiarytype
+ÃÃ 
+==
+ÃÃ  "
+$num
+ÃÃ# $
+)
+ÃÃ$ %
+{
+ÕÕ 
+beneficiaryname
+ŒŒ 
+=
+ŒŒ  !
+$str
+ŒŒ" X
+;
+ŒŒX Y
+}
+œœ 
+else
+–– 
+{
+—— 
+beneficiaryname
+““ 
+=
+““  !
+$str
+““" @
+;
+““@ A
+}
+”” 
+strMailBody
+÷÷ 
+=
+÷÷ 
+IDDSbody
+÷÷ "
+.
+÷÷" #
+	ReadToEnd
+÷÷# ,
+(
+÷÷, -
+)
+÷÷- .
+;
+÷÷. /
+strMailBody
+◊◊ 
+=
+◊◊ 
+strMailBody
+◊◊ %
+.
+◊◊% &
+Replace
+◊◊& -
+(
+◊◊- .
+$str
+◊◊. ;
+,
+◊◊; <
+	emailLogo
+◊◊= F
+)
+◊◊F G
+;
+◊◊G H
+strMailBody
+ÿÿ 
+=
+ÿÿ 
+strMailBody
+ÿÿ %
+.
+ÿÿ% &
+Replace
+ÿÿ& -
+(
+ÿÿ- .
+$str
+ÿÿ. A
+,
+ÿÿA B
+beneficiaryname
+ÿÿC R
+)
+ÿÿR S
+;
+ÿÿS T
+strMailBody
+ŸŸ 
+=
+ŸŸ 
+strMailBody
+ŸŸ %
+.
+ŸŸ% &
+Replace
+ŸŸ& -
+(
+ŸŸ- .
+$str
+ŸŸ. 6
+,
+ŸŸ6 7
+DisplayName
+ŸŸ8 C
+)
+ŸŸC D
+;
+ŸŸD E
+strMailBody
+⁄⁄ 
+=
+⁄⁄ 
+strMailBody
+⁄⁄ %
+.
+⁄⁄% &
+Replace
+⁄⁄& -
+(
+⁄⁄- .
+$str
+⁄⁄. 8
+,
+⁄⁄8 9
+UserId
+⁄⁄: @
+)
+⁄⁄@ A
+;
+⁄⁄A B
+strMailBody
+€€ 
+=
+€€ 
+strMailBody
+€€ %
+.
+€€% &
+Replace
+€€& -
+(
+€€- .
+$str
+€€. :
+,
+€€: ;
+Password
+€€< D
+)
+€€D E
+;
+€€E F
+bool
+›› 
+Chk
+›› 
+=
+›› 
+SendMail
+›› 
+(
+››  &
+_sMTPConfigSenderAddress
+››  8
+,
+››8 9*
+_sMTPConfigSenderDisplayName
+››: V
+,
+››V W
+emailAddress
+››X d
+,
+››d e&
+_sMTPConfigSenderAddress
+››f ~
+,
+››~ 
+strMailBody››Ä ã
+,››ã å
+$str››ç °
+,››° ¢
+$str››£ •
+,››• ¶
+$str››ß ©
+,
+ﬁﬁ 
+true
+ﬁﬁ 
+,
+ﬁﬁ 
+$str
+ﬁﬁ 
+,
+ﬁﬁ !
+_sMTPConfigUserName
+ﬁﬁ /
+,
+ﬁﬁ/ 0!
+_sMTPConfigPassword
+ﬁﬁ1 D
+,
+ﬁﬁD E
+_sMTPConfigHost
+ﬁﬁF U
+,
+ﬁﬁU V
+_sMTPConfigPort
+ﬁﬁW f
+,
+ﬁﬁf g"
+_sMTPConfigEnableSSL
+ﬁﬁh |
+)
+ﬁﬁ| }
+;
+ﬁﬁ} ~
+return
+‡‡ 
+Chk
+‡‡ 
+;
+‡‡ 
+}
+·· 	
+public
+‚‚ 
+bool
+‚‚ "
+SendCCRegisteredMail
+‚‚ (
+(
+‚‚( )
+string
+‚‚) /
+DisplayName
+‚‚0 ;
+,
+‚‚; <
+string
+‚‚= C
+emailAddress
+‚‚D P
+,
+‚‚P Q
+string
+‚‚R X
+UserId
+‚‚Y _
+,
+‚‚_ `
+string
+‚‚a g
+Password
+‚‚h p
+,
+‚‚p q
+string
+‚‚r x
+	emailLogo‚‚y Ç
+,‚‚Ç É
+string‚‚Ñ ä
+RootPath‚‚ã ì
+,‚‚ì î
+string‚‚ï õ
+TemplateName‚‚ú ®
+,‚‚® ©
+int‚‚™ ≠
+?‚‚≠ Æ
+beneficiarytype‚‚Ø æ
+)‚‚æ ø
+{
+„„ 	
+string
+‰‰ 
+strMailBody
+‰‰ 
+=
+‰‰  
+$str
+‰‰! #
+;
+‰‰# $
+string
+ËË 
+path
+ËË 
+=
+ËË 
+string
+ËË  
+.
+ËË  !
+Empty
+ËË! &
+;
+ËË& '
+if
+ÈÈ 
+(
+ÈÈ 
+OperatingSystem
+ÈÈ 
+.
+ÈÈ  
+	IsWindows
+ÈÈ  )
+(
+ÈÈ) *
+)
+ÈÈ* +
+)
+ÈÈ+ ,
+path
+ÍÍ 
+=
+ÍÍ 
+Path
+ÍÍ 
+.
+ÍÍ 
+Combine
+ÍÍ #
+(
+ÍÍ# $
+RootPath
+ÍÍ$ ,
++
+ÍÍ- .
+$str
+ÍÍ/ A
++
+ÍÍB C
+TemplateName
+ÍÍD P
+)
+ÍÍP Q
+;
+ÍÍQ R
+else
+ÎÎ 
+if
+ÎÎ 
+(
+ÎÎ 
+OperatingSystem
+ÎÎ $
+.
+ÎÎ$ %
+IsLinux
+ÎÎ% ,
+(
+ÎÎ, -
+)
+ÎÎ- .
+)
+ÎÎ. /
+path
+ÏÏ 
+=
+ÏÏ 
+Path
+ÏÏ 
+.
+ÏÏ 
+Combine
+ÏÏ #
+(
+ÏÏ# $
+RootPath
+ÏÏ$ ,
++
+ÏÏ- .
+$str
+ÏÏ/ A
++
+ÏÏB C
+TemplateName
+ÏÏD P
+)
+ÏÏP Q
+;
+ÏÏQ R
+else
+ÌÌ 
+{
+ÓÓ 
+path
+ÔÔ 
+=
+ÔÔ 
+$str
+ÔÔ 
+;
+ÔÔ 
+}
+ 
+StreamReader
+ÛÛ 
+IDDSbody
+ÛÛ !
+=
+ÛÛ" #
+new
+ÛÛ$ '
+StreamReader
+ÛÛ( 4
+(
+ÛÛ4 5
+path
+ÛÛ5 9
+)
+ÛÛ9 :
+;
+ÛÛ: ;
+string
+ÙÙ 
+beneficiaryname
+ÙÙ "
+=
+ÙÙ# $
+$str
+ÙÙ% '
+;
+ÙÙ' (
+if
+ıı 
+(
+ıı 
+beneficiarytype
+ıı 
+==
+ıı  "
+$num
+ıı# $
+)
+ıı$ %
+{
+ˆˆ 
+beneficiaryname
+˜˜ 
+=
+˜˜  !
+$str
+˜˜" X
+;
+˜˜X Y
+}
+¯¯ 
+else
+˘˘ 
+{
+˙˙ 
+beneficiaryname
+˚˚ 
+=
+˚˚  !
+$str
+˚˚" @
+;
+˚˚@ A
+}
+¸¸ 
+strMailBody
+ˇˇ 
+=
+ˇˇ 
+IDDSbody
+ˇˇ "
+.
+ˇˇ" #
+	ReadToEnd
+ˇˇ# ,
+(
+ˇˇ, -
+)
+ˇˇ- .
+;
+ˇˇ. /
+strMailBody
+ÄÄ 
+=
+ÄÄ 
+strMailBody
+ÄÄ %
+.
+ÄÄ% &
+Replace
+ÄÄ& -
+(
+ÄÄ- .
+$str
+ÄÄ. ;
+,
+ÄÄ; <
+	emailLogo
+ÄÄ= F
+)
+ÄÄF G
+;
+ÄÄG H
+strMailBody
+ÅÅ 
+=
+ÅÅ 
+strMailBody
+ÅÅ %
+.
+ÅÅ% &
+Replace
+ÅÅ& -
+(
+ÅÅ- .
+$str
+ÅÅ. A
+,
+ÅÅA B
+beneficiaryname
+ÅÅC R
+)
+ÅÅR S
+;
+ÅÅS T
+strMailBody
+ÇÇ 
+=
+ÇÇ 
+strMailBody
+ÇÇ %
+.
+ÇÇ% &
+Replace
+ÇÇ& -
+(
+ÇÇ- .
+$str
+ÇÇ. 6
+,
+ÇÇ6 7
+DisplayName
+ÇÇ8 C
+)
+ÇÇC D
+;
+ÇÇD E
+strMailBody
+ÉÉ 
+=
+ÉÉ 
+strMailBody
+ÉÉ %
+.
+ÉÉ% &
+Replace
+ÉÉ& -
+(
+ÉÉ- .
+$str
+ÉÉ. 8
+,
+ÉÉ8 9
+UserId
+ÉÉ: @
+)
+ÉÉ@ A
+;
+ÉÉA B
+strMailBody
+ÑÑ 
+=
+ÑÑ 
+strMailBody
+ÑÑ %
+.
+ÑÑ% &
+Replace
+ÑÑ& -
+(
+ÑÑ- .
+$str
+ÑÑ. :
+,
+ÑÑ: ;
+Password
+ÑÑ< D
+)
+ÑÑD E
+;
+ÑÑE F
+bool
+ÜÜ 
+Chk
+ÜÜ 
+=
+ÜÜ 
+SendMail
+ÜÜ 
+(
+ÜÜ  &
+_sMTPConfigSenderAddress
+ÜÜ  8
+,
+ÜÜ8 9*
+_sMTPConfigSenderDisplayName
+ÜÜ: V
+,
+ÜÜV W
+emailAddress
+ÜÜX d
+,
+ÜÜd e&
+_sMTPConfigSenderAddress
+ÜÜf ~
+,
+ÜÜ~ 
+strMailBodyÜÜÄ ã
+,ÜÜã å
+$strÜÜç ≤
+,ÜÜ≤ ≥
+$strÜÜ¥ ∂
+,ÜÜ∂ ∑
+$strÜÜ∏ ∫
+,
+áá 
+true
+áá 
+,
+áá 
+$str
+áá 
+,
+áá !
+_sMTPConfigUserName
+áá /
+,
+áá/ 0!
+_sMTPConfigPassword
+áá1 D
+,
+ááD E
+_sMTPConfigHost
+ááF U
+,
+ááU V
+_sMTPConfigPort
+ááW f
+,
+ááf g"
+_sMTPConfigEnableSSL
+ááh |
+)
+áá| }
+;
+áá} ~
+return
+ââ 
+Chk
+ââ 
+;
+ââ 
+}
+ää 	
+public
+ãã 
+bool
+ãã +
+SendApplicationRegisteredMail
+ãã 1
+(
+ãã1 2
+string
+ãã2 8
+DisplayName
+ãã9 D
+,
+ããD E
+string
+ããF L
+emailAddress
+ããM Y
+,
+ããY Z
+string
+ãã[ a
+Message
+ããb i
+,
+ããi j
+string
+ããk q
+RootPath
+ããr z
+,
+ããz {
+stringãã| Ç
+TemplateNameããÉ è
+,ããè ê
+stringããë ó
+beneficiarytypeããò ß
+)ããß ®
+{
+åå 	
+string
+çç 
+strMailBody
+çç 
+=
+çç  
+$str
+çç! #
+;
+çç# $
+string
+ëë 
+path
+ëë 
+=
+ëë 
+string
+ëë  
+.
+ëë  !
+Empty
+ëë! &
+;
+ëë& '
+if
+íí 
+(
+íí 
+OperatingSystem
+íí 
+.
+íí  
+	IsWindows
+íí  )
+(
+íí) *
+)
+íí* +
+)
+íí+ ,
+path
+ìì 
+=
+ìì 
+Path
+ìì 
+.
+ìì 
+Combine
+ìì #
+(
+ìì# $
+RootPath
+ìì$ ,
++
+ìì- .
+$str
+ìì/ A
++
+ììB C
+TemplateName
+ììD P
+)
+ììP Q
+;
+ììQ R
+else
+îî 
+if
+îî 
+(
+îî 
+OperatingSystem
+îî $
+.
+îî$ %
+IsLinux
+îî% ,
+(
+îî, -
+)
+îî- .
+)
+îî. /
+path
+ïï 
+=
+ïï 
+Path
+ïï 
+.
+ïï 
+Combine
+ïï #
+(
+ïï# $
+RootPath
+ïï$ ,
++
+ïï- .
+$str
+ïï/ A
++
+ïïB C
+TemplateName
+ïïD P
+)
+ïïP Q
+;
+ïïQ R
+else
+ññ 
+{
+óó 
+path
+òò 
+=
+òò 
+$str
+òò 
+;
+òò 
+}
+ôô 
+string
+öö 
+beneficiaryname
+öö "
+=
+öö# $
+$str
+öö% '
+;
+öö' (
+StreamReader
+úú 
+IDDSbody
+úú !
+=
+úú" #
+new
+úú$ '
+StreamReader
+úú( 4
+(
+úú4 5
+path
+úú5 9
+)
+úú9 :
+;
+úú: ;
+if
+ûû 
+(
+ûû 
+beneficiarytype
+ûû 
+==
+ûû  "
+$str
+ûû# &
+)
+ûû& '
+{
+üü 
+beneficiaryname
+†† 
+=
+††  !
+$str
+††" X
+;
+††X Y
+}
+°° 
+else
+¢¢ 
+{
+££ 
+beneficiaryname
+§§ 
+=
+§§  !
+$str
+§§" @
+;
+§§@ A
+}
+•• 
+strMailBody
+™™ 
+=
+™™ 
+IDDSbody
+™™ "
+.
+™™" #
+	ReadToEnd
+™™# ,
+(
+™™, -
+)
+™™- .
+;
+™™. /
+strMailBody
+´´ 
+=
+´´ 
+strMailBody
+´´ %
+.
+´´% &
+Replace
+´´& -
+(
+´´- .
+$str
+´´. 6
+,
+´´6 7
+DisplayName
+´´8 C
+)
+´´C D
+;
+´´D E
+strMailBody
+¨¨ 
+=
+¨¨ 
+strMailBody
+¨¨ %
+.
+¨¨% &
+Replace
+¨¨& -
+(
+¨¨- .
+$str
+¨¨. A
+,
+¨¨A B
+beneficiaryname
+¨¨C R
+)
+¨¨R S
+;
+¨¨S T
+strMailBody
+≠≠ 
+=
+≠≠ 
+strMailBody
+≠≠ %
+.
+≠≠% &
+Replace
+≠≠& -
+(
+≠≠- .
+$str
+≠≠. 9
+,
+≠≠9 :
+Message
+≠≠; B
+)
+≠≠B C
+;
+≠≠C D
+bool
+ØØ 
+Chk
+ØØ 
+=
+ØØ 
+SendMail
+ØØ 
+(
+ØØ  &
+_sMTPConfigSenderAddress
+ØØ  8
+,
+ØØ8 9*
+_sMTPConfigSenderDisplayName
+ØØ: V
+,
+ØØV W
+emailAddress
+ØØX d
+,
+ØØd e&
+_sMTPConfigSenderAddress
+ØØf ~
+,
+ØØ~ 
+strMailBodyØØÄ ã
+,ØØã å
+$strØØç •
+,ØØ• ¶
+$strØØß ©
+,ØØ© ™
+$strØØ´ ≠
+,
+∞∞ 
+true
+∞∞ 
+,
+∞∞ 
+$str
+∞∞ 
+,
+∞∞ !
+_sMTPConfigUserName
+∞∞ /
+,
+∞∞/ 0!
+_sMTPConfigPassword
+∞∞1 D
+,
+∞∞D E
+_sMTPConfigHost
+∞∞F U
+,
+∞∞U V
+_sMTPConfigPort
+∞∞W f
+,
+∞∞f g"
+_sMTPConfigEnableSSL
+∞∞h |
+)
+∞∞| }
+;
+∞∞} ~
+return
+≤≤ 
+Chk
+≤≤ 
+;
+≤≤ 
+}
+≥≥ 	
+public
+µµ 
+bool
+µµ $
+SendARSApplicationMail
+µµ *
+(
+µµ* +
+string
+µµ+ 1
+DisplayName
+µµ2 =
+,
+µµ= >
+string
+µµ? E
+emailAddress
+µµF R
+,
+µµR S
+string
+µµT Z
+Message
+µµ[ b
+,
+µµb c
+string
+µµd j
+RootPath
+µµk s
+,
+µµs t
+string
+µµu {
+TemplateNameµµ| à
+,µµà â
+stringµµä ê
+	emailLogoµµë ö
+)µµö õ
+{
+∂∂ 	
+string
+∑∑ 
+strMailBody
+∑∑ 
+=
+∑∑  
+$str
+∑∑! #
+;
+∑∑# $
+string
+∫∫ 
+path
+∫∫ 
+=
+∫∫ 
+string
+∫∫  
+.
+∫∫  !
+Empty
+∫∫! &
+;
+∫∫& '
+if
+ªª 
+(
+ªª 
+OperatingSystem
+ªª 
+.
+ªª  
+	IsWindows
+ªª  )
+(
+ªª) *
+)
+ªª* +
+)
+ªª+ ,
+path
+ºº 
+=
+ºº 
+Path
+ºº 
+.
+ºº 
+Combine
+ºº #
+(
+ºº# $
+RootPath
+ºº$ ,
++
+ºº- .
+$str
+ºº/ A
++
+ººB C
+TemplateName
+ººD P
+)
+ººP Q
+;
+ººQ R
+else
+ΩΩ 
+if
+ΩΩ 
+(
+ΩΩ 
+OperatingSystem
+ΩΩ $
+.
+ΩΩ$ %
+IsLinux
+ΩΩ% ,
+(
+ΩΩ, -
+)
+ΩΩ- .
+)
+ΩΩ. /
+path
+ææ 
+=
+ææ 
+Path
+ææ 
+.
+ææ 
+Combine
+ææ #
+(
+ææ# $
+RootPath
+ææ$ ,
++
+ææ- .
+$str
+ææ/ A
++
+ææB C
+TemplateName
+ææD P
+)
+ææP Q
+;
+ææQ R
+else
+øø 
+{
+¿¿ 
+path
+¡¡ 
+=
+¡¡ 
+$str
+¡¡ 
+;
+¡¡ 
+}
+¬¬ 
+StreamReader
+ƒƒ 
+IDDSbody
+ƒƒ !
+=
+ƒƒ" #
+new
+ƒƒ$ '
+StreamReader
+ƒƒ( 4
+(
+ƒƒ4 5
+path
+ƒƒ5 9
+)
+ƒƒ9 :
+;
+ƒƒ: ;
+strMailBody
+»» 
+=
+»» 
+IDDSbody
+»» "
+.
+»»" #
+	ReadToEnd
+»»# ,
+(
+»», -
+)
+»»- .
+;
+»». /
+strMailBody
+…… 
+=
+…… 
+strMailBody
+…… %
+.
+……% &
+Replace
+……& -
+(
+……- .
+$str
+……. ;
+,
+……; <
+	emailLogo
+……= F
+)
+……F G
+;
+……G H
+strMailBody
+   
+=
+   
+strMailBody
+   %
+.
+  % &
+Replace
+  & -
+(
+  - .
+$str
+  . 6
+,
+  6 7
+DisplayName
+  8 C
+)
+  C D
+;
+  D E
+strMailBody
+ÀÀ 
+=
+ÀÀ 
+strMailBody
+ÀÀ %
+.
+ÀÀ% &
+Replace
+ÀÀ& -
+(
+ÀÀ- .
+$str
+ÀÀ. 9
+,
+ÀÀ9 :
+Message
+ÀÀ; B
+)
+ÀÀB C
+;
+ÀÀC D
+bool
+ÕÕ 
+Chk
+ÕÕ 
+=
+ÕÕ 
+SendMail
+ÕÕ 
+(
+ÕÕ  &
+_sMTPConfigSenderAddress
+ÕÕ  8
+,
+ÕÕ8 9*
+_sMTPConfigSenderDisplayName
+ÕÕ: V
+,
+ÕÕV W
+emailAddress
+ÕÕX d
+,
+ÕÕd e&
+_sMTPConfigSenderAddress
+ÕÕf ~
+,
+ÕÕ~ 
+strMailBodyÕÕÄ ã
+,ÕÕã å
+$strÕÕç °
+,ÕÕ° ¢
+$strÕÕ£ •
+,ÕÕ• ¶
+$strÕÕß ©
+,
+ŒŒ 
+true
+ŒŒ 
+,
+ŒŒ 
+$str
+ŒŒ 
+,
+ŒŒ !
+_sMTPConfigUserName
+ŒŒ /
+,
+ŒŒ/ 0!
+_sMTPConfigPassword
+ŒŒ1 D
+,
+ŒŒD E
+_sMTPConfigHost
+ŒŒF U
+,
+ŒŒU V
+_sMTPConfigPort
+ŒŒW f
+,
+ŒŒf g"
+_sMTPConfigEnableSSL
+ŒŒh |
+)
+ŒŒ| }
+;
+ŒŒ} ~
+return
+–– 
+Chk
+–– 
+;
+–– 
+}
+—— 	
+public
+”” 
+static
+”” 
+bool
+”” 
+SendMail
+”” #
+(
+””# $
+string
+””$ *
+	FromEmail
+””+ 4
+,
+””4 5
+string
+””6 <
+FromName
+””= E
+,
+””E F
+string
+””G M
+ToEmails
+””N V
+,
+””V W
+string
+””X ^
+
+ReplyEmail
+””_ i
+,
+””i j
+string
+””k q
+MailBody
+””r z
+,
+””z {
+string””| Ç
+MailSubject””É é
+,””é è
+string””ê ñ
+CcEmails””ó ü
+,””ü †
+string””° ß
+	BccEmails””® ±
+,
+‘‘ 
+bool
+‘‘ 
+IsHtml
+‘‘ 
+,
+‘‘ 
+string
+‘‘ !
+attPath
+‘‘" )
+,
+‘‘) *
+string
+‘‘+ 1
+UserName
+‘‘2 :
+,
+‘‘: ;
+string
+‘‘< B
+Password
+‘‘C K
+,
+‘‘K L
+string
+‘‘M S
+Host
+‘‘T X
+,
+‘‘X Y
+int
+‘‘Z ]
+Port
+‘‘^ b
+,
+‘‘b c
+bool
+‘‘d h
+	EnableSSL
+‘‘i r
+)
+‘‘r s
+{
+’’ 	
+
+SmtpClient
+÷÷ 
+
+smtpClient
+÷÷ !
+=
+÷÷" #
+new
+÷÷$ '
+
+SmtpClient
+÷÷( 2
+(
+÷÷2 3
+	FromEmail
+÷÷3 <
+)
+÷÷< =
+;
+÷÷= >
+
+smtpClient
+◊◊ 
+.
+◊◊ #
+UseDefaultCredentials
+◊◊ ,
+=
+◊◊- .
+false
+◊◊/ 4
+;
+◊◊4 5
+
+smtpClient
+ÿÿ 
+.
+ÿÿ 
+Credentials
+ÿÿ "
+=
+ÿÿ# $
+new
+ÿÿ% (
+System
+ÿÿ) /
+.
+ÿÿ/ 0
+Net
+ÿÿ0 3
+.
+ÿÿ3 4
+NetworkCredential
+ÿÿ4 E
+(
+ÿÿE F
+UserName
+ÿÿF N
+,
+ÿÿN O
+Password
+ÿÿP X
+)
+ÿÿX Y
+;
+ÿÿY Z
+
+smtpClient
+ŸŸ 
+.
+ŸŸ 
+Port
+ŸŸ 
+=
+ŸŸ 
+Port
+ŸŸ "
+;
+ŸŸ" #
+
+smtpClient
+⁄⁄ 
+.
+⁄⁄ 
+	EnableSsl
+⁄⁄  
+=
+⁄⁄! "
+	EnableSSL
+⁄⁄# ,
+;
+⁄⁄, -
+
+smtpClient
+€€ 
+.
+€€ 
+Host
+€€ 
+=
+€€ 
+Host
+€€ "
+;
+€€" #
+MailMessage
+›› 
+objMail
+›› 
+=
+››  !
+new
+››" %
+MailMessage
+››& 1
+(
+››1 2
+)
+››2 3
+;
+››3 4
+if
+ﬂﬂ 
+(
+ﬂﬂ 
+!
+ﬂﬂ 
+string
+ﬂﬂ 
+.
+ﬂﬂ 
+IsNullOrEmpty
+ﬂﬂ %
+(
+ﬂﬂ% &
+FromName
+ﬂﬂ& .
+)
+ﬂﬂ. /
+)
+ﬂﬂ/ 0
+{
+‡‡ 
+objMail
+·· 
+.
+·· 
+From
+·· 
+=
+·· 
+new
+·· "
+MailAddress
+··# .
+(
+··. /
+	FromEmail
+··/ 8
+,
+··8 9
+FromName
+··: B
+)
+··B C
+;
+··C D
+}
+‚‚ 
+else
+„„ 
+{
+‰‰ 
+objMail
+ÂÂ 
+.
+ÂÂ 
+From
+ÂÂ 
+=
+ÂÂ 
+new
+ÂÂ "
+MailAddress
+ÂÂ# .
+(
+ÂÂ. /
+	FromEmail
+ÂÂ/ 8
+)
+ÂÂ8 9
+;
+ÂÂ9 :
+}
+ÊÊ 
+if
+ÁÁ 
+(
+ÁÁ 
+!
+ÁÁ 
+string
+ÁÁ 
+.
+ÁÁ 
+IsNullOrEmpty
+ÁÁ %
+(
+ÁÁ% &
+
+ReplyEmail
+ÁÁ& 0
+)
+ÁÁ0 1
+)
+ÁÁ1 2
+{
+ËË 
+objMail
+ÍÍ 
+.
+ÍÍ 
+ReplyTo
+ÍÍ 
+=
+ÍÍ  !
+new
+ÍÍ" %
+MailAddress
+ÍÍ& 1
+(
+ÍÍ1 2
+
+ReplyEmail
+ÍÍ2 <
+)
+ÍÍ< =
+;
+ÍÍ= >
+}
+ÏÏ 
+if
+ÌÌ 
+(
+ÌÌ 
+!
+ÌÌ 
+string
+ÌÌ 
+.
+ÌÌ 
+IsNullOrEmpty
+ÌÌ %
+(
+ÌÌ% &
+ToEmails
+ÌÌ& .
+)
+ÌÌ. /
+)
+ÌÌ/ 0
+{
+ÓÓ 
+objMail
+ÔÔ 
+.
+ÔÔ 
+To
+ÔÔ 
+.
+ÔÔ 
+Add
+ÔÔ 
+(
+ÔÔ 
+ToEmails
+ÔÔ '
+)
+ÔÔ' (
+;
+ÔÔ( )
+}
+ 
+if
+ÒÒ 
+(
+ÒÒ 
+!
+ÒÒ 
+string
+ÒÒ 
+.
+ÒÒ 
+IsNullOrEmpty
+ÒÒ %
+(
+ÒÒ% &
+CcEmails
+ÒÒ& .
+)
+ÒÒ. /
+)
+ÒÒ/ 0
+{
+ÚÚ 
+objMail
+ÛÛ 
+.
+ÛÛ 
+CC
+ÛÛ 
+.
+ÛÛ 
+Add
+ÛÛ 
+(
+ÛÛ 
+CcEmails
+ÛÛ '
+)
+ÛÛ' (
+;
+ÛÛ( )
+}
+ÙÙ 
+if
+ıı 
+(
+ıı 
+!
+ıı 
+string
+ıı 
+.
+ıı 
+IsNullOrEmpty
+ıı %
+(
+ıı% &
+	BccEmails
+ıı& /
+)
+ıı/ 0
+)
+ıı0 1
+{
+ˆˆ 
+objMail
+˜˜ 
+.
+˜˜ 
+Bcc
+˜˜ 
+.
+˜˜ 
+Add
+˜˜ 
+(
+˜˜  
+	BccEmails
+˜˜  )
+)
+˜˜) *
+;
+˜˜* +
+}
+¯¯ 
+else
+˘˘ 
+{
+˙˙ 
+}
+˝˝ 
+if
+˛˛ 
+(
+˛˛ 
+!
+˛˛ 
+string
+˛˛ 
+.
+˛˛ 
+IsNullOrEmpty
+˛˛ %
+(
+˛˛% &
+attPath
+˛˛& -
+)
+˛˛- .
+)
+˛˛. /
+{
+ˇˇ 
+
+Attachment
+ÄÄ 
+path
+ÄÄ 
+=
+ÄÄ  !
+new
+ÄÄ" %
+
+Attachment
+ÄÄ& 0
+(
+ÄÄ0 1
+attPath
+ÄÄ1 8
+)
+ÄÄ8 9
+;
+ÄÄ9 :
+objMail
+ÇÇ 
+.
+ÇÇ 
+Attachments
+ÇÇ #
+.
+ÇÇ# $
+Add
+ÇÇ$ '
+(
+ÇÇ' (
+path
+ÇÇ( ,
+)
+ÇÇ, -
+;
+ÇÇ- .
+}
+ÉÉ 
+else
+ÑÑ 
+{
+ÖÖ 
+}
+àà 
+objMail
+ââ 
+.
+ââ 
+Subject
+ââ 
+=
+ââ 
+MailSubject
+ââ )
+;
+ââ) *
+objMail
+ää 
+.
+ää 
+Body
+ää 
+=
+ää 
+MailBody
+ää #
+;
+ää# $
+objMail
+ãã 
+.
+ãã 
+
+IsBodyHtml
+ãã 
+=
+ãã  
+IsHtml
+ãã! '
+;
+ãã' (
+try
+åå 
+{
+çç 
+
+smtpClient
+éé 
+.
+éé 
+Send
+éé 
+(
+éé  
+objMail
+éé  '
+)
+éé' (
+;
+éé( )
+return
+èè 
+true
+èè 
+;
+èè 
+}
+êê 
+catch
+ëë 
+(
+ëë 
+	Exception
+ëë 
+e
+ëë 
+)
+ëë 
+{
+íí 
+	Exception
+ìì 
+ex
+ìì 
+=
+ìì 
+e
+ìì  
+;
+ìì  !
+return
+îî 
+false
+îî 
+;
+îî 
+}
+ïï 
+}
+óó 	
+public
+ôô 
+bool
+ôô $
+SendChangePasswordMail
+ôô *
+(
+ôô* +
+string
+ôô+ 1
+DisplayName
+ôô2 =
+,
+ôô= >
+string
+ôô? E
+emailAddress
+ôôF R
+,
+ôôR S
+string
+ôôT Z
+UserName
+ôô[ c
+,
+ôôc d
+string
+ôôe k
+Password
+ôôl t
+,
+ôôt u
+string
+ôôv |
+RootPathôô} Ö
+,ôôÖ Ü
+stringôôá ç
+beneficiarytypeôôé ù
+)ôôù û
+{
+öö 	
+string
+õõ 
+strMailBody
+õõ 
+=
+õõ  
+$str
+õõ! #
+;
+õõ# $
+string
+úú 
+path
+úú 
+=
+úú 
+string
+úú  
+.
+úú  !
+Empty
+úú! &
+;
+úú& '
+if
+ûû 
+(
+ûû 
+OperatingSystem
+ûû 
+.
+ûû  
+	IsWindows
+ûû  )
+(
+ûû) *
+)
+ûû* +
+)
+ûû+ ,
+path
+üü 
+=
+üü 
+Path
+üü 
+.
+üü 
+Combine
+üü #
+(
+üü# $
+RootPath
+üü$ ,
++
+üü- .
+$str
+üü/ S
+)
+üüS T
+;
+üüT U
+else
+†† 
+if
+†† 
+(
+†† 
+OperatingSystem
+†† $
+.
+††$ %
+IsLinux
+††% ,
+(
+††, -
+)
+††- .
+)
+††. /
+path
+°° 
+=
+°° 
+Path
+°° 
+.
+°° 
+Combine
+°° #
+(
+°°# $
+RootPath
+°°$ ,
++
+°°- .
+$str
+°°/ S
+)
+°°S T
+;
+°°T U
+else
+¢¢ 
+{
+££ 
+path
+§§ 
+=
+§§ 
+$str
+§§ 
+;
+§§ 
+}
+•• 
+StreamReader
+ßß 
+IDDSbody
+ßß !
+=
+ßß" #
+new
+ßß$ '
+StreamReader
+ßß( 4
+(
+ßß4 5
+path
+ßß5 9
+)
+ßß9 :
+;
+ßß: ;
+string
+®® 
+beneficiaryname
+®® "
+=
+®®# $
+$str
+®®% '
+;
+®®' (
+if
+©© 
+(
+©© 
+beneficiarytype
+©© 
+==
+©©  "
+$str
+©©# &
+)
+©©& '
+{
+™™ 
+beneficiaryname
+´´ 
+=
+´´  !
+$str
+´´" X
+;
+´´X Y
+}
+¨¨ 
+else
+≠≠ 
+{
+ÆÆ 
+beneficiaryname
+ØØ 
+=
+ØØ  !
+$str
+ØØ" @
+;
+ØØ@ A
+}
+∞∞ 
+strMailBody
+µµ 
+=
+µµ 
+IDDSbody
+µµ "
+.
+µµ" #
+	ReadToEnd
+µµ# ,
+(
+µµ, -
+)
+µµ- .
+;
+µµ. /
+strMailBody
+∂∂ 
+=
+∂∂ 
+strMailBody
+∂∂ %
+.
+∂∂% &
+Replace
+∂∂& -
+(
+∂∂- .
+$str
+∂∂. 6
+,
+∂∂6 7
+DisplayName
+∂∂8 C
+)
+∂∂C D
+;
+∂∂D E
+strMailBody
+∑∑ 
+=
+∑∑ 
+strMailBody
+∑∑ %
+.
+∑∑% &
+Replace
+∑∑& -
+(
+∑∑- .
+$str
+∑∑. A
+,
+∑∑A B
+beneficiaryname
+∑∑C R
+)
+∑∑R S
+;
+∑∑S T
+strMailBody
+∏∏ 
+=
+∏∏ 
+strMailBody
+∏∏ %
+.
+∏∏% &
+Replace
+∏∏& -
+(
+∏∏- .
+$str
+∏∏. :
+,
+∏∏: ;
+UserName
+∏∏< D
+)
+∏∏D E
+;
+∏∏E F
+strMailBody
+ππ 
+=
+ππ 
+strMailBody
+ππ %
+.
+ππ% &
+Replace
+ππ& -
+(
+ππ- .
+$str
+ππ. :
+,
+ππ: ;
+Password
+ππ< D
+)
+ππD E
+;
+ππE F
+bool
+ºº 
+Chk
+ºº 
+=
+ºº 
+SendMail
+ºº 
+(
+ºº  &
+_sMTPConfigSenderAddress
+ºº  8
+,
+ºº8 9*
+_sMTPConfigSenderDisplayName
+ºº: V
+,
+ººV W
+emailAddress
+ººX d
+,
+ººd e&
+_sMTPConfigSenderAddress
+ººf ~
+,
+ºº~ 
+strMailBodyººÄ ã
+,ººã å
+$strººç £
+,ºº£ §
+$strºº• ß
+,ººß ®
+$strºº© ´
+,
+ΩΩ 
+true
+ΩΩ 
+,
+ΩΩ 
+$str
+ΩΩ 
+,
+ΩΩ !
+_sMTPConfigUserName
+ΩΩ /
+,
+ΩΩ/ 0!
+_sMTPConfigPassword
+ΩΩ1 D
+,
+ΩΩD E
+_sMTPConfigHost
+ΩΩF U
+,
+ΩΩU V
+_sMTPConfigPort
+ΩΩW f
+,
+ΩΩf g"
+_sMTPConfigEnableSSL
+ΩΩh |
+)
+ΩΩ| }
+;
+ΩΩ} ~
+return
+øø 
+Chk
+øø 
+;
+øø 
+}
+¿¿ 	
+public
+¬¬ 
+bool
+¬¬ 
+SendExceptionMail
+¬¬ %
+(
+¬¬% &
+ExceptionLogger
+¬¬& 5
+exceptionLogger
+¬¬6 E
+,
+¬¬E F
+string
+¬¬G M
+RootPath
+¬¬N V
+,
+¬¬V W
+string
+¬¬X ^
+TemplateName
+¬¬_ k
+)
+¬¬k l
+{
+√√ 	
+string
+ƒƒ 
+strMailBody
+ƒƒ 
+=
+ƒƒ  
+$str
+ƒƒ! #
+;
+ƒƒ# $
+string
+«« 
+path
+«« 
+=
+«« 
+string
+««  
+.
+««  !
+Empty
+««! &
+;
+««& '
+if
+»» 
+(
+»» 
+OperatingSystem
+»» 
+.
+»»  
+	IsWindows
+»»  )
+(
+»») *
+)
+»»* +
+)
+»»+ ,
+path
+…… 
+=
+…… 
+Path
+…… 
+.
+…… 
+Combine
+…… #
+(
+……# $
+RootPath
+……$ ,
++
+……- .
+$str
+……/ A
++
+……B C
+TemplateName
+……D P
+)
+……P Q
+;
+……Q R
+else
+   
+if
+   
+(
+   
+OperatingSystem
+   $
+.
+  $ %
+IsLinux
+  % ,
+(
+  , -
+)
+  - .
+)
+  . /
+path
+ÀÀ 
+=
+ÀÀ 
+Path
+ÀÀ 
+.
+ÀÀ 
+Combine
+ÀÀ #
+(
+ÀÀ# $
+RootPath
+ÀÀ$ ,
++
+ÀÀ- .
+$str
+ÀÀ/ A
++
+ÀÀB C
+TemplateName
+ÀÀD P
+)
+ÀÀP Q
+;
+ÀÀQ R
+else
+ÃÃ 
+{
+ÕÕ 
+path
+ŒŒ 
+=
+ŒŒ 
+$str
+ŒŒ 
+;
+ŒŒ 
+}
+œœ 
+StreamReader
+““ 
+IDDSbody
+““ !
+=
+““" #
+new
+““$ '
+StreamReader
+““( 4
+(
+““4 5
+path
+““5 9
+)
+““9 :
+;
+““: ;
+strMailBody
+÷÷ 
+=
+÷÷ 
+IDDSbody
+÷÷ "
+.
+÷÷" #
+	ReadToEnd
+÷÷# ,
+(
+÷÷, -
+)
+÷÷- .
+;
+÷÷. /
+strMailBody
+◊◊ 
+=
+◊◊ 
+strMailBody
+◊◊ %
+.
+◊◊% &
+Replace
+◊◊& -
+(
+◊◊- .
+$str
+◊◊. ?
+,
+◊◊? @
+DateTime
+◊◊A I
+.
+◊◊I J
+Now
+◊◊J M
+.
+◊◊M N
+ToString
+◊◊N V
+(
+◊◊V W
+$str
+◊◊W m
+)
+◊◊m n
+)
+◊◊n o
+;
+◊◊o p
+strMailBody
+ÿÿ 
+=
+ÿÿ 
+strMailBody
+ÿÿ %
+.
+ÿÿ% &
+Replace
+ÿÿ& -
+(
+ÿÿ- .
+$str
+ÿÿ. 8
+,
+ÿÿ8 9
+Convert
+ÿÿ: A
+.
+ÿÿA B
+ToString
+ÿÿB J
+(
+ÿÿJ K
+exceptionLogger
+ÿÿK Z
+.
+ÿÿZ [
+UserId
+ÿÿ[ a
+)
+ÿÿa b
+)
+ÿÿb c
+;
+ÿÿc d
+strMailBody
+ŸŸ 
+=
+ŸŸ 
+strMailBody
+ŸŸ %
+.
+ŸŸ% &
+Replace
+ŸŸ& -
+(
+ŸŸ- .
+$str
+ŸŸ. <
+,
+ŸŸ< =
+Convert
+ŸŸ> E
+.
+ŸŸE F
+ToString
+ŸŸF N
+(
+ŸŸN O
+exceptionLogger
+ŸŸO ^
+.
+ŸŸ^ _
+
+ActionName
+ŸŸ_ i
+)
+ŸŸi j
+)
+ŸŸj k
+;
+ŸŸk l
+strMailBody
+⁄⁄ 
+=
+⁄⁄ 
+strMailBody
+⁄⁄ %
+.
+⁄⁄% &
+Replace
+⁄⁄& -
+(
+⁄⁄- .
+$str
+⁄⁄. @
+,
+⁄⁄@ A
+Convert
+⁄⁄B I
+.
+⁄⁄I J
+ToString
+⁄⁄J R
+(
+⁄⁄R S
+exceptionLogger
+⁄⁄S b
+.
+⁄⁄b c
+ControllerName
+⁄⁄c q
+)
+⁄⁄q r
+)
+⁄⁄r s
+;
+⁄⁄s t
+strMailBody
+€€ 
+=
+€€ 
+strMailBody
+€€ %
+.
+€€% &
+Replace
+€€& -
+(
+€€- .
+$str
+€€. B
+,
+€€B C
+Convert
+€€D K
+.
+€€K L
+ToString
+€€L T
+(
+€€T U
+exceptionLogger
+€€U d
+.
+€€d e
+ExceptionMessage
+€€e u
+)
+€€u v
+)
+€€v w
+;
+€€w x
+strMailBody
+‹‹ 
+=
+‹‹ 
+strMailBody
+‹‹ %
+.
+‹‹% &
+Replace
+‹‹& -
+(
+‹‹- .
+$str
+‹‹. E
+,
+‹‹E F
+Convert
+‹‹G N
+.
+‹‹N O
+ToString
+‹‹O W
+(
+‹‹W X
+exceptionLogger
+‹‹X g
+.
+‹‹g h!
+ExceptionStackTrace
+‹‹h {
+)
+‹‹{ |
+)
+‹‹| }
+;
+‹‹} ~
+strMailBody
+›› 
+=
+›› 
+strMailBody
+›› %
+.
+››% &
+Replace
+››& -
+(
+››- .
+$str
+››. <
+,
+››< =
+Convert
+››> E
+.
+››E F
+ToString
+››F N
+(
+››N O
+exceptionLogger
+››O ^
+.
+››^ _
+
+RequestURI
+››_ i
+)
+››i j
+)
+››j k
+;
+››k l
+strMailBody
+ﬁﬁ 
+=
+ﬁﬁ 
+strMailBody
+ﬁﬁ %
+.
+ﬁﬁ% &
+Replace
+ﬁﬁ& -
+(
+ﬁﬁ- .
+$str
+ﬁﬁ. 8
+,
+ﬁﬁ8 9
+Convert
+ﬁﬁ: A
+.
+ﬁﬁA B
+ToString
+ﬁﬁB J
+(
+ﬁﬁJ K
+exceptionLogger
+ﬁﬁK Z
+.
+ﬁﬁZ [
+
+LineNumber
+ﬁﬁ[ e
+)
+ﬁﬁe f
+)
+ﬁﬁf g
+;
+ﬁﬁg h
+strMailBody
+ﬂﬂ 
+=
+ﬂﬂ 
+strMailBody
+ﬂﬂ %
+.
+ﬂﬂ% &
+Replace
+ﬂﬂ& -
+(
+ﬂﬂ- .
+$str
+ﬂﬂ. 9
+,
+ﬂﬂ9 :
+Convert
+ﬂﬂ; B
+.
+ﬂﬂB C
+ToString
+ﬂﬂC K
+(
+ﬂﬂK L
+nameof
+ﬂﬂL R
+(
+ﬂﬂR S
+
+EnumLookup
+ﬂﬂS ]
+.
+ﬂﬂ] ^
+exceptionlogfrom
+ﬂﬂ^ n
+.
+ﬂﬂn o
+WEB
+ﬂﬂo r
+)
+ﬂﬂr s
+)
+ﬂﬂs t
+)
+ﬂﬂt u
+;
+ﬂﬂu v
+strMailBody
+‡‡ 
+=
+‡‡ 
+strMailBody
+‡‡ %
+.
+‡‡% &
+Replace
+‡‡& -
+(
+‡‡- .
+$str
+‡‡. ;
+,
+‡‡; <
+Convert
+‡‡= D
+.
+‡‡D E
+ToString
+‡‡E M
+(
+‡‡M N
+exceptionLogger
+‡‡N ]
+.
+‡‡] ^
+	IpAddress
+‡‡^ g
+)
+‡‡g h
+)
+‡‡h i
+;
+‡‡i j
+strMailBody
+·· 
+=
+·· 
+strMailBody
+·· %
+.
+··% &
+Replace
+··& -
+(
+··- .
+$str
+··. :
+,
+··: ;
+Convert
+··< C
+.
+··C D
+ToString
+··D L
+(
+··L M
+exceptionLogger
+··M \
+.
+··\ ]
+HostName
+··] e
+)
+··e f
+)
+··f g
+;
+··g h
+bool
+„„ 
+Chk
+„„ 
+=
+„„ 
+SendMail
+„„ 
+(
+„„  &
+_sMTPConfigSenderAddress
+„„  8
+,
+„„8 9*
+_sMTPConfigSenderDisplayName
+„„: V
+,
+„„V W 
+_emailforexception
+„„X j
+,
+„„j k'
+_sMTPConfigSenderAddress„„l Ñ
+,„„Ñ Ö
+strMailBody„„Ü ë
+,„„ë í
+$str„„ì ≤
+,„„≤ ≥
+$str„„¥ ∂
+,„„∂ ∑
+$str„„∏ ∫
+,
+‰‰ 
+true
+‰‰ 
+,
+‰‰ 
+$str
+‰‰ 
+,
+‰‰ !
+_sMTPConfigUserName
+‰‰ /
+,
+‰‰/ 0!
+_sMTPConfigPassword
+‰‰1 D
+,
+‰‰D E
+_sMTPConfigHost
+‰‰F U
+,
+‰‰U V
+_sMTPConfigPort
+‰‰W f
+,
+‰‰f g"
+_sMTPConfigEnableSSL
+‰‰h |
+)
+‰‰| }
+;
+‰‰} ~
+return
+ÊÊ 
+Chk
+ÊÊ 
+;
+ÊÊ 
+}
+ÁÁ 	
+public
+ÎÎ 
+bool
+ÎÎ /
+!SendServiceSMSWithDBLogINGujarati
+ÎÎ 5
+(
+ÎÎ5 6
+string
+ÎÎ6 <
+
+SmsContent
+ÎÎ= G
+,
+ÎÎG H
+string
+ÎÎI O
+MobileNo
+ÎÎP X
+,
+ÎÎX Y
+string
+ÎÎZ `
+
+TemplateId
+ÎÎa k
+)
+ÎÎk l
+{
+ÏÏ 	
+if
+ÌÌ 
+(
+ÌÌ 
+_isSMSRequired
+ÌÌ 
+==
+ÌÌ !
+$str
+ÌÌ" %
+)
+ÌÌ% &
+{
+ÓÓ 
+string
+ÔÔ 
+response
+ÔÔ 
+=
+ÔÔ  !
+$str
+ÔÔ" $
+;
+ÔÔ$ %
+string
+ 
+
+MessageUrl
+ !
+=
+" #
+_messageUrl
+$ /
+;
+/ 0
+string
+ÒÒ 
+UserName
+ÒÒ 
+=
+ÒÒ  !
+_messageUserName
+ÒÒ" 2
+;
+ÒÒ2 3
+string
+ÚÚ 
+Password
+ÚÚ 
+=
+ÚÚ  !
+_messagePassword
+ÚÚ" 2
+;
+ÚÚ2 3
+string
+ÛÛ 
+SenderId
+ÛÛ 
+=
+ÛÛ  !
+_messageSenderId
+ÛÛ" 2
+;
+ÛÛ2 3
+string
+ÙÙ 
+	SecureKey
+ÙÙ  
+=
+ÙÙ! "
+
+_secureKey
+ÙÙ# -
+;
+ÙÙ- .
+if
+ˆˆ 
+(
+ˆˆ 
+!
+ˆˆ 
+string
+ˆˆ 
+.
+ˆˆ 
+IsNullOrEmpty
+ˆˆ )
+(
+ˆˆ) *
+
+MessageUrl
+ˆˆ* 4
+)
+ˆˆ4 5
+&&
+ˆˆ6 8
+!
+ˆˆ9 :
+string
+ˆˆ: @
+.
+ˆˆ@ A
+IsNullOrEmpty
+ˆˆA N
+(
+ˆˆN O
+UserName
+ˆˆO W
+)
+ˆˆW X
+&&
+ˆˆY [
+!
+˜˜ 
+string
+˜˜ 
+.
+˜˜ 
+IsNullOrEmpty
+˜˜ )
+(
+˜˜) *
+Password
+˜˜* 2
+)
+˜˜2 3
+&&
+˜˜4 6
+!
+˜˜7 8
+string
+˜˜8 >
+.
+˜˜> ?
+IsNullOrEmpty
+˜˜? L
+(
+˜˜L M
+SenderId
+˜˜M U
+)
+˜˜U V
+&&
+˜˜W Y
+!
+˜˜Z [
+string
+˜˜[ a
+.
+˜˜a b
+IsNullOrEmpty
+˜˜b o
+(
+˜˜o p
+MobileNo
+˜˜p x
+)
+˜˜x y
+&&
+¯¯ 
+!
+¯¯ 
+string
+¯¯ 
+.
+¯¯ 
+IsNullOrEmpty
+¯¯ ,
+(
+¯¯, -
+	SecureKey
+¯¯- 6
+)
+¯¯6 7
+)
+¯¯7 8
+{
+˘˘ 
+response
+˙˙ 
+=
+˙˙ 
+SendUnicodeSMS
+˙˙ -
+(
+˙˙- .
+
+MessageUrl
+˙˙. 8
+,
+˙˙8 9
+UserName
+˙˙: B
+,
+˙˙B C
+Password
+˙˙D L
+,
+˙˙L M
+SenderId
+˙˙N V
+,
+˙˙V W
+MobileNo
+˙˙X `
+,
+˙˙` a
+
+SmsContent
+˙˙b l
+,
+˙˙l m
+	SecureKey
+˙˙n w
+,
+˙˙w x
+
+TemplateId˙˙y É
+)˙˙É Ñ
+;˙˙Ñ Ö
+return
+˚˚ 
+true
+˚˚ 
+;
+˚˚  
+}
+˝˝ 
+else
+˛˛ 
+{
+ˇˇ 
+return
+ÄÄ 
+false
+ÄÄ  
+;
+ÄÄ  !
+throw
+ÅÅ 
+new
+ÅÅ 
+ArgumentException
+ÅÅ /
+(
+ÅÅ/ 0
+$str
+ÅÅ0 P
+)
+ÅÅP Q
+;
+ÅÅQ R
+}
+ÇÇ 
+}
+ÉÉ 
+else
+ÑÑ 
+{
+ÖÖ 
+return
+ÜÜ 
+true
+ÜÜ 
+;
+ÜÜ 
+}
+áá 
+}
+àà 	
+public
+ää 
+static
+ää 
+String
+ää 
+SendUnicodeSMS
+ää +
+(
+ää+ ,
+string
+ää, 2
+URL
+ää3 6
+,
+ää6 7
+String
+ää8 >
+username
+ää? G
+,
+ääG H
+String
+ääI O
+password
+ääP X
+,
+ääX Y
+String
+ääZ `
+senderid
+ääa i
+,
+ääi j
+String
+ääk q
+	mobileNos
+äär {
+,
+ää{ |
+Stringää} É
+UnicodemessageääÑ í
+,ääí ì
+Stringääî ö
+	secureKeyääõ §
+,ää§ •
+stringää¶ ¨
+
+TemplateIdää≠ ∑
+)ää∑ ∏
+{
+ãã 	
+Stream
+åå 
+
+dataStream
+åå 
+;
+åå !
+ServicePointManager
+éé 
+.
+éé  
+SecurityProtocol
+éé  0
+=
+éé1 2"
+SecurityProtocolType
+éé3 G
+.
+ééG H
+Tls12
+ééH M
+;
+ééM N
+HttpWebRequest
+êê 
+request
+êê "
+=
+êê# $
+(
+êê% &
+HttpWebRequest
+êê& 4
+)
+êê4 5
+
+WebRequest
+êê5 ?
+.
+êê? @
+Create
+êê@ F
+(
+êêF G
+URL
+êêG J
+)
+êêJ K
+;
+êêK L
+request
+ëë 
+.
+ëë 
+ProtocolVersion
+ëë #
+=
+ëë$ %
+HttpVersion
+ëë& 1
+.
+ëë1 2
+	Version10
+ëë2 ;
+;
+ëë; <
+request
+íí 
+.
+íí 
+	KeepAlive
+íí 
+=
+íí 
+false
+íí  %
+;
+íí% &
+request
+ìì 
+.
+ìì 
+ServicePoint
+ìì  
+.
+ìì  !
+ConnectionLimit
+ìì! 0
+=
+ìì1 2
+$num
+ìì3 4
+;
+ìì4 5
+(
+ïï 
+(
+ïï 
+HttpWebRequest
+ïï 
+)
+ïï 
+request
+ïï $
+)
+ïï$ %
+.
+ïï% &
+	UserAgent
+ïï& /
+=
+ïï0 1
+$str
+ïï2 j
+;
+ïïj k
+request
+óó 
+.
+óó 
+Method
+óó 
+=
+óó 
+$str
+óó #
+;
+óó# $
+String
+öö  
+U_Convertedmessage
+öö %
+=
+öö& '
+$str
+öö( *
+;
+öö* +
+foreach
+úú 
+(
+úú 
+char
+úú 
+c
+úú 
+in
+úú 
+Unicodemessage
+úú -
+)
+úú- .
+{
+ùù 
+int
+ûû 
+j
+ûû 
+=
+ûû 
+(
+ûû 
+int
+ûû 
+)
+ûû 
+c
+ûû 
+;
+ûû 
+String
+üü 
+sss
+üü 
+=
+üü 
+$str
+üü !
++
+üü" #
+j
+üü$ %
++
+üü& '
+$str
+üü( +
+;
+üü+ , 
+U_Convertedmessage
+†† "
+=
+††# $ 
+U_Convertedmessage
+††% 7
++
+††8 9
+sss
+††: =
+;
+††= >
+}
+°° 
+String
+¢¢ 
+encryptedPassword
+¢¢ $
+=
+¢¢% &
+encryptedPasswod
+¢¢' 7
+(
+¢¢7 8
+password
+¢¢8 @
+)
+¢¢@ A
+;
+¢¢A B
+String
+££ 
+NewsecureKey
+££ 
+=
+££  !
+hashGenerator
+££" /
+(
+££/ 0
+username
+££0 8
+.
+££8 9
+Trim
+££9 =
+(
+££= >
+)
+££> ?
+,
+££? @
+senderid
+££A I
+.
+££I J
+Trim
+££J N
+(
+££N O
+)
+££O P
+,
+££P Q 
+U_Convertedmessage
+££R d
+.
+££d e
+Trim
+££e i
+(
+££i j
+)
+££j k
+,
+££k l
+	secureKey
+££m v
+.
+££v w
+Trim
+££w {
+(
+££{ |
+)
+££| }
+)
+££} ~
+;
+££~ 
+String
+¶¶ 
+smsservicetype
+¶¶ !
+=
+¶¶" #
+$str
+¶¶$ 0
+;
+¶¶0 1
+String
+ßß 
+query
+ßß 
+=
+ßß 
+$str
+ßß &
++
+ßß' (
+HttpUtility
+ßß) 4
+.
+ßß4 5
+	UrlEncode
+ßß5 >
+(
+ßß> ?
+username
+ßß? G
+.
+ßßG H
+Trim
+ßßH L
+(
+ßßL M
+)
+ßßM N
+)
+ßßN O
++
+ßßP Q
+$str
+®® 
++
+®® 
+HttpUtility
+®® *
+.
+®®* +
+	UrlEncode
+®®+ 4
+(
+®®4 5
+encryptedPassword
+®®5 F
+)
+®®F G
++
+®®H I
+$str
+©© "
++
+©©# $
+HttpUtility
+©©% 0
+.
+©©0 1
+	UrlEncode
+©©1 :
+(
+©©: ;
+smsservicetype
+©©; I
+)
+©©I J
++
+©©K L
+$str
+™™ 
++
+™™ 
+HttpUtility
+™™ )
+.
+™™) *
+	UrlEncode
+™™* 3
+(
+™™3 4 
+U_Convertedmessage
+™™4 F
+.
+™™F G
+Trim
+™™G K
+(
+™™K L
+)
+™™L M
+)
+™™M N
++
+™™O P
+$str
+´´ 
++
+´´ 
+HttpUtility
+´´  +
+.
+´´+ ,
+	UrlEncode
+´´, 5
+(
+´´5 6
+	mobileNos
+´´6 ?
+)
+´´? @
++
+´´A B
+$str
+¨¨ 
++
+¨¨ 
+HttpUtility
+¨¨ *
+.
+¨¨* +
+	UrlEncode
+¨¨+ 4
+(
+¨¨4 5
+senderid
+¨¨5 =
+.
+¨¨= >
+Trim
+¨¨> B
+(
+¨¨B C
+)
+¨¨C D
+)
+¨¨D E
++
+¨¨F G
+$str
+≠≠ 
++
+≠≠ 
+HttpUtility
+≠≠ %
+.
+≠≠% &
+	UrlEncode
+≠≠& /
+(
+≠≠/ 0
+NewsecureKey
+≠≠0 <
+.
+≠≠< =
+Trim
+≠≠= A
+(
+≠≠A B
+)
+≠≠B C
+)
+≠≠C D
++
+≠≠E F
+$str
+ÆÆ 
++
+ÆÆ  
+HttpUtility
+ÆÆ! ,
+.
+ÆÆ, -
+	UrlEncode
+ÆÆ- 6
+(
+ÆÆ6 7
+
+TemplateId
+ÆÆ7 A
+.
+ÆÆA B
+Trim
+ÆÆB F
+(
+ÆÆF G
+)
+ÆÆG H
+)
+ÆÆH I
+;
+ÆÆI J
+byte
+±± 
+[
+±± 
+]
+±± 
+	byteArray
+±± 
+=
+±± 
+Encoding
+±± '
+.
+±±' (
+ASCII
+±±( -
+.
+±±- .
+GetBytes
+±±. 6
+(
+±±6 7
+query
+±±7 <
+)
+±±< =
+;
+±±= >
+request
+≤≤ 
+.
+≤≤ 
+ContentType
+≤≤ 
+=
+≤≤  !
+$str
+≤≤" E
+;
+≤≤E F
+request
+≥≥ 
+.
+≥≥ 
+ContentLength
+≥≥ !
+=
+≥≥" #
+	byteArray
+≥≥$ -
+.
+≥≥- .
+Length
+≥≥. 4
+;
+≥≥4 5
+
+dataStream
+¥¥ 
+=
+¥¥ 
+request
+¥¥  
+.
+¥¥  !
+GetRequestStream
+¥¥! 1
+(
+¥¥1 2
+)
+¥¥2 3
+;
+¥¥3 4
+
+dataStream
+µµ 
+.
+µµ 
+Write
+µµ 
+(
+µµ 
+	byteArray
+µµ &
+,
+µµ& '
+$num
+µµ( )
+,
+µµ) *
+	byteArray
+µµ+ 4
+.
+µµ4 5
+Length
+µµ5 ;
+)
+µµ; <
+;
+µµ< =
+
+dataStream
+∂∂ 
+.
+∂∂ 
+Close
+∂∂ 
+(
+∂∂ 
+)
+∂∂ 
+;
+∂∂ 
+WebResponse
+∑∑ 
+response
+∑∑  
+=
+∑∑! "
+request
+∑∑# *
+.
+∑∑* +
+GetResponse
+∑∑+ 6
+(
+∑∑6 7
+)
+∑∑7 8
+;
+∑∑8 9
+String
+∏∏ 
+Status
+∏∏ 
+=
+∏∏ 
+(
+∏∏ 
+(
+∏∏ 
+HttpWebResponse
+∏∏ -
+)
+∏∏- .
+response
+∏∏. 6
+)
+∏∏6 7
+.
+∏∏7 8
+StatusDescription
+∏∏8 I
+;
+∏∏I J
+
+dataStream
+ππ 
+=
+ππ 
+response
+ππ !
+.
+ππ! "
+GetResponseStream
+ππ" 3
+(
+ππ3 4
+)
+ππ4 5
+;
+ππ5 6
+StreamReader
+∫∫ 
+reader
+∫∫ 
+=
+∫∫  !
+new
+∫∫" %
+StreamReader
+∫∫& 2
+(
+∫∫2 3
+
+dataStream
+∫∫3 =
+)
+∫∫= >
+;
+∫∫> ?
+String
+ªª  
+responseFromServer
+ªª %
+=
+ªª& '
+reader
+ªª( .
+.
+ªª. /
+	ReadToEnd
+ªª/ 8
+(
+ªª8 9
+)
+ªª9 :
+;
+ªª: ;
+reader
+ºº 
+.
+ºº 
+Close
+ºº 
+(
+ºº 
+)
+ºº 
+;
+ºº 
+
+dataStream
+ΩΩ 
+.
+ΩΩ 
+Close
+ΩΩ 
+(
+ΩΩ 
+)
+ΩΩ 
+;
+ΩΩ 
+response
+ææ 
+.
+ææ 
+Close
+ææ 
+(
+ææ 
+)
+ææ 
+;
+ææ 
+return
+øø  
+responseFromServer
+øø %
+;
+øø% &
+}
+¿¿ 	
+	protected
+¬¬ 
+static
+¬¬ 
+String
+¬¬ 
+hashGenerator
+¬¬  -
+(
+¬¬- .
+String
+¬¬. 4
+Username
+¬¬5 =
+,
+¬¬= >
+String
+¬¬? E
+	sender_id
+¬¬F O
+,
+¬¬O P
+String
+¬¬Q W
+message
+¬¬X _
+,
+¬¬_ `
+String
+¬¬a g
+
+secure_key
+¬¬h r
+)
+¬¬r s
+{
+√√ 	
+StringBuilder
+ƒƒ 
+sb
+ƒƒ 
+=
+ƒƒ 
+new
+ƒƒ "
+StringBuilder
+ƒƒ# 0
+(
+ƒƒ0 1
+)
+ƒƒ1 2
+;
+ƒƒ2 3
+sb
+≈≈ 
+.
+≈≈ 
+Append
+≈≈ 
+(
+≈≈ 
+Username
+≈≈ 
+)
+≈≈ 
+.
+≈≈  
+Append
+≈≈  &
+(
+≈≈& '
+	sender_id
+≈≈' 0
+)
+≈≈0 1
+.
+≈≈1 2
+Append
+≈≈2 8
+(
+≈≈8 9
+message
+≈≈9 @
+)
+≈≈@ A
+.
+≈≈A B
+Append
+≈≈B H
+(
+≈≈H I
+
+secure_key
+≈≈I S
+)
+≈≈S T
+;
+≈≈T U
+byte
+∆∆ 
+[
+∆∆ 
+]
+∆∆ 
+genkey
+∆∆ 
+=
+∆∆ 
+Encoding
+∆∆ $
+.
+∆∆$ %
+UTF8
+∆∆% )
+.
+∆∆) *
+GetBytes
+∆∆* 2
+(
+∆∆2 3
+sb
+∆∆3 5
+.
+∆∆5 6
+ToString
+∆∆6 >
+(
+∆∆> ?
+)
+∆∆? @
+)
+∆∆@ A
+;
+∆∆A B
+HashAlgorithm
+»» 
+sha1
+»» 
+=
+»»  
+HashAlgorithm
+»»! .
+.
+»». /
+Create
+»»/ 5
+(
+»»5 6
+$str
+»»6 >
+)
+»»> ?
+;
+»»? @
+byte
+…… 
+[
+…… 
+]
+…… 
+sec_key
+…… 
+=
+…… 
+sha1
+…… !
+.
+……! "
+ComputeHash
+……" -
+(
+……- .
+genkey
+……. 4
+)
+……4 5
+;
+……5 6
+StringBuilder
+ÀÀ 
+sb1
+ÀÀ 
+=
+ÀÀ 
+new
+ÀÀ  #
+StringBuilder
+ÀÀ$ 1
+(
+ÀÀ1 2
+)
+ÀÀ2 3
+;
+ÀÀ3 4
+for
+ÃÃ 
+(
+ÃÃ 
+int
+ÃÃ 
+i
+ÃÃ 
+=
+ÃÃ 
+$num
+ÃÃ 
+;
+ÃÃ 
+i
+ÃÃ 
+<
+ÃÃ 
+sec_key
+ÃÃ  '
+.
+ÃÃ' (
+Length
+ÃÃ( .
+;
+ÃÃ. /
+i
+ÃÃ0 1
+++
+ÃÃ1 3
+)
+ÃÃ3 4
+{
+ÕÕ 
+sb1
+ŒŒ 
+.
+ŒŒ 
+Append
+ŒŒ 
+(
+ŒŒ 
+sec_key
+ŒŒ "
+[
+ŒŒ" #
+i
+ŒŒ# $
+]
+ŒŒ$ %
+.
+ŒŒ% &
+ToString
+ŒŒ& .
+(
+ŒŒ. /
+$str
+ŒŒ/ 3
+)
+ŒŒ3 4
+)
+ŒŒ4 5
+;
+ŒŒ5 6
+}
+œœ 
+return
+–– 
+sb1
+–– 
+.
+–– 
+ToString
+–– 
+(
+––  
+)
+––  !
+;
+––! "
+}
+—— 	
+	protected
+““ 
+static
+““ 
+String
+““ 
+encryptedPasswod
+““  0
+(
+““0 1
+String
+““1 7
+password
+““8 @
+)
+““@ A
+{
+”” 	
+byte
+‘‘ 
+[
+‘‘ 
+]
+‘‘ 
+encPwd
+‘‘ 
+=
+‘‘ 
+Encoding
+‘‘ $
+.
+‘‘$ %
+UTF8
+‘‘% )
+.
+‘‘) *
+GetBytes
+‘‘* 2
+(
+‘‘2 3
+password
+‘‘3 ;
+)
+‘‘; <
+;
+‘‘< =
+HashAlgorithm
+÷÷ 
+sha1
+÷÷ 
+=
+÷÷  
+HashAlgorithm
+÷÷! .
+.
+÷÷. /
+Create
+÷÷/ 5
+(
+÷÷5 6
+$str
+÷÷6 <
+)
+÷÷< =
+;
+÷÷= >
+byte
+◊◊ 
+[
+◊◊ 
+]
+◊◊ 
+pp
+◊◊ 
+=
+◊◊ 
+sha1
+◊◊ 
+.
+◊◊ 
+ComputeHash
+◊◊ (
+(
+◊◊( )
+encPwd
+◊◊) /
+)
+◊◊/ 0
+;
+◊◊0 1
+StringBuilder
+ŸŸ 
+sb
+ŸŸ 
+=
+ŸŸ 
+new
+ŸŸ "
+StringBuilder
+ŸŸ# 0
+(
+ŸŸ0 1
+)
+ŸŸ1 2
+;
+ŸŸ2 3
+foreach
+⁄⁄ 
+(
+⁄⁄ 
+byte
+⁄⁄ 
+b
+⁄⁄ 
+in
+⁄⁄ 
+pp
+⁄⁄ !
+)
+⁄⁄! "
+{
+€€ 
+sb
+›› 
+.
+›› 
+Append
+›› 
+(
+›› 
+b
+›› 
+.
+›› 
+ToString
+›› $
+(
+››$ %
+$str
+››% )
+)
+››) *
+)
+››* +
+;
+››+ ,
+}
+ﬁﬁ 
+return
+ﬂﬂ 
+sb
+ﬂﬂ 
+.
+ﬂﬂ 
+ToString
+ﬂﬂ 
+(
+ﬂﬂ 
+)
+ﬂﬂ  
+;
+ﬂﬂ  !
+}
+‡‡ 	
+public
+·· 
+static
+·· 
+string
+·· 
+ConcatString
+·· )
+(
+··) *
+string
+··* 0
+strtext1
+··1 9
+,
+··9 :
+string
+··; A
+strtext2
+··B J
+,
+··J K
+string
+··L R
+	seperator
+··S \
+)
+··\ ]
+{
+‚‚ 	
+return
+„„ 
+string
+„„ 
+.
+„„ 
+Concat
+„„  
+(
+„„  !
+strtext1
+„„! )
+,
+„„) *
+	seperator
+„„+ 4
+,
+„„4 5
+strtext2
+„„6 >
+)
+„„> ?
+;
+„„? @
+}
+ÂÂ 	
+public
+ËË 
+async
+ËË 
+Task
+ËË 
+<
+ËË 
+CouchDBResponse
+ËË )
+>
+ËË) *
+UplodToCouchDB
+ËË+ 9
+(
+ËË9 :
+CouchDBRequest
+ËË: H
+
+attachInfo
+ËËI S
+)
+ËËS T
+{
+ÈÈ 	
+var
+ÍÍ 
+dbClient
+ÍÍ 
+=
+ÍÍ 
+DbHttpClient
+ÍÍ '
+(
+ÍÍ' (
+)
+ÍÍ( )
+;
+ÍÍ) *
+var
+ÎÎ 
+jsonData
+ÎÎ 
+=
+ÎÎ 
+JsonConvert
+ÎÎ &
+.
+ÎÎ& '
+SerializeObject
+ÎÎ' 6
+(
+ÎÎ6 7
+
+attachInfo
+ÎÎ7 A
+)
+ÎÎA B
+;
+ÎÎB C
+var
+ÏÏ 
+httpContent
+ÏÏ 
+=
+ÏÏ 
+new
+ÏÏ !
+StringContent
+ÏÏ" /
+(
+ÏÏ/ 0
+jsonData
+ÏÏ0 8
+,
+ÏÏ8 9
+Encoding
+ÏÏ: B
+.
+ÏÏB C
+UTF8
+ÏÏC G
+,
+ÏÏG H
+$str
+ÏÏI [
+)
+ÏÏ[ \
+;
+ÏÏ\ ]
+var
+ÌÌ 
+
+postResult
+ÌÌ 
+=
+ÌÌ 
+await
+ÌÌ "
+dbClient
+ÌÌ# +
+.
+ÌÌ+ ,
+	PostAsync
+ÌÌ, 5
+(
+ÌÌ5 6
+_couchDbName
+ÌÌ6 B
+,
+ÌÌB C
+httpContent
+ÌÌD O
+)
+ÌÌO P
+.
+ÌÌP Q
+ConfigureAwait
+ÌÌQ _
+(
+ÌÌ_ `
+true
+ÌÌ` d
+)
+ÌÌd e
+;
+ÌÌe f
+var
+ÔÔ 
+result
+ÔÔ 
+=
+ÔÔ 
+await
+ÔÔ 
+
+postResult
+ÔÔ )
+.
+ÔÔ) *
+Content
+ÔÔ* 1
+.
+ÔÔ1 2
+ReadAsStringAsync
+ÔÔ2 C
+(
+ÔÔC D
+)
+ÔÔD E
+;
+ÔÔE F
+var
+ÒÒ 
+	savedInfo
+ÒÒ 
+=
+ÒÒ 
+JsonConvert
+ÒÒ '
+.
+ÒÒ' (
+DeserializeObject
+ÒÒ( 9
+<
+ÒÒ9 :
+CouchDBResponse
+ÒÒ: I
+>
+ÒÒI J
+(
+ÒÒJ K
+result
+ÒÒK Q
+)
+ÒÒQ R
+;
+ÒÒR S
+var
+ÚÚ 
+requestContent
+ÚÚ 
+=
+ÚÚ  
+new
+ÚÚ! $
+ByteArrayContent
+ÚÚ% 5
+(
+ÚÚ5 6
+
+attachInfo
+ÚÚ6 @
+.
+ÚÚ@ A
+AttachmentData
+ÚÚA O
+)
+ÚÚO P
+;
+ÚÚP Q
+requestContent
+ÛÛ 
+.
+ÛÛ 
+Headers
+ÛÛ "
+.
+ÛÛ" #
+ContentType
+ÛÛ# .
+=
+ÛÛ/ 0
+new
+ÛÛ1 4"
+MediaTypeHeaderValue
+ÛÛ5 I
+(
+ÛÛI J
+$str
+ÛÛJ _
+)
+ÛÛ_ `
+;
+ÛÛ` a
+var
+ıı 
+	putResult
+ıı 
+=
+ıı 
+await
+ıı !
+dbClient
+ıı" *
+.
+ıı* +
+PutAsync
+ıı+ 3
+(
+ıı3 4
+_couchDbName
+ıı4 @
++
+ııA B
+$str
+ııC F
++
+ııG H
+	savedInfo
+ııI R
+.
+ııR S
+Id
+ııS U
++
+ııV W
+$str
+ııX [
++
+ıı\ ]
+
+attachInfo
+ıı^ h
+.
+ııh i
+FileName
+ııi q
++
+ıır s
+$str
+ııt {
++
+ıı| }
+	savedInfoıı~ á
+.ııá à
+Revııà ã
+,ııã å
+requestContentııç õ
+)ııõ ú
+;ııú ù
+CouchDBResponse
+ˆˆ 
+couchDBResponse
+ˆˆ +
+=
+ˆˆ, -
+new
+ˆˆ. 1
+CouchDBResponse
+ˆˆ2 A
+(
+ˆˆA B
+)
+ˆˆB C
+;
+ˆˆC D
+if
+˜˜ 
+(
+˜˜ 
+	putResult
+˜˜ 
+.
+˜˜ !
+IsSuccessStatusCode
+˜˜ -
+)
+˜˜- .
+{
+¯¯ 
+couchDBResponse
+˙˙ 
+.
+˙˙  
+	IsSuccess
+˙˙  )
+=
+˙˙* +
+true
+˙˙, 0
+;
+˙˙0 1
+couchDBResponse
+˚˚ 
+.
+˚˚  
+Id
+˚˚  "
+=
+˚˚# $
+	savedInfo
+˚˚% .
+.
+˚˚. /
+Id
+˚˚/ 1
+;
+˚˚1 2
+couchDBResponse
+¸¸ 
+.
+¸¸  
+Rev
+¸¸  #
+=
+¸¸$ %
+	savedInfo
+¸¸& /
+.
+¸¸/ 0
+Rev
+¸¸0 3
+;
+¸¸3 4
+couchDBResponse
+˝˝ 
+.
+˝˝  
+Result
+˝˝  &
+=
+˝˝' (
+	savedInfo
+˝˝) 2
+.
+˝˝2 3
+Result
+˝˝3 9
+;
+˝˝9 :
+return
+ˇˇ 
+couchDBResponse
+ˇˇ &
+;
+ˇˇ& '
+}
+ÄÄ 
+couchDBResponse
+ÉÉ 
+.
+ÉÉ 
+	IsSuccess
+ÉÉ %
+=
+ÉÉ& '
+false
+ÉÉ( -
+;
+ÉÉ- .
+couchDBResponse
+ÑÑ 
+.
+ÑÑ 
+Result
+ÑÑ "
+=
+ÑÑ# $
+	putResult
+ÑÑ% .
+.
+ÑÑ. /
+ReasonPhrase
+ÑÑ/ ;
+;
+ÑÑ; <
+return
+ÖÖ 
+couchDBResponse
+ÖÖ "
+;
+ÖÖ" #
+}
+ÜÜ 	
+private
+àà 
+
+HttpClient
+àà 
+DbHttpClient
+àà '
+(
+àà' (
+)
+àà( )
+{
+ââ 	
+var
+ää 
+
+httpClient
+ää 
+=
+ää 
+_clientFactory
+ää +
+.
+ää+ ,
+CreateClient
+ää, 8
+(
+ää8 9
+)
+ää9 :
+;
+ää: ;
+
+httpClient
+ãã 
+.
+ãã #
+DefaultRequestHeaders
+ãã ,
+.
+ãã, -
+Accept
+ãã- 3
+.
+ãã3 4
+Clear
+ãã4 9
+(
+ãã9 :
+)
+ãã: ;
+;
+ãã; <
+
+httpClient
+åå 
+.
+åå #
+DefaultRequestHeaders
+åå ,
+.
+åå, -
+Clear
+åå- 2
+(
+åå2 3
+)
+åå3 4
+;
+åå4 5
+
+httpClient
+éé 
+.
+éé 
+BaseAddress
+éé "
+=
+éé# $
+new
+éé% (
+Uri
+éé) ,
+(
+éé, -
+_couchDbUrl
+éé- 8
+)
+éé8 9
+;
+éé9 :
+var
+èè 
+dbUserByteArray
+èè 
+=
+èè  !
+Encoding
+èè" *
+.
+èè* +
+ASCII
+èè+ 0
+.
+èè0 1
+GetBytes
+èè1 9
+(
+èè9 :
+_couchDbUser
+èè: F
+)
+èèF G
+;
+èèG H
+
+httpClient
+êê 
+.
+êê #
+DefaultRequestHeaders
+êê ,
+.
+êê, -
+Add
+êê- 0
+(
+êê0 1
+$str
+êê1 @
+,
+êê@ A
+$str
+êêB J
++
+êêK L
+Convert
+êêM T
+.
+êêT U
+ToBase64String
+êêU c
+(
+êêc d
+dbUserByteArray
+êêd s
+)
+êês t
+)
+êêt u
+;
+êêu v
+return
+ëë 
+
+httpClient
+ëë 
+;
+ëë 
+}
+íí 	
+public
+îî 
+async
+îî 
+Task
+îî 
+<
+îî 
+CouchDBResponse
+îî )
+>
+îî) *$
+GetAttachmentByteArray
+îî+ A
+(
+îîA B
+string
+îîB H
+DocId
+îîI N
+,
+îîN O
+string
+îîP V
+AttName
+îîW ^
+)
+îî^ _
+{
+ïï 	
+var
+ññ 
+dbClient
+ññ 
+=
+ññ 
+DbHttpClient
+ññ '
+(
+ññ' (
+)
+ññ( )
+;
+ññ) *
+var
+óó 
+dbResult
+óó 
+=
+óó 
+await
+óó  
+dbClient
+óó! )
+.
+óó) *
+GetAsync
+óó* 2
+(
+óó2 3
+_couchDbName
+óó3 ?
++
+óó@ A
+$str
+óóB E
++
+óóF G
+DocId
+óóH M
++
+óóN O
+$str
+óóP S
++
+óóT U
+AttName
+óóV ]
+)
+óó] ^
+;
+óó^ _
+CouchDBResponse
+òò 
+couchDBResponse
+òò +
+=
+òò, -
+new
+òò. 1
+CouchDBResponse
+òò2 A
+(
+òòA B
+)
+òòB C
+;
+òòC D
+if
+ôô 
+(
+ôô 
+dbResult
+ôô 
+.
+ôô !
+IsSuccessStatusCode
+ôô ,
+)
+ôô, -
+{
+öö 
+couchDBResponse
+úú 
+.
+úú  
+	IsSuccess
+úú  )
+=
+úú* +
+true
+úú, 0
+;
+úú0 1
+couchDBResponse
+ùù 
+.
+ùù  
+	ImageData
+ùù  )
+=
+ùù* +
+dbResult
+ùù, 4
+.
+ùù4 5
+Content
+ùù5 <
+.
+ùù< ="
+ReadAsByteArrayAsync
+ùù= Q
+(
+ùùQ R
+)
+ùùR S
+;
+ùùS T
+return
+üü 
+couchDBResponse
+üü &
+;
+üü& '
+}
+†† 
+couchDBResponse
+££ 
+.
+££ 
+	IsSuccess
+££ %
+=
+££& '
+false
+££( -
+;
+££- .
+couchDBResponse
+§§ 
+.
+§§ 
+Result
+§§ "
+=
+§§# $
+dbResult
+§§% -
+.
+§§- .
+ReasonPhrase
+§§. :
+;
+§§: ;
+return
+•• 
+couchDBResponse
+•• "
+;
+••" #
+}
+ßß 	
+public
+©© 
+async
+©© 
+Task
+©© 
+<
+©© 
+CouchDBResponse
+©© )
+>
+©©) *"
+GetDocumentByteArray
+©©+ ?
+(
+©©? @
+string
+©©@ F
+DocId
+©©G L
+,
+©©L M
+string
+©©N T
+AttName
+©©U \
+)
+©©\ ]
+{
+™™ 	
+var
+´´ 
+dbClient
+´´ 
+=
+´´ 
+DbHttpClient
+´´ '
+(
+´´' (
+)
+´´( )
+;
+´´) *
+var
+¨¨ 
+dbResult
+¨¨ 
+=
+¨¨ 
+await
+¨¨  
+dbClient
+¨¨! )
+.
+¨¨) *
+GetAsync
+¨¨* 2
+(
+¨¨2 3
+_couchDbName
+¨¨3 ?
++
+¨¨@ A
+$str
+¨¨B E
++
+¨¨F G
+DocId
+¨¨H M
++
+¨¨N O
+$str
+¨¨P S
++
+¨¨T U
+AttName
+¨¨V ]
+)
+¨¨] ^
+;
+¨¨^ _
+CouchDBResponse
+≠≠ 
+couchDBResponse
+≠≠ +
+=
+≠≠, -
+new
+≠≠. 1
+CouchDBResponse
+≠≠2 A
+(
+≠≠A B
+)
+≠≠B C
+;
+≠≠C D
+if
+ÆÆ 
+(
+ÆÆ 
+dbResult
+ÆÆ 
+.
+ÆÆ !
+IsSuccessStatusCode
+ÆÆ ,
+)
+ÆÆ, -
+{
+ØØ 
+couchDBResponse
+±± 
+.
+±±  
+	IsSuccess
+±±  )
+=
+±±* +
+true
+±±, 0
+;
+±±0 1
+couchDBResponse
+≤≤ 
+.
+≤≤  
+	ImageData
+≤≤  )
+=
+≤≤* +
+dbResult
+≤≤, 4
+.
+≤≤4 5
+Content
+≤≤5 <
+.
+≤≤< ="
+ReadAsByteArrayAsync
+≤≤= Q
+(
+≤≤Q R
+)
+≤≤R S
+;
+≤≤S T
+return
+≥≥ 
+couchDBResponse
+≥≥ &
+;
+≥≥& '
+}
+∂∂ 
+couchDBResponse
+∑∑ 
+.
+∑∑ 
+	IsSuccess
+∑∑ %
+=
+∑∑& '
+false
+∑∑( -
+;
+∑∑- .
+couchDBResponse
+∏∏ 
+.
+∏∏ 
+Result
+∏∏ "
+=
+∏∏# $
+dbResult
+∏∏% -
+.
+∏∏- .
+ReasonPhrase
+∏∏. :
+;
+∏∏: ;
+return
+ππ 
+couchDBResponse
+ππ "
+;
+ππ" #
+}
+∫∫ 	
+public
+ºº 
+async
+ºº 
+Task
+ºº 
+<
+ºº 
+dynamic
+ºº !
+>
+ºº! "
+UpdateAttachment
+ºº# 3
+(
+ºº3 4
+CouchDBRequest
+ºº4 B
+
+attachInfo
+ººC M
+)
+ººM N
+{
+ΩΩ 	
+var
+ææ 
+dbClient
+ææ 
+=
+ææ 
+DbHttpClient
+ææ '
+(
+ææ' (
+)
+ææ( )
+;
+ææ) *
+var
+øø 
+jsonData
+øø 
+=
+øø 
+JsonConvert
+øø &
+.
+øø& '
+SerializeObject
+øø' 6
+(
+øø6 7
+
+attachInfo
+øø7 A
+)
+øøA B
+;
+øøB C
+var
+¿¿ 
+httpContent
+¿¿ 
+=
+¿¿ 
+new
+¿¿ !
+StringContent
+¿¿" /
+(
+¿¿/ 0
+jsonData
+¿¿0 8
+,
+¿¿8 9
+Encoding
+¿¿: B
+.
+¿¿B C
+UTF8
+¿¿C G
+,
+¿¿G H
+$str
+¿¿I [
+)
+¿¿[ \
+;
+¿¿\ ]
+var
+¡¡ 
+
+postResult
+¡¡ 
+=
+¡¡ 
+await
+¡¡ "
+dbClient
+¡¡# +
+.
+¡¡+ ,
+PutAsync
+¡¡, 4
+(
+¡¡4 5
+_couchDbName
+¡¡5 A
++
+¡¡B C
+$str
+¡¡D G
++
+¡¡H I
+
+attachInfo
+¡¡J T
+.
+¡¡T U
+Id
+¡¡U W
++
+¡¡X Y
+$str
+¡¡Z a
++
+¡¡b c
+
+attachInfo
+¡¡d n
+.
+¡¡n o
+Rev
+¡¡o r
+,
+¡¡r s
+httpContent
+¡¡t 
+)¡¡ Ä
+;¡¡Ä Å
+var
+¬¬ 
+result
+¬¬ 
+=
+¬¬ 
+await
+¬¬ 
+
+postResult
+¬¬ )
+.
+¬¬) *
+Content
+¬¬* 1
+.
+¬¬1 2
+ReadAsStringAsync
+¬¬2 C
+(
+¬¬C D
+)
+¬¬D E
+;
+¬¬E F
+var
+√√ 
+	savedInfo
+√√ 
+=
+√√ 
+JsonConvert
+√√ '
+.
+√√' (
+DeserializeObject
+√√( 9
+<
+√√9 :
+CouchDBResponse
+√√: I
+>
+√√I J
+(
+√√J K
+result
+√√K Q
+)
+√√Q R
+;
+√√R S
+
+attachInfo
+ƒƒ 
+.
+ƒƒ 
+Id
+ƒƒ 
+=
+ƒƒ 
+	savedInfo
+ƒƒ %
+.
+ƒƒ% &
+Id
+ƒƒ& (
+;
+ƒƒ( )
+
+attachInfo
+≈≈ 
+.
+≈≈ 
+Rev
+≈≈ 
+=
+≈≈ 
+	savedInfo
+≈≈ &
+.
+≈≈& '
+Rev
+≈≈' *
+;
+≈≈* +
+var
+∆∆ 
+requestContent
+∆∆ 
+=
+∆∆  
+new
+∆∆! $
+ByteArrayContent
+∆∆% 5
+(
+∆∆5 6
+
+attachInfo
+∆∆6 @
+.
+∆∆@ A
+AttachmentData
+∆∆A O
+)
+∆∆O P
+;
+∆∆P Q
+requestContent
+«« 
+.
+«« 
+Headers
+«« "
+.
+««" #
+ContentType
+««# .
+=
+««/ 0
+new
+««1 4"
+MediaTypeHeaderValue
+««5 I
+(
+««I J
+$str
+««J _
+)
+««_ `
+;
+««` a
+var
+»» 
+	putResult
+»» 
+=
+»» 
+await
+»» !
+dbClient
+»»" *
+.
+»»* +
+PutAsync
+»»+ 3
+(
+»»3 4
+_couchDbName
+»»4 @
++
+»»A B
+$str
+»»C F
++
+»»G H
+	savedInfo
+»»I R
+.
+»»R S
+Id
+»»S U
++
+»»V W
+$str
+»»X [
++
+»»\ ]
+
+attachInfo
+»»^ h
+.
+»»h i
+FileName
+»»i q
++
+»»r s
+$str
+»»t {
++
+»»| }
+	savedInfo»»~ á
+.»»á à
+Rev»»à ã
+,»»ã å
+requestContent»»ç õ
+)»»õ ú
+;»»ú ù
+if
+…… 
+(
+…… 
+	putResult
+…… 
+.
+…… !
+IsSuccessStatusCode
+…… -
+)
+……- .
+{
+   
+return
+ÀÀ 
+new
+ÀÀ 
+{
+ÃÃ 
+	IsSuccess
+ÕÕ 
+=
+ÕÕ 
+true
+ÕÕ  $
+,
+ÕÕ$ %
+Result
+ŒŒ 
+=
+ŒŒ 
+await
+ŒŒ "
+	putResult
+ŒŒ# ,
+.
+ŒŒ, -
+Content
+ŒŒ- 4
+.
+ŒŒ4 5
+ReadAsStringAsync
+ŒŒ5 F
+(
+ŒŒF G
+)
+ŒŒG H
+}
+œœ 
+;
+œœ 
+}
+–– 
+return
+—— 
+new
+—— 
+{
+““ 
+	IsSuccess
+”” 
+=
+”” 
+false
+”” !
+,
+””! "
+Result
+‘‘ 
+=
+‘‘ 
+	putResult
+‘‘ "
+.
+‘‘" #
+ReasonPhrase
+‘‘# /
+}
+’’ 
+;
+’’ 
+}
+÷÷ 	
+public
+⁄⁄ 
+static
+⁄⁄ 
+string
+⁄⁄ 
+GetLocalIPAddress
+⁄⁄ .
+(
+⁄⁄. /
+)
+⁄⁄/ 0
+{
+€€ 	
+var
+‹‹ 
+host
+‹‹ 
+=
+‹‹ 
+Dns
+‹‹ 
+.
+‹‹ 
+GetHostEntry
+‹‹ '
+(
+‹‹' (
+Dns
+‹‹( +
+.
+‹‹+ ,
+GetHostName
+‹‹, 7
+(
+‹‹7 8
+)
+‹‹8 9
+)
+‹‹9 :
+;
+‹‹: ;
+foreach
+›› 
+(
+›› 
+var
+›› 
+ip
+›› 
+in
+›› 
+host
+›› #
+.
+››# $
+AddressList
+››$ /
+)
+››/ 0
+{
+ﬁﬁ 
+if
+ﬂﬂ 
+(
+ﬂﬂ 
+ip
+ﬂﬂ 
+.
+ﬂﬂ 
+AddressFamily
+ﬂﬂ $
+==
+ﬂﬂ% '
+AddressFamily
+ﬂﬂ( 5
+.
+ﬂﬂ5 6
+InterNetwork
+ﬂﬂ6 B
+)
+ﬂﬂB C
+{
+‡‡ 
+return
+·· 
+ip
+·· 
+.
+·· 
+ToString
+·· &
+(
+··& '
+)
+··' (
+;
+··( )
+}
+‚‚ 
+}
+„„ 
+throw
+‰‰ 
+new
+‰‰ 
+	Exception
+‰‰ 
+(
+‰‰  
+$str
+‰‰  Y
+)
+‰‰Y Z
+;
+‰‰Z [
+}
+ÂÂ 	
+public
+ÊÊ 
+static
+ÊÊ 
+string
+ÊÊ 
+GetHostName
+ÊÊ (
+(
+ÊÊ( )
+)
+ÊÊ) *
+{
+ÁÁ 	
+var
+ËË 
+host
+ËË 
+=
+ËË 
+Dns
+ËË 
+.
+ËË 
+GetHostEntry
+ËË '
+(
+ËË' (
+Dns
+ËË( +
+.
+ËË+ ,
+GetHostName
+ËË, 7
+(
+ËË7 8
+)
+ËË8 9
+)
+ËË9 :
+;
+ËË: ;
+return
+ÈÈ 
+host
+ÈÈ 
+.
+ÈÈ 
+HostName
+ÈÈ  
+;
+ÈÈ  !
+}
+ÍÍ 	
+public
+ÏÏ 
+static
+ÏÏ 
+	DataTable
+ÏÏ 
+ToDataTable
+ÏÏ  +
+<
+ÏÏ+ ,
+T
+ÏÏ, -
+>
+ÏÏ- .
+(
+ÏÏ. /
+List
+ÏÏ/ 3
+<
+ÏÏ3 4
+T
+ÏÏ4 5
+>
+ÏÏ5 6
+items
+ÏÏ7 <
+)
+ÏÏ< =
+{
+ÌÌ 	
+	DataTable
+ÓÓ 
+	dataTable
+ÓÓ 
+=
+ÓÓ  !
+new
+ÓÓ" %
+	DataTable
+ÓÓ& /
+(
+ÓÓ/ 0
+typeof
+ÓÓ0 6
+(
+ÓÓ6 7
+T
+ÓÓ7 8
+)
+ÓÓ8 9
+.
+ÓÓ9 :
+Name
+ÓÓ: >
+)
+ÓÓ> ?
+;
+ÓÓ? @
+PropertyInfo
+ 
+[
+ 
+]
+ 
+Props
+  
+=
+! "
+typeof
+# )
+(
+) *
+T
+* +
+)
++ ,
+.
+, -
+GetProperties
+- :
+(
+: ;
+BindingFlags
+; G
+.
+G H
+Public
+H N
+|
+O P
+BindingFlags
+Q ]
+.
+] ^
+Instance
+^ f
+)
+f g
+;
+g h
+foreach
+ÚÚ 
+(
+ÚÚ 
+PropertyInfo
+ÚÚ !
+prop
+ÚÚ" &
+in
+ÚÚ' )
+Props
+ÚÚ* /
+)
+ÚÚ/ 0
+{
+ÛÛ 
+var
+ÙÙ 
+type
+ÙÙ 
+=
+ÙÙ 
+(
+ÙÙ 
+prop
+ÙÙ  
+.
+ÙÙ  !
+PropertyType
+ÙÙ! -
+.
+ÙÙ- .
+IsGenericType
+ÙÙ. ;
+&&
+ÙÙ< >
+prop
+ÙÙ? C
+.
+ÙÙC D
+PropertyType
+ÙÙD P
+.
+ÙÙP Q&
+GetGenericTypeDefinition
+ÙÙQ i
+(
+ÙÙi j
+)
+ÙÙj k
+==
+ÙÙl n
+typeof
+ÙÙo u
+(
+ÙÙu v
+Nullable
+ÙÙv ~
+<
+ÙÙ~ 
+>ÙÙ Ä
+)ÙÙÄ Å
+?ÙÙÇ É
+NullableÙÙÑ å
+.ÙÙå ç!
+GetUnderlyingTypeÙÙç û
+(ÙÙû ü
+propÙÙü £
+.ÙÙ£ §
+PropertyTypeÙÙ§ ∞
+)ÙÙ∞ ±
+:ÙÙ≤ ≥
+propÙÙ¥ ∏
+.ÙÙ∏ π
+PropertyTypeÙÙπ ≈
+)ÙÙ≈ ∆
+;ÙÙ∆ «
+	dataTable
+ˆˆ 
+.
+ˆˆ 
+Columns
+ˆˆ !
+.
+ˆˆ! "
+Add
+ˆˆ" %
+(
+ˆˆ% &
+prop
+ˆˆ& *
+.
+ˆˆ* +
+Name
+ˆˆ+ /
+.
+ˆˆ/ 0
+ToLower
+ˆˆ0 7
+(
+ˆˆ7 8
+)
+ˆˆ8 9
+,
+ˆˆ9 :
+type
+ˆˆ; ?
+)
+ˆˆ? @
+;
+ˆˆ@ A
+}
+˜˜ 
+foreach
+¯¯ 
+(
+¯¯ 
+T
+¯¯ 
+item
+¯¯ 
+in
+¯¯ 
+items
+¯¯ $
+)
+¯¯$ %
+{
+˘˘ 
+var
+˙˙ 
+values
+˙˙ 
+=
+˙˙ 
+new
+˙˙  
+object
+˙˙! '
+[
+˙˙' (
+Props
+˙˙( -
+.
+˙˙- .
+Length
+˙˙. 4
+]
+˙˙4 5
+;
+˙˙5 6
+for
+˚˚ 
+(
+˚˚ 
+int
+˚˚ 
+i
+˚˚ 
+=
+˚˚ 
+$num
+˚˚ 
+;
+˚˚ 
+i
+˚˚  !
+<
+˚˚" #
+Props
+˚˚$ )
+.
+˚˚) *
+Length
+˚˚* 0
+;
+˚˚0 1
+i
+˚˚2 3
+++
+˚˚3 5
+)
+˚˚5 6
+{
+¸¸ 
+values
+˛˛ 
+[
+˛˛ 
+i
+˛˛ 
+]
+˛˛ 
+=
+˛˛ 
+Props
+˛˛  %
+[
+˛˛% &
+i
+˛˛& '
+]
+˛˛' (
+.
+˛˛( )
+GetValue
+˛˛) 1
+(
+˛˛1 2
+item
+˛˛2 6
+,
+˛˛6 7
+null
+˛˛8 <
+)
+˛˛< =
+;
+˛˛= >
+}
+ˇˇ 
+	dataTable
+ÄÄ 
+.
+ÄÄ 
+Rows
+ÄÄ 
+.
+ÄÄ 
+Add
+ÄÄ "
+(
+ÄÄ" #
+values
+ÄÄ# )
+)
+ÄÄ) *
+;
+ÄÄ* +
+}
+ÅÅ 
+return
+ÉÉ 
+	dataTable
+ÉÉ 
+;
+ÉÉ 
+}
+ÑÑ 	
+public
+ÜÜ 
+static
+ÜÜ 
+string
+ÜÜ 
+
+EncryptCRY
+ÜÜ '
+(
+ÜÜ' (
+string
+ÜÜ( .
+	clearText
+ÜÜ/ 8
+)
+ÜÜ8 9
+{
+áá 	
+string
+àà 
+EncryptionKey
+àà  
+=
+àà! "
+Convert
+àà# *
+.
+àà* +
+ToString
+àà+ 3
+(
+àà3 4
+$str
+àà4 @
+)
+àà@ A
+;
+ààA B
+byte
+ää 
+[
+ää 
+]
+ää 
+
+clearBytes
+ää 
+=
+ää 
+Encoding
+ää  (
+.
+ää( )
+Unicode
+ää) 0
+.
+ää0 1
+GetBytes
+ää1 9
+(
+ää9 :
+	clearText
+ää: C
+)
+ääC D
+;
+ääD E
+using
+ãã 
+(
+ãã 
+Aes
+ãã 
+	encryptor
+ãã  
+=
+ãã! "
+Aes
+ãã# &
+.
+ãã& '
+Create
+ãã' -
+(
+ãã- .
+)
+ãã. /
+)
+ãã/ 0
+{
+åå  
+Rfc2898DeriveBytes
+çç "
+pdb
+çç# &
+=
+çç' (
+new
+çç) , 
+Rfc2898DeriveBytes
+çç- ?
+(
+çç? @
+EncryptionKey
+çç@ M
+,
+ççM N
+new
+ççO R
+byte
+ççS W
+[
+ççW X
+]
+ççX Y
+{
+ççZ [
+$num
+éé 
+,
+éé 
+$num
+éé 
+,
+éé 
+$num
+éé 
+,
+éé 
+$num
+éé #
+,
+éé# $
+$num
+éé$ (
+,
+éé( )
+$num
+éé) -
+,
+éé- .
+$num
+éé. 2
+,
+éé2 3
+$num
+éé3 7
+,
+éé7 8
+$num
+éé8 <
+,
+éé< =
+$num
+éé= A
+,
+ééA B
+$num
+ééB F
+,
+ééF G
+$num
+ééG K
+,
+ééK L
+$num
+ééL P
+}
+ééP Q
+)
+ééQ R
+;
+ééR S
+	encryptor
+êê 
+.
+êê 
+Key
+êê 
+=
+êê 
+pdb
+êê  #
+.
+êê# $
+GetBytes
+êê$ ,
+(
+êê, -
+$num
+êê- /
+)
+êê/ 0
+;
+êê0 1
+	encryptor
+ëë 
+.
+ëë 
+IV
+ëë 
+=
+ëë 
+pdb
+ëë "
+.
+ëë" #
+GetBytes
+ëë# +
+(
+ëë+ ,
+$num
+ëë, .
+)
+ëë. /
+;
+ëë/ 0
+using
+íí 
+(
+íí 
+MemoryStream
+íí #
+ms
+íí$ &
+=
+íí' (
+new
+íí) ,
+MemoryStream
+íí- 9
+(
+íí9 :
+)
+íí: ;
+)
+íí; <
+{
+ìì 
+using
+îî 
+(
+îî 
+CryptoStream
+îî '
+cs
+îî( *
+=
+îî+ ,
+new
+îî- 0
+CryptoStream
+îî1 =
+(
+îî= >
+ms
+îî> @
+,
+îî@ A
+	encryptor
+îîB K
+.
+îîK L
+CreateEncryptor
+îîL [
+(
+îî[ \
+)
+îî\ ]
+,
+îî] ^
+CryptoStreamMode
+îî_ o
+.
+îîo p
+Write
+îîp u
+)
+îîu v
+)
+îîv w
+{
+ïï 
+cs
+ññ 
+.
+ññ 
+Write
+ññ  
+(
+ññ  !
+
+clearBytes
+ññ! +
+,
+ññ+ ,
+$num
+ññ- .
+,
+ññ. /
+
+clearBytes
+ññ0 :
+.
+ññ: ;
+Length
+ññ; A
+)
+ññA B
+;
+ññB C
+cs
+óó 
+.
+óó 
+Close
+óó  
+(
+óó  !
+)
+óó! "
+;
+óó" #
+}
+òò 
+	clearText
+ôô 
+=
+ôô 
+Convert
+ôô  '
+.
+ôô' (
+ToBase64String
+ôô( 6
+(
+ôô6 7
+ms
+ôô7 9
+.
+ôô9 :
+ToArray
+ôô: A
+(
+ôôA B
+)
+ôôB C
+)
+ôôC D
+.
+ôôD E
+Replace
+ôôE L
+(
+ôôL M
+$char
+ôôM P
+,
+ôôP Q
+$char
+ôôR U
+)
+ôôU V
+;
+ôôV W
+}
+õõ 
+}
+úú 
+return
+ùù 
+	clearText
+ùù 
+;
+ùù 
+}
+ûû 	
+public
+üü 
+static
+üü 
+string
+üü 
+
+DecryptCRY
+üü '
+(
+üü' (
+string
+üü( .
+
+cipherText
+üü/ 9
+)
+üü9 :
+{
+†† 	
+string
+°° 
+EncryptionKey
+°°  
+=
+°°! "
+Convert
+°°# *
+.
+°°* +
+ToString
+°°+ 3
+(
+°°3 4
+$str
+°°4 @
+)
+°°@ A
+;
+°°A B
+if
+¢¢ 
+(
+¢¢ 
+
+cipherText
+¢¢ 
+!=
+¢¢ 
+null
+¢¢ "
+)
+¢¢" #
+
+cipherText
+¢¢$ .
+=
+¢¢/ 0
+
+cipherText
+¢¢1 ;
+.
+¢¢; <
+Replace
+¢¢< C
+(
+¢¢C D
+$str
+¢¢D G
+,
+¢¢G H
+$str
+¢¢I L
+)
+¢¢L M
+.
+¢¢M N
+Replace
+¢¢N U
+(
+¢¢U V
+$char
+¢¢V Y
+,
+¢¢Y Z
+$char
+¢¢[ ^
+)
+¢¢^ _
+;
+¢¢_ `
+byte
+££ 
+[
+££ 
+]
+££ 
+cipherBytes
+££ 
+=
+££  
+Convert
+££! (
+.
+££( )
+FromBase64String
+££) 9
+(
+££9 :
+
+cipherText
+££: D
+)
+££D E
+;
+££E F
+using
+§§ 
+(
+§§ 
+Aes
+§§ 
+	encryptor
+§§  
+=
+§§! "
+Aes
+§§# &
+.
+§§& '
+Create
+§§' -
+(
+§§- .
+)
+§§. /
+)
+§§/ 0
+{
+••  
+Rfc2898DeriveBytes
+¶¶ "
+pdb
+¶¶# &
+=
+¶¶' (
+new
+¶¶) , 
+Rfc2898DeriveBytes
+¶¶- ?
+(
+¶¶? @
+EncryptionKey
+¶¶@ M
+,
+¶¶M N
+new
+¶¶O R
+byte
+¶¶S W
+[
+¶¶W X
+]
+¶¶X Y
+{
+¶¶Z [
+$num
+ßß 
+,
+ßß 
+$num
+ßß 
+,
+ßß 
+$num
+ßß 
+,
+ßß 
+$num
+ßß #
+,
+ßß# $
+$num
+ßß$ (
+,
+ßß( )
+$num
+ßß) -
+,
+ßß- .
+$num
+ßß. 2
+,
+ßß2 3
+$num
+ßß3 7
+,
+ßß7 8
+$num
+ßß8 <
+,
+ßß< =
+$num
+ßß= A
+,
+ßßA B
+$num
+ßßB F
+,
+ßßF G
+$num
+ßßG K
+,
+ßßK L
+$num
+ßßL P
+}
+ßßP Q
+)
+ßßQ R
+;
+ßßR S
+	encryptor
+®® 
+.
+®® 
+Key
+®® 
+=
+®® 
+pdb
+®®  #
+.
+®®# $
+GetBytes
+®®$ ,
+(
+®®, -
+$num
+®®- /
+)
+®®/ 0
+;
+®®0 1
+	encryptor
+©© 
+.
+©© 
+IV
+©© 
+=
+©© 
+pdb
+©© "
+.
+©©" #
+GetBytes
+©©# +
+(
+©©+ ,
+$num
+©©, .
+)
+©©. /
+;
+©©/ 0
+using
+™™ 
+(
+™™ 
+MemoryStream
+™™ #
+ms
+™™$ &
+=
+™™' (
+new
+™™) ,
+MemoryStream
+™™- 9
+(
+™™9 :
+)
+™™: ;
+)
+™™; <
+{
+´´ 
+using
+¨¨ 
+(
+¨¨ 
+CryptoStream
+¨¨ '
+cs
+¨¨( *
+=
+¨¨+ ,
+new
+¨¨- 0
+CryptoStream
+¨¨1 =
+(
+¨¨= >
+ms
+¨¨> @
+,
+¨¨@ A
+	encryptor
+¨¨B K
+.
+¨¨K L
+CreateDecryptor
+¨¨L [
+(
+¨¨[ \
+)
+¨¨\ ]
+,
+¨¨] ^
+CryptoStreamMode
+¨¨_ o
+.
+¨¨o p
+Write
+¨¨p u
+)
+¨¨u v
+)
+¨¨v w
+{
+≠≠ 
+cs
+ÆÆ 
+.
+ÆÆ 
+Write
+ÆÆ  
+(
+ÆÆ  !
+cipherBytes
+ÆÆ! ,
+,
+ÆÆ, -
+$num
+ÆÆ. /
+,
+ÆÆ/ 0
+cipherBytes
+ÆÆ1 <
+.
+ÆÆ< =
+Length
+ÆÆ= C
+)
+ÆÆC D
+;
+ÆÆD E
+cs
+ØØ 
+.
+ØØ 
+Close
+ØØ  
+(
+ØØ  !
+)
+ØØ! "
+;
+ØØ" #
+}
+∞∞ 
+
+cipherText
+±± 
+=
+±±  
+Encoding
+±±! )
+.
+±±) *
+Unicode
+±±* 1
+.
+±±1 2
+	GetString
+±±2 ;
+(
+±±; <
+ms
+±±< >
+.
+±±> ?
+ToArray
+±±? F
+(
+±±F G
+)
+±±G H
+)
+±±H I
+;
+±±I J
+}
+≤≤ 
+}
+≥≥ 
+return
+¥¥ 
+
+cipherText
+¥¥ 
+;
+¥¥ 
+}
+µµ 	
+public
+∑∑ 
+static
+∑∑ 
+string
+∑∑ 
+Encrypt
+∑∑ $
+(
+∑∑$ %
+string
+∑∑% +
+	inputText
+∑∑, 5
+)
+∑∑5 6
+{
+∏∏ 	
+string
+ππ 
+encryptionkey
+ππ  
+=
+ππ! "
+Convert
+ππ# *
+.
+ππ* +
+ToString
+ππ+ 3
+(
+ππ3 4
+$str
+ππ4 @
+)
+ππ@ A
+;
+ππA B
+byte
+∫∫ 
+[
+∫∫ 
+]
+∫∫ 
+keybytes
+∫∫ 
+=
+∫∫ 
+Encoding
+∫∫ &
+.
+∫∫& '
+ASCII
+∫∫' ,
+.
+∫∫, -
+GetBytes
+∫∫- 5
+(
+∫∫5 6
+encryptionkey
+∫∫6 C
+.
+∫∫C D
+Length
+∫∫D J
+.
+∫∫J K
+ToString
+∫∫K S
+(
+∫∫S T
+)
+∫∫T U
+)
+∫∫U V
+;
+∫∫V W
+RijndaelManaged
+ªª 
+rijndaelCipher
+ªª *
+=
+ªª+ ,
+new
+ªª- 0
+RijndaelManaged
+ªª1 @
+(
+ªª@ A
+)
+ªªA B
+;
+ªªB C
+byte
+ºº 
+[
+ºº 
+]
+ºº 
+	plainText
+ºº 
+=
+ºº 
+Encoding
+ºº '
+.
+ºº' (
+Unicode
+ºº( /
+.
+ºº/ 0
+GetBytes
+ºº0 8
+(
+ºº8 9
+	inputText
+ºº9 B
+)
+ººB C
+;
+ººC D!
+PasswordDeriveBytes
+ΩΩ 
+pwdbytes
+ΩΩ  (
+=
+ΩΩ) *
+new
+ΩΩ+ .!
+PasswordDeriveBytes
+ΩΩ/ B
+(
+ΩΩB C
+encryptionkey
+ΩΩC P
+,
+ΩΩP Q
+keybytes
+ΩΩR Z
+)
+ΩΩZ [
+;
+ΩΩ[ \
+using
+ææ 
+(
+ææ 
+ICryptoTransform
+ææ #
+encryptrans
+ææ$ /
+=
+ææ0 1
+rijndaelCipher
+ææ2 @
+.
+ææ@ A
+CreateEncryptor
+ææA P
+(
+ææP Q
+pwdbytes
+ææQ Y
+.
+ææY Z
+GetBytes
+ææZ b
+(
+ææb c
+$num
+ææc e
+)
+ææe f
+,
+ææf g
+pwdbytes
+ææh p
+.
+ææp q
+GetBytes
+ææq y
+(
+ææy z
+$num
+ææz |
+)
+ææ| }
+)
+ææ} ~
+)
+ææ~ 
+{
+øø 
+using
+¿¿ 
+(
+¿¿ 
+MemoryStream
+¿¿ #
+mstrm
+¿¿$ )
+=
+¿¿* +
+new
+¿¿, /
+MemoryStream
+¿¿0 <
+(
+¿¿< =
+)
+¿¿= >
+)
+¿¿> ?
+{
+¡¡ 
+using
+¬¬ 
+(
+¬¬ 
+CryptoStream
+¬¬ '
+cryptstm
+¬¬( 0
+=
+¬¬1 2
+new
+¬¬3 6
+CryptoStream
+¬¬7 C
+(
+¬¬C D
+mstrm
+¬¬D I
+,
+¬¬I J
+encryptrans
+¬¬K V
+,
+¬¬V W
+CryptoStreamMode
+¬¬X h
+.
+¬¬h i
+Write
+¬¬i n
+)
+¬¬n o
+)
+¬¬o p
+{
+√√ 
+cryptstm
+ƒƒ  
+.
+ƒƒ  !
+Write
+ƒƒ! &
+(
+ƒƒ& '
+	plainText
+ƒƒ' 0
+,
+ƒƒ0 1
+$num
+ƒƒ2 3
+,
+ƒƒ3 4
+	plainText
+ƒƒ5 >
+.
+ƒƒ> ?
+Length
+ƒƒ? E
+)
+ƒƒE F
+;
+ƒƒF G
+cryptstm
+≈≈  
+.
+≈≈  !
+Close
+≈≈! &
+(
+≈≈& '
+)
+≈≈' (
+;
+≈≈( )
+return
+∆∆ 
+Convert
+∆∆ &
+.
+∆∆& '
+ToBase64String
+∆∆' 5
+(
+∆∆5 6
+mstrm
+∆∆6 ;
+.
+∆∆; <
+ToArray
+∆∆< C
+(
+∆∆C D
+)
+∆∆D E
+)
+∆∆E F
+;
+∆∆F G
+}
+«« 
+}
+»» 
+}
+…… 
+}
+   	
+public
+ÀÀ 
+static
+ÀÀ 
+string
+ÀÀ 
+Decrypt
+ÀÀ $
+(
+ÀÀ$ %
+string
+ÀÀ% +
+encryptText
+ÀÀ, 7
+)
+ÀÀ7 8
+{
+ÃÃ 	
+string
+ÕÕ 
+encryptionkey
+ÕÕ  
+=
+ÕÕ! "
+Convert
+ÕÕ# *
+.
+ÕÕ* +
+ToString
+ÕÕ+ 3
+(
+ÕÕ3 4
+$str
+ÕÕ4 @
+)
+ÕÕ@ A
+;
+ÕÕA B
+byte
+ŒŒ 
+[
+ŒŒ 
+]
+ŒŒ 
+keybytes
+ŒŒ 
+=
+ŒŒ 
+Encoding
+ŒŒ &
+.
+ŒŒ& '
+ASCII
+ŒŒ' ,
+.
+ŒŒ, -
+GetBytes
+ŒŒ- 5
+(
+ŒŒ5 6
+encryptionkey
+ŒŒ6 C
+.
+ŒŒC D
+Length
+ŒŒD J
+.
+ŒŒJ K
+ToString
+ŒŒK S
+(
+ŒŒS T
+)
+ŒŒT U
+)
+ŒŒU V
+;
+ŒŒV W
+RijndaelManaged
+œœ 
+rijndaelCipher
+œœ *
+=
+œœ+ ,
+new
+œœ- 0
+RijndaelManaged
+œœ1 @
+(
+œœ@ A
+)
+œœA B
+;
+œœB C
+byte
+–– 
+[
+–– 
+]
+–– 
+encryptedData
+––  
+=
+––! "
+Convert
+––# *
+.
+––* +
+FromBase64String
+––+ ;
+(
+––; <
+encryptText
+––< G
+.
+––G H
+Replace
+––H O
+(
+––O P
+$str
+––P S
+,
+––S T
+$str
+––U X
+)
+––X Y
+)
+––Y Z
+;
+––Z [!
+PasswordDeriveBytes
+—— 
+pwdbytes
+——  (
+=
+——) *
+new
+——+ .!
+PasswordDeriveBytes
+——/ B
+(
+——B C
+encryptionkey
+——C P
+,
+——P Q
+keybytes
+——R Z
+)
+——Z [
+;
+——[ \
+using
+““ 
+(
+““ 
+ICryptoTransform
+““ #
+decryptrans
+““$ /
+=
+““0 1
+rijndaelCipher
+““2 @
+.
+““@ A
+CreateDecryptor
+““A P
+(
+““P Q
+pwdbytes
+““Q Y
+.
+““Y Z
+GetBytes
+““Z b
+(
+““b c
+$num
+““c e
+)
+““e f
+,
+““f g
+pwdbytes
+““h p
+.
+““p q
+GetBytes
+““q y
+(
+““y z
+$num
+““z |
+)
+““| }
+)
+““} ~
+)
+““~ 
+{
+”” 
+using
+‘‘ 
+(
+‘‘ 
+MemoryStream
+‘‘ #
+mstrm
+‘‘$ )
+=
+‘‘* +
+new
+‘‘, /
+MemoryStream
+‘‘0 <
+(
+‘‘< =
+encryptedData
+‘‘= J
+)
+‘‘J K
+)
+‘‘K L
+{
+’’ 
+using
+÷÷ 
+(
+÷÷ 
+CryptoStream
+÷÷ '
+cryptstm
+÷÷( 0
+=
+÷÷1 2
+new
+÷÷3 6
+CryptoStream
+÷÷7 C
+(
+÷÷C D
+mstrm
+÷÷D I
+,
+÷÷I J
+decryptrans
+÷÷K V
+,
+÷÷V W
+CryptoStreamMode
+÷÷X h
+.
+÷÷h i
+Read
+÷÷i m
+)
+÷÷m n
+)
+÷÷n o
+{
+◊◊ 
+byte
+ÿÿ 
+[
+ÿÿ 
+]
+ÿÿ 
+	plainText
+ÿÿ (
+=
+ÿÿ) *
+new
+ÿÿ+ .
+byte
+ÿÿ/ 3
+[
+ÿÿ3 4
+encryptedData
+ÿÿ4 A
+.
+ÿÿA B
+Length
+ÿÿB H
+]
+ÿÿH I
+;
+ÿÿI J
+int
+ŸŸ 
+decryptedCount
+ŸŸ *
+=
+ŸŸ+ ,
+cryptstm
+ŸŸ- 5
+.
+ŸŸ5 6
+Read
+ŸŸ6 :
+(
+ŸŸ: ;
+	plainText
+ŸŸ; D
+,
+ŸŸD E
+$num
+ŸŸF G
+,
+ŸŸG H
+	plainText
+ŸŸI R
+.
+ŸŸR S
+Length
+ŸŸS Y
+)
+ŸŸY Z
+;
+ŸŸZ [
+return
+⁄⁄ 
+Encoding
+⁄⁄ '
+.
+⁄⁄' (
+Unicode
+⁄⁄( /
+.
+⁄⁄/ 0
+	GetString
+⁄⁄0 9
+(
+⁄⁄9 :
+	plainText
+⁄⁄: C
+,
+⁄⁄C D
+$num
+⁄⁄E F
+,
+⁄⁄F G
+decryptedCount
+⁄⁄H V
+)
+⁄⁄V W
+;
+⁄⁄W X
+}
+€€ 
+}
+›› 
+}
+ﬁﬁ 
+}
+ﬂﬂ 	
+public
+·· 
+static
+·· 
+string
+·· 
+
+MaskString
+·· '
+(
+··' (
+string
+··( .
+	plainText
+··/ 8
+)
+··8 9
+{
+‚‚ 	
+if
+„„ 
+(
+„„ 
+	plainText
+„„ 
+!=
+„„ 
+null
+„„ !
+&&
+„„" $
+	plainText
+„„% .
+!=
+„„/ 1
+$str
+„„2 4
+)
+„„4 5
+{
+‰‰ 
+var
+ËË 
+
+lastDigits
+ËË 
+=
+ËË  
+	plainText
+ËË! *
+.
+ËË* +
+	Substring
+ËË+ 4
+(
+ËË4 5
+	plainText
+ËË5 >
+.
+ËË> ?
+Length
+ËË? E
+-
+ËËF G
+$num
+ËËH I
+,
+ËËI J
+$num
+ËËK L
+)
+ËËL M
+;
+ËËM N
+var
+ÍÍ 
+requiredMask
+ÍÍ  
+=
+ÍÍ! "
+new
+ÍÍ# &
+String
+ÍÍ' -
+(
+ÍÍ- .
+$char
+ÍÍ. 1
+,
+ÍÍ1 2
+	plainText
+ÍÍ3 <
+.
+ÍÍ< =
+Length
+ÍÍ= C
+-
+ÍÍD E
+
+lastDigits
+ÍÍF P
+.
+ÍÍP Q
+Length
+ÍÍQ W
+)
+ÍÍW X
+;
+ÍÍX Y
+var
+ÏÏ 
+maskedString
+ÏÏ  
+=
+ÏÏ! "
+string
+ÏÏ# )
+.
+ÏÏ) *
+Concat
+ÏÏ* 0
+(
+ÏÏ0 1
+requiredMask
+ÏÏ1 =
+,
+ÏÏ= >
+
+lastDigits
+ÏÏ? I
+)
+ÏÏI J
+;
+ÏÏJ K
+var
+ÌÌ (
+maskedCardNumberWithSpaces
+ÌÌ .
+=
+ÌÌ/ 0
+Regex
+ÌÌ1 6
+.
+ÌÌ6 7
+Replace
+ÌÌ7 >
+(
+ÌÌ> ?
+maskedString
+ÌÌ? K
+,
+ÌÌK L
+$str
+ÌÌM S
+,
+ÌÌS T
+$str
+ÌÌU Z
+)
+ÌÌZ [
+;
+ÌÌ[ \
+return
+ÓÓ (
+maskedCardNumberWithSpaces
+ÓÓ 1
+;
+ÓÓ1 2
+}
+ÔÔ 
+else
+ 
+{
+ÒÒ 
+return
+ÚÚ 
+$str
+ÚÚ 
+;
+ÚÚ 
+}
+ÛÛ 
+}
+ÙÙ 	
+public
+˜˜ 
+static
+˜˜ 
+byte
+˜˜ 
+[
+˜˜ 
+]
+˜˜ !
+GenerateReportExcel
+˜˜ 0
+(
+˜˜0 1
+DataSet
+˜˜1 8
+ds
+˜˜9 ;
+,
+˜˜; <
+string
+˜˜= C
+RootPath
+˜˜D L
+,
+˜˜L M
+string
+˜˜N T
+RDLCFileName
+˜˜U a
+,
+˜˜a b
+string
+˜˜c i
+
+ReportName
+˜˜j t
+,
+˜˜t u
+string
+˜˜v |
+FileType˜˜} Ö
+,˜˜Ö Ü
+bool˜˜á ã
+	IsRunTime˜˜å ï
+,˜˜ï ñ
+string˜˜ó ù
+
+reportPara˜˜û ®
+=˜˜© ™
+$str˜˜´ ≠
+)˜˜≠ Æ
+{
+¯¯ 	
+try
+ÉÉ 
+{
+ÑÑ 
+string
+ÜÜ 
+path
+ÜÜ 
+=
+ÜÜ 
+$str
+ÜÜ  
+;
+ÜÜ  !
+string
+áá 
+
+reportName
+áá !
+=
+áá" #
+$str
+áá$ 0
+;
+áá0 1
+string
+ää 
+
+reportPath
+ää !
+=
+ää" #
+string
+ää$ *
+.
+ää* +
+Empty
+ää+ 0
+;
+ää0 1
+if
+ãã 
+(
+ãã 
+OperatingSystem
+ãã #
+.
+ãã# $
+	IsWindows
+ãã$ -
+(
+ãã- .
+)
+ãã. /
+)
+ãã/ 0
+
+reportPath
+åå 
+=
+åå  
+RootPath
+åå! )
++
+åå* +
+$str
+åå, 9
++
+åå: ;
+RDLCFileName
+åå< H
+;
+ååH I
+else
+çç 
+if
+çç 
+(
+çç 
+OperatingSystem
+çç (
+.
+çç( )
+IsLinux
+çç) 0
+(
+çç0 1
+)
+çç1 2
+)
+çç2 3
+
+reportPath
+éé 
+=
+éé  
+RootPath
+éé! )
++
+éé* +
+$str
+éé, 9
++
+éé: ;
+RDLCFileName
+éé< H
+;
+ééH I
+else
+èè 
+{
+êê 
+
+reportPath
+ëë 
+=
+ëë  
+$str
+ëë! #
+;
+ëë# $
+}
+íí 
+Warning
+îî 
+[
+îî 
+]
+îî 
+warnings
+îî "
+;
+îî" #
+string
+ïï 
+[
+ïï 
+]
+ïï 
+	streamIds
+ïï "
+;
+ïï" #
+string
+ññ 
+mimeType
+ññ 
+=
+ññ  !
+string
+ññ" (
+.
+ññ( )
+Empty
+ññ) .
+;
+ññ. /
+string
+óó 
+encoding
+óó 
+=
+óó  !
+string
+óó" (
+.
+óó( )
+Empty
+óó) .
+;
+óó. /
+string
+òò 
+
+extension1
+òò !
+=
+òò" #
+string
+òò$ *
+.
+òò* +
+Empty
+òò+ 0
+;
+òò0 1
+Stream
+õõ 
+reportDefinition
+õõ '
+;
+õõ' (
+using
+úú 
+var
+úú 
+fs
+úú 
+=
+úú 
+new
+úú "
+
+FileStream
+úú# -
+(
+úú- .
+
+reportPath
+úú. 8
+,
+úú8 9
+FileMode
+úú: B
+.
+úúB C
+Open
+úúC G
+)
+úúG H
+;
+úúH I
+reportDefinition
+ùù  
+=
+ùù! "
+fs
+ùù# %
+;
+ùù% &
+LocalReport
+ûû 
+report
+ûû "
+=
+ûû# $
+new
+ûû% (
+LocalReport
+ûû) 4
+(
+ûû4 5
+)
+ûû5 6
+;
+ûû6 7
+report
+üü 
+.
+üü "
+EnableExternalImages
+üü +
+=
+üü, -
+true
+üü. 2
+;
+üü2 3
+report
+†† 
+.
+†† "
+LoadReportDefinition
+†† +
+(
+††+ ,
+reportDefinition
+††, <
+)
+††< =
+;
+††= >
+if
+¢¢ 
+(
+¢¢ 
+ds
+¢¢ 
+.
+¢¢ 
+Tables
+¢¢ 
+.
+¢¢ 
+Count
+¢¢ #
+>
+¢¢$ %
+$num
+¢¢& '
+)
+¢¢' (
+{
+££ 
+if
+§§ 
+(
+§§ 
+!
+§§ 
+string
+§§ 
+.
+§§  
+IsNullOrEmpty
+§§  -
+(
+§§- .
+
+reportPara
+§§. 8
+)
+§§8 9
+)
+§§9 :
+{
+•• 
+ReportParameter
+¶¶ '
+[
+¶¶' (
+]
+¶¶( )
+
+parameters
+¶¶* 4
+=
+¶¶5 6
+new
+¶¶7 :
+ReportParameter
+¶¶; J
+[
+¶¶J K
+$num
+¶¶K L
+]
+¶¶L M
+;
+¶¶M N
+
+parameters
+®® "
+[
+®®" #
+$num
+®®# $
+]
+®®$ %
+=
+®®& '
+new
+®®( +
+ReportParameter
+®®, ;
+(
+®®; <
+$str
+®®< I
+,
+®®I J
+
+reportPara
+®®K U
+)
+®®U V
+;
+®®V W
+report
+©© 
+.
+©© 
+SetParameters
+©© ,
+(
+©©, -
+
+parameters
+©©- 7
+)
+©©7 8
+;
+©©8 9
+}
+™™ 
+for
+´´ 
+(
+´´ 
+int
+´´ 
+i
+´´ 
+=
+´´  
+$num
+´´! "
+;
+´´" #
+i
+´´$ %
+<
+´´& '
+ds
+´´( *
+.
+´´* +
+Tables
+´´+ 1
+.
+´´1 2
+Count
+´´2 7
+;
+´´7 8
+i
+´´9 :
+++
+´´: <
+)
+´´< =
+{
+¨¨ 
+if
+≠≠ 
+(
+≠≠ 
+i
+≠≠ 
+==
+≠≠  
+$num
+≠≠! "
+)
+≠≠" #
+{
+ÆÆ 
+ReportDataSource
+ØØ ,
+
+datasource
+ØØ- 7
+=
+ØØ8 9
+new
+ØØ: =
+ReportDataSource
+ØØ> N
+(
+ØØN O
+$str
+ØØO X
+,
+ØØX Y
+ds
+ØØZ \
+.
+ØØ\ ]
+Tables
+ØØ] c
+[
+ØØc d
+$num
+ØØd e
+]
+ØØe f
+)
+ØØf g
+;
+ØØg h
+report
+∞∞ "
+.
+∞∞" #
+DataSources
+∞∞# .
+.
+∞∞. /
+Add
+∞∞/ 2
+(
+∞∞2 3
+
+datasource
+∞∞3 =
+)
+∞∞= >
+;
+∞∞> ?
+}
+±± 
+else
+≤≤ 
+{
+≥≥ 
+ReportDataSource
+¥¥ ,
+
+datasource
+¥¥- 7
+=
+¥¥8 9
+new
+¥¥: =
+ReportDataSource
+¥¥> N
+(
+¥¥N O
+$str
+¥¥O X
++
+¥¥Y Z
+i
+¥¥[ \
++
+¥¥] ^
+$str
+¥¥_ a
+,
+¥¥a b
+ds
+¥¥c e
+.
+¥¥e f
+Tables
+¥¥f l
+[
+¥¥l m
+i
+¥¥m n
+]
+¥¥n o
+)
+¥¥o p
+;
+¥¥p q
+report
+µµ "
+.
+µµ" #
+DataSources
+µµ# .
+.
+µµ. /
+Add
+µµ/ 2
+(
+µµ2 3
+
+datasource
+µµ3 =
+)
+µµ= >
+;
+µµ> ?
+}
+∂∂ 
+}
+∑∑ 
+}
+∏∏ 
+byte
+¿¿ 
+[
+¿¿ 
+]
+¿¿ 
+bytes
+¿¿ 
+=
+¿¿ 
+report
+¿¿ %
+.
+¿¿% &
+Render
+¿¿& ,
+(
+¿¿, -
+FileType
+¿¿- 5
+,
+¿¿5 6
+null
+¿¿7 ;
+,
+¿¿; <
+out
+¿¿= @
+mimeType
+¿¿A I
+,
+¿¿I J
+out
+¿¿K N
+encoding
+¿¿O W
+,
+¿¿W X
+out
+¿¿Y \
+
+extension1
+¿¿] g
+,
+¿¿g h
+out
+¿¿i l
+	streamIds
+¿¿m v
+,
+¿¿v w
+out
+¿¿x {
+warnings¿¿| Ñ
+)¿¿Ñ Ö
+;¿¿Ö Ü
+fs
+≈≈ 
+.
+≈≈ 
+Dispose
+≈≈ 
+(
+≈≈ 
+)
+≈≈ 
+;
+≈≈ 
+if
+«« 
+(
+«« 
+	IsRunTime
+«« 
+==
+««  
+false
+««! &
+)
+««& '
+{
+»» 
+string
+   
+filename
+   #
+=
+  $ %
+string
+  & ,
+.
+  , -
+Empty
+  - 2
+;
+  2 3
+if
+ÀÀ 
+(
+ÀÀ 
+OperatingSystem
+ÀÀ '
+.
+ÀÀ' (
+	IsWindows
+ÀÀ( 1
+(
+ÀÀ1 2
+)
+ÀÀ2 3
+)
+ÀÀ3 4
+filename
+ÃÃ  
+=
+ÃÃ! "
+Path
+ÃÃ# '
+.
+ÃÃ' (
+Combine
+ÃÃ( /
+(
+ÃÃ/ 0
+RootPath
+ÃÃ0 8
++
+ÃÃ9 :
+$str
+ÃÃ; H
+,
+ÃÃH I
+RDLCFileName
+ÃÃJ V
+)
+ÃÃV W
+;
+ÃÃW X
+else
+ÕÕ 
+if
+ÕÕ 
+(
+ÕÕ 
+OperatingSystem
+ÕÕ ,
+.
+ÕÕ, -
+IsLinux
+ÕÕ- 4
+(
+ÕÕ4 5
+)
+ÕÕ5 6
+)
+ÕÕ6 7
+filename
+ŒŒ  
+=
+ŒŒ! "
+Path
+ŒŒ# '
+.
+ŒŒ' (
+Combine
+ŒŒ( /
+(
+ŒŒ/ 0
+RootPath
+ŒŒ0 8
++
+ŒŒ9 :
+$str
+ŒŒ; H
+,
+ŒŒH I
+RDLCFileName
+ŒŒJ V
+)
+ŒŒV W
+;
+ŒŒW X
+else
+œœ 
+{
+–– 
+filename
+——  
+=
+——! "
+$str
+——# %
+;
+——% &
+}
+““ 
+using
+‘‘ 
+(
+‘‘ 
+var
+‘‘ 
+fstream
+‘‘ &
+=
+‘‘' (
+new
+‘‘) ,
+
+FileStream
+‘‘- 7
+(
+‘‘7 8
+filename
+‘‘8 @
+,
+‘‘@ A
+FileMode
+‘‘B J
+.
+‘‘J K
+Create
+‘‘K Q
+)
+‘‘Q R
+)
+‘‘R S
+{
+’’ 
+fstream
+÷÷ 
+.
+÷÷  
+Write
+÷÷  %
+(
+÷÷% &
+bytes
+÷÷& +
+,
+÷÷+ ,
+$num
+÷÷- .
+,
+÷÷. /
+bytes
+÷÷0 5
+.
+÷÷5 6
+Length
+÷÷6 <
+)
+÷÷< =
+;
+÷÷= >
+fstream
+◊◊ 
+.
+◊◊  
+Close
+◊◊  %
+(
+◊◊% &
+)
+◊◊& '
+;
+◊◊' (
+}
+ÿÿ 
+return
+ŸŸ 
+bytes
+ŸŸ  
+;
+ŸŸ  !
+}
+⁄⁄ 
+else
+€€ 
+{
+‹‹ 
+return
+›› 
+bytes
+››  
+;
+››  !
+}
+ﬁﬁ 
+}
+ﬂﬂ 
+catch
+‡‡ 
+(
+‡‡ 
+	Exception
+‡‡ 
+ex
+‡‡ 
+)
+‡‡  
+{
+·· 
+throw
+ÊÊ 
+ex
+ÊÊ 
+;
+ÊÊ 
+}
+ËË 
+finally
+ÈÈ 
+{
+ÈÈ 
+}
+ÈÈ 
+}
+ÍÍ 	
+public
+ÏÏ 
+static
+ÏÏ 
+byte
+ÏÏ 
+[
+ÏÏ 
+]
+ÏÏ %
+TestGenerateReportExcel
+ÏÏ 4
+(
+ÏÏ4 5
+DataSet
+ÏÏ5 <
+ds
+ÏÏ= ?
+,
+ÏÏ? @
+string
+ÏÏA G
+RootPath
+ÏÏH P
+,
+ÏÏP Q
+string
+ÏÏR X
+RDLCFileName
+ÏÏY e
+,
+ÏÏe f
+string
+ÏÏg m
+
+ReportName
+ÏÏn x
+,
+ÏÏx y
+stringÏÏz Ä
+FileTypeÏÏÅ â
+,ÏÏâ ä
+boolÏÏã è
+	IsRunTimeÏÏê ô
+,ÏÏô ö
+stringÏÏõ °
+
+reportParaÏÏ¢ ¨
+=ÏÏ≠ Æ
+$strÏÏØ ±
+)ÏÏ± ≤
+{
+ÌÌ 	
+try
+ÓÓ 
+{
+ÔÔ 
+string
+ÒÒ 
+path
+ÒÒ 
+=
+ÒÒ 
+$str
+ÒÒ  
+;
+ÒÒ  !
+string
+ÚÚ 
+
+reportName
+ÚÚ !
+=
+ÚÚ" #
+$str
+ÚÚ$ 0
+;
+ÚÚ0 1
+string
+ıı 
+
+reportPath
+ıı !
+=
+ıı" #
+string
+ıı$ *
+.
+ıı* +
+Empty
+ıı+ 0
+;
+ıı0 1
+if
+ˆˆ 
+(
+ˆˆ 
+OperatingSystem
+ˆˆ #
+.
+ˆˆ# $
+	IsWindows
+ˆˆ$ -
+(
+ˆˆ- .
+)
+ˆˆ. /
+)
+ˆˆ/ 0
+
+reportPath
+˜˜ 
+=
+˜˜  
+RootPath
+˜˜! )
++
+˜˜* +
+$str
+˜˜, 9
++
+˜˜: ;
+RDLCFileName
+˜˜< H
+;
+˜˜H I
+else
+¯¯ 
+if
+¯¯ 
+(
+¯¯ 
+OperatingSystem
+¯¯ (
+.
+¯¯( )
+IsLinux
+¯¯) 0
+(
+¯¯0 1
+)
+¯¯1 2
+)
+¯¯2 3
+
+reportPath
+˘˘ 
+=
+˘˘  
+RootPath
+˘˘! )
++
+˘˘* +
+$str
+˘˘, 9
++
+˘˘: ;
+RDLCFileName
+˘˘< H
+;
+˘˘H I
+else
+˙˙ 
+{
+˚˚ 
+
+reportPath
+¸¸ 
+=
+¸¸  
+$str
+¸¸! #
+;
+¸¸# $
+}
+˝˝ 
+Warning
+ˇˇ 
+[
+ˇˇ 
+]
+ˇˇ 
+warnings
+ˇˇ "
+;
+ˇˇ" #
+string
+ÄÄ 
+[
+ÄÄ 
+]
+ÄÄ 
+	streamIds
+ÄÄ "
+;
+ÄÄ" #
+string
+ÅÅ 
+mimeType
+ÅÅ 
+=
+ÅÅ  !
+string
+ÅÅ" (
+.
+ÅÅ( )
+Empty
+ÅÅ) .
+;
+ÅÅ. /
+string
+ÇÇ 
+encoding
+ÇÇ 
+=
+ÇÇ  !
+string
+ÇÇ" (
+.
+ÇÇ( )
+Empty
+ÇÇ) .
+;
+ÇÇ. /
+string
+ÉÉ 
+
+extension1
+ÉÉ !
+=
+ÉÉ" #
+string
+ÉÉ$ *
+.
+ÉÉ* +
+Empty
+ÉÉ+ 0
+;
+ÉÉ0 1
+Stream
+ÜÜ 
+reportDefinition
+ÜÜ '
+;
+ÜÜ' (
+using
+áá 
+var
+áá 
+fs
+áá 
+=
+áá 
+new
+áá "
+
+FileStream
+áá# -
+(
+áá- .
+
+reportPath
+áá. 8
+,
+áá8 9
+FileMode
+áá: B
+.
+ááB C
+Open
+ááC G
+)
+ááG H
+;
+ááH I
+reportDefinition
+àà  
+=
+àà! "
+fs
+àà# %
+;
+àà% &
+LocalReport
+ââ 
+report
+ââ "
+=
+ââ# $
+new
+ââ% (
+LocalReport
+ââ) 4
+(
+ââ4 5
+)
+ââ5 6
+;
+ââ6 7
+report
+ää 
+.
+ää "
+EnableExternalImages
+ää +
+=
+ää, -
+true
+ää. 2
+;
+ää2 3
+report
+ãã 
+.
+ãã "
+LoadReportDefinition
+ãã +
+(
+ãã+ ,
+reportDefinition
+ãã, <
+)
+ãã< =
+;
+ãã= >
+byte
+çç 
+[
+çç 
+]
+çç 
+bytes
+çç 
+=
+çç 
+report
+çç %
+.
+çç% &
+Render
+çç& ,
+(
+çç, -
+FileType
+çç- 5
+,
+çç5 6
+null
+çç7 ;
+,
+çç; <
+out
+çç= @
+mimeType
+ççA I
+,
+ççI J
+out
+ççK N
+encoding
+ççO W
+,
+ççW X
+out
+ççY \
+
+extension1
+çç] g
+,
+ççg h
+out
+ççi l
+	streamIds
+ççm v
+,
+ççv w
+out
+ççx {
+warningsçç| Ñ
+)ççÑ Ö
+;ççÖ Ü
+fs
+éé 
+.
+éé 
+Dispose
+éé 
+(
+éé 
+)
+éé 
+;
+éé 
+if
+êê 
+(
+êê 
+	IsRunTime
+êê 
+==
+êê  
+false
+êê! &
+)
+êê& '
+{
+ëë 
+string
+ìì 
+filename
+ìì #
+=
+ìì$ %
+string
+ìì& ,
+.
+ìì, -
+Empty
+ìì- 2
+;
+ìì2 3
+if
+îî 
+(
+îî 
+OperatingSystem
+îî '
+.
+îî' (
+	IsWindows
+îî( 1
+(
+îî1 2
+)
+îî2 3
+)
+îî3 4
+filename
+ïï  
+=
+ïï! "
+Path
+ïï# '
+.
+ïï' (
+Combine
+ïï( /
+(
+ïï/ 0
+RootPath
+ïï0 8
++
+ïï9 :
+$str
+ïï; H
+,
+ïïH I
+RDLCFileName
+ïïJ V
+)
+ïïV W
+;
+ïïW X
+else
+ññ 
+if
+ññ 
+(
+ññ 
+OperatingSystem
+ññ ,
+.
+ññ, -
+IsLinux
+ññ- 4
+(
+ññ4 5
+)
+ññ5 6
+)
+ññ6 7
+filename
+óó  
+=
+óó! "
+Path
+óó# '
+.
+óó' (
+Combine
+óó( /
+(
+óó/ 0
+RootPath
+óó0 8
++
+óó9 :
+$str
+óó; H
+,
+óóH I
+RDLCFileName
+óóJ V
+)
+óóV W
+;
+óóW X
+else
+òò 
+{
+ôô 
+filename
+öö  
+=
+öö! "
+$str
+öö# %
+;
+öö% &
+}
+õõ 
+using
+ùù 
+(
+ùù 
+var
+ùù 
+fstream
+ùù &
+=
+ùù' (
+new
+ùù) ,
+
+FileStream
+ùù- 7
+(
+ùù7 8
+filename
+ùù8 @
+,
+ùù@ A
+FileMode
+ùùB J
+.
+ùùJ K
+Create
+ùùK Q
+)
+ùùQ R
+)
+ùùR S
+{
+ûû 
+fstream
+üü 
+.
+üü  
+Write
+üü  %
+(
+üü% &
+bytes
+üü& +
+,
+üü+ ,
+$num
+üü- .
+,
+üü. /
+bytes
+üü0 5
+.
+üü5 6
+Length
+üü6 <
+)
+üü< =
+;
+üü= >
+fstream
+†† 
+.
+††  
+Close
+††  %
+(
+††% &
+)
+††& '
+;
+††' (
+}
+°° 
+return
+¢¢ 
+bytes
+¢¢  
+;
+¢¢  !
+}
+££ 
+else
+§§ 
+{
+•• 
+return
+¶¶ 
+bytes
+¶¶  
+;
+¶¶  !
+}
+ßß 
+}
+®® 
+catch
+©© 
+(
+©© 
+	Exception
+©© 
+ex
+©© 
+)
+©©  
+{
+™™ 
+throw
+´´ 
+ex
+´´ 
+;
+´´ 
+}
+¨¨ 
+finally
+≠≠ 
+{
+≠≠ 
+}
+≠≠ 
+}
+ÆÆ 	
+public
+≥≥ 
+static
+≥≥ 
+byte
+≥≥ 
+[
+≥≥ 
+]
+≥≥ 
+ExportToCSV
+≥≥ (
+(
+≥≥( )
+	DataTable
+≥≥) 2
+
+exportData
+≥≥3 =
+,
+≥≥= >
+string
+≥≥? E
+	tableName
+≥≥F O
+,
+≥≥O P
+bool
+≥≥Q U
+headerRequired
+≥≥V d
+=
+≥≥e f
+true
+≥≥g k
+)
+≥≥k l
+{
+¥¥ 	
+using
+µµ 
+(
+µµ 
+
+XLWorkbook
+µµ 
+wb
+µµ  
+=
+µµ! "
+new
+µµ# &
+
+XLWorkbook
+µµ' 1
+(
+µµ1 2
+)
+µµ2 3
+)
+µµ3 4
+{
+∂∂ 
+
+exportData
+∑∑ 
+.
+∑∑ 
+	TableName
+∑∑ $
+=
+∑∑% &
+	tableName
+∑∑' 0
+;
+∑∑0 1
+var
+∏∏ 
+ws
+∏∏ 
+=
+∏∏ 
+wb
+∏∏ 
+.
+∏∏ 
+
+Worksheets
+∏∏ &
+.
+∏∏& '
+Add
+∏∏' *
+(
+∏∏* +
+
+exportData
+∏∏+ 5
+)
+∏∏5 6
+;
+∏∏6 7
+if
+∫∫ 
+(
+∫∫ 
+!
+∫∫ 
+headerRequired
+∫∫ #
+)
+∫∫# $
+{
+ªª 
+ws
+¡¡ 
+.
+¡¡ 
+Range
+¡¡ 
+(
+¡¡ 
+$str
+¡¡ !
+,
+¡¡! "
+$str
+¡¡# '
+)
+¡¡' (
+.
+¡¡( )
+Delete
+¡¡) /
+(
+¡¡/ 0!
+XLShiftDeletedCells
+¡¡0 C
+.
+¡¡C D
+ShiftCellsUp
+¡¡D P
+)
+¡¡P Q
+;
+¡¡Q R
+ws
+¬¬ 
+.
+¬¬ 
+Range
+¬¬ 
+(
+¬¬ 
+$str
+¬¬ !
+,
+¬¬! "
+$str
+¬¬# '
+)
+¬¬' (
+.
+¬¬( )
+Delete
+¬¬) /
+(
+¬¬/ 0!
+XLShiftDeletedCells
+¬¬0 C
+.
+¬¬C D
+ShiftCellsUp
+¬¬D P
+)
+¬¬P Q
+;
+¬¬Q R
+ws
+√√ 
+.
+√√ 
+Range
+√√ 
+(
+√√ 
+$str
+√√ !
+,
+√√! "
+$str
+√√# '
+)
+√√' (
+.
+√√( )
+Delete
+√√) /
+(
+√√/ 0!
+XLShiftDeletedCells
+√√0 C
+.
+√√C D
+ShiftCellsUp
+√√D P
+)
+√√P Q
+;
+√√Q R
+ws
+ƒƒ 
+.
+ƒƒ 
+Range
+ƒƒ 
+(
+ƒƒ 
+$str
+ƒƒ !
+,
+ƒƒ! "
+$str
+ƒƒ# '
+)
+ƒƒ' (
+.
+ƒƒ( )
+Delete
+ƒƒ) /
+(
+ƒƒ/ 0!
+XLShiftDeletedCells
+ƒƒ0 C
+.
+ƒƒC D
+ShiftCellsUp
+ƒƒD P
+)
+ƒƒP Q
+;
+ƒƒQ R
+ws
+≈≈ 
+.
+≈≈ 
+Range
+≈≈ 
+(
+≈≈ 
+$str
+≈≈ !
+,
+≈≈! "
+$str
+≈≈# '
+)
+≈≈' (
+.
+≈≈( )
+Delete
+≈≈) /
+(
+≈≈/ 0!
+XLShiftDeletedCells
+≈≈0 C
+.
+≈≈C D
+ShiftCellsUp
+≈≈D P
+)
+≈≈P Q
+;
+≈≈Q R
+ws
+∆∆ 
+.
+∆∆ 
+Range
+∆∆ 
+(
+∆∆ 
+$str
+∆∆ !
+,
+∆∆! "
+$str
+∆∆# '
+)
+∆∆' (
+.
+∆∆( )
+Delete
+∆∆) /
+(
+∆∆/ 0!
+XLShiftDeletedCells
+∆∆0 C
+.
+∆∆C D
+ShiftCellsUp
+∆∆D P
+)
+∆∆P Q
+;
+∆∆Q R
+ws
+«« 
+.
+«« 
+Range
+«« 
+(
+«« 
+$str
+«« !
+,
+««! "
+$str
+««# '
+)
+««' (
+.
+««( )
+Delete
+««) /
+(
+««/ 0!
+XLShiftDeletedCells
+««0 C
+.
+««C D
+ShiftCellsUp
+««D P
+)
+««P Q
+;
+««Q R
+ws
+»» 
+.
+»» 
+Range
+»» 
+(
+»» 
+$str
+»» !
+,
+»»! "
+$str
+»»# '
+)
+»»' (
+.
+»»( )
+Delete
+»») /
+(
+»»/ 0!
+XLShiftDeletedCells
+»»0 C
+.
+»»C D
+ShiftCellsUp
+»»D P
+)
+»»P Q
+;
+»»Q R
+ws
+…… 
+.
+…… 
+Range
+…… 
+(
+…… 
+$str
+…… !
+,
+……! "
+$str
+……# '
+)
+……' (
+.
+……( )
+Delete
+……) /
+(
+……/ 0!
+XLShiftDeletedCells
+……0 C
+.
+……C D
+ShiftCellsUp
+……D P
+)
+……P Q
+;
+……Q R
+ws
+   
+.
+   
+Range
+   
+(
+   
+$str
+   !
+,
+  ! "
+$str
+  # '
+)
+  ' (
+.
+  ( )
+Delete
+  ) /
+(
+  / 0!
+XLShiftDeletedCells
+  0 C
+.
+  C D
+ShiftCellsUp
+  D P
+)
+  P Q
+;
+  Q R
+ws
+ÀÀ 
+.
+ÀÀ 
+Range
+ÀÀ 
+(
+ÀÀ 
+$str
+ÀÀ !
+,
+ÀÀ! "
+$str
+ÀÀ# '
+)
+ÀÀ' (
+.
+ÀÀ( )
+Delete
+ÀÀ) /
+(
+ÀÀ/ 0!
+XLShiftDeletedCells
+ÀÀ0 C
+.
+ÀÀC D
+ShiftCellsUp
+ÀÀD P
+)
+ÀÀP Q
+;
+ÀÀQ R
+ws
+ÃÃ 
+.
+ÃÃ 
+Range
+ÃÃ 
+(
+ÃÃ 
+$str
+ÃÃ !
+,
+ÃÃ! "
+$str
+ÃÃ# '
+)
+ÃÃ' (
+.
+ÃÃ( )
+Delete
+ÃÃ) /
+(
+ÃÃ/ 0!
+XLShiftDeletedCells
+ÃÃ0 C
+.
+ÃÃC D
+ShiftCellsUp
+ÃÃD P
+)
+ÃÃP Q
+;
+ÃÃQ R
+ws
+ÕÕ 
+.
+ÕÕ 
+Table
+ÕÕ 
+(
+ÕÕ 
+$num
+ÕÕ 
+)
+ÕÕ 
+.
+ÕÕ  
+Theme
+ÕÕ  %
+=
+ÕÕ& '
+XLTableTheme
+ÕÕ( 4
+.
+ÕÕ4 5
+None
+ÕÕ5 9
+;
+ÕÕ9 :
+}
+ŒŒ 
+ws
+œœ 
+.
+œœ 
+Tables
+œœ 
+.
+œœ 
+FirstOrDefault
+œœ (
+(
+œœ( )
+)
+œœ) *
+.
+œœ* +
+ShowAutoFilter
+œœ+ 9
+=
+œœ: ;
+false
+œœ< A
+;
+œœA B
+ws
+”” 
+.
+”” 
+	CellsUsed
+”” 
+(
+”” 
+)
+”” 
+.
+”” 
+Style
+”” $
+.
+””$ %
+Border
+””% +
+.
+””+ ,
+BottomBorder
+””, 8
+=
+””9 :
+	ClosedXML
+””; D
+.
+””D E
+Excel
+””E J
+.
+””J K!
+XLBorderStyleValues
+””K ^
+.
+””^ _
+Thin
+””_ c
+;
+””c d
+ws
+‘‘ 
+.
+‘‘ 
+	CellsUsed
+‘‘ 
+(
+‘‘ 
+)
+‘‘ 
+.
+‘‘ 
+Style
+‘‘ $
+.
+‘‘$ %
+Border
+‘‘% +
+.
+‘‘+ ,
+BottomBorderColor
+‘‘, =
+=
+‘‘> ?
+	ClosedXML
+‘‘@ I
+.
+‘‘I J
+Excel
+‘‘J O
+.
+‘‘O P
+XLColor
+‘‘P W
+.
+‘‘W X
+Black
+‘‘X ]
+;
+‘‘] ^
+ws
+’’ 
+.
+’’ 
+	CellsUsed
+’’ 
+(
+’’ 
+)
+’’ 
+.
+’’ 
+Style
+’’ $
+.
+’’$ %
+Border
+’’% +
+.
+’’+ ,
+	TopBorder
+’’, 5
+=
+’’6 7
+	ClosedXML
+’’8 A
+.
+’’A B
+Excel
+’’B G
+.
+’’G H!
+XLBorderStyleValues
+’’H [
+.
+’’[ \
+Thin
+’’\ `
+;
+’’` a
+ws
+÷÷ 
+.
+÷÷ 
+	CellsUsed
+÷÷ 
+(
+÷÷ 
+)
+÷÷ 
+.
+÷÷ 
+Style
+÷÷ $
+.
+÷÷$ %
+Border
+÷÷% +
+.
+÷÷+ ,
+TopBorderColor
+÷÷, :
+=
+÷÷; <
+	ClosedXML
+÷÷= F
+.
+÷÷F G
+Excel
+÷÷G L
+.
+÷÷L M
+XLColor
+÷÷M T
+.
+÷÷T U
+Black
+÷÷U Z
+;
+÷÷Z [
+ws
+◊◊ 
+.
+◊◊ 
+	CellsUsed
+◊◊ 
+(
+◊◊ 
+)
+◊◊ 
+.
+◊◊ 
+Style
+◊◊ $
+.
+◊◊$ %
+Border
+◊◊% +
+.
+◊◊+ ,
+
+LeftBorder
+◊◊, 6
+=
+◊◊7 8
+	ClosedXML
+◊◊9 B
+.
+◊◊B C
+Excel
+◊◊C H
+.
+◊◊H I!
+XLBorderStyleValues
+◊◊I \
+.
+◊◊\ ]
+Thin
+◊◊] a
+;
+◊◊a b
+ws
+ÿÿ 
+.
+ÿÿ 
+	CellsUsed
+ÿÿ 
+(
+ÿÿ 
+)
+ÿÿ 
+.
+ÿÿ 
+Style
+ÿÿ $
+.
+ÿÿ$ %
+Border
+ÿÿ% +
+.
+ÿÿ+ ,
+LeftBorderColor
+ÿÿ, ;
+=
+ÿÿ< =
+	ClosedXML
+ÿÿ> G
+.
+ÿÿG H
+Excel
+ÿÿH M
+.
+ÿÿM N
+XLColor
+ÿÿN U
+.
+ÿÿU V
+Black
+ÿÿV [
+;
+ÿÿ[ \
+ws
+ŸŸ 
+.
+ŸŸ 
+	CellsUsed
+ŸŸ 
+(
+ŸŸ 
+)
+ŸŸ 
+.
+ŸŸ 
+Style
+ŸŸ $
+.
+ŸŸ$ %
+Border
+ŸŸ% +
+.
+ŸŸ+ ,
+RightBorder
+ŸŸ, 7
+=
+ŸŸ8 9
+	ClosedXML
+ŸŸ: C
+.
+ŸŸC D
+Excel
+ŸŸD I
+.
+ŸŸI J!
+XLBorderStyleValues
+ŸŸJ ]
+.
+ŸŸ] ^
+Thin
+ŸŸ^ b
+;
+ŸŸb c
+ws
+⁄⁄ 
+.
+⁄⁄ 
+	CellsUsed
+⁄⁄ 
+(
+⁄⁄ 
+)
+⁄⁄ 
+.
+⁄⁄ 
+Style
+⁄⁄ $
+.
+⁄⁄$ %
+Border
+⁄⁄% +
+.
+⁄⁄+ ,
+RightBorderColor
+⁄⁄, <
+=
+⁄⁄= >
+	ClosedXML
+⁄⁄? H
+.
+⁄⁄H I
+Excel
+⁄⁄I N
+.
+⁄⁄N O
+XLColor
+⁄⁄O V
+.
+⁄⁄V W
+Black
+⁄⁄W \
+;
+⁄⁄\ ]
+using
+‡‡ 
+(
+‡‡ 
+MemoryStream
+‡‡ #
+stream
+‡‡$ *
+=
+‡‡+ ,
+new
+‡‡- 0
+MemoryStream
+‡‡1 =
+(
+‡‡= >
+)
+‡‡> ?
+)
+‡‡? @
+{
+·· 
+wb
+‚‚ 
+.
+‚‚ 
+SaveAs
+‚‚ 
+(
+‚‚ 
+stream
+‚‚ $
+)
+‚‚$ %
+;
+‚‚% &
+return
+„„ 
+stream
+„„ !
+.
+„„! "
+ToArray
+„„" )
+(
+„„) *
+)
+„„* +
+;
+„„+ ,
+}
+‰‰ 
+}
+ÊÊ 
+}
+ËË 	
+public
+ÍÍ 
+static
+ÍÍ 
+byte
+ÍÍ 
+[
+ÍÍ 
+]
+ÍÍ #
+ExportToCSVUsingComma
+ÍÍ 2
+(
+ÍÍ2 3
+	DataTable
+ÍÍ3 <
+dt
+ÍÍ= ?
+)
+ÍÍ? @
+{
+ÎÎ 	
+Log
+ÏÏ 
+.
+ÏÏ 
+Information
+ÏÏ 
+(
+ÏÏ 
+$str
+ÏÏ p
++
+ÏÏq r
+DateTime
+ÏÏs {
+.
+ÏÏ{ |
+Now
+ÏÏ| 
+.ÏÏ Ä
+ToStringÏÏÄ à
+(ÏÏà â
+$strÏÏâ ú
+)ÏÏú ù
++ÏÏû ü
+$strÏÏ† µ
+)ÏÏµ ∂
+;ÏÏ∂ ∑
+byte
+ÌÌ 
+[
+ÌÌ 
+]
+ÌÌ 
+csvData
+ÌÌ 
+=
+ÌÌ 
+null
+ÌÌ !
+;
+ÌÌ! "
+if
+ÓÓ 
+(
+ÓÓ 
+dt
+ÓÓ 
+.
+ÓÓ 
+Rows
+ÓÓ 
+.
+ÓÓ 
+Count
+ÓÓ 
+>
+ÓÓ 
+$num
+ÓÓ  !
+)
+ÓÓ! "
+{
+ÔÔ 
+try
+ÚÚ 
+{
+ÛÛ 
+if
+ıı 
+(
+ıı 
+dt
+ıı 
+!=
+ıı 
+null
+ıı "
+&&
+ıı# %
+dt
+ıı& (
+.
+ıı( )
+Rows
+ıı) -
+.
+ıı- .
+Count
+ıı. 3
+>
+ıı4 5
+$num
+ıı6 7
+)
+ıı7 8
+{
+ˆˆ 
+StringBuilder
+¯¯ %
+sb
+¯¯& (
+=
+¯¯) *
+new
+¯¯+ .
+StringBuilder
+¯¯/ <
+(
+¯¯< =
+)
+¯¯= >
+;
+¯¯> ?
+foreach
+˚˚ 
+(
+˚˚  !
+DataRow
+˚˚! (
+row
+˚˚) ,
+in
+˚˚- /
+dt
+˚˚0 2
+.
+˚˚2 3
+Rows
+˚˚3 7
+)
+˚˚7 8
+{
+¸¸ 
+IEnumerable
+˝˝ '
+<
+˝˝' (
+string
+˝˝( .
+>
+˝˝. /
+fields
+˝˝0 6
+=
+˝˝7 8
+row
+˝˝9 <
+.
+˝˝< =
+	ItemArray
+˝˝= F
+.
+˝˝F G
+Select
+˝˝G M
+(
+˝˝M N
+field
+˝˝N S
+=>
+˝˝T V
+field
+˝˝W \
+.
+˝˝\ ]
+ToString
+˝˝] e
+(
+˝˝e f
+)
+˝˝f g
+)
+˝˝g h
+;
+˝˝h i
+sb
+˛˛ 
+.
+˛˛ 
+
+AppendLine
+˛˛ )
+(
+˛˛) *
+string
+˛˛* 0
+.
+˛˛0 1
+Join
+˛˛1 5
+(
+˛˛5 6
+$str
+˛˛6 9
+,
+˛˛9 :
+fields
+˛˛; A
+)
+˛˛A B
+)
+˛˛B C
+;
+˛˛C D
+}
+Ä	Ä	 
+Log
+Å	Å	 
+.
+Å	Å	 
+Information
+Å	Å	 '
+(
+Å	Å	' (
+$str
+Å	Å	( T
++
+Å	Å	U V
+sb
+Å	Å	W Y
+.
+Å	Å	Y Z
+ToString
+Å	Å	Z b
+(
+Å	Å	b c
+)
+Å	Å	c d
++
+Å	Å	e f
+$str
+Å	Å	g |
+)
+Å	Å	| }
+;
+Å	Å	} ~
+csvData
+Ç	Ç	 
+=
+Ç	Ç	  !
+Encoding
+Ç	Ç	" *
+.
+Ç	Ç	* +
+ASCII
+Ç	Ç	+ 0
+.
+Ç	Ç	0 1
+GetBytes
+Ç	Ç	1 9
+(
+Ç	Ç	9 :
+sb
+Ç	Ç	: <
+.
+Ç	Ç	< =
+ToString
+Ç	Ç	= E
+(
+Ç	Ç	E F
+)
+Ç	Ç	F G
+)
+Ç	Ç	G H
+;
+Ç	Ç	H I
+Log
+Ö	Ö	 
+.
+Ö	Ö	 
+Information
+Ö	Ö	 '
+(
+Ö	Ö	' (
+$str
+Ö	Ö	( ^
++
+Ö	Ö	_ `
+csvData
+Ö	Ö	a h
++
+Ö	Ö	i j
+$strÖ	Ö	k Ä
+)Ö	Ö	Ä Å
+;Ö	Ö	Å Ç
+}
+Ü	Ü	 
+}
+á	á	 
+catch
+à	à	 
+(
+à	à	 
+	Exception
+à	à	  
+ex
+à	à	! #
+)
+à	à	# $
+{
+â	â	 
+return
+ä	ä	 
+csvData
+ä	ä	 "
+;
+ä	ä	" #
+}
+ã	ã	 
+}
+ç	ç	 
+return
+é	é	 
+csvData
+é	é	 
+;
+é	é	 
+}
+è	è	 	
+public
+ì	ì	 
+int
+ì	ì	 $
+BOCWUploadFileOnServer
+ì	ì	 )
+(
+ì	ì	) *
+string
+ì	ì	* 0
+
+SourceFile
+ì	ì	1 ;
+)
+ì	ì	; <
+{
+î	î	 	
+Log
+ñ	ñ	 
+.
+ñ	ñ	 
+Information
+ñ	ñ	 
+(
+ñ	ñ	 
+$str
+ñ	ñ	 U
++
+ñ	ñ	V W
+DateTime
+ñ	ñ	X `
+.
+ñ	ñ	` a
+Now
+ñ	ñ	a d
+.
+ñ	ñ	d e
+ToString
+ñ	ñ	e m
+(
+ñ	ñ	m n
+$strñ	ñ	n Å
+)ñ	ñ	Å Ç
++ñ	ñ	É Ñ
+$strñ	ñ	Ö ö
+)ñ	ñ	ö õ
+;ñ	ñ	õ ú
+int
+ô	ô	 
+result
+ô	ô	 
+=
+ô	ô	 
+$num
+ô	ô	 
+;
+ô	ô	 
+try
+ö	ö	 
+{
+õ	õ	 
+using
+ú	ú	 
+(
+ú	ú	 
+
+SftpClient
+ú	ú	 !
+client
+ú	ú	" (
+=
+ú	ú	) *
+new
+ú	ú	+ .
+
+SftpClient
+ú	ú	/ 9
+(
+ú	ú	9 :
+	_sftpHost
+ú	ú	: C
+,
+ú	ú	C D
+	_sftpPort
+ú	ú	E N
+,
+ú	ú	N O
+_sftpUserName
+ú	ú	P ]
+,
+ú	ú	] ^
+_sftpPassword
+ú	ú	_ l
+)
+ú	ú	l m
+)
+ú	ú	m n
+{
+ù	ù	 
+client
+û	û	 
+.
+û	û	 
+Connect
+û	û	 "
+(
+û	û	" #
+)
+û	û	# $
+;
+û	û	$ %
+if
+†	†	 
+(
+†	†	 
+client
+†	†	 
+.
+†	†	 
+IsConnected
+†	†	 *
+)
+†	†	* +
+{
+°	°	 
+Log
+¢	¢	 
+.
+¢	¢	 
+Information
+¢	¢	 '
+(
+¢	¢	' (
+$str
+¢	¢	( ?
+)
+¢	¢	? @
+;
+¢	¢	@ A
+client
+£	£	 
+.
+£	£	 
+ChangeDirectory
+£	£	 .
+(
+£	£	. /(
+_sftpDestinationUploadPath
+£	£	/ I
+)
+£	£	I J
+;
+£	£	J K
+using
+§	§	 
+(
+§	§	 
+
+FileStream
+§	§	 )
+fs
+§	§	* ,
+=
+§	§	- .
+new
+§	§	/ 2
+
+FileStream
+§	§	3 =
+(
+§	§	= >
+
+SourceFile
+§	§	> H
+,
+§	§	H I
+FileMode
+§	§	J R
+.
+§	§	R S
+Open
+§	§	S W
+)
+§	§	W X
+)
+§	§	X Y
+{
+•	•	 
+if
+®	®	 
+(
+®	®	  
+System
+®	®	  &
+.
+®	®	& '
+IO
+®	®	' )
+.
+®	®	) *
+File
+®	®	* .
+.
+®	®	. /
+Exists
+®	®	/ 5
+(
+®	®	5 6
+Path
+®	®	6 :
+.
+®	®	: ;
+Combine
+®	®	; B
+(
+®	®	B C(
+_sftpDestinationUploadPath
+®	®	C ]
+,
+®	®	] ^
+Path
+®	®	_ c
+.
+®	®	c d
+GetFileName
+®	®	d o
+(
+®	®	o p
+
+SourceFile
+®	®	p z
+)
+®	®	z {
+)
+®	®	{ |
+)
+®	®	| }
+)
+®	®	} ~
+{
+©	©	 
+Log
+™	™	  #
+.
+™	™	# $
+Information
+™	™	$ /
+(
+™	™	/ 0
+$str
+™	™	0 R
++
+™	™	S T
+
+SourceFile
+™	™	U _
++
+™	™	` a
+$str
+™	™	b e
+)
+™	™	e f
+;
+™	™	f g
+}
+´	´	 
+else
+¨	¨	  
+{
+≠	≠	 
+client
+Æ	Æ	  &
+.
+Æ	Æ	& '
+
+UploadFile
+Æ	Æ	' 1
+(
+Æ	Æ	1 2
+fs
+Æ	Æ	2 4
+,
+Æ	Æ	4 5
+Path
+Æ	Æ	6 :
+.
+Æ	Æ	: ;
+GetFileName
+Æ	Æ	; F
+(
+Æ	Æ	F G
+
+SourceFile
+Æ	Æ	G Q
+)
+Æ	Æ	Q R
+)
+Æ	Æ	R S
+;
+Æ	Æ	S T
+Log
+Ø	Ø	  #
+.
+Ø	Ø	# $
+Information
+Ø	Ø	$ /
+(
+Ø	Ø	/ 0
+$str
+Ø	Ø	0 G
+)
+Ø	Ø	G H
+;
+Ø	Ø	H I
+}
+∞	∞	 
+}
+≤	≤	 
+client
+≥	≥	 
+.
+≥	≥	 
+Dispose
+≥	≥	 &
+(
+≥	≥	& '
+)
+≥	≥	' (
+;
+≥	≥	( )
+result
+¥	¥	 
+=
+¥	¥	  
+$num
+¥	¥	! "
+;
+¥	¥	" #
+}
+µ	µ	 
+else
+∂	∂	 
+{
+∑	∑	 
+Log
+∏	∏	 
+.
+∏	∏	 
+Information
+∏	∏	 '
+(
+∏	∏	' (
+$str
+∏	∏	( C
+)
+∏	∏	C D
+;
+∏	∏	D E
+}
+π	π	 
+}
+ª	ª	 
+}
+Ω	Ω	 
+catch
+æ	æ	 
+(
+æ	æ	 
+	Exception
+æ	æ	 
+ex
+æ	æ	 
+)
+æ	æ	  
+{
+ø	ø	 
+throw
+¿	¿	 
+ex
+¿	¿	 
+;
+¿	¿	 
+}
+¡	¡	 
+return
+¬	¬	 
+result
+¬	¬	 
+;
+¬	¬	 
+Log
+≈	≈	 
+.
+≈	≈	 
+Information
+≈	≈	 
+(
+≈	≈	 
+$str
+≈	≈	 S
++
+≈	≈	T U
+DateTime
+≈	≈	V ^
+.
+≈	≈	^ _
+Now
+≈	≈	_ b
+.
+≈	≈	b c
+ToString
+≈	≈	c k
+(
+≈	≈	k l
+$str
+≈	≈	l 
+)≈	≈	 Ä
++≈	≈	Å Ç
+$str≈	≈	É ò
+)≈	≈	ò ô
+;≈	≈	ô ö
+}
+∆	∆	 	
+public
+»	»	 
+int
+»	»	 $
+BOCWReadFileFromServer
+»	»	 )
+(
+»	»	) *
+string
+»	»	* 0
+[
+»	»	0 1
+]
+»	»	1 2
+FileNameToRead
+»	»	3 A
+,
+»	»	A B
+string
+»	»	C I
+rootPath
+»	»	J R
+)
+»	»	R S
+{
+…	…	 	
+Log
+À	À	 
+.
+À	À	 
+Information
+À	À	 
+(
+À	À	 
+$str
+À	À	 U
++
+À	À	V W
+DateTime
+À	À	X `
+.
+À	À	` a
+Now
+À	À	a d
+.
+À	À	d e
+ToString
+À	À	e m
+(
+À	À	m n
+$strÀ	À	n Å
+)À	À	Å Ç
++À	À	É Ñ
+$strÀ	À	Ö ö
+)À	À	ö õ
+;À	À	õ ú
+int
+Œ	Œ	 
+result
+Œ	Œ	 
+=
+Œ	Œ	 
+$num
+Œ	Œ	 
+;
+Œ	Œ	 
+try
+œ	œ	 
+{
+–	–	 
+using
+—	—	 
+(
+—	—	 
+var
+—	—	 
+
+sftpClient
+—	—	 %
+=
+—	—	& '
+new
+—	—	( +
+
+SftpClient
+—	—	, 6
+(
+—	—	6 7
+	_sftpHost
+—	—	7 @
+,
+—	—	@ A
+	_sftpPort
+—	—	B K
+,
+—	—	K L
+_sftpUserName
+—	—	M Z
+,
+—	—	Z [
+_sftpPassword
+—	—	\ i
+)
+—	—	i j
+)
+—	—	j k
+{
+“	“	 
+
+sftpClient
+”	”	 
+.
+”	”	 
+Connect
+”	”	 &
+(
+”	”	& '
+)
+”	”	' (
+;
+”	”	( )
+if
+‘	‘	 
+(
+‘	‘	 
+
+sftpClient
+‘	‘	 "
+.
+‘	‘	" #
+IsConnected
+‘	‘	# .
+)
+‘	‘	. /
+{
+’	’	 
+Log
+÷	÷	 
+.
+÷	÷	 
+Information
+÷	÷	 '
+(
+÷	÷	' (
+$str
+÷	÷	( ?
+)
+÷	÷	? @
+;
+÷	÷	@ A
+rootPath
+◊	◊	  
+=
+◊	◊	! "
+Path
+◊	◊	# '
+.
+◊	◊	' (
+Combine
+◊	◊	( /
+(
+◊	◊	/ 0
+rootPath
+◊	◊	0 8
++
+◊	◊	9 :
+$str
+◊	◊	; >
+,
+◊	◊	> ?
+_BOCWResponsePath
+◊	◊	@ Q
+)
+◊	◊	Q R
+;
+◊	◊	R S
+foreach
+ÿ	ÿ	 
+(
+ÿ	ÿ	  !
+var
+ÿ	ÿ	! $
+fileItemToRead
+ÿ	ÿ	% 3
+in
+ÿ	ÿ	4 6
+FileNameToRead
+ÿ	ÿ	7 E
+)
+ÿ	ÿ	E F
+{
+Ÿ	Ÿ	 
+string
+⁄	⁄	 "
+fileName
+⁄	⁄	# +
+=
+⁄	⁄	, -
+_BOCWCorporateId
+⁄	⁄	. >
++
+⁄	⁄	? @
+$str
+⁄	⁄	A H
++
+⁄	⁄	I J
+fileItemToRead
+⁄	⁄	K Y
+;
+⁄	⁄	Y Z
+var
+‹	‹	 
+files
+‹	‹	  %
+=
+‹	‹	& '
+
+sftpClient
+‹	‹	( 2
+.
+‹	‹	2 3
+ListDirectory
+‹	‹	3 @
+(
+‹	‹	@ A&
+_sftpDestinationReadPath
+‹	‹	A Y
+)
+‹	‹	Y Z
+;
+‹	‹	Z [
+Log
+ﬁ	ﬁ	 
+.
+ﬁ	ﬁ	  
+Information
+ﬁ	ﬁ	  +
+(
+ﬁ	ﬁ	+ ,
+$str
+ﬁ	ﬁ	, B
++
+ﬁ	ﬁ	C D
+fileName
+ﬁ	ﬁ	E M
+)
+ﬁ	ﬁ	M N
+;
+ﬁ	ﬁ	N O
+if
+ﬂ	ﬂ	 
+(
+ﬂ	ﬂ	  
+files
+ﬂ	ﬂ	  %
+!=
+ﬂ	ﬂ	& (
+null
+ﬂ	ﬂ	) -
+)
+ﬂ	ﬂ	- .
+{
+‡	‡	 
+files
+‚	‚	  %
+=
+‚	‚	& '
+files
+‚	‚	( -
+.
+‚	‚	- .
+Where
+‚	‚	. 3
+(
+‚	‚	3 4
+f
+‚	‚	4 5
+=>
+‚	‚	6 8
+f
+‚	‚	9 :
+.
+‚	‚	: ;
+Name
+‚	‚	; ?
+==
+‚	‚	@ B
+fileName
+‚	‚	C K
+)
+‚	‚	K L
+.
+‚	‚	L M
+ToList
+‚	‚	M S
+(
+‚	‚	S T
+)
+‚	‚	T U
+;
+‚	‚	U V
+if
+Ê	Ê	  "
+(
+Ê	Ê	# $
+!
+Ê	Ê	$ %
+	Directory
+Ê	Ê	% .
+.
+Ê	Ê	. /
+Exists
+Ê	Ê	/ 5
+(
+Ê	Ê	5 6
+rootPath
+Ê	Ê	6 >
+)
+Ê	Ê	> ?
+)
+Ê	Ê	? @
+{
+Á	Á	  !
+	Directory
+Ë	Ë	$ -
+.
+Ë	Ë	- .
+CreateDirectory
+Ë	Ë	. =
+(
+Ë	Ë	= >
+rootPath
+Ë	Ë	> F
+)
+Ë	Ë	F G
+;
+Ë	Ë	G H
+}
+È	È	  !
+foreach
+Í	Í	  '
+(
+Í	Í	( )
+var
+Í	Í	) ,
+file
+Í	Í	- 1
+in
+Í	Í	2 4
+files
+Í	Í	5 :
+)
+Í	Í	: ;
+{
+Î	Î	  !
+string
+Ï	Ï	$ *
+FileName
+Ï	Ï	+ 3
+=
+Ï	Ï	4 5
+Path
+Ï	Ï	6 :
+.
+Ï	Ï	: ;
+GetFileName
+Ï	Ï	; F
+(
+Ï	Ï	F G
+file
+Ï	Ï	G K
+.
+Ï	Ï	K L
+Name
+Ï	Ï	L P
+.
+Ï	Ï	P Q
+ToString
+Ï	Ï	Q Y
+(
+Ï	Ï	Y Z
+)
+Ï	Ï	Z [
+)
+Ï	Ï	[ \
+;
+Ï	Ï	\ ]3
+%DownloadResponseFileFromServerToLocal
+Ì	Ì	$ I
+(
+Ì	Ì	I J
+
+sftpClient
+Ì	Ì	J T
+,
+Ì	Ì	T U
+file
+Ì	Ì	V Z
+,
+Ì	Ì	Z [
+rootPath
+Ì	Ì	\ d
+)
+Ì	Ì	d e
+;
+Ì	Ì	e f
+}
+Ö
+Ö
+  !
+}
+á
+á
+ 
+Log
+â
+â
+ 
+.
+â
+â
+  
+Information
+â
+â
+  +
+(
+â
+â
++ ,
+$str
+â
+â
+, @
++
+â
+â
+A B
+fileName
+â
+â
+C K
+)
+â
+â
+K L
+;
+â
+â
+L M
+}
+ã
+ã
+ 
+}
+å
+å
+ 
+else
+ç
+ç
+ 
+{
+é
+é
+ 
+Log
+è
+è
+ 
+.
+è
+è
+ 
+Information
+è
+è
+ '
+(
+è
+è
+' (
+$str
+è
+è
+( C
+)
+è
+è
+C D
+;
+è
+è
+D E
+}
+ë
+ë
+ 
+
+sftpClient
+í
+í
+ 
+.
+í
+í
+ 
+Dispose
+í
+í
+ &
+(
+í
+í
+& '
+)
+í
+í
+' (
+;
+í
+í
+( )
+}
+î
+î
+ 
+}
+ñ
+ñ
+ 
+catch
+ó
+ó
+ 
+(
+ó
+ó
+ 
+	Exception
+ó
+ó
+ 
+ex
+ó
+ó
+ 
+)
+ó
+ó
+  
+{
+ò
+ò
+ 
+throw
+ô
+ô
+ 
+ex
+ô
+ô
+ 
+;
+ô
+ô
+ 
+}
+ö
+ö
+ 
+return
+õ
+õ
+ 
+result
+õ
+õ
+ 
+;
+õ
+õ
+ 
+Log
+û
+û
+ 
+.
+û
+û
+ 
+Information
+û
+û
+ 
+(
+û
+û
+ 
+$str
+û
+û
+ S
++
+û
+û
+T U
+DateTime
+û
+û
+V ^
+.
+û
+û
+^ _
+Now
+û
+û
+_ b
+.
+û
+û
+b c
+ToString
+û
+û
+c k
+(
+û
+û
+k l
+$str
+û
+û
+l 
+)û
+û
+ Ä
++û
+û
+Å Ç
+$strû
+û
+É ò
+)û
+û
+ò ô
+;û
+û
+ô ö
+}
+ü
+ü
+ 	
+public
+°
+°
+ 
+	DataTable
+°
+°
+ ,
+BOCWReadCSVFileFromLocalServer
+°
+°
+ 7
+(
+°
+°
+7 8
+string
+°
+°
+8 >
+dest
+°
+°
+? C
+,
+°
+°
+C D
+string
+°
+°
+E K
+file
+°
+°
+L P
+)
+°
+°
+P Q
+{
+¢
+¢
+ 	
+Log
+§
+§
+ 
+.
+§
+§
+ 
+Information
+§
+§
+ 
+(
+§
+§
+ 
+$str
+§
+§
+ ]
++
+§
+§
+^ _
+DateTime
+§
+§
+` h
+.
+§
+§
+h i
+Now
+§
+§
+i l
+.
+§
+§
+l m
+ToString
+§
+§
+m u
+(
+§
+§
+u v
+$str§
+§
+v â
+)§
+§
+â ä
++§
+§
+ã å
+$str§
+§
+ç ¢
+)§
+§
+¢ £
+;§
+§
+£ §
+	DataTable
+•
+•
+ 
+dtCsv
+•
+•
+ 
+=
+•
+•
+ 
+new
+•
+•
+ !
+	DataTable
+•
+•
+" +
+(
+•
+•
++ ,
+)
+•
+•
+, -
+;
+•
+•
+- .
+Log
+¶
+¶
+ 
+.
+¶
+¶
+ 
+Information
+¶
+¶
+ 
+(
+¶
+¶
+ 
+$str
+¶
+¶
+ #
++
+¶
+¶
+$ %
+dest
+¶
+¶
+& *
++
+¶
+¶
++ ,
+$str
+¶
+¶
+- ?
++
+¶
+¶
+@ A
+file
+¶
+¶
+B F
++
+¶
+¶
+G H
+$str
+¶
+¶
+I K
+)
+¶
+¶
+K L
+;
+¶
+¶
+L M
+try
+ß
+ß
+ 
+{
+®
+®
+ 
+using
+©
+©
+ 
+(
+©
+©
+ 
+StreamReader
+©
+©
+ #
+sr
+©
+©
+$ &
+=
+©
+©
+' (
+new
+©
+©
+) ,
+StreamReader
+©
+©
+- 9
+(
+©
+©
+9 :
+Path
+©
+©
+: >
+.
+©
+©
+> ?
+Combine
+©
+©
+? F
+(
+©
+©
+F G
+dest
+©
+©
+G K
+,
+©
+©
+K L
+file
+©
+©
+M Q
+)
+©
+©
+Q R
+)
+©
+©
+R S
+)
+©
+©
+S T
+{
+™
+™
+ 
+dtCsv
+¨
+¨
+ 
+.
+¨
+¨
+ 
+Columns
+¨
+¨
+ !
+.
+¨
+¨
+! "
+Add
+¨
+¨
+" %
+(
+¨
+¨
+% &
+$str
+¨
+¨
+& ,
+,
+¨
+¨
+, -
+typeof
+¨
+¨
+. 4
+(
+¨
+¨
+4 5
+System
+¨
+¨
+5 ;
+.
+¨
+¨
+; <
+String
+¨
+¨
+< B
+)
+¨
+¨
+B C
+)
+¨
+¨
+C D
+;
+¨
+¨
+D E
+dtCsv
+≠
+≠
+ 
+.
+≠
+≠
+ 
+Columns
+≠
+≠
+ !
+.
+≠
+≠
+! "
+Add
+≠
+≠
+" %
+(
+≠
+≠
+% &
+$str
+≠
+≠
+& 9
+,
+≠
+≠
+9 :
+typeof
+≠
+≠
+; A
+(
+≠
+≠
+A B
+System
+≠
+≠
+B H
+.
+≠
+≠
+H I
+String
+≠
+≠
+I O
+)
+≠
+≠
+O P
+)
+≠
+≠
+P Q
+;
+≠
+≠
+Q R
+dtCsv
+Æ
+Æ
+ 
+.
+Æ
+Æ
+ 
+Columns
+Æ
+Æ
+ !
+.
+Æ
+Æ
+! "
+Add
+Æ
+Æ
+" %
+(
+Æ
+Æ
+% &
+$str
+Æ
+Æ
+& -
+,
+Æ
+Æ
+- .
+typeof
+Æ
+Æ
+/ 5
+(
+Æ
+Æ
+5 6
+System
+Æ
+Æ
+6 <
+.
+Æ
+Æ
+< =
+String
+Æ
+Æ
+= C
+)
+Æ
+Æ
+C D
+)
+Æ
+Æ
+D E
+;
+Æ
+Æ
+E F
+dtCsv
+Ø
+Ø
+ 
+.
+Ø
+Ø
+ 
+Columns
+Ø
+Ø
+ !
+.
+Ø
+Ø
+! "
+Add
+Ø
+Ø
+" %
+(
+Ø
+Ø
+% &
+$str
+Ø
+Ø
+& 5
+,
+Ø
+Ø
+5 6
+typeof
+Ø
+Ø
+7 =
+(
+Ø
+Ø
+= >
+System
+Ø
+Ø
+> D
+.
+Ø
+Ø
+D E
+String
+Ø
+Ø
+E K
+)
+Ø
+Ø
+K L
+)
+Ø
+Ø
+L M
+;
+Ø
+Ø
+M N
+dtCsv
+∞
+∞
+ 
+.
+∞
+∞
+ 
+Columns
+∞
+∞
+ !
+.
+∞
+∞
+! "
+Add
+∞
+∞
+" %
+(
+∞
+∞
+% &
+$str
+∞
+∞
+& <
+,
+∞
+∞
+< =
+typeof
+∞
+∞
+> D
+(
+∞
+∞
+D E
+System
+∞
+∞
+E K
+.
+∞
+∞
+K L
+String
+∞
+∞
+L R
+)
+∞
+∞
+R S
+)
+∞
+∞
+S T
+;
+∞
+∞
+T U
+dtCsv
+±
+±
+ 
+.
+±
+±
+ 
+Columns
+±
+±
+ !
+.
+±
+±
+! "
+Add
+±
+±
+" %
+(
+±
+±
+% &
+$str
+±
+±
+& 0
+,
+±
+±
+0 1
+typeof
+±
+±
+2 8
+(
+±
+±
+8 9
+System
+±
+±
+9 ?
+.
+±
+±
+? @
+String
+±
+±
+@ F
+)
+±
+±
+F G
+)
+±
+±
+G H
+;
+±
+±
+H I
+dtCsv
+≤
+≤
+ 
+.
+≤
+≤
+ 
+Columns
+≤
+≤
+ !
+.
+≤
+≤
+! "
+Add
+≤
+≤
+" %
+(
+≤
+≤
+% &
+$str
+≤
+≤
+& .
+,
+≤
+≤
+. /
+typeof
+≤
+≤
+0 6
+(
+≤
+≤
+6 7
+System
+≤
+≤
+7 =
+.
+≤
+≤
+= >
+Decimal
+≤
+≤
+> E
+)
+≤
+≤
+E F
+)
+≤
+≤
+F G
+;
+≤
+≤
+G H
+dtCsv
+≥
+≥
+ 
+.
+≥
+≥
+ 
+Columns
+≥
+≥
+ !
+.
+≥
+≥
+! "
+Add
+≥
+≥
+" %
+(
+≥
+≥
+% &
+$str
+≥
+≥
+& 1
+,
+≥
+≥
+1 2
+typeof
+≥
+≥
+3 9
+(
+≥
+≥
+9 :
+System
+≥
+≥
+: @
+.
+≥
+≥
+@ A
+String
+≥
+≥
+A G
+)
+≥
+≥
+G H
+)
+≥
+≥
+H I
+;
+≥
+≥
+I J
+dtCsv
+¥
+¥
+ 
+.
+¥
+¥
+ 
+Columns
+¥
+¥
+ !
+.
+¥
+¥
+! "
+Add
+¥
+¥
+" %
+(
+¥
+¥
+% &
+$str
+¥
+¥
+& ?
+,
+¥
+¥
+? @
+typeof
+¥
+¥
+A G
+(
+¥
+¥
+G H
+System
+¥
+¥
+H N
+.
+¥
+¥
+N O
+String
+¥
+¥
+O U
+)
+¥
+¥
+U V
+)
+¥
+¥
+V W
+;
+¥
+¥
+W X
+dtCsv
+µ
+µ
+ 
+.
+µ
+µ
+ 
+Columns
+µ
+µ
+ !
+.
+µ
+µ
+! "
+Add
+µ
+µ
+" %
+(
+µ
+µ
+% &
+$str
+µ
+µ
+& 3
+,
+µ
+µ
+3 4
+typeof
+µ
+µ
+5 ;
+(
+µ
+µ
+; <
+System
+µ
+µ
+< B
+.
+µ
+µ
+B C
+String
+µ
+µ
+C I
+)
+µ
+µ
+I J
+)
+µ
+µ
+J K
+;
+µ
+µ
+K L
+dtCsv
+∂
+∂
+ 
+.
+∂
+∂
+ 
+Columns
+∂
+∂
+ !
+.
+∂
+∂
+! "
+Add
+∂
+∂
+" %
+(
+∂
+∂
+% &
+$str
+∂
+∂
+& 0
+,
+∂
+∂
+0 1
+typeof
+∂
+∂
+2 8
+(
+∂
+∂
+8 9
+System
+∂
+∂
+9 ?
+.
+∂
+∂
+? @
+String
+∂
+∂
+@ F
+)
+∂
+∂
+F G
+)
+∂
+∂
+G H
+;
+∂
+∂
+H I
+dtCsv
+∑
+∑
+ 
+.
+∑
+∑
+ 
+Columns
+∑
+∑
+ !
+.
+∑
+∑
+! "
+Add
+∑
+∑
+" %
+(
+∑
+∑
+% &
+$str
+∑
+∑
+& 2
+,
+∑
+∑
+2 3
+typeof
+∑
+∑
+4 :
+(
+∑
+∑
+: ;
+System
+∑
+∑
+; A
+.
+∑
+∑
+A B
+String
+∑
+∑
+B H
+)
+∑
+∑
+H I
+)
+∑
+∑
+I J
+;
+∑
+∑
+J K
+dtCsv
+∏
+∏
+ 
+.
+∏
+∏
+ 
+Columns
+∏
+∏
+ !
+.
+∏
+∏
+! "
+Add
+∏
+∏
+" %
+(
+∏
+∏
+% &
+$str
+∏
+∏
+& 7
+,
+∏
+∏
+7 8
+typeof
+∏
+∏
+9 ?
+(
+∏
+∏
+? @
+System
+∏
+∏
+@ F
+.
+∏
+∏
+F G
+String
+∏
+∏
+G M
+)
+∏
+∏
+M N
+)
+∏
+∏
+N O
+;
+∏
+∏
+O P
+dtCsv
+π
+π
+ 
+.
+π
+π
+ 
+Columns
+π
+π
+ !
+.
+π
+π
+! "
+Add
+π
+π
+" %
+(
+π
+π
+% &
+$str
+π
+π
+& 9
+,
+π
+π
+9 :
+typeof
+π
+π
+; A
+(
+π
+π
+A B
+System
+π
+π
+B H
+.
+π
+π
+H I
+String
+π
+π
+I O
+)
+π
+π
+O P
+)
+π
+π
+P Q
+;
+π
+π
+Q R
+dtCsv
+∫
+∫
+ 
+.
+∫
+∫
+ 
+Columns
+∫
+∫
+ !
+.
+∫
+∫
+! "
+Add
+∫
+∫
+" %
+(
+∫
+∫
+% &
+$str
+∫
+∫
+& -
+,
+∫
+∫
+- .
+typeof
+∫
+∫
+/ 5
+(
+∫
+∫
+5 6
+System
+∫
+∫
+6 <
+.
+∫
+∫
+< =
+String
+∫
+∫
+= C
+)
+∫
+∫
+C D
+)
+∫
+∫
+D E
+;
+∫
+∫
+E F
+dtCsv
+ª
+ª
+ 
+.
+ª
+ª
+ 
+Columns
+ª
+ª
+ !
+.
+ª
+ª
+! "
+Add
+ª
+ª
+" %
+(
+ª
+ª
+% &
+$str
+ª
+ª
+& 4
+,
+ª
+ª
+4 5
+typeof
+ª
+ª
+6 <
+(
+ª
+ª
+< =
+System
+ª
+ª
+= C
+.
+ª
+ª
+C D
+String
+ª
+ª
+D J
+)
+ª
+ª
+J K
+)
+ª
+ª
+K L
+;
+ª
+ª
+L M
+while
+ø
+ø
+ 
+(
+ø
+ø
+ 
+!
+ø
+ø
+ 
+sr
+ø
+ø
+ 
+.
+ø
+ø
+ 
+EndOfStream
+ø
+ø
+ *
+)
+ø
+ø
+* +
+{
+¿
+¿
+ 
+string
+¡
+¡
+ 
+FullText
+¡
+¡
+ '
+;
+¡
+¡
+' (
+FullText
+¬
+¬
+  
+=
+¬
+¬
+! "
+sr
+¬
+¬
+# %
+.
+¬
+¬
+% &
+	ReadToEnd
+¬
+¬
+& /
+(
+¬
+¬
+/ 0
+)
+¬
+¬
+0 1
+;
+¬
+¬
+1 2
+string
+√
+√
+ 
+[
+√
+√
+ 
+]
+√
+√
+  
+rows
+√
+√
+! %
+=
+√
+√
+& '
+FullText
+√
+√
+( 0
+.
+√
+√
+0 1
+Split
+√
+√
+1 6
+(
+√
+√
+6 7
+$char
+√
+√
+7 ;
+)
+√
+√
+; <
+;
+√
+√
+< =
+for
+≈
+≈
+ 
+(
+≈
+≈
+ 
+int
+≈
+≈
+  
+i
+≈
+≈
+! "
+=
+≈
+≈
+# $
+$num
+≈
+≈
+% &
+;
+≈
+≈
+& '
+i
+≈
+≈
+( )
+<
+≈
+≈
+* +
+rows
+≈
+≈
+, 0
+.
+≈
+≈
+0 1
+Length
+≈
+≈
+1 7
+-
+≈
+≈
+8 9
+$num
+≈
+≈
+: ;
+;
+≈
+≈
+; <
+i
+≈
+≈
+= >
+++
+≈
+≈
+> @
+)
+≈
+≈
+@ A
+{
+∆
+∆
+ 
+string
+»
+»
+ "
+[
+»
+»
+" #
+]
+»
+»
+# $
+
+rowValues0
+»
+»
+% /
+=
+»
+»
+0 1
+rows
+»
+»
+2 6
+[
+»
+»
+6 7
+i
+»
+»
+7 8
+]
+»
+»
+8 9
+.
+»
+»
+9 :
+Split
+»
+»
+: ?
+(
+»
+»
+? @
+$char
+»
+»
+@ C
+)
+»
+»
+C D
+;
+»
+»
+D E
+DataRow
+…
+…
+ #
+row
+…
+…
+$ '
+=
+…
+…
+( )
+dtCsv
+…
+…
+* /
+.
+…
+…
+/ 0
+Rows
+…
+…
+0 4
+.
+…
+…
+4 5
+Add
+…
+…
+5 8
+(
+…
+…
+8 9
+)
+…
+…
+9 :
+;
+…
+…
+: ;
+for
+ 
+ 
+ 
+(
+ 
+ 
+  !
+int
+ 
+ 
+! $
+j
+ 
+ 
+% &
+=
+ 
+ 
+' (
+$num
+ 
+ 
+) *
+;
+ 
+ 
+* +
+j
+ 
+ 
+, -
+<
+ 
+ 
+. /
+
+rowValues0
+ 
+ 
+0 :
+.
+ 
+ 
+: ;
+Length
+ 
+ 
+; A
+;
+ 
+ 
+A B
+j
+ 
+ 
+C D
+++
+ 
+ 
+D F
+)
+ 
+ 
+F G
+{
+À
+À
+ 
+row
+Ã
+Ã
+  #
+.
+Ã
+Ã
+# $
+SetField
+Ã
+Ã
+$ ,
+(
+Ã
+Ã
+, -
+j
+Ã
+Ã
+- .
+,
+Ã
+Ã
+. /
+
+rowValues0
+Ã
+Ã
+0 :
+[
+Ã
+Ã
+: ;
+j
+Ã
+Ã
+; <
+]
+Ã
+Ã
+< =
+)
+Ã
+Ã
+= >
+;
+Ã
+Ã
+> ?
+}
+Õ
+Õ
+ 
+}
+Œ
+Œ
+ 
+}
+–
+–
+ 
+return
+—
+—
+ 
+dtCsv
+—
+—
+  
+;
+—
+—
+  !
+}
+“
+“
+ 
+return
+‘
+‘
+ 
+null
+‘
+‘
+ 
+;
+‘
+‘
+ 
+}
+’
+’
+ 
+catch
+÷
+÷
+ 
+(
+÷
+÷
+ 
+	Exception
+÷
+÷
+ 
+ex
+÷
+÷
+ 
+)
+÷
+÷
+  
+{
+◊
+◊
+ 
+return
+Ÿ
+Ÿ
+ 
+dtCsv
+Ÿ
+Ÿ
+ 
+;
+Ÿ
+Ÿ
+ 
+}
+⁄
+⁄
+ 
+Log
+‹
+‹
+ 
+.
+‹
+‹
+ 
+Information
+‹
+‹
+ 
+(
+‹
+‹
+ 
+$str
+‹
+‹
+ [
++
+‹
+‹
+\ ]
+DateTime
+‹
+‹
+^ f
+.
+‹
+‹
+f g
+Now
+‹
+‹
+g j
+.
+‹
+‹
+j k
+ToString
+‹
+‹
+k s
+(
+‹
+‹
+s t
+$str‹
+‹
+t á
+)‹
+‹
+á à
++‹
+‹
+â ä
+$str‹
+‹
+ã †
+)‹
+‹
+† °
+;‹
+‹
+° ¢
+}
+›
+›
+ 	
+private
+‡
+‡
+ 
+void
+‡
+‡
+ 3
+%DownloadResponseFileFromServerToLocal
+‡
+‡
+ :
+(
+‡
+‡
+: ;
+
+SftpClient
+‡
+‡
+; E
+client
+‡
+‡
+F L
+,
+‡
+‡
+L M
+SftpFile
+‡
+‡
+N V
+file
+‡
+‡
+W [
+,
+‡
+‡
+[ \
+string
+‡
+‡
+] c"
+destinationDirectory
+‡
+‡
+d x
+)
+‡
+‡
+x y
+{
+·
+·
+ 	
+Log
+‚
+‚
+ 
+.
+‚
+‚
+ 
+Information
+‚
+‚
+ 
+(
+‚
+‚
+ 
+$str
+‚
+‚
+ d
++
+‚
+‚
+e f
+DateTime
+‚
+‚
+g o
+.
+‚
+‚
+o p
+Now
+‚
+‚
+p s
+.
+‚
+‚
+s t
+ToString
+‚
+‚
+t |
+(
+‚
+‚
+| }
+$str‚
+‚
+} ê
+)‚
+‚
+ê ë
++‚
+‚
+í ì
+$str‚
+‚
+î ©
+)‚
+‚
+© ™
+;‚
+‚
+™ ´
+try
+„
+„
+ 
+{
+‰
+‰
+ 
+using
+Â
+Â
+ 
+(
+Â
+Â
+ 
+Stream
+Â
+Â
+ 
+
+fileStream
+Â
+Â
+ (
+=
+Â
+Â
+) *
+File
+Â
+Â
++ /
+.
+Â
+Â
+/ 0
+	OpenWrite
+Â
+Â
+0 9
+(
+Â
+Â
+9 :
+Path
+Â
+Â
+: >
+.
+Â
+Â
+> ?
+Combine
+Â
+Â
+? F
+(
+Â
+Â
+F G"
+destinationDirectory
+Â
+Â
+G [
+,
+Â
+Â
+[ \
+file
+Â
+Â
+] a
+.
+Â
+Â
+a b
+Name
+Â
+Â
+b f
+)
+Â
+Â
+f g
+)
+Â
+Â
+g h
+)
+Â
+Â
+h i
+{
+Ê
+Ê
+ 
+string
+Á
+Á
+ 
+FileName
+Á
+Á
+ #
+=
+Á
+Á
+$ %
+Path
+Á
+Á
+& *
+.
+Á
+Á
+* +
+GetFileName
+Á
+Á
++ 6
+(
+Á
+Á
+6 7
+file
+Á
+Á
+7 ;
+.
+Á
+Á
+; <
+Name
+Á
+Á
+< @
+.
+Á
+Á
+@ A
+ToString
+Á
+Á
+A I
+(
+Á
+Á
+I J
+)
+Á
+Á
+J K
+)
+Á
+Á
+K L
+;
+Á
+Á
+L M
+if
+È
+È
+ 
+(
+È
+È
+ 
+File
+È
+È
+ 
+.
+È
+È
+ 
+Exists
+È
+È
+ #
+(
+È
+È
+# $
+Path
+È
+È
+$ (
+.
+È
+È
+( )
+Combine
+È
+È
+) 0
+(
+È
+È
+0 1"
+destinationDirectory
+È
+È
+1 E
+,
+È
+È
+E F
+file
+È
+È
+G K
+.
+È
+È
+K L
+Name
+È
+È
+L P
+)
+È
+È
+P Q
+)
+È
+È
+Q R
+)
+È
+È
+R S
+{
+Í
+Í
+ 
+if
+Î
+Î
+ 
+(
+Î
+Î
+ 
+file
+Î
+Î
+  
+.
+Î
+Î
+  !
+Length
+Î
+Î
+! '
+!=
+Î
+Î
+( *
+
+fileStream
+Î
+Î
++ 5
+.
+Î
+Î
+5 6
+Length
+Î
+Î
+6 <
+)
+Î
+Î
+< =
+{
+Ï
+Ï
+ 
+client
+Ó
+Ó
+ "
+.
+Ó
+Ó
+" #
+DownloadFile
+Ó
+Ó
+# /
+(
+Ó
+Ó
+/ 0
+file
+Ó
+Ó
+0 4
+.
+Ó
+Ó
+4 5
+FullName
+Ó
+Ó
+5 =
+,
+Ó
+Ó
+= >
+
+fileStream
+Ó
+Ó
+? I
+)
+Ó
+Ó
+I J
+;
+Ó
+Ó
+J K
+Log
+Ô
+Ô
+ 
+.
+Ô
+Ô
+  
+Information
+Ô
+Ô
+  +
+(
+Ô
+Ô
++ ,
+$str
+Ô
+Ô
+, g
++
+Ô
+Ô
+h i
+file
+Ô
+Ô
+j n
+.
+Ô
+Ô
+n o
+FullName
+Ô
+Ô
+o w
+)
+Ô
+Ô
+w x
+;
+Ô
+Ô
+x y
+}
+
+
+ 
+else
+Ò
+Ò
+ 
+{
+Ú
+Ú
+ 
+Log
+Û
+Û
+ 
+.
+Û
+Û
+  
+Information
+Û
+Û
+  +
+(
+Û
+Û
++ ,
+$str
+Û
+Û
+, M
++
+Û
+Û
+N O
+file
+Û
+Û
+P T
+.
+Û
+Û
+T U
+FullName
+Û
+Û
+U ]
+)
+Û
+Û
+] ^
+;
+Û
+Û
+^ _
+}
+Ù
+Ù
+ 
+}
+ı
+ı
+ 
+else
+ˆ
+ˆ
+ 
+{
+˜
+˜
+ 
+client
+¯
+¯
+ 
+.
+¯
+¯
+ 
+DownloadFile
+¯
+¯
+ +
+(
+¯
+¯
++ ,
+file
+¯
+¯
+, 0
+.
+¯
+¯
+0 1
+FullName
+¯
+¯
+1 9
+,
+¯
+¯
+9 :
+
+fileStream
+¯
+¯
+; E
+)
+¯
+¯
+E F
+;
+¯
+¯
+F G
+Log
+˘
+˘
+ 
+.
+˘
+˘
+ 
+Information
+˘
+˘
+ '
+(
+˘
+˘
+' (
+$str
+˘
+˘
+( O
++
+˘
+˘
+P Q
+file
+˘
+˘
+R V
+.
+˘
+˘
+V W
+FullName
+˘
+˘
+W _
+)
+˘
+˘
+_ `
+;
+˘
+˘
+` a
+}
+˙
+˙
+ 
+}
+˚
+˚
+ 
+}
+¸
+¸
+ 
+catch
+˝
+˝
+ 
+(
+˝
+˝
+ 
+	Exception
+˝
+˝
+ 
+e
+˝
+˝
+ 
+)
+˝
+˝
+ 
+{
+˛
+˛
+ 
+Log
+ˇ
+ˇ
+ 
+.
+ˇ
+ˇ
+ 
+Information
+ˇ
+ˇ
+ 
+(
+ˇ
+ˇ
+  
+$str
+ˇ
+ˇ
+  g
++
+ˇ
+ˇ
+h i
+e
+ˇ
+ˇ
+j k
+.
+ˇ
+ˇ
+k l
+Message
+ˇ
+ˇ
+l s
+)
+ˇ
+ˇ
+s t
+;
+ˇ
+ˇ
+t u
+throw
+ÄÄ 
+;
+ÄÄ 
+}
+ÅÅ 
+Log
+ÇÇ 
+.
+ÇÇ 
+Information
+ÇÇ 
+(
+ÇÇ 
+$str
+ÇÇ b
++
+ÇÇc d
+DateTime
+ÇÇe m
+.
+ÇÇm n
+Now
+ÇÇn q
+.
+ÇÇq r
+ToString
+ÇÇr z
+(
+ÇÇz {
+$strÇÇ{ é
+)ÇÇé è
++ÇÇê ë
+$strÇÇí ß
+)ÇÇß ®
+;ÇÇ® ©
+}
+ÉÉ 	
+public
+áá 
+int
+áá $
+GLWBUploadFileOnServer
+áá )
+(
+áá) *
+string
+áá* 0
+
+SourceFile
+áá1 ;
+)
+áá; <
+{
+àà 	
+Log
+ää 
+.
+ää 
+Information
+ää 
+(
+ää 
+$str
+ää U
++
+ääV W
+DateTime
+ääX `
+.
+ää` a
+Now
+ääa d
+.
+ääd e
+ToString
+ääe m
+(
+ääm n
+$strään Å
+)ääÅ Ç
++ääÉ Ñ
+$strääÖ ö
+)ääö õ
+;ääõ ú
+int
+çç 
+result
+çç 
+=
+çç 
+$num
+çç 
+;
+çç 
+try
+éé 
+{
+èè 
+using
+êê 
+(
+êê 
+
+SftpClient
+êê !
+client
+êê" (
+=
+êê) *
+new
+êê+ .
+
+SftpClient
+êê/ 9
+(
+êê9 :
+	_sftpHost
+êê: C
+,
+êêC D
+	_sftpPort
+êêE N
+,
+êêN O
+_sftpUserName
+êêP ]
+,
+êê] ^
+_sftpPassword
+êê_ l
+)
+êêl m
+)
+êêm n
+{
+ëë 
+client
+íí 
+.
+íí 
+Connect
+íí "
+(
+íí" #
+)
+íí# $
+;
+íí$ %
+if
+îî 
+(
+îî 
+client
+îî 
+.
+îî 
+IsConnected
+îî *
+)
+îî* +
+{
+ïï 
+Log
+ññ 
+.
+ññ 
+Information
+ññ '
+(
+ññ' (
+$str
+ññ( ?
+)
+ññ? @
+;
+ññ@ A
+client
+óó 
+.
+óó 
+ChangeDirectory
+óó .
+(
+óó. /(
+_sftpDestinationUploadPath
+óó/ I
+)
+óóI J
+;
+óóJ K
+using
+òò 
+(
+òò 
+
+FileStream
+òò )
+fs
+òò* ,
+=
+òò- .
+new
+òò/ 2
+
+FileStream
+òò3 =
+(
+òò= >
+
+SourceFile
+òò> H
+,
+òòH I
+FileMode
+òòJ R
+.
+òòR S
+Open
+òòS W
+)
+òòW X
+)
+òòX Y
+{
+ôô 
+if
+úú 
+(
+úú  
+System
+úú  &
+.
+úú& '
+IO
+úú' )
+.
+úú) *
+File
+úú* .
+.
+úú. /
+Exists
+úú/ 5
+(
+úú5 6
+Path
+úú6 :
+.
+úú: ;
+Combine
+úú; B
+(
+úúB C(
+_sftpDestinationUploadPath
+úúC ]
+,
+úú] ^
+Path
+úú_ c
+.
+úúc d
+GetFileName
+úúd o
+(
+úúo p
+
+SourceFile
+úúp z
+)
+úúz {
+)
+úú{ |
+)
+úú| }
+)
+úú} ~
+{
+ùù 
+Log
+ûû  #
+.
+ûû# $
+Information
+ûû$ /
+(
+ûû/ 0
+$str
+ûû0 R
++
+ûûS T
+
+SourceFile
+ûûU _
++
+ûû` a
+$str
+ûûb e
+)
+ûûe f
+;
+ûûf g
+}
+üü 
+else
+††  
+{
+°° 
+client
+¢¢  &
+.
+¢¢& '
+
+UploadFile
+¢¢' 1
+(
+¢¢1 2
+fs
+¢¢2 4
+,
+¢¢4 5
+Path
+¢¢6 :
+.
+¢¢: ;
+GetFileName
+¢¢; F
+(
+¢¢F G
+
+SourceFile
+¢¢G Q
+)
+¢¢Q R
+)
+¢¢R S
+;
+¢¢S T
+Log
+££  #
+.
+££# $
+Information
+££$ /
+(
+££/ 0
+$str
+££0 G
+)
+££G H
+;
+££H I
+}
+§§ 
+}
+¶¶ 
+client
+ßß 
+.
+ßß 
+Dispose
+ßß &
+(
+ßß& '
+)
+ßß' (
+;
+ßß( )
+result
+®® 
+=
+®®  
+$num
+®®! "
+;
+®®" #
+}
+©© 
+else
+™™ 
+{
+´´ 
+Log
+¨¨ 
+.
+¨¨ 
+Information
+¨¨ '
+(
+¨¨' (
+$str
+¨¨( C
+)
+¨¨C D
+;
+¨¨D E
+}
+≠≠ 
+}
+ØØ 
+}
+±± 
+catch
+≤≤ 
+(
+≤≤ 
+	Exception
+≤≤ 
+ex
+≤≤ 
+)
+≤≤  
+{
+≥≥ 
+Log
+¥¥ 
+.
+¥¥ 
+Information
+¥¥ 
+(
+¥¥  
+$str
+¥¥  >
++
+¥¥? @
+ex
+¥¥A C
+.
+¥¥C D
+Message
+¥¥D K
+)
+¥¥K L
+;
+¥¥L M
+throw
+µµ 
+ex
+µµ 
+;
+µµ 
+}
+∂∂ 
+return
+∑∑ 
+result
+∑∑ 
+;
+∑∑ 
+Log
+∫∫ 
+.
+∫∫ 
+Information
+∫∫ 
+(
+∫∫ 
+$str
+∫∫ S
++
+∫∫T U
+DateTime
+∫∫V ^
+.
+∫∫^ _
+Now
+∫∫_ b
+.
+∫∫b c
+ToString
+∫∫c k
+(
+∫∫k l
+$str
+∫∫l 
+)∫∫ Ä
++∫∫Å Ç
+$str∫∫É ò
+)∫∫ò ô
+;∫∫ô ö
+}
+ªª 	
+public
+ΩΩ 
+int
+ΩΩ $
+GLWBReadFileFromServer
+ΩΩ )
+(
+ΩΩ) *
+string
+ΩΩ* 0
+[
+ΩΩ0 1
+]
+ΩΩ1 2
+FileNameToRead
+ΩΩ3 A
+,
+ΩΩA B
+string
+ΩΩC I
+rootPath
+ΩΩJ R
+)
+ΩΩR S
+{
+ææ 	
+Log
+¿¿ 
+.
+¿¿ 
+Information
+¿¿ 
+(
+¿¿ 
+$str
+¿¿ U
++
+¿¿V W
+DateTime
+¿¿X `
+.
+¿¿` a
+Now
+¿¿a d
+.
+¿¿d e
+ToString
+¿¿e m
+(
+¿¿m n
+$str¿¿n Å
+)¿¿Å Ç
++¿¿É Ñ
+$str¿¿Ö ö
+)¿¿ö õ
+;¿¿õ ú
+int
+√√ 
+result
+√√ 
+=
+√√ 
+$num
+√√ 
+;
+√√ 
+try
+ƒƒ 
+{
+≈≈ 
+using
+∆∆ 
+(
+∆∆ 
+var
+∆∆ 
+
+sftpClient
+∆∆ %
+=
+∆∆& '
+new
+∆∆( +
+
+SftpClient
+∆∆, 6
+(
+∆∆6 7
+	_sftpHost
+∆∆7 @
+,
+∆∆@ A
+	_sftpPort
+∆∆B K
+,
+∆∆K L
+_sftpUserName
+∆∆M Z
+,
+∆∆Z [
+_sftpPassword
+∆∆\ i
+)
+∆∆i j
+)
+∆∆j k
+{
+«« 
+
+sftpClient
+»» 
+.
+»» 
+Connect
+»» &
+(
+»»& '
+)
+»»' (
+;
+»»( )
+if
+…… 
+(
+…… 
+
+sftpClient
+…… "
+.
+……" #
+IsConnected
+……# .
+)
+……. /
+{
+   
+Log
+ÀÀ 
+.
+ÀÀ 
+Information
+ÀÀ '
+(
+ÀÀ' (
+$str
+ÀÀ( ?
+)
+ÀÀ? @
+;
+ÀÀ@ A
+rootPath
+ÃÃ  
+=
+ÃÃ! "
+Path
+ÃÃ# '
+.
+ÃÃ' (
+Combine
+ÃÃ( /
+(
+ÃÃ/ 0
+rootPath
+ÃÃ0 8
++
+ÃÃ9 :
+$str
+ÃÃ; >
+,
+ÃÃ> ?
+_GLWBResponsePath
+ÃÃ@ Q
+)
+ÃÃQ R
+;
+ÃÃR S
+foreach
+ÕÕ 
+(
+ÕÕ  !
+var
+ÕÕ! $
+fileItemToRead
+ÕÕ% 3
+in
+ÕÕ4 6
+FileNameToRead
+ÕÕ7 E
+)
+ÕÕE F
+{
+ŒŒ 
+string
+œœ "
+fileName
+œœ# +
+=
+œœ, -
+_GLWBCorporateId
+œœ. >
++
+œœ? @
+$str
+œœA H
++
+œœI J
+fileItemToRead
+œœK Y
+;
+œœY Z
+var
+—— 
+files
+——  %
+=
+——& '
+
+sftpClient
+——( 2
+.
+——2 3
+ListDirectory
+——3 @
+(
+——@ A&
+_sftpDestinationReadPath
+——A Y
+)
+——Y Z
+;
+——Z [
+Log
+”” 
+.
+””  
+Information
+””  +
+(
+””+ ,
+$str
+””, B
++
+””C D
+fileName
+””E M
+)
+””M N
+;
+””N O
+if
+‘‘ 
+(
+‘‘  
+files
+‘‘  %
+!=
+‘‘& (
+null
+‘‘) -
+)
+‘‘- .
+{
+’’ 
+files
+÷÷  %
+=
+÷÷& '
+files
+÷÷( -
+.
+÷÷- .
+Where
+÷÷. 3
+(
+÷÷3 4
+f
+÷÷4 5
+=>
+÷÷6 8
+f
+÷÷9 :
+.
+÷÷: ;
+Name
+÷÷; ?
+==
+÷÷@ B
+fileName
+÷÷C K
+)
+÷÷K L
+.
+÷÷L M
+ToList
+÷÷M S
+(
+÷÷S T
+)
+÷÷T U
+;
+÷÷U V
+if
+⁄⁄  "
+(
+⁄⁄# $
+!
+⁄⁄$ %
+	Directory
+⁄⁄% .
+.
+⁄⁄. /
+Exists
+⁄⁄/ 5
+(
+⁄⁄5 6
+rootPath
+⁄⁄6 >
+)
+⁄⁄> ?
+)
+⁄⁄? @
+{
+€€  !
+	Directory
+‹‹$ -
+.
+‹‹- .
+CreateDirectory
+‹‹. =
+(
+‹‹= >
+rootPath
+‹‹> F
+)
+‹‹F G
+;
+‹‹G H
+}
+››  !
+foreach
+ﬁﬁ  '
+(
+ﬁﬁ( )
+var
+ﬁﬁ) ,
+file
+ﬁﬁ- 1
+in
+ﬁﬁ2 4
+files
+ﬁﬁ5 :
+)
+ﬁﬁ: ;
+{
+ﬂﬂ  !
+string
+‡‡$ *
+FileName
+‡‡+ 3
+=
+‡‡4 5
+Path
+‡‡6 :
+.
+‡‡: ;
+GetFileName
+‡‡; F
+(
+‡‡F G
+file
+‡‡G K
+.
+‡‡K L
+Name
+‡‡L P
+.
+‡‡P Q
+ToString
+‡‡Q Y
+(
+‡‡Y Z
+)
+‡‡Z [
+)
+‡‡[ \
+;
+‡‡\ ]3
+%DownloadResponseFileFromServerToLocal
+··$ I
+(
+··I J
+
+sftpClient
+··J T
+,
+··T U
+file
+··V Z
+,
+··Z [
+rootPath
+··\ d
+)
+··d e
+;
+··e f
+}
+˘˘  !
+}
+˚˚ 
+Log
+˝˝ 
+.
+˝˝  
+Information
+˝˝  +
+(
+˝˝+ ,
+$str
+˝˝, @
++
+˝˝A B
+fileName
+˝˝C K
+)
+˝˝K L
+;
+˝˝L M
+}
+ˇˇ 
+}
+ÄÄ 
+else
+ÅÅ 
+{
+ÇÇ 
+Log
+ÉÉ 
+.
+ÉÉ 
+Information
+ÉÉ '
+(
+ÉÉ' (
+$str
+ÉÉ( C
+)
+ÉÉC D
+;
+ÉÉD E
+}
+ÖÖ 
+
+sftpClient
+ÜÜ 
+.
+ÜÜ 
+Dispose
+ÜÜ &
+(
+ÜÜ& '
+)
+ÜÜ' (
+;
+ÜÜ( )
+}
+àà 
+}
+ää 
+catch
+ãã 
+(
+ãã 
+	Exception
+ãã 
+ex
+ãã 
+)
+ãã  
+{
+åå 
+throw
+çç 
+ex
+çç 
+;
+çç 
+}
+éé 
+return
+èè 
+result
+èè 
+;
+èè 
+Log
+íí 
+.
+íí 
+Information
+íí 
+(
+íí 
+$str
+íí S
++
+ííT U
+DateTime
+ííV ^
+.
+íí^ _
+Now
+íí_ b
+.
+ííb c
+ToString
+ííc k
+(
+íík l
+$str
+ííl 
+)íí Ä
++ííÅ Ç
+$strííÉ ò
+)ííò ô
+;ííô ö
+}
+ìì 	
+public
+ïï 
+	DataTable
+ïï ,
+GLWBReadCSVFileFromLocalServer
+ïï 7
+(
+ïï7 8
+string
+ïï8 >
+dest
+ïï? C
+,
+ïïC D
+string
+ïïE K
+file
+ïïL P
+)
+ïïP Q
+{
+ññ 	
+Log
+òò 
+.
+òò 
+Information
+òò 
+(
+òò 
+$str
+òò ]
++
+òò^ _
+DateTime
+òò` h
+.
+òòh i
+Now
+òòi l
+.
+òòl m
+ToString
+òòm u
+(
+òòu v
+$stròòv â
+)òòâ ä
++òòã å
+$stròòç ¢
+)òò¢ £
+;òò£ §
+	DataTable
+ôô 
+dtCsv
+ôô 
+=
+ôô 
+new
+ôô !
+	DataTable
+ôô" +
+(
+ôô+ ,
+)
+ôô, -
+;
+ôô- .
+Log
+öö 
+.
+öö 
+Information
+öö 
+(
+öö 
+$str
+öö #
++
+öö$ %
+dest
+öö& *
++
+öö+ ,
+$str
+öö- ?
++
+öö@ A
+file
+ööB F
++
+ööG H
+$str
+ööI K
+)
+ööK L
+;
+ööL M
+try
+õõ 
+{
+úú 
+using
+ùù 
+(
+ùù 
+StreamReader
+ùù #
+sr
+ùù$ &
+=
+ùù' (
+new
+ùù) ,
+StreamReader
+ùù- 9
+(
+ùù9 :
+Path
+ùù: >
+.
+ùù> ?
+Combine
+ùù? F
+(
+ùùF G
+dest
+ùùG K
+,
+ùùK L
+file
+ùùM Q
+)
+ùùQ R
+)
+ùùR S
+)
+ùùS T
+{
+ûû 
+dtCsv
+†† 
+.
+†† 
+Columns
+†† !
+.
+††! "
+Add
+††" %
+(
+††% &
+$str
+††& ,
+,
+††, -
+typeof
+††. 4
+(
+††4 5
+System
+††5 ;
+.
+††; <
+String
+††< B
+)
+††B C
+)
+††C D
+;
+††D E
+dtCsv
+°° 
+.
+°° 
+Columns
+°° !
+.
+°°! "
+Add
+°°" %
+(
+°°% &
+$str
+°°& 9
+,
+°°9 :
+typeof
+°°; A
+(
+°°A B
+System
+°°B H
+.
+°°H I
+String
+°°I O
+)
+°°O P
+)
+°°P Q
+;
+°°Q R
+dtCsv
+¢¢ 
+.
+¢¢ 
+Columns
+¢¢ !
+.
+¢¢! "
+Add
+¢¢" %
+(
+¢¢% &
+$str
+¢¢& -
+,
+¢¢- .
+typeof
+¢¢/ 5
+(
+¢¢5 6
+System
+¢¢6 <
+.
+¢¢< =
+String
+¢¢= C
+)
+¢¢C D
+)
+¢¢D E
+;
+¢¢E F
+dtCsv
+££ 
+.
+££ 
+Columns
+££ !
+.
+££! "
+Add
+££" %
+(
+££% &
+$str
+££& 5
+,
+££5 6
+typeof
+££7 =
+(
+££= >
+System
+££> D
+.
+££D E
+String
+££E K
+)
+££K L
+)
+££L M
+;
+££M N
+dtCsv
+§§ 
+.
+§§ 
+Columns
+§§ !
+.
+§§! "
+Add
+§§" %
+(
+§§% &
+$str
+§§& <
+,
+§§< =
+typeof
+§§> D
+(
+§§D E
+System
+§§E K
+.
+§§K L
+String
+§§L R
+)
+§§R S
+)
+§§S T
+;
+§§T U
+dtCsv
+•• 
+.
+•• 
+Columns
+•• !
+.
+••! "
+Add
+••" %
+(
+••% &
+$str
+••& 0
+,
+••0 1
+typeof
+••2 8
+(
+••8 9
+System
+••9 ?
+.
+••? @
+String
+••@ F
+)
+••F G
+)
+••G H
+;
+••H I
+dtCsv
+¶¶ 
+.
+¶¶ 
+Columns
+¶¶ !
+.
+¶¶! "
+Add
+¶¶" %
+(
+¶¶% &
+$str
+¶¶& .
+,
+¶¶. /
+typeof
+¶¶0 6
+(
+¶¶6 7
+System
+¶¶7 =
+.
+¶¶= >
+Decimal
+¶¶> E
+)
+¶¶E F
+)
+¶¶F G
+;
+¶¶G H
+dtCsv
+ßß 
+.
+ßß 
+Columns
+ßß !
+.
+ßß! "
+Add
+ßß" %
+(
+ßß% &
+$str
+ßß& 1
+,
+ßß1 2
+typeof
+ßß3 9
+(
+ßß9 :
+System
+ßß: @
+.
+ßß@ A
+String
+ßßA G
+)
+ßßG H
+)
+ßßH I
+;
+ßßI J
+dtCsv
+®® 
+.
+®® 
+Columns
+®® !
+.
+®®! "
+Add
+®®" %
+(
+®®% &
+$str
+®®& ?
+,
+®®? @
+typeof
+®®A G
+(
+®®G H
+System
+®®H N
+.
+®®N O
+String
+®®O U
+)
+®®U V
+)
+®®V W
+;
+®®W X
+dtCsv
+©© 
+.
+©© 
+Columns
+©© !
+.
+©©! "
+Add
+©©" %
+(
+©©% &
+$str
+©©& 3
+,
+©©3 4
+typeof
+©©5 ;
+(
+©©; <
+System
+©©< B
+.
+©©B C
+String
+©©C I
+)
+©©I J
+)
+©©J K
+;
+©©K L
+dtCsv
+™™ 
+.
+™™ 
+Columns
+™™ !
+.
+™™! "
+Add
+™™" %
+(
+™™% &
+$str
+™™& 0
+,
+™™0 1
+typeof
+™™2 8
+(
+™™8 9
+System
+™™9 ?
+.
+™™? @
+String
+™™@ F
+)
+™™F G
+)
+™™G H
+;
+™™H I
+dtCsv
+´´ 
+.
+´´ 
+Columns
+´´ !
+.
+´´! "
+Add
+´´" %
+(
+´´% &
+$str
+´´& 2
+,
+´´2 3
+typeof
+´´4 :
+(
+´´: ;
+System
+´´; A
+.
+´´A B
+String
+´´B H
+)
+´´H I
+)
+´´I J
+;
+´´J K
+dtCsv
+¨¨ 
+.
+¨¨ 
+Columns
+¨¨ !
+.
+¨¨! "
+Add
+¨¨" %
+(
+¨¨% &
+$str
+¨¨& 7
+,
+¨¨7 8
+typeof
+¨¨9 ?
+(
+¨¨? @
+System
+¨¨@ F
+.
+¨¨F G
+String
+¨¨G M
+)
+¨¨M N
+)
+¨¨N O
+;
+¨¨O P
+dtCsv
+≠≠ 
+.
+≠≠ 
+Columns
+≠≠ !
+.
+≠≠! "
+Add
+≠≠" %
+(
+≠≠% &
+$str
+≠≠& 9
+,
+≠≠9 :
+typeof
+≠≠; A
+(
+≠≠A B
+System
+≠≠B H
+.
+≠≠H I
+String
+≠≠I O
+)
+≠≠O P
+)
+≠≠P Q
+;
+≠≠Q R
+dtCsv
+ÆÆ 
+.
+ÆÆ 
+Columns
+ÆÆ !
+.
+ÆÆ! "
+Add
+ÆÆ" %
+(
+ÆÆ% &
+$str
+ÆÆ& -
+,
+ÆÆ- .
+typeof
+ÆÆ/ 5
+(
+ÆÆ5 6
+System
+ÆÆ6 <
+.
+ÆÆ< =
+String
+ÆÆ= C
+)
+ÆÆC D
+)
+ÆÆD E
+;
+ÆÆE F
+dtCsv
+ØØ 
+.
+ØØ 
+Columns
+ØØ !
+.
+ØØ! "
+Add
+ØØ" %
+(
+ØØ% &
+$str
+ØØ& 4
+,
+ØØ4 5
+typeof
+ØØ6 <
+(
+ØØ< =
+System
+ØØ= C
+.
+ØØC D
+String
+ØØD J
+)
+ØØJ K
+)
+ØØK L
+;
+ØØL M
+while
+≥≥ 
+(
+≥≥ 
+!
+≥≥ 
+sr
+≥≥ 
+.
+≥≥ 
+EndOfStream
+≥≥ *
+)
+≥≥* +
+{
+¥¥ 
+string
+µµ 
+FullText
+µµ '
+;
+µµ' (
+FullText
+∂∂  
+=
+∂∂! "
+sr
+∂∂# %
+.
+∂∂% &
+	ReadToEnd
+∂∂& /
+(
+∂∂/ 0
+)
+∂∂0 1
+;
+∂∂1 2
+string
+∑∑ 
+[
+∑∑ 
+]
+∑∑  
+rows
+∑∑! %
+=
+∑∑& '
+FullText
+∑∑( 0
+.
+∑∑0 1
+Split
+∑∑1 6
+(
+∑∑6 7
+$char
+∑∑7 ;
+)
+∑∑; <
+;
+∑∑< =
+for
+ππ 
+(
+ππ 
+int
+ππ  
+i
+ππ! "
+=
+ππ# $
+$num
+ππ% &
+;
+ππ& '
+i
+ππ( )
+<
+ππ* +
+rows
+ππ, 0
+.
+ππ0 1
+Length
+ππ1 7
+-
+ππ8 9
+$num
+ππ: ;
+;
+ππ; <
+i
+ππ= >
+++
+ππ> @
+)
+ππ@ A
+{
+∫∫ 
+string
+ºº "
+[
+ºº" #
+]
+ºº# $
+
+rowValues0
+ºº% /
+=
+ºº0 1
+rows
+ºº2 6
+[
+ºº6 7
+i
+ºº7 8
+]
+ºº8 9
+.
+ºº9 :
+Split
+ºº: ?
+(
+ºº? @
+$char
+ºº@ C
+)
+ººC D
+;
+ººD E
+DataRow
+ΩΩ #
+row
+ΩΩ$ '
+=
+ΩΩ( )
+dtCsv
+ΩΩ* /
+.
+ΩΩ/ 0
+Rows
+ΩΩ0 4
+.
+ΩΩ4 5
+Add
+ΩΩ5 8
+(
+ΩΩ8 9
+)
+ΩΩ9 :
+;
+ΩΩ: ;
+for
+ææ 
+(
+ææ  !
+int
+ææ! $
+j
+ææ% &
+=
+ææ' (
+$num
+ææ) *
+;
+ææ* +
+j
+ææ, -
+<
+ææ. /
+
+rowValues0
+ææ0 :
+.
+ææ: ;
+Length
+ææ; A
+;
+ææA B
+j
+ææC D
+++
+ææD F
+)
+ææF G
+{
+øø 
+row
+¿¿  #
+.
+¿¿# $
+SetField
+¿¿$ ,
+(
+¿¿, -
+j
+¿¿- .
+,
+¿¿. /
+
+rowValues0
+¿¿0 :
+[
+¿¿: ;
+j
+¿¿; <
+]
+¿¿< =
+)
+¿¿= >
+;
+¿¿> ?
+}
+¡¡ 
+}
+¬¬ 
+}
+ƒƒ 
+return
+≈≈ 
+dtCsv
+≈≈  
+;
+≈≈  !
+}
+∆∆ 
+return
+»» 
+null
+»» 
+;
+»» 
+}
+…… 
+catch
+   
+(
+   
+	Exception
+   
+ex
+   
+)
+    
+{
+ÀÀ 
+return
+ÕÕ 
+dtCsv
+ÕÕ 
+;
+ÕÕ 
+}
+ŒŒ 
+Log
+–– 
+.
+–– 
+Information
+–– 
+(
+–– 
+$str
+–– [
++
+––\ ]
+DateTime
+––^ f
+.
+––f g
+Now
+––g j
+.
+––j k
+ToString
+––k s
+(
+––s t
+$str––t á
+)––á à
++––â ä
+$str––ã †
+)––† °
+;––° ¢
+}
+—— 	
+private
+÷÷ 
+static
+÷÷ 
+readonly
+÷÷ 
+char
+÷÷  $
+[
+÷÷$ %
+]
+÷÷% &
+Punctuations
+÷÷' 3
+=
+÷÷4 5
+$str
+÷÷6 N
+.
+÷÷N O
+ToCharArray
+÷÷O Z
+(
+÷÷Z [
+)
+÷÷[ \
+;
+÷÷\ ]
+public
+◊◊ 
+static
+◊◊ 
+string
+◊◊ 
+Generate
+◊◊ %
+(
+◊◊% &
+int
+◊◊& )
+length
+◊◊* 0
+,
+◊◊0 1
+int
+◊◊2 5/
+!numberOfNonAlphanumericCharacters
+◊◊6 W
+)
+◊◊W X
+{
+ÿÿ 	
+if
+ŸŸ 
+(
+ŸŸ 
+length
+ŸŸ 
+<
+ŸŸ 
+$num
+ŸŸ 
+||
+ŸŸ 
+length
+ŸŸ $
+>
+ŸŸ% &
+$num
+ŸŸ' *
+)
+ŸŸ* +
+{
+⁄⁄ 
+throw
+€€ 
+new
+€€ 
+ArgumentException
+€€ +
+(
+€€+ ,
+$str
+€€, 4
+)
+€€4 5
+;
+€€5 6
+}
+‹‹ 
+if
+ﬁﬁ 
+(
+ﬁﬁ /
+!numberOfNonAlphanumericCharacters
+ﬁﬁ 1
+>
+ﬁﬁ2 3
+length
+ﬁﬁ4 :
+||
+ﬁﬁ; =/
+!numberOfNonAlphanumericCharacters
+ﬁﬁ> _
+<
+ﬁﬁ` a
+$num
+ﬁﬁb c
+)
+ﬁﬁc d
+{
+ﬂﬂ 
+throw
+‡‡ 
+new
+‡‡ 
+ArgumentException
+‡‡ +
+(
+‡‡+ ,
+$str
+‡‡, O
+)
+‡‡O P
+;
+‡‡P Q
+}
+·· 
+using
+„„ 
+(
+„„ 
+var
+„„ 
+rng
+„„ 
+=
+„„ #
+RandomNumberGenerator
+„„ 2
+.
+„„2 3
+Create
+„„3 9
+(
+„„9 :
+)
+„„: ;
+)
+„„; <
+{
+‰‰ 
+var
+ÂÂ 
+
+byteBuffer
+ÂÂ 
+=
+ÂÂ  
+new
+ÂÂ! $
+byte
+ÂÂ% )
+[
+ÂÂ) *
+length
+ÂÂ* 0
+]
+ÂÂ0 1
+;
+ÂÂ1 2
+rng
+ÁÁ 
+.
+ÁÁ 
+GetBytes
+ÁÁ 
+(
+ÁÁ 
+
+byteBuffer
+ÁÁ '
+)
+ÁÁ' (
+;
+ÁÁ( )
+var
+ÈÈ 
+count
+ÈÈ 
+=
+ÈÈ 
+$num
+ÈÈ 
+;
+ÈÈ 
+var
+ÍÍ 
+characterBuffer
+ÍÍ #
+=
+ÍÍ$ %
+new
+ÍÍ& )
+char
+ÍÍ* .
+[
+ÍÍ. /
+length
+ÍÍ/ 5
+]
+ÍÍ5 6
+;
+ÍÍ6 7
+for
+ÏÏ 
+(
+ÏÏ 
+var
+ÏÏ 
+iter
+ÏÏ 
+=
+ÏÏ 
+$num
+ÏÏ  !
+;
+ÏÏ! "
+iter
+ÏÏ# '
+<
+ÏÏ( )
+length
+ÏÏ* 0
+;
+ÏÏ0 1
+iter
+ÏÏ2 6
+++
+ÏÏ6 8
+)
+ÏÏ8 9
+{
+ÌÌ 
+var
+ÓÓ 
+i
+ÓÓ 
+=
+ÓÓ 
+
+byteBuffer
+ÓÓ &
+[
+ÓÓ& '
+iter
+ÓÓ' +
+]
+ÓÓ+ ,
+%
+ÓÓ- .
+$num
+ÓÓ/ 1
+;
+ÓÓ1 2
+if
+ 
+(
+ 
+i
+ 
+<
+ 
+$num
+ 
+)
+ 
+{
+ÒÒ 
+characterBuffer
+ÚÚ '
+[
+ÚÚ' (
+iter
+ÚÚ( ,
+]
+ÚÚ, -
+=
+ÚÚ. /
+(
+ÚÚ0 1
+char
+ÚÚ1 5
+)
+ÚÚ5 6
+(
+ÚÚ6 7
+$char
+ÚÚ7 :
++
+ÚÚ; <
+i
+ÚÚ= >
+)
+ÚÚ> ?
+;
+ÚÚ? @
+}
+ÛÛ 
+else
+ÙÙ 
+if
+ÙÙ 
+(
+ÙÙ 
+i
+ÙÙ 
+<
+ÙÙ  
+$num
+ÙÙ! #
+)
+ÙÙ# $
+{
+ıı 
+characterBuffer
+ˆˆ '
+[
+ˆˆ' (
+iter
+ˆˆ( ,
+]
+ˆˆ, -
+=
+ˆˆ. /
+(
+ˆˆ0 1
+char
+ˆˆ1 5
+)
+ˆˆ5 6
+(
+ˆˆ6 7
+$char
+ˆˆ7 :
++
+ˆˆ; <
+i
+ˆˆ= >
+-
+ˆˆ? @
+$num
+ˆˆA C
+)
+ˆˆC D
+;
+ˆˆD E
+}
+˜˜ 
+else
+¯¯ 
+if
+¯¯ 
+(
+¯¯ 
+i
+¯¯ 
+<
+¯¯  
+$num
+¯¯! #
+)
+¯¯# $
+{
+˘˘ 
+characterBuffer
+˙˙ '
+[
+˙˙' (
+iter
+˙˙( ,
+]
+˙˙, -
+=
+˙˙. /
+(
+˙˙0 1
+char
+˙˙1 5
+)
+˙˙5 6
+(
+˙˙6 7
+$char
+˙˙7 :
++
+˙˙; <
+i
+˙˙= >
+-
+˙˙? @
+$num
+˙˙A C
+)
+˙˙C D
+;
+˙˙D E
+}
+˚˚ 
+else
+¸¸ 
+{
+˝˝ 
+characterBuffer
+˛˛ '
+[
+˛˛' (
+iter
+˛˛( ,
+]
+˛˛, -
+=
+˛˛. /
+Punctuations
+˛˛0 <
+[
+˛˛< =
+GetRandomInt
+˛˛= I
+(
+˛˛I J
+rng
+˛˛J M
+,
+˛˛M N
+Punctuations
+˛˛O [
+.
+˛˛[ \
+Length
+˛˛\ b
+)
+˛˛b c
+]
+˛˛c d
+;
+˛˛d e
+count
+ˇˇ 
+++
+ˇˇ 
+;
+ˇˇ  
+}
+ÄÄ 
+}
+ÅÅ 
+if
+ÉÉ 
+(
+ÉÉ 
+count
+ÉÉ 
+>=
+ÉÉ /
+!numberOfNonAlphanumericCharacters
+ÉÉ >
+)
+ÉÉ> ?
+{
+ÑÑ 
+return
+ÖÖ 
+new
+ÖÖ 
+string
+ÖÖ %
+(
+ÖÖ% &
+characterBuffer
+ÖÖ& 5
+)
+ÖÖ5 6
+;
+ÖÖ6 7
+}
+ÜÜ 
+int
+àà 
+j
+àà 
+;
+àà 
+for
+ää 
+(
+ää 
+j
+ää 
+=
+ää 
+$num
+ää 
+;
+ää 
+j
+ää 
+<
+ää /
+!numberOfNonAlphanumericCharacters
+ää  A
+-
+ääB C
+count
+ääD I
+;
+ääI J
+j
+ääK L
+++
+ääL N
+)
+ääN O
+{
+ãã 
+int
+åå 
+k
+åå 
+;
+åå 
+do
+çç 
+{
+éé 
+k
+èè 
+=
+èè 
+GetRandomInt
+èè (
+(
+èè( )
+rng
+èè) ,
+,
+èè, -
+length
+èè. 4
+)
+èè4 5
+;
+èè5 6
+}
+êê 
+while
+ëë 
+(
+ëë 
+!
+ëë 
+char
+ëë  
+.
+ëë  !
+IsLetterOrDigit
+ëë! 0
+(
+ëë0 1
+characterBuffer
+ëë1 @
+[
+ëë@ A
+k
+ëëA B
+]
+ëëB C
+)
+ëëC D
+)
+ëëD E
+;
+ëëE F
+characterBuffer
+ìì #
+[
+ìì# $
+k
+ìì$ %
+]
+ìì% &
+=
+ìì' (
+Punctuations
+ìì) 5
+[
+ìì5 6
+GetRandomInt
+ìì6 B
+(
+ììB C
+rng
+ììC F
+,
+ììF G
+Punctuations
+ììH T
+.
+ììT U
+Length
+ììU [
+)
+ìì[ \
+]
+ìì\ ]
+;
+ìì] ^
+}
+îî 
+return
+ññ 
+new
+ññ 
+string
+ññ !
+(
+ññ! "
+characterBuffer
+ññ" 1
+)
+ññ1 2
+;
+ññ2 3
+}
+óó 
+}
+òò 	
+private
+öö 
+static
+öö 
+int
+öö 
+GetRandomInt
+öö '
+(
+öö' (#
+RandomNumberGenerator
+öö( =
+randomGenerator
+öö> M
+)
+ööM N
+{
+õõ 	
+var
+úú 
+buffer
+úú 
+=
+úú 
+new
+úú 
+byte
+úú !
+[
+úú! "
+$num
+úú" #
+]
+úú# $
+;
+úú$ %
+randomGenerator
+ùù 
+.
+ùù 
+GetBytes
+ùù $
+(
+ùù$ %
+buffer
+ùù% +
+)
+ùù+ ,
+;
+ùù, -
+return
+üü 
+BitConverter
+üü 
+.
+üü  
+ToInt32
+üü  '
+(
+üü' (
+buffer
+üü( .
+)
+üü. /
+;
+üü/ 0
+}
+†† 	
+private
+°° 
+static
+°° 
+int
+°° 
+GetRandomInt
+°° '
+(
+°°' (#
+RandomNumberGenerator
+°°( =
+randomGenerator
+°°> M
+,
+°°M N
+int
+°°O R
+maxInput
+°°S [
+)
+°°[ \
+{
+¢¢ 	
+return
+££ 
+Math
+££ 
+.
+££ 
+Abs
+££ 
+(
+££ 
+GetRandomInt
+££ (
+(
+££( )
+randomGenerator
+££) 8
+)
+££8 9
+%
+££: ;
+maxInput
+££< D
+)
+££D E
+;
+££E F
+}
+§§ 	
+public
+ßß 
+static
+ßß 
+string
+ßß *
+GenerateRandomStrongPassword
+ßß 9
+(
+ßß9 :
+int
+ßß: =
+length
+ßß> D
+)
+ßßD E
+{
+®® 	
+string
+©© 
+	alphaCaps
+©© 
+=
+©© 
+$str
+©© ;
+;
+©©; <
+string
+™™ 
+alphaLow
+™™ 
+=
+™™ 
+$str
+™™ :
+;
+™™: ;
+string
+´´ 
+numerics
+´´ 
+=
+´´ 
+$str
+´´ *
+;
+´´* +
+string
+¨¨ 
+special
+¨¨ 
+=
+¨¨ 
+$str
+¨¨ #
+;
+¨¨# $
+string
+≠≠ 
+allChars
+≠≠ 
+=
+≠≠ 
+	alphaCaps
+≠≠ '
++
+≠≠( )
+alphaLow
+≠≠* 2
++
+≠≠3 4
+numerics
+≠≠5 =
+;
+≠≠= >
+String
+ØØ 
+generatedPassword
+ØØ $
+=
+ØØ% &
+$str
+ØØ' )
+;
+ØØ) *
+if
+∞∞ 
+(
+∞∞ 
+length
+∞∞ 
+<
+∞∞ 
+$num
+∞∞ 
+)
+∞∞ 
+throw
+±± 
+new
+±± 
+	Exception
+±± #
+(
+±±# $
+$str
+±±$ T
+)
+±±T U
+;
+±±U V
+int
+≥≥ 
+	lowerpass
+≥≥ 
+,
+≥≥ 
+	upperpass
+≥≥ $
+,
+≥≥$ %
+numpass
+≥≥& -
+,
+≥≥- .
+specialchar
+≥≥/ :
+;
+≥≥: ;
+string
+¥¥ 
+posarray
+¥¥ 
+=
+¥¥ 
+$str
+¥¥ *
+;
+¥¥* +
+if
+µµ 
+(
+µµ 
+length
+µµ 
+<
+µµ 
+posarray
+µµ !
+.
+µµ! "
+Length
+µµ" (
+)
+µµ( )
+posarray
+∂∂ 
+=
+∂∂ 
+posarray
+∂∂ #
+.
+∂∂# $
+	Substring
+∂∂$ -
+(
+∂∂- .
+$num
+∂∂. /
+,
+∂∂/ 0
+length
+∂∂1 7
+)
+∂∂7 8
+;
+∂∂8 9
+	lowerpass
+∑∑ 
+=
+∑∑ 
+getRandomPosition
+∑∑ )
+(
+∑∑) *
+ref
+∑∑* -
+posarray
+∑∑. 6
+)
+∑∑6 7
+;
+∑∑7 8
+	upperpass
+∏∏ 
+=
+∏∏ 
+getRandomPosition
+∏∏ )
+(
+∏∏) *
+ref
+∏∏* -
+posarray
+∏∏. 6
+)
+∏∏6 7
+;
+∏∏7 8
+numpass
+ππ 
+=
+ππ 
+getRandomPosition
+ππ '
+(
+ππ' (
+ref
+ππ( +
+posarray
+ππ, 4
+)
+ππ4 5
+;
+ππ5 6
+specialchar
+∫∫ 
+=
+∫∫ 
+getRandomPosition
+∫∫ +
+(
+∫∫+ ,
+ref
+∫∫, /
+posarray
+∫∫0 8
+)
+∫∫8 9
+;
+∫∫9 :
+for
+ΩΩ 
+(
+ΩΩ 
+int
+ΩΩ 
+i
+ΩΩ 
+=
+ΩΩ 
+$num
+ΩΩ 
+;
+ΩΩ 
+i
+ΩΩ 
+<
+ΩΩ 
+length
+ΩΩ  &
+;
+ΩΩ& '
+i
+ΩΩ( )
+++
+ΩΩ) +
+)
+ΩΩ+ ,
+{
+ææ 
+if
+øø 
+(
+øø 
+i
+øø 
+==
+øø 
+	lowerpass
+øø "
+)
+øø" #
+generatedPassword
+¿¿ %
++=
+¿¿& (
+getRandomChar
+¿¿) 6
+(
+¿¿6 7
+	alphaCaps
+¿¿7 @
+)
+¿¿@ A
+;
+¿¿A B
+else
+¡¡ 
+if
+¡¡ 
+(
+¡¡ 
+i
+¡¡ 
+==
+¡¡ 
+	upperpass
+¡¡ '
+)
+¡¡' (
+generatedPassword
+¬¬ %
++=
+¬¬& (
+getRandomChar
+¬¬) 6
+(
+¬¬6 7
+alphaLow
+¬¬7 ?
+)
+¬¬? @
+;
+¬¬@ A
+else
+√√ 
+if
+√√ 
+(
+√√ 
+i
+√√ 
+==
+√√ 
+numpass
+√√ %
+)
+√√% &
+generatedPassword
+ƒƒ %
++=
+ƒƒ& (
+getRandomChar
+ƒƒ) 6
+(
+ƒƒ6 7
+numerics
+ƒƒ7 ?
+)
+ƒƒ? @
+;
+ƒƒ@ A
+else
+≈≈ 
+if
+≈≈ 
+(
+≈≈ 
+i
+≈≈ 
+==
+≈≈ 
+specialchar
+≈≈ )
+)
+≈≈) *
+generatedPassword
+∆∆ %
++=
+∆∆& (
+getRandomChar
+∆∆) 6
+(
+∆∆6 7
+special
+∆∆7 >
+)
+∆∆> ?
+;
+∆∆? @
+else
+«« 
+generatedPassword
+»» %
++=
+»»& (
+getRandomChar
+»») 6
+(
+»»6 7
+allChars
+»»7 ?
+)
+»»? @
+;
+»»@ A
+}
+…… 
+return
+   
+generatedPassword
+   $
+;
+  $ %
+}
+ÀÀ 	
+private
+ŒŒ 
+static
+ŒŒ 
+string
+ŒŒ 
+getRandomChar
+ŒŒ +
+(
+ŒŒ+ ,
+string
+ŒŒ, 2
+
+fullString
+ŒŒ3 =
+)
+ŒŒ= >
+{
+œœ 	
+return
+–– 
+
+fullString
+–– 
+.
+–– 
+ToCharArray
+–– )
+(
+––) *
+)
+––* +
+[
+––+ ,
+(
+––, -
+int
+––- 0
+)
+––0 1
+Math
+––1 5
+.
+––5 6
+Floor
+––6 ;
+(
+––; <
+new
+––< ?
+Random
+––@ F
+(
+––F G
+)
+––G H
+.
+––H I
+
+NextDouble
+––I S
+(
+––S T
+)
+––T U
+*
+––V W
+
+fullString
+––X b
+.
+––b c
+Length
+––c i
+)
+––i j
+]
+––j k
+.
+––k l
+ToString
+––l t
+(
+––t u
+)
+––u v
+;
+––v w
+}
+—— 	
+private
+”” 
+static
+”” 
+int
+”” 
+getRandomPosition
+”” ,
+(
+””, -
+ref
+””- 0
+string
+””1 7
+posArray
+””8 @
+)
+””@ A
+{
+‘‘ 	
+int
+’’ 
+pos
+’’ 
+;
+’’ 
+string
+÷÷ 
+
+randomChar
+÷÷ 
+=
+÷÷ 
+posArray
+÷÷  (
+.
+÷÷( )
+ToCharArray
+÷÷) 4
+(
+÷÷4 5
+)
+÷÷5 6
+[
+÷÷6 7
+(
+÷÷7 8
+int
+÷÷8 ;
+)
+÷÷; <
+Math
+÷÷< @
+.
+÷÷@ A
+Floor
+÷÷A F
+(
+÷÷F G
+new
+÷÷G J
+Random
+÷÷K Q
+(
+÷÷Q R
+)
+÷÷R S
+.
+÷÷S T
+
+NextDouble
+÷÷T ^
+(
+÷÷^ _
+)
+÷÷_ `
+*
+÷÷a b
+posArray
+÷÷c k
+.
+÷÷k l
+Length
+÷÷l r
+)
+÷÷r s
+]
+÷÷s t
+.
+÷÷t u
+ToString
+÷÷u }
+(
+÷÷} ~
+)
+÷÷~ 
+;÷÷ Ä
+pos
+◊◊ 
+=
+◊◊ 
+int
+◊◊ 
+.
+◊◊ 
+Parse
+◊◊ 
+(
+◊◊ 
+
+randomChar
+◊◊ &
+)
+◊◊& '
+;
+◊◊' (
+posArray
+ÿÿ 
+=
+ÿÿ 
+posArray
+ÿÿ 
+.
+ÿÿ  
+Replace
+ÿÿ  '
+(
+ÿÿ' (
+
+randomChar
+ÿÿ( 2
+,
+ÿÿ2 3
+$str
+ÿÿ4 6
+)
+ÿÿ6 7
+;
+ÿÿ7 8
+return
+ŸŸ 
+pos
+ŸŸ 
+;
+ŸŸ 
+}
+⁄⁄ 	
+public
+‹‹ 
+async
+‹‹ 
+Task
+‹‹ 
+<
+‹‹ 
+APIResponse
+‹‹ %
+>
+‹‹% &
+
+CallWebAPI
+‹‹' 1
+(
+‹‹1 2
+object
+‹‹2 8
+
+dataobject
+‹‹9 C
+)
+‹‹C D
+{
+›› 	
+try
+ﬂﬂ 
+{
+‡‡ 
+APIResponse
+„„ 
+objApiResponse
+„„ *
+=
+„„+ ,
+new
+„„- 0
+APIResponse
+„„1 <
+(
+„„< =
+)
+„„= >
+;
+„„> ?
+using
+‰‰ 
+(
+‰‰ 
+var
+‰‰ 
+client
+‰‰ !
+=
+‰‰" #
+new
+‰‰$ '
+
+HttpClient
+‰‰( 2
+(
+‰‰2 3
+)
+‰‰3 4
+)
+‰‰4 5
+{
+ÂÂ 
+client
+ÁÁ 
+.
+ÁÁ 
+BaseAddress
+ÁÁ &
+=
+ÁÁ' (
+new
+ÁÁ) ,
+Uri
+ÁÁ- 0
+(
+ÁÁ0 1
+Convert
+ÁÁ1 8
+.
+ÁÁ8 9
+ToString
+ÁÁ9 A
+(
+ÁÁA B"
+_bocwRegistrationAPI
+ÁÁB V
+)
+ÁÁV W
+)
+ÁÁW X
+;
+ÁÁX Y
+client
+ÎÎ 
+.
+ÎÎ #
+DefaultRequestHeaders
+ÎÎ 0
+.
+ÎÎ0 1
+Accept
+ÎÎ1 7
+.
+ÎÎ7 8
+Add
+ÎÎ8 ;
+(
+ÎÎ; <
+new
+ÎÎ< ?-
+MediaTypeWithQualityHeaderValue
+ÎÎ@ _
+(
+ÎÎ_ `
+$str
+ÎÎ` r
+)
+ÎÎr s
+)
+ÎÎs t
+;
+ÎÎt u
+client
+ÏÏ 
+.
+ÏÏ #
+DefaultRequestHeaders
+ÏÏ 0
+.
+ÏÏ0 1
+Add
+ÏÏ1 4
+(
+ÏÏ4 5
+$str
+ÏÏ5 D
+,
+ÏÏD E
+_bocwAuthHeader
+ÏÏF U
+)
+ÏÏU V
+;
+ÏÏV W!
+HttpResponseMessage
+ '
+response
+( 0
+=
+1 2
+new
+3 6!
+HttpResponseMessage
+7 J
+(
+J K
+)
+K L
+;
+L M
+response
+˚˚ 
+=
+˚˚ 
+await
+˚˚ $
+client
+˚˚% +
+.
+˚˚+ ,
+PostAsJsonAsync
+˚˚, ;
+(
+˚˚; <"
+_bocwRegistrationAPI
+˚˚< P
+,
+˚˚P Q
+
+dataobject
+˚˚R \
+)
+˚˚\ ]
+;
+˚˚] ^
+if
+ˇˇ 
+(
+ˇˇ 
+response
+ˇˇ  
+.
+ˇˇ  !!
+IsSuccessStatusCode
+ˇˇ! 4
+)
+ˇˇ4 5
+{
+ÄÄ 
+var
+ÇÇ 
+result
+ÇÇ "
+=
+ÇÇ# $
+response
+ÇÇ% -
+.
+ÇÇ- .
+Content
+ÇÇ. 5
+.
+ÇÇ5 6
+ReadAsStringAsync
+ÇÇ6 G
+(
+ÇÇG H
+)
+ÇÇH I
+.
+ÇÇI J
+Result
+ÇÇJ P
+;
+ÇÇP Q
+objApiResponse
+ÉÉ &
+.
+ÉÉ& '
+Result
+ÉÉ' -
+=
+ÉÉ. /
+result
+ÉÉ0 6
+;
+ÉÉ6 7
+}
+ÑÑ 
+}
+ÖÖ 
+return
+ÜÜ 
+objApiResponse
+ÜÜ %
+;
+ÜÜ% &
+}
+áá 
+catch
+àà 
+(
+àà 
+	Exception
+àà 
+ex
+àà 
+)
+àà  
+{
+ââ 
+throw
+ãã 
+;
+ãã 
+}
+åå 
+}
+çç 	
+public
+èè 
+static
+èè 
+String
+èè 
+CreateCTPPOSTForm
+èè .
+(
+èè. /
+string
+èè/ 5
+url
+èè6 9
+,
+èè9 :!
+NameValueCollection
+èè; N
+data
+èèO S
+)
+èèS T
+{
+êê 	
+try
+ëë 
+{
+íí 
+string
+îî 
+formID
+îî 
+=
+îî 
+$str
+îî  -
+;
+îî- .
+string
+ïï 
+
+outputHTML
+ïï !
+=
+ïï" #
+$str
+ïï$ ,
+;
+ïï, -
+
+outputHTML
+ññ 
++=
+ññ 
+(
+ññ 
+$str
+ññ '
+)
+ññ' (
+;
+ññ( )
+
+outputHTML
+óó 
++=
+óó 
+(
+óó 
+$str
+óó F
+)
+óóF G
+;
+óóG H
+
+outputHTML
+òò 
++=
+òò 
+(
+òò 
+$str
+òò (
+)
+òò( )
+;
+òò) *
+
+outputHTML
+ôô 
++=
+ôô 
+(
+ôô 
+$str
+ôô '
+)
+ôô' (
+;
+ôô( )
+
+outputHTML
+öö 
++=
+öö 
+$str
+öö \
+;
+öö\ ]
+
+outputHTML
+õõ 
++=
+õõ 
+$str
+õõ 8
++
+õõ8 9
+formID
+õõ: @
++
+õõA B
+$str
+õõC O
++
+õõP Q
+url
+õõR U
++
+õõV W
+$str
+õõX b
++
+õõc d
+formID
+õõe k
++
+õõl m
+$str
+õõn r
+;
+õõr s
+
+outputHTML
+úú 
++=
+úú 
+$str
+úú 2
+;
+úú2 3
+
+outputHTML
+ùù 
++=
+ùù 
+$str
+ùù '
+;
+ùù' (
+foreach
+ûû 
+(
+ûû 
+string
+ûû 
+key
+ûû  #
+in
+ûû$ &
+data
+ûû' +
+.
+ûû+ ,
+Keys
+ûû, 0
+)
+ûû0 1
+{
+üü 
+
+outputHTML
+†† 
++=
+†† !
+$str
+††" ?
++
+††@ A
+key
+††B E
++
+††F G
+$str
+††H S
++
+††T U
+data
+††V Z
+[
+††Z [
+key
+††[ ^
+]
+††^ _
++
+††` a
+$str
+††b g
+;
+††g h
+}
+°° 
+
+outputHTML
+ßß 
++=
+ßß 
+$str
+ßß (
+;
+ßß( )
+
+outputHTML
+®® 
++=
+®® 
+$str
+®® (
+;
+®®( )
+
+outputHTML
+©© 
++=
+©© 
+$str
+©© ?
+;
+©©? @
+
+outputHTML
+™™ 
++=
+™™ 
+$str
+™™ *
++
+™™* +
+formID
+™™, 2
++
+™™3 4
+$str
+™™5 B
+;
+™™B C
+
+outputHTML
+´´ 
++=
+´´ 
+$str
+´´ )
+;
+´´) *
+
+outputHTML
+¨¨ 
++=
+¨¨ 
+$str
+¨¨ '
+;
+¨¨' (
+
+outputHTML
+≠≠ 
++=
+≠≠ 
+$str
+≠≠ '
+;
+≠≠' (
+
+outputHTML
+ÆÆ 
++=
+ÆÆ 
+$str
+ÆÆ '
+;
+ÆÆ' (
+return
+ØØ 
+
+outputHTML
+ØØ !
+;
+ØØ! "
+}
+∞∞ 
+catch
+±± 
+(
+±± 
+	Exception
+±± 
+ex
+±± 
+)
+±±  
+{
+≤≤ 
+return
+≥≥ 
+$str
+≥≥ 
+;
+≥≥ 
+}
+¥¥ 
+}
+µµ 	
+}
+∑∑ 
+}ππ ˙
+RD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\Extensions.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+.# $
+Utility$ +
+{ 
+public 
+
+class 
+
+Extensions 
+{ 
+private 
+readonly 
+IConfiguration '
+	appConfig( 1
+;1 2
+private 
+readonly 
+IHttpClientFactory +
+_clientFactory, :
+;: ;
+private 
+readonly 
+ClaimsPrincipal (
+_claimPincipal) 7
+;7 8
+private 
+readonly  
+IHttpContextAccessor - 
+_httpContextAccessor. B
+;B C
+public 
+
+Extensions 
+( 
+IConfiguration (
+config) /
+,/ 0
+IHttpClientFactory1 C
+clientFactoryD Q
+,Q R 
+IHttpContextAccessorS g
+httpContextAccessorh {
+){ |
+{ 	 
+_httpContextAccessor  
+=! "
+httpContextAccessor# 6
+??7 9
+throw: ?
+new@ C!
+ArgumentNullExceptionD Y
+(Y Z
+nameofZ `
+(` a
+httpContextAccessora t
+)t u
+)u v
+;v w
+_claimPincipal 
+=  
+_httpContextAccessor 1
+.1 2
+HttpContext2 =
+.= >
+User> B
+??C E
+throwF K
+newL O!
+ArgumentNullExceptionP e
+(e f
+nameoff l
+(l m!
+_httpContextAccessor	m Å
+.
+Å Ç
+HttpContext
+Ç ç
+.
+ç é
+User
+é í
+)
+í ì
+)
+ì î
+;
+î ï
+} 	
+public 
+void 
+AddUpdateClaim "
+(" #
+string# )
+key* -
+,- .
+string/ 5
+value6 ;
+); <
+{ 	
+var   
+identity   
+=   
+_claimPincipal   )
+.  ) *
+Identity  * 2
+as  3 5
+ClaimsIdentity  6 D
+;  D E
+if!! 
+(!! 
+identity!! 
+==!! 
+null!!  
+)!!  !
+return"" 
+;"" 
+var%% 
+existingClaim%% 
+=%% 
+identity%%  (
+.%%( )
+	FindFirst%%) 2
+(%%2 3
+key%%3 6
+)%%6 7
+;%%7 8
+if&& 
+(&& 
+existingClaim&& 
+!=&&  
+null&&! %
+)&&% &
+identity'' 
+.'' 
+RemoveClaim'' $
+(''$ %
+existingClaim''% 2
+)''2 3
+;''3 4
+identity** 
+.** 
+AddClaim** 
+(** 
+new** !
+Claim**" '
+(**' (
+key**( +
+,**+ ,
+value**- 2
+)**2 3
+)**3 4
+;**4 5 
+_httpContextAccessor++  
+.++  !
+HttpContext++! ,
+.++, -
+SignInAsync++- 8
+(++8 9(
+CookieAuthenticationDefaults++9 U
+.++U V 
+AuthenticationScheme++V j
+,++j k
+_claimPincipal++l z
+)++z {
+;++{ |
+},, 	
+}.. 
+}// °
+ZD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\PermissionConstant.cs
+	namespace 	
+LabourCommissioner
+ 
+. 
+Common #
+.# $
+Utility$ +
+{ 
+public		 
+
+enum		 
+PermissionConstant		 "
+{
+
+ 
+IsNone 
+= 
+$num 
+, 
+IsInsert 
+= 
+$num 
+, 
+IsUpdate 
+= 
+$num 
+, 
+IsDelete 
+= 
+$num 
+, 
+IsView 
+= 
+$num 
+} 
+} ·[
+SD:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\UserCookies.cs
+	namespace
+
+ 	
+LabourCommissioner
+
+
+ 
+.
+
+ 
+Common
+
+ #
+.
+
+# $
+Utility
+
+$ +
+{ 
+public 
+
+class 
+UserCookies 
+{ 
+private 
+static  
+IHttpContextAccessor + 
+_httpContextAccessor, @
+;@ A
+private 
+static 
+HttpContext "
+_httpContext# /
+;/ 0
+public 
+UserCookies 
+(  
+IHttpContextAccessor /
+httpContextAccessor0 C
+)C D
+{ 	 
+_httpContextAccessor  
+=! "
+httpContextAccessor# 6
+;6 7
+_httpContext 
+=  
+_httpContextAccessor /
+./ 0
+HttpContext0 ;
+;; <
+} 	
+public 
+static 
+int 
+UserId  
+{ 	
+get 
+{ 
+if 
+( 
+_httpContext  
+.  !
+User! %
+.% &
+Identity& .
+.. /
+IsAuthenticated/ >
+)> ?
+{ 
+return 
+Convert "
+." #
+ToInt32# *
+(* +
+_httpContext+ 7
+.7 8
+User8 <
+.< =
+Claims= C
+.C D
+FirstOrDefaultD R
+(R S
+xS T
+=>U W
+xX Y
+.Y Z
+TypeZ ^
+==_ a
+
+ClaimTypesb l
+.l m
+NameIdentifierm {
+){ |
+.| }
+Value	} Ç
+)
+Ç É
+;
+É Ñ
+} 
+else 
+{   
+return!! 
+$num!! 
+;!! 
+}"" 
+}## 
+}$$ 	
+public&& 
+static&& 
+string&& 
+UserName&& %
+{'' 	
+get(( 
+{)) 
+if** 
+(** 
+_httpContext**  
+.**  !
+User**! %
+.**% &
+Identity**& .
+.**. /
+IsAuthenticated**/ >
+)**> ?
+{++ 
+return,, 
+_httpContext,, '
+.,,' (
+User,,( ,
+.,,, -
+Claims,,- 3
+.,,3 4
+FirstOrDefault,,4 B
+(,,B C
+x,,C D
+=>,,E G
+x,,H I
+.,,I J
+Type,,J N
+==,,O Q
+
+ClaimTypes,,R \
+.,,\ ]
+Name,,] a
+),,a b
+.,,b c
+Value,,c h
+;,,h i
+}-- 
+else.. 
+{// 
+return00 
+null00 
+;00  
+}11 
+}22 
+}33 	
+public55 
+static55 
+string55 
+RoleIds55 $
+{66 	
+get77 
+{88 
+if99 
+(99 
+_httpContext99  
+.99  !
+User99! %
+.99% &
+Identity99& .
+.99. /
+IsAuthenticated99/ >
+)99> ?
+{:: 
+return;; 
+_httpContext;; '
+.;;' (
+User;;( ,
+.;;, -
+Claims;;- 3
+.;;3 4
+FirstOrDefault;;4 B
+(;;B C
+x;;C D
+=>;;E G
+x;;H I
+.;;I J
+Type;;J N
+==;;O Q
+
+ClaimTypes;;R \
+.;;\ ]
+Role;;] a
+);;a b
+.;;b c
+Value;;c h
+;;;h i
+}<< 
+else== 
+{>> 
+return?? 
+null?? 
+;??  
+}@@ 
+}AA 
+}BB 	
+publicCC 
+staticCC 
+stringCC 
+RegistrationIdCC +
+{DD 	
+getEE 
+{FF 
+ifGG 
+(GG 
+_httpContextGG  
+.GG  !
+UserGG! %
+.GG% &
+IdentityGG& .
+.GG. /
+IsAuthenticatedGG/ >
+)GG> ?
+{HH 
+returnII 
+_httpContextII '
+.II' (
+UserII( ,
+.II, -
+ClaimsII- 3
+.II3 4
+FirstOrDefaultII4 B
+(IIB C
+xIIC D
+=>IIE G
+xIIH I
+.III J
+TypeIIJ N
+==IIO Q
+$strIIR b
+)IIb c
+.IIc d
+ValueIId i
+;IIi j
+}JJ 
+elseKK 
+{LL 
+returnMM 
+nullMM 
+;MM  
+}NN 
+}OO 
+}PP 	
+publicRR 
+staticRR 
+stringRR 
+UserTypeRR %
+{SS 	
+getTT 
+{UU 
+ifVV 
+(VV 
+_httpContextVV  
+.VV  !
+UserVV! %
+.VV% &
+IdentityVV& .
+.VV. /
+IsAuthenticatedVV/ >
+)VV> ?
+{WW 
+returnXX 
+_httpContextXX '
+.XX' (
+UserXX( ,
+.XX, -
+ClaimsXX- 3
+.XX3 4
+FirstOrDefaultXX4 B
+(XXB C
+xXXC D
+=>XXE G
+xXXH I
+.XXI J
+TypeXXJ N
+==XXO Q
+$strXXR \
+)XX\ ]
+.XX] ^
+ValueXX^ c
+;XXc d
+}YY 
+elseZZ 
+{[[ 
+return\\ 
+null\\ 
+;\\  
+}]] 
+}^^ 
+}__ 	
+publicaa 
+staticaa 
+stringaa 
+DisplayNameaa (
+{bb 	
+getcc 
+{dd 
+ifee 
+(ee 
+_httpContextee  
+.ee  !
+Useree! %
+.ee% &
+Identityee& .
+.ee. /
+IsAuthenticatedee/ >
+)ee> ?
+{ff 
+returngg 
+_httpContextgg '
+.gg' (
+Usergg( ,
+.gg, -
+Claimsgg- 3
+.gg3 4
+FirstOrDefaultgg4 B
+(ggB C
+xggC D
+=>ggE G
+xggH I
+.ggI J
+TypeggJ N
+==ggO Q
+$strggR _
+)gg_ `
+.gg` a
+Valuegga f
+;ggf g
+}hh 
+elseii 
+{jj 
+returnkk 
+nullkk 
+;kk  
+}ll 
+}mm 
+}nn 	
+publicoo 
+staticoo 
+stringoo 
+MobileNooo %
+{pp 	
+getqq 
+{rr 
+ifss 
+(ss 
+_httpContextss  
+.ss  !
+Userss! %
+.ss% &
+Identityss& .
+.ss. /
+IsAuthenticatedss/ >
+)ss> ?
+{tt 
+returnuu 
+_httpContextuu '
+.uu' (
+Useruu( ,
+.uu, -
+Claimsuu- 3
+.uu3 4
+FirstOrDefaultuu4 B
+(uuB C
+xuuC D
+=>uuE G
+xuuH I
+.uuI J
+TypeuuJ N
+==uuO Q
+$struuR \
+)uu\ ]
+.uu] ^
+Valueuu^ c
+;uuc d
+}vv 
+elseww 
+{xx 
+returnyy 
+nullyy 
+;yy  
+}zz 
+}{{ 
+}|| 	
+public}} 
+static}} 
+string}} 
+EmailId}} $
+{~~ 	
+get 
+{
+ÄÄ 
+if
+ÅÅ 
+(
+ÅÅ 
+_httpContext
+ÅÅ  
+.
+ÅÅ  !
+User
+ÅÅ! %
+.
+ÅÅ% &
+Identity
+ÅÅ& .
+.
+ÅÅ. /
+IsAuthenticated
+ÅÅ/ >
+)
+ÅÅ> ?
+{
+ÇÇ 
+return
+ÉÉ 
+_httpContext
+ÉÉ '
+.
+ÉÉ' (
+User
+ÉÉ( ,
+.
+ÉÉ, -
+Claims
+ÉÉ- 3
+.
+ÉÉ3 4
+FirstOrDefault
+ÉÉ4 B
+(
+ÉÉB C
+x
+ÉÉC D
+=>
+ÉÉE G
+x
+ÉÉH I
+.
+ÉÉI J
+Type
+ÉÉJ N
+==
+ÉÉO Q
+$str
+ÉÉR [
+)
+ÉÉ[ \
+.
+ÉÉ\ ]
+Value
+ÉÉ] b
+;
+ÉÉb c
+}
+ÑÑ 
+else
+ÖÖ 
+{
+ÜÜ 
+return
+áá 
+null
+áá 
+;
+áá  
+}
+àà 
+}
+ââ 
+}
+ää 	
+public
+ãã 
+static
+ãã 
+string
+ãã 
+BeneficiaryType
+ãã ,
+{
+åå 	
+get
+çç 
+{
+éé 
+if
+èè 
+(
+èè 
+_httpContext
+èè  
+.
+èè  !
+User
+èè! %
+.
+èè% &
+Identity
+èè& .
+.
+èè. /
+IsAuthenticated
+èè/ >
+)
+èè> ?
+{
+êê 
+return
+ëë 
+_httpContext
+ëë '
+.
+ëë' (
+User
+ëë( ,
+.
+ëë, -
+Claims
+ëë- 3
+.
+ëë3 4
+FirstOrDefault
+ëë4 B
+(
+ëëB C
+x
+ëëC D
+=>
+ëëE G
+x
+ëëH I
+.
+ëëI J
+Type
+ëëJ N
+==
+ëëO Q
+$str
+ëëR c
+)
+ëëc d
+.
+ëëd e
+Value
+ëëe j
+;
+ëëj k
+}
+íí 
+else
+ìì 
+{
+îî 
+return
+ïï 
+null
+ïï 
+;
+ïï  
+}
+ññ 
+}
+óó 
+}
+òò 	
+public
+ôô 
+static
+ôô 
+int
+ôô 
+PostId
+ôô  
+{
+öö 	
+get
+õõ 
+{
+úú 
+if
+ùù 
+(
+ùù 
+_httpContext
+ùù  
+.
+ùù  !
+User
+ùù! %
+.
+ùù% &
+Identity
+ùù& .
+.
+ùù. /
+IsAuthenticated
+ùù/ >
+)
+ùù> ?
+{
+ûû 
+return
+üü 
+Convert
+üü "
+.
+üü" #
+ToInt32
+üü# *
+(
+üü* +
+_httpContext
+üü+ 7
+.
+üü7 8
+User
+üü8 <
+.
+üü< =
+Claims
+üü= C
+.
+üüC D
+FirstOrDefault
+üüD R
+(
+üüR S
+x
+üüS T
+=>
+üüU W
+x
+üüX Y
+.
+üüY Z
+Type
+üüZ ^
+==
+üü_ a
+$str
+üüb j
+)
+üüj k
+.
+üük l
+Value
+üül q
+)
+üüq r
+;
+üür s
+}
+†† 
+else
+°° 
+{
+¢¢ 
+return
+££ 
+$num
+££ 
+;
+££ 
+}
+§§ 
+}
+•• 
+}
+¶¶ 	
+public
+®® 
+static
+®® 
+int
+®® 
+	ServiceId
+®® #
+{
+©© 	
+get
+™™ 
+{
+´´ 
+if
+¨¨ 
+(
+¨¨ 
+_httpContext
+¨¨  
+.
+¨¨  !
+User
+¨¨! %
+.
+¨¨% &
+Identity
+¨¨& .
+.
+¨¨. /
+IsAuthenticated
+¨¨/ >
+)
+¨¨> ?
+{
+≠≠ 
+return
+ÆÆ 
+Convert
+ÆÆ "
+.
+ÆÆ" #
+ToInt32
+ÆÆ# *
+(
+ÆÆ* +
+_httpContext
+ÆÆ+ 7
+.
+ÆÆ7 8
+User
+ÆÆ8 <
+.
+ÆÆ< =
+Claims
+ÆÆ= C
+.
+ÆÆC D
+FirstOrDefault
+ÆÆD R
+(
+ÆÆR S
+x
+ÆÆS T
+=>
+ÆÆU W
+x
+ÆÆX Y
+.
+ÆÆY Z
+Type
+ÆÆZ ^
+==
+ÆÆ_ a
+$str
+ÆÆb m
+)
+ÆÆm n
+.
+ÆÆn o
+Value
+ÆÆo t
+)
+ÆÆt u
+;
+ÆÆu v
+}
+ØØ 
+else
+∞∞ 
+{
+±± 
+return
+≤≤ 
+$num
+≤≤ 
+;
+≤≤ 
+}
+≥≥ 
+}
+¥¥ 
+}
+µµ 	
+public
+∏∏ 
+static
+∏∏ 
+string
+∏∏ 
+GetIpAddress
+∏∏ )
+(
+∏∏) *
+)
+∏∏* +
+{
+ππ 	
+return
+∫∫ 
+_httpContext
+∫∫ 
+.
+∫∫  
+
+Connection
+∫∫  *
+.
+∫∫* +
+RemoteIpAddress
+∫∫+ :
+.
+∫∫: ;
+ToString
+∫∫; C
+(
+∫∫C D
+)
+∫∫D E
+;
+∫∫E F
+}
+ªª 	
+public
+ΩΩ 
+static
+ΩΩ 
+string
+ΩΩ 
+GetHostName
+ΩΩ (
+(
+ΩΩ( )
+)
+ΩΩ) *
+{
+ææ 	
+return
+øø 
+Dns
+øø 
+.
+øø 
+GetHostEntry
+øø #
+(
+øø# $
+_httpContext
+øø$ 0
+.
+øø0 1
+
+Connection
+øø1 ;
+.
+øø; <
+RemoteIpAddress
+øø< K
+)
+øøK L
+.
+øøL M
+HostName
+øøM U
+.
+øøU V
+ToString
+øøV ^
+(
+øø^ _
+)
+øø_ `
+;
+øø` a
+}
+¿¿ 	
+}
+¡¡ 
+}¬¬ 

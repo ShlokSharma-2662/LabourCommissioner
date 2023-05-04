@@ -1,0 +1,140 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@model BOCWTSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWTabletSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+       @* <fieldset class="custom-fieldset mb-4">
+            <legend>યોજનાની વિગત</legend>
+            <div class="">
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <label asp-for="totalsahay" class="control-label col-md-3">
+                            ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                        </label>
+
+                        <div class="control-form col-md-3">
+                            <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly />
+                            <span asp-validation-for="totalsahay" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>*@
+
+       @* //new design for antyesthi *@
+
+
+         <fieldset class="custom-fieldset mb-4">
+                                    <legend>યોજનાની વિગત</legend>
+                                    <div class="form-horizontal form-bordered">
+
+                                        <div class="form-group row">
+                                            <span id="" class="control-label col-md-3">અભ્યાસની વિગત:<span class="text-danger">*</span></span>
+                                            <div class="control-form col-md-3">
+                                                 <input asp-for="studydetails" class="form-control">
+                                               <span asp-validation-for="studydetails" class="text-danger"> </span>
+                                               
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <span id="" class="control-label col-md-3">અભ્યાસનું  વર્ષ/સેમ:<span class="text-danger">*</span></span>
+                                            <div class="control-form col-md-3">
+                                                 <input asp-for="Yearofs" class="form-control">
+                                               <span asp-validation-for="Yearofs" class="text-danger"> </span>
+                                               
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <span id="" class="control-label col-md-3">ટેબ્લેટની પહોંચ નંબર:<span class="text-danger">*</span></span>
+                                            <div class="control-form col-md-3">
+                                                 <input asp-for="tabletno" class="form-control">
+                                               <span asp-validation-for="tabletno" class="text-danger"> </span>
+                                               
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <span id="" class="control-label col-md-3">શાળા/કોલેજનું નામ:<span class="text-danger">*</span></span>
+                                            <div class="control-form col-md-3">
+                                                 <input asp-for="schoolorcollagename" class="form-control">
+                                               <span asp-validation-for="schoolorcollagename" class="text-danger"> </span>
+                                               
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+
+
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">Cancel</button>
+        </div>
+
+    </div>
+</form>
+@*
+<script type="text/javascript">
+
+
+    function GettotalsahaybysahayId(serviceid , gender) {
+        debugger;
+
+
+           var relations = $('#Relation').children("option:selected").val();          
+       
+        $.ajax({
+            type: "get",
+            url: "/BOCWBhagyaLaxmiBondYojna/GettotalsahaybysahayId",
+            data: { serviceid: serviceid, relation: relations, gender: gender },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                 var totalsahay = data.data.result.totalsahay;
+                $('#Totalsahay').val(totalsahay);
+
+            }
+        });
+    }
+
+
+</script>*@

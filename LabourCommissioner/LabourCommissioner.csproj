@@ -1,0 +1,195 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Controllers\**" />
+    <Content Remove="Resources\Controllers\**" />
+    <EmbeddedResource Remove="Resources\Controllers\**" />
+    <None Remove="Resources\Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\SchemeController.cs" />
+    <Compile Remove="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\BOCWHostelSahayYojana\_BOCWHostelSahayYojanaTab.cshtml" />
+    <Content Remove="wwwroot\ReportDataSet\daApplicationPreview.xsc" />
+    <Content Remove="wwwroot\ReportDataSet\daApplicationPreview.xsd" />
+    <Content Remove="wwwroot\ReportDataSet\daApplicationPreview.xss" />
+    <Content Remove="wwwroot\Reports\bocw_Hssy_childrenfamily.rdlc" />
+    <Content Remove="wwwroot\Reports\bocw_Hssy_family.rdlc" />
+    <Content Remove="wwwroot\Reports\bocw_Hssy_hostelfamily.rdlc" />
+    <Content Remove="wwwroot\Reports\CitizenApplicationPreview.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Reports\bocw_Hssy_hostelfamily.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\bocw_Hssy_childrenfamily.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\bocw_Hssy_family.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\CitizenApplicationPreview.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\BOCWHostelSahayYojana\_BOCWHostelSahayYojanaTab.cshtml" />
+    <None Include="Views\Shared\BOCWSikshanSahayYojana\_BOCWSikshanSahayYojanaTab.cshtml" />
+    <None Include="wwwroot\MailTemplate\MailVerification.cshtml" />
+    <None Include="wwwroot\MailTemplate\PasswordRecovery.cshtml" />
+    <None Include="wwwroot\ReportDataSet\daApplicationPreview.xsc" />
+    <None Include="wwwroot\ReportDataSet\daApplicationPreview.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>daApplicationPreview.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\ReportDataSet\daApplicationPreview.xss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="AspNetCoreRateLimit" Version="4.0.2" />
+    <PackageReference Include="ClosedXML" Version="0.97.0" />
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="3.2.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="DNTCaptcha.Core" Version="4.3.3" />
+    <PackageReference Include="Highsoft.Highcharts" Version="10.2.1.1" />
+    <PackageReference Include="HtmlAgilityPack.NetCore" Version="1.5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.7" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="4.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="3.2.0" />
+    <PackageReference Include="SweetAlert" Version="1.0.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Localization" Version="2.2.0" />
+	<PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.4" />
+	<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.4" />
+	<PackageReference Include="Wkhtmltopdf.NetCore" Version="3.0.2" />
+	<PackageReference Include="X.PagedList" Version="8.4.3" />
+	<PackageReference Include="X.PagedList.Mvc" Version="8.0.7" />
+	<PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.3" />
+	<PackageReference Include="X.PagedList.Web.Common" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LabourCommissioner.Common\LabourCommissioner.Common.csproj" />
+    <ProjectReference Include="..\LabourCommissioner.Services\LabourCommissioner.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewComponent\" />
+    <Folder Include="Views\CCHome\" />
+    <Folder Include="wwwroot\ApplicationDocuments\BOCW\BPSY\" />
+    <Folder Include="wwwroot\ApplicationDocuments\BOCW\PSY\" />
+    <Folder Include="wwwroot\ApplicationDocuments\GLWB\" />
+    <Folder Include="wwwroot\ApplicationForm\BOCW\BPSY\" />
+    <Folder Include="wwwroot\ApplicationForm\BOCW\PSY\" />
+    <Folder Include="wwwroot\LogFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AESEncryptBase">
+      <HintPath>CTPDLLReference\AESEncryptBase.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms">
+      <HintPath>CTPDLLReference\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>CTPDLLReference\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>CTPDLLReference\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI">
+      <HintPath>CTPDLLReference\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ReportDataSet\dsApplicationPreview.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsApplicationPreview.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Dashboard.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\ApplicationDocuments\BOCW\SSY\ApplicationDetails.pdf">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ReportDataSet\dsApplicationPreview.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApplicationPreview.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

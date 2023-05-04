@@ -1,0 +1,95 @@
+﻿@model IEnumerable<EmpApplicationDetailsModel>
+@using System.Security.Claims
+
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (EmpApproveApplication)ViewBag.RejectApplication;
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string approvalstate = "";
+    string FromPostId = "";
+    string approvalstatus = "";
+    string toRole = "";
+    string conc = "/0";
+    string DistrictId = "";
+    string TalukaId = "";
+    string[]? applicationidlist = null;
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.serviceid);
+        ApplicationNo = Convert.ToString(Data.applicationno);
+        ApplicationId = Convert.ToString(Data.applicationid);
+        approvalstate = Convert.ToString(Data.isapproved);
+        applicationidlist = Data.applicationidlist;
+        FromPostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+        toRole = Convert.ToString(ViewBag.RoleId + conc);
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+
+}
+<form asp-controller="EmployeeHome" asp-action="RejectApplication" data-ajax="true" data-ajax-method="POST" data-ajax-begin="OnBegin" data-ajax-success="OnSuccess">
+    @*  <div class="modal fade" id="RejectPopup" tabindex="-1" aria-labelledby="acceptPopupLabel" aria-hidden="true">*@
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">Reject Application
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            @for (int i = 0; i < applicationidlist.Count(); i++)
+            {
+                @Html.HiddenFor(m => applicationidlist[i])
+            }
+            <input type="hidden" id="ApplicationId" name="ApplicationId" value="@ApplicationId" />
+            <input type="hidden" id="approvalstate" name="approvalstate" value="@approvalstate" />
+            <input type="hidden" id="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="approvalstatus" name="approvalstatus" value="@approvalstatus" />
+            <input type="hidden" id="toRole" name="toRole" value="@toRole" />
+            <input type="hidden" id="ServiceId" name="ServiceId" value="@ServiceId" />
+            <input type="hidden" id="fromPostId" name="fromPostId" value="@FromPostId" />
+            <div class="modal-body bocw_bg">
+                <div class="form-group">
+                    <label>
+                        <span id="lblOTP">Remarks</span><span class="text-danger">*</span>
+                    </label>
+                    <div class="">
+                        <textarea id="remarks" name="remarks" cols="20" rows="2" class="form-control" required></textarea>
+                    </div>
+                </div>
+                <br />
+                <input type="submit" value="Submit" class="btn btn-warning">
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    @*    </div>*@
+</form>
+
+<script type="text/javascript">
+    function OnBegin() {
+        $('.btn-close').click();
+    }
+    function OnSuccess(response) {
+        debugger;
+        var msg = response.msg;
+        //ShowDynamicSwalAlert("", msg);
+        //window.location.reload();
+        swal({
+            title: "",
+            text: msg,
+            type: "success",
+            showCancelButtonClass: "btn-primary",
+            confirmButtonText: 'OK'
+        }, function() {
+            window.location.reload();
+        });
+    }
+</script>

@@ -1,0 +1,132 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBHSS_SchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var year = ViewBag.Year;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+    long Totalsahay = 0;
+    if (Model != null)
+    {
+        Totalsahay = Model.totalsahay;
+    }
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHigherStudy" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" id="totalsahay" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div>
+            <fieldset class="custom-fieldset mb-4">
+                <legend>યોજનાની વિગત</legend>
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span class="control-label col-md-2">ધો-૧૨ પરીક્ષા આપ્યા માસ તથા વર્ષ : <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-4 d-flex">
+                            @Html.DropDownListFor(model => model.ExamMonth12th, Enumerable.Range(1, 12).Select(x => new SelectListItem { Value = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x), Text = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x) }), "Select Month", new { @class = "form-control" })
+
+                            <span asp-validation-for="ExamMonth12th" class="text-danger"></span>
+                            <select asp-for="ExamYear12th" asp-items="@(new SelectList(@ViewBag.Year, "Value", "Text"))" class="form-control me-1">
+                                <option value="0">--Select--</option>
+                            </select>
+                            <span asp-validation-for="ExamYear12th" class="text-danger"></span>
+                        </div>
+                        <span class="control-label col-md-3">ધો-૧૨ પરીક્ષામાં મેળવનાર પર્સન્ટાઇલ / પર્સેંટેજ (ઓવર ઓલ): <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="Percentage" type="text" class="form-control">
+                            <span asp-validation-for="Percentage" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <span class="control-label col-md-2">પ્રવેશ મેળવ્યા માસ અને વર્ષ : <span class="text-danger">*</span></span>
+                        <div class="control-form col-md-4 d-flex">
+                            @Html.DropDownListFor(model => model.ExamMonthEntrance, Enumerable.Range(1, 12).Select(x => new SelectListItem { Value = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x), Text = System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.GetMonthName(x) }), "Select Month", new { @class = "form-control" })
+                            <span asp-validation-for="ExamMonthEntrance" class="text-danger"></span>
+
+                            <select asp-for="ExamYearEntrance" asp-items="@(new SelectList(@ViewBag.Year, "Value", "Text"))" class="form-control me-1">
+                                <option value="0">--Select--</option>
+                            </select>
+                            <span asp-validation-for="ExamYearEntrance" class="text-danger"></span>
+                        </div>
+
+                        <span class="control-label col-md-3 ">
+                            કોર્સ :<span class="text-danger">*</span>
+                        </span>
+                        <div class="control-form col-md-3 mt-1">
+                            <select asp-for="courseid" id="course" class="form-control" onchange="    GetHSSTotalSahay();">
+                                <option value="0" selected disabled hidden>-Please Select-</option>
+                                <option value="1">M.B.B.S</option>
+                                <option value="2">અન્ય સ્નાતક</option>
+                            </select>
+                            <span asp-validation-for="courseid" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                </div>
+            </fieldset>
+
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+                </legend>
+
+                <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+            </fieldset>
+
+        </div>
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript">
+
+    $(function() {
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    function GetHSSTotalSahay() {
+        var course = $("#course").val();
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/GLWBHigherStudy/GetHSSTotalSahay",
+            data: { serviceId: @ServiceId, course: course },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                $("#totalsahay").val(data.data.result.totalsahay);
+            }
+        });
+    }
+
+
+</script>

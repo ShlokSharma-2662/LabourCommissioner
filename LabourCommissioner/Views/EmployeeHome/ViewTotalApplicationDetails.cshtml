@@ -1,0 +1,274 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model IEnumerable<CompletedApplicationDetailsModel>
+
+
+
+@{
+    var Title = "";
+    @if (ViewBag.IsApproved != null)
+    {
+        @if (ViewBag.IsApproved == 0)
+        {
+            Title = "Total Application";
+        }
+        else if (ViewBag.IsApproved == 1)
+        {
+            Title = "Pending Application";
+        }
+        else if (ViewBag.IsApproved == 2)
+        {
+            Title = "Completed Application";
+        }
+        else if (ViewBag.IsApproved == 3)
+        {
+            Title = "Rejected Application";
+        }
+    }
+
+    ViewData["Title"] = Title;
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+
+    var i = 1;
+    var ControllerName = "";
+    var ActionName = "";
+    ControllerName = Convert.ToString(ViewBag.ControllerName);
+    ActionName = Convert.ToString(ViewBag.ActionName);
+
+    SPager pager = new SPager();
+    int pageNo = 0;
+    if (ViewBag.SearchPager != null)
+    {
+        pager = ViewBag.SearchPager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@Title</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="EmployeeHome" asp-action="ViewTotalApplicationDetails" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i>@Title</span>
+                                <button type="submit" value="export" name="export" class="btn btn-primary">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>
+                            </div>
+                            <input type="hidden" name="isApproved" id="isApproved" value="@ViewBag.IsApproved" />
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Service Name</label>
+                                            <select id="serviceId" name="serviceId" asp-items="@(new SelectList(@ViewBag.ServiceList, "Value", "Text", selectedValue: @ViewBag.ServiceId))" tabindex="2" class="aspNetDisabled form-control">
+                                                <option value="0">-- ALL --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">From Date</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">To Date</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control dateValidateCls datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="f-600">Applicant No./ Name/ Mobile No. </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 text-center mt-3">
+                                        <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>@Title</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-10">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sr. No.</th>
+                                                        <th>HOD Name</th>
+                                                        <th>Service Name</th>
+                                                        <th>Application Date</th>
+                                                        <th>Application No.</th>
+                                                        <th>Applicant Name</th>
+                                                        <th>BirthDate</th>
+                                                        <th>District</th>
+                                                        <th>Taluka</th>
+                                                        <th>Village</th>
+                                                        <th>Mobile No</th>
+                                                        @if (ViewBag.IsApproved != null && ViewBag.IsApproved == 0)
+                                                        {
+                                                            <th>Application Status</th>
+                                                        }
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            <tr>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.hodname
+                                                                </td>
+                                                                <td class="text-start">
+                                                                    @item.servicename
+                                                                </td>
+
+                                                                <td class="text-start">
+                                                                    @Convert.ToDateTime(item.applicationdate).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.applicationno
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.name
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @Convert.ToDateTime(item.dateofbirth).ToString("dd/MM/yyyy")
+                                                                </td>
+                                                                <td class="text-start">
+                                                                    @item.districtname
+                                                                </td>
+                                                                <td>
+                                                                    @item.talukaname
+                                                                </td>
+                                                                <td>
+                                                                    @item.villagename
+                                                                </td>
+                                                                <td>
+                                                                    @item.mobileno
+                                                                </td>
+                                                                @if (ViewBag.IsApproved != null && ViewBag.IsApproved == 0)
+                                                                {
+                                                                    <td>
+                                                                        @item.appstatus
+                                                                    </td>
+                                                                }
+                                                            </tr>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+                                                            @if (ViewBag.IsApproved != null && ViewBag.IsApproved == 0)
+                                                            {
+                                                                <td class="text-warning" colspan="12"><h6><i class="bi bi-search"></i> No Record Found</h6></td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td class="text-warning" colspan="11"><h6><i class="bi bi-search"></i> No Record Found</h6></td>
+                                                            }
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                        @*<vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+        function ChangePageSize(obj, searchtext) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&search=" + searchtext + "&serviceId=" + '@ViewBag.ServiceId' + "&isApproved=" + '@ViewBag.IsApproved' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate';
+        }
+    </script>
+
+}

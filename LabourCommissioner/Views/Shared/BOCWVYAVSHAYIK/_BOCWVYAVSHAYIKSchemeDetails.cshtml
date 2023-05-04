@@ -1,0 +1,438 @@
+﻿﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWVRSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    var modelCnt1 = 1;
+    if (@Model != null && @Model.lstOtherSchemeDetails != null)
+    {
+        modelCnt1 = @Model.lstOtherSchemeDetails.Count();
+    }
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWVYAVSHAYIK" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                    દદીર્ની વિગત
+                </span>
+            </legend>
+            <div class="form-horizontal form-bordered">
+
+                <div class="form-group row">
+                    <span id="body_innerbody_lblApplicantGender" class="control-label col-md-3">રોગ / ઈજાઓ <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3 d-flex align-items-center">
+                        <input asp-for="diseasestype" type="radio" value="1" id="rbdiseases" name="diseasestype" />રોગ<br />
+                        <span class="px-2"><input asp-for="diseasestype" type="radio" value="2" id="rbinjuries" name="diseasestype" />ઈજા<br /></span>
+                        <span asp-validation-for="diseasestype" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-2">વ્યવસાયિક રોગ/ બીમારી નુ નામ:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        @*<input type="text" asp-for="diseasename" autocomplete="off" class="form-control" placeholder="વ્યવસાયિક રોગ/ બીમારી નુ નામ" />
+                        <span asp-validation-for="diseasename" class="text-danger"></span>*@
+                        <select asp-for="diseasename" asp-items="@(isfilled == true ? new SelectList(@ViewBag.Diseases, "Value", "Text", selectedValue:@ViewBag.DiseasesId) : null)" id="ddldiseases" class="form-select form-control" aria-label="Default select example">
+                            <option value="0" selected disabled>---Select---</option>
+                        </select>
+                        <span asp-validation-for="diseasename" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                </div>
+
+
+                <div class="form-group row">
+                    <span class="control-label col-md-3">કેટલા સમયથી રોગ/બીમારી છે? (માહિનામાં):<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" asp-for="diseaseduration" autocomplete="off" id="durationinmonths" class="form-control" placeholder="કેટલા સમયથી રોગ/બીમારી છે?(e.g 10)" />
+                        <span asp-validation-for="diseaseduration" class="text-danger"></span>
+                        @*<select asp-for="Syllabus" asp-items="@(new SelectList(@ViewBag.Syllabus,"Value", "Text"))" class="form-control"></select>*@
+                    </div>
+                    <span class="control-label col-md-3"> સરકાર દ્વારા એમ્પેનલ થયેલ હોસ્પિટલ નુ નામ : <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" id="hospitalname" asp-for="hospitalname" autocomplete="off" class="form-control" placeholder="સરકાર દ્વારા એમ્પેનલ થયેલ હોસ્પિટલ નુ નામ" />
+                        <span asp-validation-for="hospitalname" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3"> ડૉક્ટરનુ નામ : <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" id="doctorname" asp-for="doctorname" autocomplete="off" class="form-control" placeholder="ડૉક્ટરનુ નામ" />
+                        <span asp-validation-for="doctorname" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-3"> અશક્તતા ની ટકાવારી(%) : <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" id="strength" onblur="    CalculateSahay();" asp-for="strength" autocomplete="off" class="form-control" placeholder="અશક્તતા ની ટકાવારી(%)" />
+                        <span asp-validation-for="strength" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3"> આરામ કરવાનો સમયગાળો: <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" id="restduration" asp-for="restduration" autocomplete="off" class="form-control" placeholder="આરામ કરવાનો સમયગાળો" />
+                        <span asp-validation-for="restduration" class="text-danger"></span>
+                    </div>
+                    <span class="control-label col-md-3"> અત્યાર સુધીમાં ચૂકવેલ સહાય: <span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input type="text" id="assistancepaid" asp-for="assistancepaid" autocomplete="off" class="form-control" placeholder="અત્યાર સુધીમાં ચૂકવેલ સહાય" />
+                        <span asp-validation-for="assistancepaid" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3"> અન્ય કોઈ યોજના હેઠળ સહાય મેળવેલ છે ? : <span class="text-danger">*</span></span>
+                    <div id="radioDiv" class="control-form col-md-3 d-flex align-items-center">
+                        <input asp-for="istakeanyotherassistance" type="radio" value="1" id="rbYes" name="istakeanyotherassistance" />હા<br />
+                        <span class="px-2">
+                            <input asp-for="istakeanyotherassistance" type="radio" value="2" id="rbNo" name="istakeanyotherassistance" />નાં<br />
+                        </span>
+                        <span asp-validation-for="istakeanyotherassistance" class="text-danger"></span>
+
+
+                    </div>
+                    <label asp-for="totalsahay" class="control-label col-md-3"> કુલ મળવા પાત્ર સહાય (રૂપિયામાં) :  <span class="text-danger">*</span> </label>
+                    <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly="readonly" />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+
+                <div class="form-group row divHide">
+                    <fieldset>
+                        <legend>તબીબી સારવારનો ખર્ચ ની વિગત </legend>
+                        <table class="table bg-white table-bordered text-center" id="tblotherscheme">
+
+                            <th>
+                                <span class="control-label">તબીબી સારવારની યોજનાનું નામ<span class="text-danger">*</span></span>
+                            </th>
+                            <th>
+                                <span class="control-label">તબીબી સારવારની સહાય<span class="text-danger">*</span></span>
+                            </th>
+                            <th>
+                                <span class="control-label">આરામ માટેની યોજનાનું નામ<span class="text-danger">*</span></span>
+                            </th>
+                            <th>
+                                <span class="control-label">
+                                    આરામ માટેની સહાય<span class="text-danger">*</span>
+                                </span>
+                            </th>
+                            <th>
+                                <span class="control-label">Action<span class="text-danger"></span></span>
+                            </th>
+                            @if (Model != null && Model.lstOtherSchemeDetails != null && Model.lstOtherSchemeDetails.Count() > 0)
+                            {
+                                @for (int i = 0; i < Model.lstOtherSchemeDetails.Count; i++)
+                                {
+                                    <tr id="@("tr"+i)">
+                                        <td>
+                                            <input type="hidden" id="@("hdnIsDeletedChildren"+i)" asp-for="@Model.lstOtherSchemeDetails[i].isDeleted" />
+                                            <input asp-for=@Model.lstOtherSchemeDetails[i].otherschemename type="text" class="form-control" maxlength="15">
+                                            <span asp-validation-for="@Model.lstOtherSchemeDetails[i].otherschemename" class="text-danger"></span>
+                                            <span id="lstOtherSchemeDetails_otherschemename_error" class="text-danger"></span>
+                                        </td>
+                                        <td>
+
+                                            <input asp-for=@Model.lstOtherSchemeDetails[i].otherschemesahay type="text" onkeypress="return AllowNumeric(event);" class="form-control" maxlength="15">
+                                            <span asp-validation-for="@Model.lstOtherSchemeDetails[i].otherschemesahay" class="text-danger"></span>
+                                            <span id="lstOtherSchemeDetails_otherschemesahay_error" class="text-danger"></span>
+
+                                        </td>
+                                        <td>
+
+                                            <input asp-for=@Model.lstOtherSchemeDetails[i].restschemename type="text" class="form-control" maxlength="15">
+                                            <span asp-validation-for="@Model.lstOtherSchemeDetails[i].restschemename" class="text-danger"></span>
+                                            <span id="lstOtherSchemeDetails_restschemename_error" class="text-danger"></span>
+
+                                        </td>
+                                        <td>
+
+                                            <input asp-for=@Model.lstOtherSchemeDetails[i].restschemesahay type="text" onkeypress="return AllowNumeric(event);" class="form-control" maxlength="15">
+                                            <span asp-validation-for="@Model.lstOtherSchemeDetails[i].restschemesahay" class="text-danger"></span>
+                                            <span id="lstOtherSchemeDetails_restschemesahay_error" class="text-danger"></span>
+
+                                        </td>
+                                        <td><input type="button" value="Remove" onclick="RemoveTextBoxs(this,'@i');"></td>
+
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr id="tr0">
+                                    <td>
+                                        <input type="hidden" id="@("hdnIsDeletedChildren0")" asp-for="@Model.lstOtherSchemeDetails[0].isDeleted" />
+                                        <input asp-for=@Model.lstOtherSchemeDetails[0].otherschemename type="text" class="form-control" maxlength="15">
+                                        <span asp-validation-for="@Model.lstOtherSchemeDetails[0].otherschemename" class="text-danger"></span>
+                                        <span id="lstOtherSchemeDetails_otherschemename_error0" class="text-danger"></span>
+
+                                    </td>
+                                    <td>
+
+                                        <input asp-for=@Model.lstOtherSchemeDetails[0].otherschemesahay type="text" onkeypress="return AllowNumeric(event);" class="form-control" maxlength="15">
+                                        <span asp-validation-for="@Model.lstOtherSchemeDetails[0].otherschemesahay" class="text-danger"></span>
+                                        <span id="lstOtherSchemeDetails_otherschemesahay_error0" class="text-danger"></span>
+
+                                    </td>
+                                    <td>
+
+                                        <input asp-for=@Model.lstOtherSchemeDetails[0].restschemename type="text" class="form-control" maxlength="15">
+                                        <span asp-validation-for="@Model.lstOtherSchemeDetails[0].restschemename" class="text-danger"></span>
+                                        <span id="lstOtherSchemeDetails_restschemename_error0" class="text-danger"></span>
+
+                                    </td>
+                                    <td>
+
+                                        <input asp-for=@Model.lstOtherSchemeDetails[0].restschemesahay type="text" onkeypress="return AllowNumeric(event);" class="form-control" maxlength="15">
+                                        <span asp-validation-for="@Model.lstOtherSchemeDetails[0].restschemesahay" class="text-danger"></span>
+                                        <span id="lstOtherSchemeDetails_restschemesahay_error0" class="text-danger"></span>
+
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+
+                        <div>
+                            <span colspan="1" class="text-end">
+                                <input id="addotherscheme" type="button" value="Add" />
+                            </span>
+                        </div>
+
+
+
+                    </fieldset>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <fieldset class="custom-fieldset mb-4">
+        <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+            <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+        </legend>
+
+        <partial name="~/Views/Shared/_BankDetails.cshtml" />
+    </fieldset>
+    <div class="card-footer text-center border">
+        <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+        <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+    </div>
+</form>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        debugger;
+        if ('@isfilled' == 'True' && @Model.istakeanyotherassistance == 1) {
+            $(".divHide").show();
+        }
+        else {
+            $(".divHide").hide();
+        }
+
+    });
+
+    $(function() {
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    function CalculateSahay() {
+        debugger;
+        if ($("#strength").val() != '' || $("#strength").val() != "") {
+            if ($("#strength").val() > 90) {
+                $("#Totalsahay").val("3000");
+            }
+            else {
+                $("#Totalsahay").val("1500");
+            }
+        }
+        else {
+            $("#strength").val();
+        }
+    }
+
+
+    $(document).ready(function() {
+        $("#strength").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d.]/g, ''));
+        });
+        $("#durationinmonths").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d]/g, ''));
+        });
+        $("#restduration").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d]/g, ''));
+        });
+        $("#assistancepaid").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^\d]/g, ''));
+        });
+        $("#doctorname").keyup(function(event) {
+            debugger;
+            var $this = $(this);
+            $this.val($this.val().replace(/[^a-zA-Z]/g, ''));
+        });
+        $("#hospitalname").keyup(function() {
+            var $this = $(this);
+            $this.val($this.val().replace(/[^a-zA-Z]/g, ''));
+        });
+
+    });
+
+
+    $('input[type=radio][name=diseasestype]').change(function() {
+        var value = $('input[name="diseasestype"]:checked').val();
+        GetDiseasesandInjuries(value);
+    });
+
+    $("input[name$='istakeanyotherassistance']").click(function() {
+        debugger;
+        var test = $(this).val();
+        if (test == 1) {
+            $(".divHide").show();
+        }
+        else {
+            $(".divHide").hide();
+        }
+
+    });
+
+    function GetDiseasesandInjuries(type) {
+
+        $.ajax({
+            type: "get",
+            url: "/BOCWVYAVSHAYIK/GetDieases",
+            data: { type: type },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var DiseasesList = "";
+                DiseasesList = DiseasesList + '<option value="">--Select--</option>';
+
+                for (var i = 0; i < data.data.result.length; i++) {
+
+                    DiseasesList = DiseasesList + '<option value=' + data.data.result[i].value + '>' + data.data.result[i].text + '</option>';
+                }
+                $('#ddldiseases').html(DiseasesList);
+
+                //$('#PlistDistrict').html(DistrictList);
+            }
+        });
+    }
+
+
+
+    var ttlCountotherscheme = @modelCnt1;
+    $(document).ready(function() {
+        debugger;
+
+        $("#addotherscheme").on("click", function() {
+
+
+            var flags = false;
+            flags = ValidateControlM(ttlCountotherscheme);
+            if (flags) {
+
+                var strHTMLs = "";
+                strHTMLs += "<tr id='tr1" + ttlCountotherscheme + "'>";
+                strHTMLs += "<td><input type='hidden' id='hdnIsDeletedChildren" + ttlCountotherscheme + "' name='lstOtherSchemeDetails[" + ttlCountotherscheme + "].isDeleted'>";
+                strHTMLs += "<input name='lstOtherSchemeDetails[" + ttlCountotherscheme + "].otherschemename' id='lstOtherSchemeDetails_" + ttlCountotherscheme + "__otherschemename' type='text' class='form-control' maxlength='15'>";
+                strHTMLs += "<span id='lstOtherSchemeDetails_otherschemename_error" + ttlCountotherscheme + "' class='text-danger'></span></td>";
+
+                strHTMLs += "<td><input name='lstOtherSchemeDetails[" + ttlCountotherscheme + "].otherschemesahay' onkeypress='return AllowNumeric(event);' id='lstOtherSchemeDetails_" + ttlCountotherscheme + "__otherschemesahay' type='text' class='form-control' maxlength='15'>";
+                strHTMLs += "<span id='lstOtherSchemeDetails_otherschemesahay_error" + ttlCountotherscheme + "' class='text-danger'></span></td>";
+
+                strHTMLs += "<td><input name='lstOtherSchemeDetails[" + ttlCountotherscheme + "].restschemename' id='lstOtherSchemeDetails_" + ttlCountotherscheme + "__restschemename' type='text' class='form-control' maxlength='15'>";
+                strHTMLs += "<span id='lstOtherSchemeDetails_restschemename_error" + ttlCountotherscheme + "' class='text-danger'></span></td>";
+
+                strHTMLs += "<td><input name='lstOtherSchemeDetails[" + ttlCountotherscheme + "].restschemesahay' onkeypress='return AllowNumeric(event);' id='lstOtherSchemeDetails_" + ttlCountotherscheme + "__restschemesahay' type='text' class='form-control' maxlength='15'>";
+                strHTMLs += "<span id='lstOtherSchemeDetails_restschemesahay_error" + ttlCountotherscheme + "' class='text-danger'></span></td>";
+                strHTMLs += "<td><input type='button' value='Remove' onclick='RemoveTextBoxs(this," + ttlCountotherscheme + ");'></td>";
+                                                                                           /* strHTMLs += "<td></td>"*/;
+
+                strHTMLs += "</tr>";
+                ttlCountotherscheme++;
+                $("#tblotherscheme").append(strHTMLs);
+            }
+
+
+        });
+    });
+    //var removeList = "";
+    function RemoveTextBoxs(button, rowId) {
+        debugger;
+
+        $("#hdnIsDeletedChildren" + rowId).val(true);
+        $(button).parent().parent().css("display", "none");
+
+    }
+
+    function ValidateControlM(rowCnts) {
+        debugger;
+        //--i;
+
+        for (var i = 0; i < rowCnts; i++) {
+            if ($("#hdnIsDeletedChildren" + i).val() == 'False' || $("#hdnIsDeletedChildren" + i).val() == undefined || $("#hdnIsDeletedChildren" + i).val() == '') {
+                $("#lstOtherSchemeDetails_otherschemename_error" + i + "").html("");
+                $("#lstOtherSchemeDetails_otherschemesahay_error" + i + "").html("");
+                $("#lstOtherSchemeDetails_restschemename_error" + i + "").html("");
+                $("#lstOtherSchemeDetails_restschemesahay_error" + i + "").html("");
+
+
+                if ($("#lstOtherSchemeDetails_" + i + "__otherschemename").val() == "") {
+                    $("#lstOtherSchemeDetails_otherschemename_error" + i + "").html("યોજનાનું નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstOtherSchemeDetails_" + i + "__otherschemesahay").val() == "") {
+                    $("#lstOtherSchemeDetails_otherschemesahay_error" + i + "").html("સહાય ની રકમ નાખો");
+                    //alert("Cannot Insert");
+                    return false; " + i + "
+                }
+                if ($("#lstOtherSchemeDetails_" + i + "__restschemename").val() == "") {
+                    $("#lstOtherSchemeDetails_restschemename_error" + i + "").html("યોજનાનું નામ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+                if ($("#lstOtherSchemeDetails_" + i + "__restschemesahay").val() == "") {
+                    $("#lstOtherSchemeDetails_restschemesahay_error" + i + "").html(" સહાય ની રકમ નાખો");
+                    //alert("Cannot Insert");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+</script>   

@@ -1,0 +1,397 @@
+﻿@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model IEnumerable<PaymentDetailsModel>
+
+
+
+@{
+    ViewData["Title"] = "View Payment History";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    //IEnumerable<EmpApplicationDetailsModel> distinctAadeshIdwiseDetails = null;
+    //if (Model != null)
+    //{
+    //    distinctAadeshIdwiseDetails = Model.DistinctBy(o => o.aadeshid);
+    //}
+    var serviceId = HttpUtility.UrlEncode(CommonUtils.Encrypt(ViewBag.ServiceId.ToString()));
+    string updatedBankDetails = "";
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">@ViewBag.SchemeName</h2>
+</section>
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4">
+
+
+                        <form asp-controller="EmployeeHome" asp-action="GLWBPaymentHistory" method="get">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bx-list-ul align-middle'></i> @ViewBag.SchemeName નાં આદેશની વિગતો</span>
+                                <button type="submit" value="export" name="export" class="btn btn-primary">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>Export
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">ચુકવણીની શરૂઆત તારીખ</label>
+                                            <input name="fromDate" id="fromDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">ચુકવણીની અંતિમ તારીખ</label>
+                                            <input name="toDate" id="toDate" type="text" class="form-control datepicker" value="@ViewBag.EndDate" placeholder="dd/MM/yyyy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">યોજનાનું  નામ</label>
+                                            <select id="serviceId" name="serviceId" asp-items="@(new SelectList(@ViewBag.ServiceList, "Value", "Text", selectedValue: @ViewBag.ServiceId))" tabindex="2" class="aspNetDisabled form-control">
+                                                @* <option value="0">-- ALL --</option>*@
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">આદેશ નંબર/UTR નંબર/અરજી નંબર : </label>
+                                            <input name="search" id="search" type="text" maxlength="16" value="@ViewBag.Search" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="f-600">ચુકવણીની સ્થિતિ</label>
+                                            <select name="statusId" id="statusId" class="form-control">
+                                                <option value="0">- ALL -</option>
+                                                <option value="1">Success</option>
+                                                <option value="2">Fail</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-3">
+                                        <input type="submit" id="btnSubmit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <fieldset class="custom-fieldset">
+                                        <legend>View Application</legend>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-9">
+                                                <div class="d-flex align-items-center">
+                                                    Row Per Page
+                                                    <select class="form-control w-auto" id="pageSelector" asp-items="@ViewBag.PageSizes" onchange="ChangePageSize(this,'@ViewBag.Search')"></select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 align-self-center text-end">
+                                                <span class="border p-1 small   w-auto">
+                                                    <span class="me-2"><span class="bg-warning3 round2"></span> Updated Bank Details</span>
+                                                    @* <span class="me-2"><span class="bg-danger round2"></span> Rejected</span>
+                                                    <span class="me-2"><span class="bg-danger round2"></span> Rejected</span>*@
+
+
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table id="myTable" class="table table-striped table-bordered table-hover text-center table-responsive-md boldIcon">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="23" class="text-start">
+                                                            <a class="btn btn-success" href="#" onclick="GLWBSendForPaymentFailedRecord('@CommonUtils.Decrypt(HttpUtility.UrlDecode(serviceId))')">
+                                                                <i class="bi bi-check-lg me-1"></i>Send For Payment
+                                                            </a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><input type="checkbox" id="headerchkSendforpayment" /><br />Select</th>
+                                                        <th>Sr. No.</th>
+                                                        <th>Aadesh No.</th>
+                                                        <th>Application No.</th>
+                                                        <th>Account Holder Name</th>
+                                                        <th>Account No.</th>
+                                                        <th>IFSC Code</th>
+                                                        <th>Payment Type</th>
+                                                        <th>Total Sahay</th>
+                                                        <th>UTR No.</th>
+                                                        <th>Transaction Date</th>
+                                                        <th>Remarks <span class="text-danger">(* in case of failed transaction)</span></th>
+                                                        <th>Update Bank Details Remarks</th>
+                                                        <th>Transaction Status</th>
+                                                        <th>Update Bank Details <span class="text-danger">(* in case of failed transaction)</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model.Count() > 0)
+                                                    {
+                                                        foreach (var item in Model)
+                                                        {
+                                                            updatedBankDetails = "";
+                                                            @if (item.remarks != null && @item.remarks != "")
+                                                            {
+                                                                updatedBankDetails = "bg-warning3";
+                                                            }
+                                                            <tr class="@updatedBankDetails">
+                                                                <td>
+                                                                    @if (item.remarks != null && @item.remarks != "" && item.resendforpayment == 1)
+                                                                    {
+                                                                        <input type="checkbox" id="chkapprovereject" class="clschkSendforpayment" value="@item.payinfoid" />
+                                                                    }
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    @item.srno
+                                                                </td>
+
+                                                                <td>
+                                                                    @item.aadeshno
+                                                                </td>
+                                                                <td>
+                                                                    @item.applicationno
+                                                                </td>
+                                                                <td>
+                                                                    @item.accountholdername
+                                                                </td>
+                                                                <td>
+                                                                    @item.beneficiaryaccountno
+                                                                </td>
+                                                                <td>
+                                                                    @item.ifsccode
+                                                                </td>
+                                                                <td>
+                                                                    @item.paymenttype
+                                                                </td>
+                                                                <td>
+                                                                    @item.amount
+                                                                </td>
+                                                                <td>
+                                                                    @item.utrno
+                                                                </td>
+                                                                <td>
+                                                                    @if (@item.transactiondate != null)
+                                                                    {
+                                                                        @Convert.ToDateTime(@item.transactiondate).ToString("dd/MM/yyyy")
+                                                                    }
+                                                                </td>
+
+                                                                <td>
+                                                                    @item.returnreason
+                                                                </td>
+                                                                <td>
+                                                                    @item.remarks
+                                                                </td>
+                                                                <td>
+                                                                    @if (item.transactionstatus.ToLower() == "success".ToLower())
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#70CC56 ;">
+                                                                            @item.transactionstatus
+                                                                        </span>
+                                                                    }
+                                                                    else if (item.transactionstatus.ToLower() == "fail".ToLower())
+                                                                    {
+                                                                        <span class="badge badge-success" style="background-color:#FF4003 ;">
+                                                                            @item.transactionstatus
+                                                                        </span>
+                                                                    }
+                                                                </td>
+                                                                <td>
+                                                                    @if (item.transactionstatus.ToLower() == "fail".ToLower() && item.resendforpayment == 1)
+                                                                    {
+                                                                        <a href="#" class="text-primary h5" onclick="return UpdateGLWBBankDetails(@item.payinfoid,@item.serviceid,@item.applicationid,'@item.beneficiaryaccountno','@item.ifsccode');"><i class="bi bi-pencil-square"></i></a>
+                                                                    }
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = true }))
+                                        @(await Component.InvokeAsync("SearchBar", new { SearchPager = @ViewBag.SearchPager, BottomBar = false }))
+
+                                        @* <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="true">
+                                        </vc:search-bar>
+                                        <vc:search-bar search-pager="@ViewBag.SearchPager" bottom-bar="false">
+                                        </vc:search-bar>*@
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <div class="modal fade" id="popupUpdateGLWBBankDetails" tabindex="-1" role="dialog" aria-labelledby="popupUpdateGLWBBankDetails" aria-hidden="true">
+        <div id="divContent"></div>
+    </div>
+</main>
+
+@section Scripts{
+    <script src="~/js/Common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#navbar ul li a").removeClass('active');
+            $("#menuPaymentHistory").addClass('active');
+            $("#statusId").val('@ViewBag.Status');
+            var msg = '@Html.Raw(@TempData["Message"])';
+            if (msg != null && msg != '') {
+                ShowDynamicSwalAlert("Done!", msg);
+            }
+            $('#headerchkSendforpayment').change(function () {
+                if (this.checked) {
+                    $(".clschkSendforpayment").prop("checked", true);
+                }
+                else {
+                    $(".clschkSendforpayment").prop("checked", false);
+                }
+
+            });
+        });
+        $(".detail123").click(function () {
+            $(this).toggleClass("bi-chevron-up");
+        });
+
+        $(function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+        });
+
+        function ChangePageSize(obj, searchtext) {
+            debugger;
+            window.location.href = "/@ViewBag.ControllerName/@ViewBag.ActionName" + "?pageSize=" + obj.value + "&districtId=" + '@ViewBag.DistrictId' + "&fromDate=" + '@ViewBag.StartDate' + "&toDate=" + '@ViewBag.EndDate' + "&search=" + '@ViewBag.Search' + "&serviceId=" + '@ViewBag.ServiceId' + "&statusId=" + '@ViewBag.Status';
+        }
+        function UpdateGLWBBankDetails(payinfoId, serviceId, applicationId, beneficiaryAccountno, ifscCode) {
+
+            var data = new Object();
+            data.payinfoid = payinfoId;
+            data.serviceid = serviceId;
+            data.applicationid = applicationId;
+            data.beneficiaryaccountno = beneficiaryAccountno;
+            data.ifsccode = ifscCode;
+
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/ViewUpdateGLWBBankDetails",
+                //data: { PayInfoId: payinfoId, ServiceId: serviceId, ApplicationId: applicationId,BeneficiaryAccountno:beneficiaryaccountno,IFSCCode:ifsccode },
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                traditional: true,
+                success: function (response) {
+                    debugger;
+
+                    $("#popupUpdateGLWBBankDetails").find("#divContent").html(response);
+                    $("#popupUpdateGLWBBankDetails").modal('show');
+                    $("form").removeData("validator").removeData("unobtrusiveValidation");
+                    $.validator.unobtrusive.parse($("form"));
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+        function GLWBSendForPaymentFailedRecord(ServiceId) {
+            debugger;
+            var valSelected = [];
+            $('#chkapprovereject:checked').each(function (i) {
+                valSelected[i] = $(this).val();
+            });
+
+            if (valSelected.length == 0) {
+                alert('Please select atleast one application for payment.')
+                return false;
+            }
+
+            var data = new Object();
+            data.payinfoidlist = valSelected;
+            data.serviceid = ServiceId;
+            $.ajax({
+                type: "GET",
+                url: "/EmployeeHome/GLWBSendForPaymentFailedRecord",
+                dataType: "json",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                //dataType: "html",
+                traditional: true,
+                success: function (data) {
+                    debugger;
+                    if (data != null && data.errorCode == 0) {
+                        debugger;
+                        swal({
+                            title: "",
+                            text: data.msg,
+                            type: "success",
+                            confirmButtonClass: "btn-primary",
+                        }, function () {
+                            $("#statusId").val('2');
+                            $("#btnSubmit").click();
+
+                        });
+                    }
+                    else {
+                        swal({
+                            title: "",
+                            text: data.msg,
+                            type: "error",
+                            confirmButtonClass: "btn-primary",
+                        });
+                    }
+                },
+                failure: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                },
+                error: function (response) {
+                    swal("Oops", "We couldn't connect to the server!", "error");
+                }
+            });
+        }
+
+    </script>
+
+}

@@ -1,0 +1,66 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model BankDetails
+
+<div class="text-left">
+    <span class="text-danger font-weight-bolder">
+        <small>
+            @*<b id="">નોંધ : લાભાર્થીના લાભ માટે બેંકની વિગત ફરજીયાત છે.</b> <br>*@
+
+        </small>
+    </span>
+</div>
+<br>
+<div class="form-horizontal form-bordered">
+
+    <div class="form-group row">
+        <span class="control-label col-md-3">
+            બેંકનું નામ :   <span class="text-danger">*</span>
+        </span>
+        <div class="control-form col-md-3">
+            <input asp-for="BankName" class="form-control">
+            <span asp-validation-for="BankName" class="text-danger"></span>
+        </div>
+        <span class="control-label col-md-3">
+            શાખાનું નામ :   <span class="text-danger">*</span>
+        </span>
+        <div class="control-form col-md-3">
+            <input asp-for="BankBranch" class="form-control">
+            <span asp-validation-for="BankBranch" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+
+        <span class="control-label col-md-3">
+            બેંક એકાઉન્ટ નંબર : <span class="text-danger">*</span>
+        </span>
+        <div class="control-form col-md-3">
+            <input asp-for="BankAccountNo" class="form-control">
+            <span asp-validation-for="BankAccountNo" class="text-danger"></span>
+
+        </div>
+        <span class="control-label col-md-3">
+            બેંક એકાઉન્ટ હોલ્ડર નું નામ :   <span class="text-danger">*</span>
+        </span>
+        <div class="control-form col-md-3">
+            <input asp-for="AccountHolderName" class="form-control">
+            <span asp-validation-for="AccountHolderName" class="text-danger"></span>
+        </div>
+
+        <span class="control-label col-md-3">
+            IFSC કોડ નંબર:  <span class="text-danger">*</span>
+        </span>
+        <div class="control-form col-md-3">
+            <input asp-for="IFSCCode" class="form-control" maxlength="15">
+            <span asp-validation-for="IFSCCode" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<br>
+@*<script>
+    var IFSCCodeRegEX = ^[A-Za-z]{4}[a-zA-Z0-9]{7}$;
+    //var BankAccRegEx =
+     $("#ifsccodevalidation").empty();
+            if (!$("#ifsccode").val().match($IFSCCodeRegEX)) {
+                $("#ifsccodevalidation").html('Invalid IFSC CODE..!!');
+</script>*@

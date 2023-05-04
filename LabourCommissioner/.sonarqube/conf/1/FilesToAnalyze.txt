@@ -1,0 +1,10 @@
+﻿D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\aadharcard.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Class1.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\CouchDBRequest.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\CouchDBResponse.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Procedures.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\Extensions.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\PermissionConstant.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Utility\UserCookies.cs
+D:\Azure DevOps\LabourCommissioner\LabourCommissioner.Common\Properties\launchSettings.json

@@ -1,0 +1,139 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBPSY_SchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+    decimal Totalsahay = 0;
+    decimal Prasutisahay = 0;
+    decimal Betisahay = 0;
+    if (Model != null)
+    {
+        Totalsahay = Model.totalsahay;
+        Prasutisahay = Model.prasutisahay;
+        Betisahay = Model.betisahay;
+    }
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBPrasutiSahayBetiProtsahanYojna" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" id="totalsahay" asp-for="totalsahay" value="@Totalsahay" />
+    <input type="hidden" id="prasutisahay" asp-for="prasutisahay" value="@Prasutisahay" />
+    <input type="hidden" id="betisahay" asp-for="betisahay" value="@Betisahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div>
+            <fieldset class="custom-fieldset mb-4">
+                <legend>યોજનાની વિગત</legend>
+                <div class="">
+                    <div class="form-horizontal form-bordered">
+                        <div class="form-group row">
+                            <span id="body_innerbody_label1" class="control-label col-md-3">બાળકની જન્મ તારીખ:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="dateofbirth" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="dateofbirth" class="text-danger"></span>
+                                <span id="body_innerbody_reqtxtApplicantDOB" style="color: Red; display: none;">બાળકની જન્મ તારીખ પસંદ કરો.</span>
+                            </div>
+                            @* <span id="body_innerbody_label1" class="control-label col-md-3">બાળકની જાતિ:<span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3 d-flex align-items-center">
+                            <input asp-for="gender" type="radio" value="1" id="rbSon" name="Gender" />પુત્ર<br />
+                            <span class="px-2"><input asp-for="gender" type="radio" value="2" id="rbDaughter" name="Gender" />પુત્રી<br /></span>
+                            <span asp-validation-for="gender" class="text-danger"></span>
+                            </div>*@
+                        </div>
+                        <div class="form-group row">
+                            <span id="body_innerbody_label1" class="control-label col-md-3">નવા જન્મેલ બાળક પુત્ર ની સંખ્યા: <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="noofchildemale" id="noofchildemale" onblur="    GetPSYTotalSahay();" onKeyPress="if(this.value.length >1) return false;" class="form-control" onkeypress="return AllowNumeric(event);" autocomplete="off" />
+                                <span asp-validation-for="noofchildemale" class="text-danger"></span>
+                            </div>
+                            <span id="body_innerbody_label2" class="control-label col-md-3">નવા જન્મેલ બાળક પુત્રી ની સંખ્યા: <span class="text-danger">*</span></span>
+                            <div class="control-form col-md-3">
+                                <input asp-for="noofchildfemale" id="noofchildfemale" onblur="    GetPSYTotalSahay();" onKeyPress="if(this.value.length >1) return false;" class="form-control" onkeypress="return AllowNumeric(event);" autocomplete="off" />
+                                <span asp-validation-for="noofchildfemale" class="text-danger"></span>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">પ્રસુતાર્થીના બેંકની વિગતો</span>
+                </legend>
+
+                <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+            </fieldset>
+
+        </div>
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript">
+
+     $(function() {
+
+        var date = new Date();
+        var currentYear = date.getFullYear();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDate();
+
+
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            startDate: new Date(currentYear, currentMonth - 12, currentDate),
+            endDate: new Date(),
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+        //$('.datepicker').datepicker({
+        //    changeMonth: true,
+        //    changeYear: true,
+        //    format: "dd/mm/yyyy",
+        //    language: "local",
+        //    todayHighlight: 'TRUE',
+        //    autoclose: true
+        //});
+    });
+
+    function GetPSYTotalSahay() {
+
+        var maleChild = $("#noofchildemale").val();
+        var femaleChild = $("#noofchildfemale").val();
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/GLWBPrasutiSahayBetiProtsahanYojna/GetPSYTotalSahay",
+            data: { serviceId: @ServiceId, male: maleChild, female: femaleChild },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                $("#totalsahay").val(data.data.result.totalsahay);
+                $("#prasutisahay").val(data.data.result.prasutisahay);
+                $("#betisahay").val(data.data.result.betisahay);
+            }
+        });
+    }
+</script>

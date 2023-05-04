@@ -1,0 +1,59 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using System.Security.Claims
+@model ServiceMaster
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var serviceid = HttpUtility.UrlEncode(CommonUtils.Encrypt(Model.ServiceId.ToString()));
+    string BenificiaryType = identity?.Claims.FirstOrDefault(x => x.Type.Equals("BeneficiaryType", StringComparison.OrdinalIgnoreCase))?.Value;
+}
+@if (Model != null)
+{
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="dynamicSchemeModelLabel">
+                    @if (Model.BeneficiaryTypeId == "1")
+                    {
+                        <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">
+                    }
+                    else
+                    {
+                        <img src="/assets/img/GLWBColorLogo.jpg" class="rounded-circle me-2" height="50" width="50">
+                    }
+                    @Model.ServiceNameGujarati
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <div class="modal-body bocw_bg">
+                @*@if (Model.ServiceId == 7 || Model.ServiceId == 3 || Model.ServiceId == 2 || Model.ServiceId == 12  || Model.ServiceId == 4 || Model.ServiceId == 8|| Model.ServiceId == 5)
+            *@
+                @*//BOCW Schemes  -------  || Model.ServiceId == 12  || Model.ServiceId == 4 || Model.ServiceId == 8|| Model.ServiceId == 5*@
+                @if (((Model.isschemeopen == true && Model.isreverted == true) || (Model.isschemeopen == true && Model.isreverted == false)) || (Model.isschemeopen == false && (Model.isreverted == null || Model.isreverted == true)))
+                {
+
+                    @Html.Raw(Model.Description)
+
+                }
+                else
+                {
+                    <h1> @Html.Raw("Comming Soon...") </h1>
+                }
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                @*@if (Model.isschemeopen == true && identity.Claims.Count() > 0)*@
+                @if ((((Model.isschemeopen == true && Model.isreverted == true) || (Model.isschemeopen == true && Model.isreverted == false)) || (Model.isschemeopen == false && (Model.isreverted == null || Model.isreverted == true))) && identity.Claims.Count() > 0)
+                {
+                    <a class="btn btn-primary" asp-controller="Home" asp-action="ApplicationDetails" asp-route-strserviceId="@serviceid" asp-route-isschemeopen="@Model.isschemeopen" asp-route-isreverted="@Model.isreverted">Accept</a>
+                }
+            </div>
+        </div>
+    </div>
+
+}
+
+@*modal end*@

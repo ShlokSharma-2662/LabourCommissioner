@@ -1,0 +1,461 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model GLWBhtySchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var ClaimApplicationId = ViewBag.ClaimApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //var year = ViewBag.Year;
+    ////var std = ViewBag.Standard;
+    var enirmancardno = ViewBag.EnirmanCardNo;
+    ////if (isfilled == true)
+    ////{
+    ////    ApplicationNo = Model.ApplicationNo;
+    ////}
+    //var dropDownItems = new SelectList(std, "Value", "Text", "12");
+
+
+    var modelCnt = 1;
+
+
+    if (@Model != null && @Model.lstFamilyMemberTravelDetails != null)
+    {
+        modelCnt = @Model.lstFamilyMemberTravelDetails.Count();
+    }
+}
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="GLWBHomeTownClaimYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ClaimApplicationId" value="@ClaimApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="ENirmanCardNo" value="@enirmancardno" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <input type="hidden" asp-for="TotalFamilyMemberCount" />
+        <fieldset>
+            <legend>શ્રમયોગી તથા તેના આશ્રિતોની વિગત </legend>
+            <table class="table bg-white table-bordered text-center" id="tblFamily">
+
+                <th>
+                    <span class="control-label">સફરનો પ્રકાર<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">જવાનું / આવાનું <span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સફર શરૂ થયા સ્થળ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સફર પૂરો થયા સ્થળ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">સફર ની તારીખ<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ટિકિટ નંબર:<span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">ટિકિટની રકમ <span class="text-danger">*</span></span>
+                </th>
+                <th>
+                    <span class="control-label">Action<span class="text-danger"></span></span>
+                </th>
+                @if (Model != null && Model.lstFamilyMemberTravelDetails != null && Model.lstFamilyMemberTravelDetails.Count() > 0)
+                {
+                    @for (int i = 0; i < Model.lstFamilyMemberTravelDetails.Count; i++)
+                    {
+                        string IsValidate = "false";
+                        IsValidate = (@Model.lstFamilyMemberTravelDetails[i].CouchDBDocId != null && @Model.lstFamilyMemberTravelDetails[i].CouchDBDocId != "") ? "false" : "true";
+                        <tr id="@("tr"+i)">
+                            <td>
+                                <input type="hidden" id="@("hdnIsDeleted"+i)" asp-for="@Model.lstFamilyMemberTravelDetails[i].isDeleted" />
+                                <input type="hidden" asp-for="@Model.lstFamilyMemberTravelDetails[i].travellingdetailsid" />
+                                @*<input type="hidden" asp-for="@Model.lstFamilyMemberTravelDetails[i].DocumentName" />
+                        <input type="hidden" asp-for="@Model.lstFamilyMemberTravelDetails[i].CouchDBDocId" />
+                        <input type="hidden" asp-for="@Model.lstFamilyMemberTravelDetails[i].CouchDBDocRevId" />*@
+
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].travelledby" type="radio" value="1" />ટ્રેન<br />
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].travelledby" type="radio" value="2" />બસ<br />
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].travelledby" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_travelledby_error0" class="text-danger"></span>
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].travelstatus" type="radio" value="1" />જવાનું<br />
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].travelstatus" type="radio" value="2" />અવાનું<br />
+
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].travelstatus" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_travelstatus_error0" class="text-danger"></span>
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].fromplace" type="text" class="form-control ">
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].fromplace" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_fromplace_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].toplace" type="text" class="form-control ">
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].toplace" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_toplace_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].travelldate" id="lstFamilyMemberTravelDetails_0__travelldate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].travelldate" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_travelldate_error0" class="text-danger"></span>
+
+                            </td>
+
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].ticketno" type="text" class="form-control allownumericwithoutdecimal" maxlength="12">
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].ticketno" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_ticketno_error0" class="text-danger"></span>
+
+                            </td>
+                            @*<td>
+                    <div class="">
+                    <input asp-for="@Model.lstFamilyMemberTravelDetails[i].Ticket" type="file" data-val="@IsValidate" class="form-control file-validate border p-1">
+                    <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].Ticket" class="text-danger"></span>
+                    <span id="lstFamilyMemberTravelDetails_Ticket_error0" class="text-danger"></span>
+                    <a asp-controller="GLWBHomeTownClaimYojana" asp-action="DownloadDocument" asp-route-id="@Model.lstFamilyMemberTravelDetails[i].CouchDBDocId" asp-route-filename="@Model.lstFamilyMemberTravelDetails[i].DocumentName">@Model.lstFamilyMemberTravelDetails[i].DocumentName</a>
+                    </div>
+                    </td>*@
+                            <td>
+                                <input asp-for="@Model.lstFamilyMemberTravelDetails[i].ticketamount" type="text" class="form-control allownumericwithoutdecimal clstotalsahay" maxlength="12">
+                                <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[i].ticketamount" class="text-danger"></span>
+                                <span id="lstFamilyMemberTravelDetails_ticketamount_error0" class="text-danger"></span>
+
+                            </td>
+                            <td>
+                                @if (i != 0)
+                                {
+                                    <input type='button' value='Remove' onclick='RemoveTextBox(this,@i);'>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr id="tr0">
+                        <td>
+                            <input type="hidden" id="@("hdnIsDeleted0")" asp-for="@Model.lstFamilyMemberTravelDetails[0].isDeleted" />
+                            <input type="hidden" asp-for="@Model.lstFamilyMemberTravelDetails[0].travellingdetailsid" />
+
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].travelledby" type="radio" value="1" />ટ્રેન<br />
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].travelledby" type="radio" value="2" />બસ<br />
+
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].travelledby" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_travelledby_error0" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].travelstatus" type="radio" value="1" />જવાનું<br />
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].travelstatus" type="radio" value="2" />અવાનું<br />
+
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].travelstatus" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_travelstatus_error0" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].fromplace" type="text" class="form-control ">
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].fromplace" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_fromplace_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].toplace" type="text" class="form-control ">
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].toplace" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_toplace_error0" class="text-danger"></span>
+
+                        </td>
+                        <td>
+
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].travelldate" id="lstFamilyMemberTravelDetails_0__travelldate" type="text" class="form-control dateValidateCls datepicker" placeholder="dd/MM/yyyy" />
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].travelldate" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_travelldate_error0" class="text-danger"></span>
+
+                        </td>
+
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].ticketno" type="text" class="form-control allownumericwithoutdecimal" maxlength="12">
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].ticketno" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_ticketno_error0" class="text-danger"></span>
+
+                        </td>
+                        @*<td>
+                    <div class="">
+                    <input asp-for="@Model.lstFamilyMemberTravelDetails[0].Ticket" type="file" class="form-control file-validate border p-1">
+                    <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].Ticket" class="text-danger"></span>
+                    <span id="lstFamilyMemberTravelDetails_Ticket_error0" class="text-danger"></span>
+
+                    </div>
+                    </td>*@
+                        <td>
+                            <input asp-for="@Model.lstFamilyMemberTravelDetails[0].ticketamount" type="text" id="lstFamilyMemberTravelDetails_0__ticketamount" class="form-control allownumericwithoutdecimal clstotalsahay" maxlength="12">
+                            <span asp-validation-for="@Model.lstFamilyMemberTravelDetails[0].ticketamount" class="text-danger"></span>
+                            <span id="lstFamilyMemberTravelDetails_ticketamount_error0" class="text-danger"></span>
+
+                        </td>
+
+                    </tr>
+                }
+            </table>
+
+            <div>
+                <span colspan="1" class="text-end">
+                    <input id="Addbutton" type="button" value="Add" />
+                </span>
+            </div>
+            <div class="form-horizontal form-bordered mt-2">
+
+                <div class="form-group row">
+                    <span id="body_innerbody_label2" class="control-label col-md-3">મળવા પાત્ર સહાય:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+
+                        <input asp-for="totalsahay" type="text" class="form-control" id="totalSahay" readonly="readonly" />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+
+
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_GLWB_BankDetails.cshtml" />
+        </fieldset>
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+    </div>
+</form>
+
+@*<script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>
+<script type="text/javascript" src="~/js/Common.js"></script>
+<link href="lib/jqueryui/themes/base/jquery-ui.min.css" />
+<link href="lib/jqueryui/themes/base/theme.min.css" />*@
+<script type="text/javascript">
+
+    $(function() {
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    var ttlCount = @modelCnt;
+    $(document).ready(function() {
+        debugger;
+        $("#Addbutton").click(function() {
+
+
+
+            debugger;
+            var flag = false;
+            flag = ValidateControl(ttlCount);
+            if (flag) {
+                var strHTML = "";
+                strHTML += "<tr id='tr" + ttlCount + "'>";
+                strHTML += "<td><input type='hidden' id='hdnIsDeleted" + ttlCount + "' name='lstFamilyMemberTravelDetails[" + ttlCount + "].isDeleted'>";
+                strHTML += "<input type='hidden' name='lstFamilyMemberTravelDetails[" + ttlCount + "].isDeleted'>";
+
+                strHTML += "<input name='lstFamilyMemberTravelDetails[" + ttlCount + "].travelledby' id='lstFamilyMemberTravelDetails[" + ttlCount + "].travelledby' type='radio'value='1'>ટ્રેન<br/>";
+                strHTML += "<input name='lstFamilyMemberTravelDetails[" + ttlCount + "].travelledby' id='lstFamilyMemberTravelDetails[" + ttlCount + "].travelledby' type='radio'value='2'>બસ<br/>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_travelledby_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].travelstatus' id='lstFamilyMemberTravelDetails[" + ttlCount + "].travelstatus' type='radio'value='1'>જવાનું<br/>";
+                strHTML += "<input name='lstFamilyMemberTravelDetails[" + ttlCount + "].travelstatus' id='lstFamilyMemberTravelDetails[" + ttlCount + "].travelstatus' type='radio'value='2'>અવાનું<br/>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_travelstatus_error" + ttlCount + "' class='text-danger'></span></td>";
+
+
+
+                strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].fromplace' id='lstFamilyMemberTravelDetails_" + ttlCount + "___fromplace' type='text'  class='form-control'>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_fromplace_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].toplace' id='lstFamilyMemberTravelDetails_" + ttlCount + "___toplace' type='text'  class='form-control'>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_toplace_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td> <input name='lstFamilyMemberTravelDetails[" + ttlCount + "].travelldate' id='lstFamilyMemberTravelDetails_" + ttlCount + "___travelldate' type='text' class='form-control dateValidateCls datepicker' placeholder='dd/MM/yyyy' />";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_travelldate_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].ticketno' id='lstFamilyMemberTravelDetails_" + ttlCount + "___ticketno' type='text'  class='form-control'>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_ticketno_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                //strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].Ticket' id='lstFamilyMemberTravelDetails_" + ttlCount + "__Ticket' type='file' class='form-control file-validate border p-1' data-val='true' maxlength='15'>";
+                //strHTML += "<span id='lstFamilyMemberTravelDetails_Ticket_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input name='lstFamilyMemberTravelDetails[" + ttlCount + "].ticketamount' id='lstFamilyMemberTravelDetails_" + ttlCount + "__ticketamount' type='text'  class='form-control clstotalsahay'>";
+                strHTML += "<span id='lstFamilyMemberTravelDetails_ticketamount_error" + ttlCount + "' class='text-danger'></span></td>";
+
+                strHTML += "<td><input type='button' value='Remove' onclick='RemoveTextBox(this," + ttlCount + ");'></td>";
+                strHTML += "</tr>";
+                ttlCount++;
+            }
+            $("#tblFamily").append(strHTML);
+            $(".datepicker").datepicker("destroy");
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true
+            });
+            $(".clstotalsahay").change(function() {
+                debugger;
+                var totalsahay = 0;
+                for (var i = 0; i < ttlCount; i++) {
+                    totalsahay = parseFloat(totalsahay) + parseFloat($("#lstFamilyMemberTravelDetails_" + i + "__ticketamount").val());
+                }
+                $("#totalSahay").val(totalsahay);
+            });
+            $(document).on('change', '.dateValidateCls', function() {
+                debugger;
+                var date = $(this).val();
+                //var date = "19/09/2000";
+                if (date != "") {
+                    var pattern = /(^0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(\d{4}$)/;
+                    var reg = pattern.test(date);
+                    if (reg == false) {
+                        //$("#lbldateErrorMsg").css("display", "block");
+                        //$("#lbldateErrorMsg").text("કૃપા કરીને dd/MM/yyyy ફોર્મેટમાં તારીખ દાખલ કરો.");
+                        alert("કૃપા કરીને dd/MM/yyyy ફોર્મેટમાં તારીખ દાખલ કરો.");
+                        $(this).val('');
+
+                        return false;
+                    }
+                }
+            });
+
+        });
+    });
+    function RemoveTextBox(button, rowId) {
+        debugger;
+        $("#hdnIsDeleted" + rowId).val(true);
+        var val = $("#lstFamilyMemberTravelDetails_" + rowId + "__ticketamount").val();
+        var totalsahay = $("#totalSahay").val();
+        totalsahay = parseFloat(totalsahay) - parseFloat(val);
+        $("#totalSahay").val(totalsahay);
+        $(button).parent().parent().css("display", "none");
+    }
+
+    function ValidateControl(rowCnt) {
+        debugger;
+        for (var i = 0; i < rowCnt; i++) {
+            if ($("#hdnIsDeleted" + i).val() == 'False' || $("#hdnIsDeleted" + i).val() == undefined || $("#hdnIsDeleted" + i).val() == '') {
+                $("#lstFamilyMemberTravelDetails_travelledby_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_travelstatus_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_fromplace_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_toplace_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_travelldate_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_ticketno_error" + i + "").html("");
+                //$("#lstFamilyMemberTravelDetails_Ticket_error" + i + "").html("");
+                $("#lstFamilyMemberTravelDetails_ticketamount_error" + i + "").html("");
+
+                if ($("input:radio[name='lstFamilyMemberTravelDetails[" + i + "].travelledby']:checked").val() == undefined) {
+                    $("#lstFamilyMemberTravelDetails_travelledby_error" + i + "").html("સફર નો પ્રકાર પસંદ કરો.");
+                    return false;
+                }
+                if ($("input:radio[name='lstFamilyMemberTravelDetails[" + i + "].travelstatus']:checked").val() == undefined) {
+                    $("#lstFamilyMemberTravelDetails_travelstatus_error" + i + "").html("આઓ છો ક જાઓ છો એ પસંદ કરો.");
+                    return false;
+                }
+                if ($("#lstFamilyMemberTravelDetails_" + i + "___fromplace").val() == "") {
+
+                    $("#lstFamilyMemberTravelDetails_fromplace_error" + i + "").html("સફર શરૂ થયા સ્થળ પસંદ કરો.");
+                    return false;
+                }
+                if ($("#lstFamilyMemberTravelDetails_" + i + "___toplace").val() == "") {
+                    $("#lstFamilyMemberTravelDetails_toplace_error" + i + "").html("સફર પૂરો થયા સ્થળ પસંદ કરો.");
+                    return false;
+                }
+                if ($("#lstfamilymembertraveldetails_" + i + "___travelldate").val() == "") {
+                    $("#lstFamilyMemberTravelDetails_travelldate_error" + i + "").html("સફર ની તારીખ પસંદ કરો.");
+                    return false;
+                }
+                if ($("#lstFamilyMemberTravelDetails_" + i + "___ticketno").val() == "") {
+                    $("#lstFamilyMemberTravelDetails_ticketno_error" + i + "").html("ટિકિટ નંબર નાખો.");
+                    return false;
+                }
+                //if ($("#lstFamilyMemberTravelDetails_" + i + "__Ticket  ").val() == "" && $("#lstFamilyMemberTravelDetails_" + i + "__Ticket  ").attr("data-val") == "true") {
+                //    $("#lstFamilyMemberTravelDetails_Ticket_error" + i + "").html("ટિકિટ નાખો.");
+                //    return false;
+                //}
+                if ($("#lstFamilyMemberTravelDetails_" + i + "__ticketamount").val() == "") {
+                    $("#lstFamilyMemberTravelDetails_ticketamount_error" + i + "").html("ટિકિટની રકમ નાખો.");
+                    return false;
+
+                }
+
+
+            }
+        }
+        return true;
+    }
+
+    $(".clstotalsahay").change(function() {
+        debugger;
+        var totalsahay = 0;
+        for (var i = 0; i < ttlCount; i++) {
+            totalsahay = parseFloat(totalsahay) + parseFloat($("#lstFamilyMemberTravelDetails_" + i + "__ticketamount").val());
+        }
+        $("#totalSahay").val(totalsahay);
+    });
+
+
+
+
+
+    $(document).ready(function() {
+
+        $(".file-validate").on("change", function() {
+
+            var fileName = $(this).val();
+            // Allowing file type
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+            if (!allowedExtensions.exec(fileName)) {
+                alert('Invalid file type');
+                $(this).val('');
+                return false;
+            }
+            if (this.files[0].size > 1000000) {
+                alert('અપલોડ કરેલ દસ્તાવેજ ની સાઇઝ 1 MB કરતાં ઓછી હોવી જોઈએ');
+                $(this).val('');
+                return false;
+            }
+
+        });
+    });
+
+
+
+    $(".allownumericwithoutdecimal").on("keypress keyup blur", function(event) {
+        $(this).val($(this).val().replace(/[^\d].+/, ""));
+        if ((event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+
+
+
+
+</script>

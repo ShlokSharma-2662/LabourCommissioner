@@ -1,0 +1,113 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@using LabourCommissioner.Common.Utility
+@using System.Web
+@using LabourCommissioner.Views.Shared.Components.SearchBar
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using System.Security.Claims
+@model TalukaMaster
+
+
+@{
+    ViewData["Title"] = "Taluka Add Details";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
+    bool isfilled = ViewBag.isFilled;
+
+}
+
+<style>
+    section#services {
+        margin-top: 38px;
+    }
+
+    .bg-primary, .badge-primary, .card-primary {
+        background: #e3a800 !important;
+        border-color: var(--navy-primary) !important;
+        color: white !important;
+    }
+</style>
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">Add Taluka</h2>
+</section>
+
+
+<main id="main">
+    <section id="services" class="services services2">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <form asp-controller="Masters" asp-action="AddUpdateDeleteTalukaMaster" method="post">
+                        <input type="hidden" asp-for="talukaid" />
+                        <div class="card">
+                            <div class="card-header card-head-bg">
+                                <div class="card-header py-2 bg-primary d-flex justify-content-between align-items-center">
+                                    <span class="text-white"><i class='bx bx-list-ul align-middle'></i>Add Taluka</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+
+                                             
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal form-bordered">
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">District : <span class="text-danger font-weight-bold">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                     <select asp-items="@(new SelectList(@ViewBag.District, "Value", "Text"))"   class="form-control" name="districtid" asp-for="districtid" >
+                                                   <option value="0" selected disabled>-Please Select-</option>
+                                                </select>
+
+                                                </div>
+                                                <label class="control-label col-md-3">Taluka Name <span class="text-danger font-weight-bold">*</span><br>(in Gujarati)</label>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="talukaname" name="talukaname" type="text" maxlength="100" id="talukaname" class="form-control">
+                                                    <span id="body_rfvtxtDistrictNameGuj" style="color:Red;display:none;">Please Enter Taluka Name</span>
+                                                    <span id="body_revtxtDistrictNameGuj" style="color:Red;display:none;">Use Charchers except (&lt; and &gt;). Maximum 100 characters are Allowed</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Taluka Name(in Gujarati): <span class="text-danger font-weight-bold">*</span></label>
+                                                <div class="control-form col-md-3">
+                                                    <input asp-for="talukanameguj" name="talukanameguj" type="text" maxlength="50" id="talukanameguj" class="form-control">
+                                                    <span id="body_rfvtxtDistrictHeadOfficeName" style="color:Red;display:none;">Please Enter Taluka Name in Gujarati</span>
+                                                    <span id="body_revtxtDistrictHeadOfficeName" style="color:Red;display:none;">Allows Only Alphabets &amp; Space (A-Z,a-z) and Max 50 Characters</span>
+                                                </div>
+                                                <label class="control-label col-md-3">Is Active ? </label>
+                                                <div class="control-form col-md-3">
+                                                    <label class="c-checkbox">
+                                                        <input asp-for="IsActive" id="IsActive" type="checkbox" name="IsActive" checked="checked">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card-footer clearfix">
+                                <div class="text-center">
+                                    <input type="submit" name="ctl00$body$btnSave" value="Save" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$btnSave&quot;, &quot;&quot;, true, &quot;vgSave&quot;, &quot;&quot;, false, false))" id="body_btnSave" class="btn btn-primary">
+                                    <input type="submit" name="ctl00$body$btnCancel" value="Cancel" id="body_btnCancel" class="btn btn-secondary">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<script src="~/js/Common.js"></script>

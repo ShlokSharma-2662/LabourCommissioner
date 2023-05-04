@@ -1,0 +1,2945 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LabourCommissioner.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LabourCommissioner.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\ADSY\\Accidental Death Assistance Affidavit Format.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\ADSY\\Accidental Death Assistance Affidavit Format.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\ADSY\\Accidental Death Assistance Consent Form Format.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\ADSY\\Accidental Death Assistance Consent Form Format.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\ASY\\ASY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\ASY\\ASY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\ASY\\Pedhinamu.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\ASY\\Pedhinamu.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\BPSY\\BOCW_BPSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\BPSY\\BOCW_BPSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\BPSY\\BOCW_BPSY_BANK-BOND-FORM.PDF",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\BPSY\\BOCW_BPSY_BANK-BOND-FORM.PDF"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\DoctorCertificate.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\DoctorCertificate.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\PSY\\BOCW_PSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\PSY\\BOCW_PSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\Pedhinamu.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\Pedhinamu.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\SSY\\BOCW_SSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\SSY\\BOCW_SSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\Survivalcertificate.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\Survivalcertificate.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\VR\\DoctorCertificate.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\VR\\DoctorCertificate.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\VR\\Survivalcertificate.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\VR\\Survivalcertificate.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\BOCW\\VR\\VR.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\BOCW\\VR\\VR.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\ADSY\\ADSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\ADSY\\ADSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\ADSY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\ADSY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\ASY\\ASY.rar",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\ASY\\ASY.rar"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\ASY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\ASY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\ASY\\sogandnamu.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\ASY\\sogandnamu.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\CSY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\CSY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\CSY\\CSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\CSY\\CSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HLS\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HLS\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HLS\\HLS.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HLS\\HLS.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HLS\\Homeloan Affidavit Sample.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HLS\\Homeloan Affidavit Sample.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HSC\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HSC\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HSC\\HSC.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HSC\\HSC.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HSS\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HSS\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HSS\\HSS.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HSS\\HSS.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HTY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HTY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HTY\\HTY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HTY\\HTY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\HTY\\સ્વઘોષણા.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\HTY\\સ્વઘોષણા.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\LSY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\LSY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\LSY\\LSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\LSY\\LSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\MSL\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\MSL\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\MSL\\MSL.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\MSL\\MSL.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\PSY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\PSY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\PSY\\PSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\PSY\\PSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\SSC\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\SSC\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\SSC\\SSC.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\SSC\\SSC.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\TSY\\Bonafide.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\TSY\\Bonafide.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\TSY\\TSY.zip",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\TSY\\TSY.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\sogandnamu.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\sogandnamu.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationDocuments\\GLWB\\સ્વઘોષણા.pdf",
+      "PackagePath": "staticwebassets\\ApplicationDocuments\\GLWB\\સ્વઘોષણા.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\BOCW\\BPSY\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\BOCW\\BPSY\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\BOCW\\PSY\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\BOCW\\PSY\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\BOCW\\SSY\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\BOCW\\SSY\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\GLWB\\HSC\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\GLWB\\HSC\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\GLWB\\PSY\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\GLWB\\PSY\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\ApplicationForm\\GLWB\\SSC\\ApplicationForm.pdf",
+      "PackagePath": "staticwebassets\\ApplicationForm\\GLWB\\SSC\\ApplicationForm.pdf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230117033344.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230117033344.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230117035749.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230117035749.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230117051442.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230117051442.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230118112154.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230118112154.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230118115426.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230118115426.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_20230118115956.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_20230118115956.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_20230224035017.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_20230224035017.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230228123017.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230228123017.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230314020057.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230314020057.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230314022430.csv",
+      "PackagePath": "staticwebassets\\BOCWRequestPaymentFiles\\297844_BOCW_SSY_AMR_20230314022430.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWResponsePaymentFiles\\297844_REV_297844_BOCW_20230111104127.csv",
+      "PackagePath": "staticwebassets\\BOCWResponsePaymentFiles\\297844_REV_297844_BOCW_20230111104127.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\BOCWResponsePaymentFiles\\297844_REV_297844_BOCW_SSY_20230224035017.csv",
+      "PackagePath": "staticwebassets\\BOCWResponsePaymentFiles\\297844_REV_297844_BOCW_SSY_20230224035017.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\CTP Documents\\IBDeptencKey.key",
+      "PackagePath": "staticwebassets\\CTP Documents\\IBDeptencKey.key"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\CTP Documents\\KeyFile.txt",
+      "PackagePath": "staticwebassets\\CTP Documents\\KeyFile.txt"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_20230113123702.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_20230113123702.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_20230118042540.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_20230118042540.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_20230118061907.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_20230118061907.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_20230119111004.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_20230119111004.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_PSY_20230306035652.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_PSY_20230306035652.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBRequestPaymentFiles\\283424_GLWB_PSY_20230314035907.csv",
+      "PackagePath": "staticwebassets\\GLWBRequestPaymentFiles\\283424_GLWB_PSY_20230314035907.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\GLWBResponsePaymentFiles\\283424_REV_283424_GLWB_20230124115131.csv",
+      "PackagePath": "staticwebassets\\GLWBResponsePaymentFiles\\283424_REV_283424_GLWB_20230124115131.csv"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\LogFiles\\LogWrite.text",
+      "PackagePath": "staticwebassets\\LogFiles\\LogWrite.text"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\BOCWApproveRejectSendbackMail.htm",
+      "PackagePath": "staticwebassets\\MailTemplate\\BOCWApproveRejectSendbackMail.htm"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\ChangePassword.htm",
+      "PackagePath": "staticwebassets\\MailTemplate\\ChangePassword.htm"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\ExceptionMail.html",
+      "PackagePath": "staticwebassets\\MailTemplate\\ExceptionMail.html"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\MailVerification.html",
+      "PackagePath": "staticwebassets\\MailTemplate\\MailVerification.html"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\PasswordRecovery.htm",
+      "PackagePath": "staticwebassets\\MailTemplate\\PasswordRecovery.htm"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\MailTemplate\\Registration.html",
+      "PackagePath": "staticwebassets\\MailTemplate\\Registration.html"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWACSY-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWACSY-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWACSY.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWACSY.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWAadeshReport.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWAadeshReport.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWAntyesthiSahay-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWAntyesthiSahay-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWAntyesthiSahay.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWAntyesthiSahay.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWCitizenApplicationDetail-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWCitizenApplicationDetail-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWCitizenApplicationDetail.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWCitizenApplicationDetail.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWHostelSahayYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWHostelSahayYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWHostelSahayYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWHostelSahayYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWNanaji-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWNanaji-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWNanaji.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWNanaji.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWPIPSahayYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWPIPSahayYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWPIPSahayYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWPIPSahayYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWPrasutiBhagyaLaxmiSahay-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWPrasutiBhagyaLaxmiSahay-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWPrasutiBhagyaLaxmiSahay.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWPrasutiBhagyaLaxmiSahay.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWPrasutisahay.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWPrasutisahay.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWTabibiSahayYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWTabibiSahayYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWTabibiSahayYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWTabibiSahayYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWTabletSahayYojna.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWTabletSahayYojna.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWVisisthaCoachingYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWVisisthaCoachingYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCWVisisthaCoachingYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCWVisisthaCoachingYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCW_VR-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCW_VR-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\BOCW_VR.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\BOCW_VR.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\CitizenApplicantDocumentDetails.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\CitizenApplicantDocumentDetails.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\CitizenApplicationPreviewOLD.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\CitizenApplicationPreviewOLD.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBAadeshReport.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBAadeshReport.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBAccidentalDisabilitySahayYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBAccidentalDisabilitySahayYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBAccidentalDisabilitySahayYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBAccidentalDisabilitySahayYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBAccidentalSahayYojana-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBAccidentalSahayYojana-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBAccidentalSahayYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBAccidentalSahayYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBCycleYojna-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBCycleYojna-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBCycleYojna.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBCycleYojna.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHSLApplicationReport-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHSLApplicationReport-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHSLApplicationReport.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHSLApplicationReport.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHomeTownClaimYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHomeTownClaimYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHomeTownSadhyantikApproval.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHomeTownSadhyantikApproval.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHomeTownYojana.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHomeTownYojana.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHscScheme-OLD.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHscScheme-OLD.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHscScheme.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHscScheme.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHssScheme-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHssScheme-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBHssScheme.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBHssScheme.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBIndividualAadeshReport.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBIndividualAadeshReport.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBLsyScheme-OLD.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBLsyScheme-OLD.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBLsyScheme.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBLsyScheme.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBMahilashramLagnaSahay-OLD.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBMahilashramLagnaSahay-OLD.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBMahilashramLagnaSahay.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBMahilashramLagnaSahay.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBTabibiSahay.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBTabibiSahay.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBTabibiSahayClaim.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBTabibiSahayClaim.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBprasutiScheme-OLD.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBprasutiScheme-OLD.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBprasutiScheme.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBprasutiScheme.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBsscScheme-old.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBsscScheme-old.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\GLWBsscScheme.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\GLWBsscScheme.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\Reports\\Test.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\Test.rdlc"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\css.zip",
+      "PackagePath": "staticwebassets\\assets\\css.zip"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\css\\CustomGoogleFonts.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\CustomGoogleFonts.woff2"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\css\\OpenSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\OpenSans-Bold.ttf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\css\\fonts.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\1.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\2.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\3.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\AAMLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\AAMLogo.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\AAMLogoOLD.png",
+      "PackagePath": "staticwebassets\\assets\\img\\AAMLogoOLD.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\ASIAS.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ASIAS.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\BOCWEmailLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\BOCWEmailLogo.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\BOCWLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\BOCWLogo.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\Emblem.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Emblem.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\GLWBAadeshLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\GLWBAadeshLogo.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\GLWBColorLogo.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\GLWBColorLogo.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\GLWBEmailLogo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\GLWBEmailLogo.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\Loader.gif",
+      "PackagePath": "staticwebassets\\assets\\img\\Loader.gif"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\MainLogoEng.png",
+      "PackagePath": "staticwebassets\\assets\\img\\MainLogoEng.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\MainLogoGuj.png",
+      "PackagePath": "staticwebassets\\assets\\img\\MainLogoGuj.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\ShramsetuLogoEng.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ShramsetuLogoEng.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\ShramsetuLogoGuj.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ShramsetuLogoGuj.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\about-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about-bg.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\b.png",
+      "PackagePath": "staticwebassets\\assets\\img\\b.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\bg1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg1.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\bg2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg2.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\cm.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cm.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\contact-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\contact-bg.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\cta-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta-bg.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\favicon1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon1.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\h.png",
+      "PackagePath": "staticwebassets\\assets\\img\\h.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero-bg.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\hero-bg1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero-bg1.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\hero-bg123.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero-bg123.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo1.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\logo21.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo21.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\pm.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pm.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\img\\why-us.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\why-us.jpg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\animate.css\\animate.compat.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\animate.css\\animate.compat.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\animate.css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\animate.css\\animate.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\animate.css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\animate.css\\animate.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\aos\\aos.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\aos\\aos.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap-icons\\index.html",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\index.html"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\css\\animations.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\css\\animations.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\css\\boxicons.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\css\\boxicons.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\css\\boxicons.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\css\\boxicons.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\css\\transformations.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\css\\transformations.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\fonts\\boxicons.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\fonts\\boxicons.eot"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\fonts\\boxicons.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\fonts\\boxicons.svg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\fonts\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\fonts\\boxicons.ttf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\fonts\\boxicons.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\fonts\\boxicons.woff"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\boxicons\\fonts\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\boxicons\\fonts\\boxicons.woff2"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\isotope-layout\\isotope.pkgd.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\isotope-layout\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\isotope-layout\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\php-email-form\\validate.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\php-email-form\\validate.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.eot"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.less",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.less"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.svg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.symbol.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.symbol.svg"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.ttf"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.woff"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\remixicon\\remixicon.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\remixicon\\remixicon.woff2"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\css\\Select2.css",
+      "PackagePath": "staticwebassets\\css\\Select2.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\css\\sweetalert.css",
+      "PackagePath": "staticwebassets\\css\\sweetalert.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\Common.js",
+      "PackagePath": "staticwebassets\\js\\Common.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\Select2.js",
+      "PackagePath": "staticwebassets\\js\\Select2.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\exporting.js",
+      "PackagePath": "staticwebassets\\js\\exporting.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\highcharts.js",
+      "PackagePath": "staticwebassets\\js\\highcharts.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\jquery.unobtrusive-ajax.js",
+      "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\sweetalert.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\table2csv.js",
+      "PackagePath": "staticwebassets\\js\\table2csv.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\js\\table2csv.min.js",
+      "PackagePath": "staticwebassets\\js\\table2csv.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\base\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_diagonals-thick_8_333333_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_diagonals-thick_8_333333_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_glass_40_111111_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_glass_40_111111_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_glass_55_1c1c1c_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_glass_55_1c1c1c_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-hard_100_f9f9f9_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-hard_100_f9f9f9_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-hard_40_aaaaaa_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-hard_40_aaaaaa_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-soft_50_aaaaaa_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_highlight-soft_50_aaaaaa_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_inset-hard_45_cd0a0a_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_inset-hard_45_cd0a0a_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_inset-hard_55_ffeb80_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-bg_inset-hard_55_ffeb80_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_4ca300_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_4ca300_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_bbbbbb_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_bbbbbb_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ededed_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ededed_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ffcf29_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ffcf29_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\black-tie\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\black-tie\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_diagonals-thick_75_f3d8d8_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_diagonals-thick_75_f3d8d8_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_dots-small_65_a6a6a6_2x2.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_dots-small_65_a6a6a6_2x2.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_glass_55_fbf8ee_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_glass_55_fbf8ee_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-hard_100_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-hard_100_eeeeee_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-hard_100_f6f6f6_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-hard_100_f6f6f6_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-soft_15_cc0000_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-bg_highlight-soft_15_cc0000_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_004276_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_004276_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\blitzer\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\blitzer\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_diagonals-thick_90_eeeeee_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_diagonals-thick_90_eeeeee_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_100_e4f1fb_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_100_e4f1fb_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_50_3baae3_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_50_3baae3_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_80_d7ebf9_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_glass_80_d7ebf9_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-hard_100_f2f5f7_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-hard_100_f2f5f7_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-hard_70_000000_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-hard_70_000000_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-soft_100_deedf7_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-soft_100_deedf7_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-soft_25_ffef8f_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-bg_highlight-soft_25_ffef8f_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_2694e8_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_2694e8_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_2e83ff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_2e83ff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_3d80b3_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_3d80b3_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_72a7cf_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_72a7cf_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\cupertino\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\cupertino\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_glass_40_ffc73d_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_glass_40_ffc73d_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-hard_20_0972a5_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-hard_20_0972a5_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_33_003147_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_33_003147_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_35_222222_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_35_222222_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_44_444444_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_44_444444_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_80_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_highlight-soft_80_eeeeee_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_loop_25_000000_21x21.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-bg_loop_25_000000_21x21.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_4b8e0b_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_4b8e0b_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_a83300_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_a83300_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_cccccc_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_cccccc_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dark-hive\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dark-hive\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_diagonals-thick_15_0b3e6f_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_diagonals-thick_15_0b3e6f_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-medium_30_0b58a2_4x4.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-medium_30_0b58a2_4x4.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_20_333333_2x2.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_20_333333_2x2.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_30_a32d00_2x2.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_30_a32d00_2x2.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_40_00498f_2x2.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_dots-small_40_00498f_2x2.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_gloss-wave_20_111111_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-bg_gloss-wave_20_111111_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_00498f_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_00498f_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_98d2fb_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_98d2fb_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_9ccdfc_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_9ccdfc_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\dot-luv\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\dot-luv\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_gloss-wave_30_3d3644_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_gloss-wave_30_3d3644_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_100_dcd9de_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_100_dcd9de_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_100_eae6ea_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_100_eae6ea_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_25_30273a_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_25_30273a_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_45_5f5964_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-bg_highlight-soft_45_5f5964_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_454545_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_454545_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_734d99_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_734d99_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_8d78a5_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_8d78a5_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_a8a3ae_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_a8a3ae_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_ebccce_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_ebccce_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\eggplant\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\eggplant\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-small_25_c5ddfc_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-small_25_c5ddfc_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_20_e69700_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_20_e69700_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_22_1484e6_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_22_1484e6_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_26_2293f7_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_diagonals-thick_26_2293f7_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_highlight-soft_100_f9f9f9_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_highlight-soft_100_f9f9f9_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_inset-hard_100_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-bg_inset-hard_100_eeeeee_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_0a82eb_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_0a82eb_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_0b54d5_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_0b54d5_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_5fa5e3_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_5fa5e3_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_fcdd4a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_fcdd4a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\excite-bike\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\excite-bike\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_glass_65_ffffff_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_glass_65_ffffff_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_100_f6f6f6_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_100_f6f6f6_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_25_0073ea_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_25_0073ea_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_50_dddddd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-bg_highlight-soft_50_dddddd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_0073ea_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_0073ea_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_454545_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_454545_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_666666_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_666666_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_ff0084_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_ff0084_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\flick\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\flick\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_40_db4865_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_40_db4865_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_50_93c3cd_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_50_93c3cd_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_50_ff3853_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_50_ff3853_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_75_ccd232_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_diagonals-small_75_ccd232_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_dots-medium_80_ffff38_4x4.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_dots-medium_80_ffff38_4x4.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_dots-small_35_35414f_2x2.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_dots-small_35_35414f_2x2.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_white-lines_85_f7f7ba_40x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-bg_white-lines_85_f7f7ba_40x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_454545_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_454545_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_88a206_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_88a206_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_c02669_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_c02669_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_e1e463_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_e1e463_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_ffeb33_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_ffeb33_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\hot-sneaks\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\hot-sneaks\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_100_f5f0e5_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_100_f5f0e5_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_25_cb842e_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_25_cb842e_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_70_ede4d4_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_glass_70_ede4d4_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_100_f4f0ec_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_100_f4f0ec_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_65_fee4bd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_65_fee4bd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_75_f5f5b5_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_highlight-hard_75_f5f5b5_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_inset-soft_100_f4f0ec_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-bg_inset-soft_100_f4f0ec_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_c47a23_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_c47a23_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_cb672b_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_cb672b_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_f08000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_f08000_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_f35f07_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_f35f07_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_ff7519_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_ff7519_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\humanity\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\humanity\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-small_0_aaaaaa_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-small_0_aaaaaa_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-thick_15_444444_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-thick_15_444444_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-thick_95_ffdc2e_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_diagonals-thick_95_ffdc2e_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_glass_55_fbf5d0_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_glass_55_fbf5d0_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-hard_30_285c00_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-hard_30_285c00_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_33_3a8104_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_33_3a8104_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_50_4eb305_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_50_4eb305_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_60_4ca20b_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_highlight-soft_60_4ca20b_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_inset-soft_10_285c00_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-bg_inset-soft_10_285c00_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_4eb305_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_4eb305_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_72b42d_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_72b42d_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\le-frog\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\le-frog\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_glass_15_5f391b_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_glass_15_5f391b_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_20_1c160d_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_20_1c160d_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_25_453326_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_25_453326_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_30_44372c_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_gloss-wave_30_44372c_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_highlight-soft_20_201913_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_highlight-soft_20_201913_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_highlight-soft_20_619226_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_highlight-soft_20_619226_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_inset-soft_10_201913_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-bg_inset-soft_10_201913_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_9bcc60_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_9bcc60_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_add978_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_add978_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_e3ddc9_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_e3ddc9_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_f1fd86_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_f1fd86_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\mint-choc\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\mint-choc\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_100_f8f8f8_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_100_f8f8f8_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_35_dddddd_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_35_dddddd_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_60_eeeeee_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_glass_60_eeeeee_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_inset-hard_75_999999_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_inset-hard_75_999999_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_inset-soft_50_c9c9c9_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-bg_inset-soft_50_c9c9c9_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_3383bb_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_3383bb_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_454545_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_454545_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_70b2e1_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_70b2e1_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_999999_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_999999_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_fbc856_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\images\\ui-icons_fbc856_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\overcast\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\overcast\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_diagonal-maze_20_6e4f1c_10x10.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_diagonal-maze_20_6e4f1c_10x10.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_diagonal-maze_40_000000_10x10.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_diagonal-maze_40_000000_10x10.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_10_eceadf_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_10_eceadf_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_10_f8f7f6_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_10_f8f7f6_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_eceadf_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_eceadf_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_f7f3de_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_f7f3de_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_ffffff_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_15_ffffff_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_65_654b24_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_65_654b24_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_68_b83400_60x60.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-bg_fine-grain_68_b83400_60x60.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_3572ac_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_3572ac_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_8c291d_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_8c291d_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_b83400_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_b83400_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_fbdb93_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_fbdb93_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\pepper-grinder\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\pepper-grinder\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_75_d0e5f5_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_75_d0e5f5_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_85_dfeffc_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_85_dfeffc_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_95_fef1ec_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_217bc0_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_217bc0_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_2e83ff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_2e83ff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_469bdd_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_469bdd_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_6da8d5_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_6da8d5_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_d8e7f3_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_d8e7f3_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_f9bd01_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\images\\ui-icons_f9bd01_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\redmond\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\redmond\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_55_fbf9ee_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_65_ffffff_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_65_ffffff_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_75_dadada_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_75_dadada_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_75_e6e6e6_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_75_e6e6e6_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_95_fef1ec_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_2e83ff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_2e83ff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_454545_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_454545_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_888888_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_888888_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\smoothness\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\smoothness\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_glass_55_fcf0ba_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_glass_55_fcf0ba_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_gloss-wave_100_ece8da_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_gloss-wave_100_ece8da_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_100_f5f3e5_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_100_f5f3e5_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_100_fafaf4_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_100_fafaf4_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_15_459e00_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_15_459e00_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_95_cccccc_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-hard_95_cccccc_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-soft_25_67b021_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-soft_25_67b021_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-soft_95_ffedad_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_highlight-soft_95_ffedad_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_inset-soft_15_2b2922_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-bg_inset-soft_15_2b2922_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_808080_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_808080_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_847e71_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_847e71_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_8DC262_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_8DC262_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_eeeeee_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_eeeeee_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\south-street\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\south-street\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_45_0078ae_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_45_0078ae_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_55_f8da4e_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_55_f8da4e_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_75_79c9ec_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_glass_75_79c9ec_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_45_e14f1c_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_45_e14f1c_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_50_6eac2c_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_50_6eac2c_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_75_2191c0_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_gloss-wave_75_2191c0_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_0078ae_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_0078ae_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_056b93_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_056b93_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_d8e7f3_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_d8e7f3_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_e0fdff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_e0fdff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_f5e175_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_f5e175_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_f7a50d_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_f7a50d_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\images\\ui-icons_fcd113_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\images\\ui-icons_fcd113_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\start\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\start\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_diagonals-medium_20_d34d17_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_diagonals-medium_20_d34d17_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_45_817865_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_45_817865_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_60_fece2f_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_60_fece2f_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_70_ffdd57_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_70_ffdd57_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_90_fff9e5_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_gloss-wave_90_fff9e5_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_highlight-soft_100_feeebd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_highlight-soft_100_feeebd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_inset-soft_30_ffffff_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-bg_inset-soft_30_ffffff_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_3d3d3d_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_3d3d3d_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_bd7b00_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_bd7b00_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_d19405_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_d19405_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_eb990f_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_eb990f_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_ed9f26_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_ed9f26_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_fadc7a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_fadc7a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_ffe180_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\images\\ui-icons_ffe180_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\sunny\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\sunny\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_10_4f4221_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_10_4f4221_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_20_372806_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_20_372806_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_25_675423_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_25_675423_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_25_d5ac5d_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_25_d5ac5d_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_8_261803_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_8_261803_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_8_443113_10x8.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_diamond_8_443113_10x8.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_highlight-hard_65_fee4bd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-bg_highlight-hard_65_fee4bd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_070603_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_070603_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_e8e2b5_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_e8e2b5_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_e9cd86_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_e9cd86_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_efec9f_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_efec9f_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_f2ec64_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_f2ec64_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_f9f2bd_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_f9f2bd_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_ff7519_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\images\\ui-icons_ff7519_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\swanky-purse\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\swanky-purse\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_diagonals-small_50_262626_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_diagonals-small_50_262626_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_40_0a0a0a_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_40_0a0a0a_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_55_f1fbe5_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_55_f1fbe5_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_60_000000_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_glass_60_000000_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_55_000000_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_55_000000_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_85_9fda58_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_85_9fda58_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_95_f6ecd5_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-bg_gloss-wave_95_f6ecd5_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_000000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_000000_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_1f1f1f_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_1f1f1f_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_9fda58_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_9fda58_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_b8ec79_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_b8ec79_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\trontastic\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\trontastic\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_20_555555_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_20_555555_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_40_0078a3_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_40_0078a3_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_40_ffc73d_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_glass_40_ffc73d_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_gloss-wave_25_333333_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_gloss-wave_25_333333_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_highlight-soft_80_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_highlight-soft_80_eeeeee_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_inset-soft_25_000000_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_inset-soft_25_000000_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_inset-soft_30_f58400_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-bg_inset-soft_30_f58400_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_4b8e0b_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_4b8e0b_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_a83300_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_a83300_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_cccccc_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_cccccc_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-darkness\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-darkness\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_diagonals-thick_18_b81900_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_diagonals-thick_18_b81900_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_diagonals-thick_20_666666_40x40.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_diagonals-thick_20_666666_40x40.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_100_f6f6f6_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_100_f6f6f6_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_100_fdf5ce_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_100_fdf5ce_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_65_ffffff_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_glass_65_ffffff_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_gloss-wave_35_f6a828_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_gloss-wave_35_f6a828_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_highlight-soft_100_eeeeee_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_highlight-soft_75_ffe45c_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-bg_highlight-soft_75_ffe45c_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_222222_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_222222_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_228ef1_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_228ef1_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ef8c08_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ef8c08_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ffd27a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ffd27a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\ui-lightness\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\ui-lightness\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_glass_95_fef1ec_1x400.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_gloss-wave_16_121212_500x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_gloss-wave_16_121212_500x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-hard_15_888888_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-hard_15_888888_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-hard_55_555555_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-hard_55_555555_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-soft_35_adadad_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-soft_35_adadad_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-soft_60_dddddd_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_highlight-soft_60_dddddd_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_inset-soft_15_121212_1x100.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-bg_inset-soft_15_121212_1x100.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_666666_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_666666_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_aaaaaa_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_aaaaaa_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_c98000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_c98000_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_cccccc_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_cccccc_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_cd0a0a_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_cd0a0a_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_f29a00_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\images\\ui-icons_f29a00_256x240.png"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\theme.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\lib\\jqueryui\\themes\\vader\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\vader\\theme.min.css"
+    },
+    {
+      "Id": "D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot\\report\\ApplicationDetails.pdf",
+      "PackagePath": "staticwebassets\\report\\ApplicationDetails.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.LabourCommissioner.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.LabourCommissioner.props",
+      "PackagePath": "build\\LabourCommissioner.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.LabourCommissioner.props",
+      "PackagePath": "buildMultiTargeting\\LabourCommissioner.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.LabourCommissioner.props",
+      "PackagePath": "buildTransitive\\LabourCommissioner.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

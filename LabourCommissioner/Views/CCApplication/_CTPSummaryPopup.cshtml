@@ -1,0 +1,78 @@
+﻿@{
+    var Data = (PaymentDetails)ViewBag.PaymentDetails;
+
+    string TAXPeriod = "";
+    string ApplicationCount = "";
+    string TotalAmount = "";
+    string[]? applicationidlist = null;
+    if (Data != null)
+    {
+        TAXPeriod = Data.fromdate + " To " + Data.todate;
+        ApplicationCount = Data.applicationidlist != null ? Convert.ToString(Data.applicationidlist.Count()) : "0";
+        TotalAmount = Convert.ToDecimal(Data.amount).ToString("f2");
+         applicationidlist = Data.applicationidlist;
+
+    }
+}
+
+
+@*<form asp-action="AddLocalAuthority" asp-controller="CCRegistration" method="post">*@
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header bg-primary py-2">
+            <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">Payment Details
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+        </div>
+        <div class="modal-body bocw_bg">
+
+            
+            <fieldset class="custom-fieldset mb-4">
+                <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                    <span id="body_innerbody_ucApplicantBankdetails_lblLegend">Payment Details</span>
+                </legend>
+
+                <div class="form-horizontal form-bordered">
+                    <div class="form-group row">
+                        <span class="control-label col-md-5">
+                            TAX Period :
+                        </span>
+                        <div class="control-form col-md-6">
+                            <label name="applicationcount" id="applicationcount">@TAXPeriod</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-5">
+                            Application Count :
+                        </span>
+                        <div class="control-form col-md-6">
+                            <label name="applicationcount" id="applicationcount">@ApplicationCount</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span class="control-label col-md-5">
+                            Total Amount :
+                        </span>
+                        <div class="control-form col-md-6">
+                            <label name="totalamount" id="totalamount">@TotalAmount</label>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <div class="text-center">
+            <input type="button" value="Initiate Payment" onclick="event.preventDefault(); return SendCESSForCTPPayment();" class="btn btn-warning text-center">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+@*</form>*@
+@section Scripts{
+     
+}
+
+

@@ -1,0 +1,147 @@
+/* _content/LabourCommissioner/Views/Shared/_EmployeeLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-9rlfz7j2qy] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-9rlfz7j2qy] {
+  color: #0077cc;
+}
+
+.btn-primary[b-9rlfz7j2qy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-9rlfz7j2qy], .nav-pills .show > .nav-link[b-9rlfz7j2qy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-9rlfz7j2qy] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-9rlfz7j2qy] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-9rlfz7j2qy] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-9rlfz7j2qy] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-9rlfz7j2qy] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/LabourCommissioner/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-mol5qi1bf8] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-mol5qi1bf8] {
+  color: #0077cc;
+}
+
+.btn-primary[b-mol5qi1bf8] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-mol5qi1bf8], .nav-pills .show > .nav-link[b-mol5qi1bf8] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-mol5qi1bf8] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-mol5qi1bf8] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-mol5qi1bf8] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-mol5qi1bf8] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-mol5qi1bf8] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/LabourCommissioner/Views/Shared/_OtherLoginLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-9zhnbwzw42] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-9zhnbwzw42] {
+  color: #0077cc;
+}
+
+.btn-primary[b-9zhnbwzw42] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-9zhnbwzw42], .nav-pills .show > .nav-link[b-9zhnbwzw42] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-9zhnbwzw42] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-9zhnbwzw42] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-9zhnbwzw42] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-9zhnbwzw42] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-9zhnbwzw42] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

@@ -1,0 +1,474 @@
+AddRegistration:Line No : 60 
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: An unexpected error occurred in Report Processing. ---> System.InvalidOperationException: Expr1end(0) : error BC30201: Expression expected.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 860
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘mdates’ refers to the field ‘mdates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 867
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘mdates’ refers to the field ‘mdates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 867
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘mdates’ refers to the field ‘mdates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 867
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+ex:System.IO.IOException: The process cannot access the file 'D:\Shlok\LabourCommissioner\LabourCommissioner\wwwroot\Reports\BOCWAntyesthiSahay.rdlc' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 867
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘cvillageid3’ refers to the field ‘deathdisability’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘cvillageid3’ refers to the field ‘deathdisability’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘cvillageid3’ refers to the field ‘deathdisability’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:System.IO.IOException: The process cannot access the file 'D:\Shlok\LabourCommissioner\LabourCommissioner\wwwroot\Reports\GLWBLsyScheme.rdlc' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 867
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘buydates’ refers to the field ‘buydates’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox193’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox193’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox193’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox62’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox62’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox62’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+Before:byte
+After:byte
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox193’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+ex:Microsoft.Reporting.NETCore.LocalProcessingException: An error occurred during local report processing.
+ ---> Microsoft.Reporting.DefinitionInvalidException: The definition of the report '' is invalid. ---> Microsoft.ReportingServices.ReportProcessing.ReportPublishingException: The Value expression for the text box ‘Textbox193’ refers to the field ‘enirmancardno’.  Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope. Letters in the names of fields must use the correct case.
+   --- End of inner exception stack trace ---
+   at Microsoft.Reporting.NETCore.LocalReport.EnsureExecutionSession()
+   at Microsoft.Reporting.NETCore.LocalReport.SetParameters(IEnumerable`1 parameters)
+   at LabourCommissioner.Common.Utility.CommonUtils.GenerateReportExcel(DataSet ds, String RootPath, String RDLCFileName, String ReportName, String FileType, Boolean IsRunTime, String reportPara) in D:\Shlok\LabourCommissioner\LabourCommissioner.Common\Utility\CommonUtils.cs:line 880
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+Before:byte
+After:byte
+{"Timestamp":"2023-02-08T10:42:24.9632443+05:30","Level":"Information","MessageTemplate":"*************** START : BOCWUploadFileOnServer (Date : 08/02/2023 104224 )  ***************"}
+{"Timestamp":"2023-02-08T10:42:25.9792981+05:30","Level":"Information","MessageTemplate":"GeneratedFileForUploadToServer : D:\\GIT Lab Projects\\LabourCommissioner\\LabourCommissioner\\LabourCommissioner\\wwwroot/BOCWRequestPaymentFiles/297844_BOCW_20230208104225.csv "}
+{"Timestamp":"2023-02-08T10:42:25.9950092+05:30","Level":"Information","MessageTemplate":"Update FileName &  Confirm Upload Status in  bocwpaymentinfo (PaymentInfoIds): 1,2, "}
+{"Timestamp":"2023-02-08T10:42:25.9950695+05:30","Level":"Information","MessageTemplate":"*************** END : BOCWUploadFileOnServer (Date : 08/02/2023 104225 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.3464928+05:30","Level":"Information","MessageTemplate":"*************** START : GLWBUploadFileOnServer (Date : 06/03/2023 035652 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.3945085+05:30","Level":"Information","MessageTemplate":"*************** START : modelList Count (modelList Count : 1 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.3946709+05:30","Level":"Information","MessageTemplate":"*************** START : modelList If (Date : 06/03/2023 035652 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.3980257+05:30","Level":"Information","MessageTemplate":"*************** START : finalResult For (Date : 06/03/2023 035652 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4010748+05:30","Level":"Information","MessageTemplate":"*************** START : ExportToCSVUsingComma Count(ExportToCSVUsingComma (Date : 06/03/2023 035652 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4017405+05:30","Level":"Information","MessageTemplate":"*************** START : sb (csvData (sb : 27,ARTIBEN K MAKWANA,Ahmadabad,2223000073,17620100007775,BARB0VATAMA,10000,GLWB,56005006003,NEFT,1A4aL9FmR1uS3X71XepB4kbLXphC,glwb_psy\r\n )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4018094+05:30","Level":"Information","MessageTemplate":"*************** START : csvData (csvData (csvData : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4018223+05:30","Level":"Information","MessageTemplate":"*************** START : dtExportData Count(dtExportData Count : 1 )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4018306+05:30","Level":"Information","MessageTemplate":"*************** START : result (result : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4018436+05:30","Level":"Information","MessageTemplate":"*************** START : rootPath (rootPath : D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/GLWBRequestPaymentFiles )  ***************"}
+{"Timestamp":"2023-03-06T15:56:52.4029211+05:30","Level":"Information","MessageTemplate":"GeneratedFileForUploadToServer : D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/GLWBRequestPaymentFiles/283424_GLWB_PSY_20230306035652.csv "}
+{"Timestamp":"2023-03-06T15:56:52.4098208+05:30","Level":"Information","MessageTemplate":"Update FileName &  Confirm Upload Status in  glwbpaymentinfo (PaymentInfoIds): 27, "}
+{"Timestamp":"2023-03-06T15:56:52.4098797+05:30","Level":"Information","MessageTemplate":"*************** END : GLWBUploadFileOnServer (Date : 06/03/2023 035652 )  ***************"}
+{"Timestamp":"2023-03-14T14:00:57.0035905+05:30","Level":"Information","MessageTemplate":"*************** START : BOCWUploadFileOnServer (Date : 14/03/2023 020057 )  ***************"}
+{"Timestamp":"2023-03-14T14:00:57.0930734+05:30","Level":"Information","MessageTemplate":"*************** START : ExportToCSVUsingComma Count(ExportToCSVUsingComma (Date : 14/03/2023 020057 )  ***************"}
+{"Timestamp":"2023-03-14T14:00:57.0948224+05:30","Level":"Information","MessageTemplate":"*************** START : sb (csvData (sb : 4,rtrtrtr,Amreli,2307000141,3220100029250,BARB0BHADRA,10200,BOCW,41411378877,NEFT,MSXwpSsSp4inEe6O6NB3ZGcseI5t,bocw_ssy\r\n )  ***************"}
+{"Timestamp":"2023-03-14T14:00:57.0949132+05:30","Level":"Information","MessageTemplate":"*************** START : csvData (csvData (csvData : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-14T14:00:57.9124304+05:30","Level":"Information","MessageTemplate":"GeneratedFileForUploadToServer : D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/BOCWRequestPaymentFiles/297844_BOCW_SSY_AMR_20230314020057.csv "}
+{"Timestamp":"2023-03-14T14:00:57.9265444+05:30","Level":"Information","MessageTemplate":"Update FileName &  Confirm Upload Status in  bocwpaymentinfo (PaymentInfoIds): 4, "}
+{"Timestamp":"2023-03-14T14:00:57.9266144+05:30","Level":"Information","MessageTemplate":"*************** END : BOCWUploadFileOnServer (Date : 14/03/2023 020057 )  ***************"}
+{"Timestamp":"2023-03-14T14:24:30.3162990+05:30","Level":"Information","MessageTemplate":"*************** START : BOCWUploadFileOnServer (Date : 14/03/2023 022430 )  ***************"}
+{"Timestamp":"2023-03-14T14:24:30.3782557+05:30","Level":"Information","MessageTemplate":"*************** START : ExportToCSVUsingComma Count(ExportToCSVUsingComma (Date : 14/03/2023 022430 )  ***************"}
+{"Timestamp":"2023-03-14T14:24:30.3788018+05:30","Level":"Information","MessageTemplate":"*************** START : sb (csvData (sb : 1,rtrtrtr,Amreli,2307000147,123456789111,AXIS0111111,10200,BOCW,41411378877,NEFT,rZIEMQ4oMRNMnZ8HGcdaTDJ20LA1,bocw_ssy\r\n2,rtrtrtr,Amreli,2307000148,123456789111,AXIS0233355,10500,BOCW,41411378877,NEFT,cTacdiQJi9DaChCRPTmXb6ZvARsx,bocw_ssy\r\n )  ***************"}
+{"Timestamp":"2023-03-14T14:24:30.3788340+05:30","Level":"Information","MessageTemplate":"*************** START : csvData (csvData (csvData : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-14T14:24:30.9542555+05:30","Level":"Information","MessageTemplate":"GeneratedFileForUploadToServer : D:\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/BOCWRequestPaymentFiles/297844_BOCW_SSY_AMR_20230314022430.csv "}
+{"Timestamp":"2023-03-14T14:24:30.9673631+05:30","Level":"Information","MessageTemplate":"Update FileName &  Confirm Upload Status in  bocwpaymentinfo (PaymentInfoIds): 1,2, "}
+{"Timestamp":"2023-03-14T14:24:30.9674513+05:30","Level":"Information","MessageTemplate":"*************** END : BOCWUploadFileOnServer (Date : 14/03/2023 022430 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0213239+05:30","Level":"Information","MessageTemplate":"*************** START : GLWBUploadFileOnServer (Date : 14/03/2023 035907 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0666389+05:30","Level":"Information","MessageTemplate":"*************** START : modelList Count (modelList Count : 2 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0669037+05:30","Level":"Information","MessageTemplate":"*************** START : modelList If (Date : 14/03/2023 035907 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0669620+05:30","Level":"Information","MessageTemplate":"*************** START : finalResult For (Date : 14/03/2023 035907 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0677414+05:30","Level":"Information","MessageTemplate":"*************** START : finalResult For (Date : 14/03/2023 035907 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0683954+05:30","Level":"Information","MessageTemplate":"*************** START : ExportToCSVUsingComma Count(ExportToCSVUsingComma (Date : 14/03/2023 035907 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0688017+05:30","Level":"Information","MessageTemplate":"*************** START : sb (csvData (sb : 2,Shlok Sharma,Amreli,2323000105,123456789111,AXIS0111111,20000,GLWB,56005006003,NEFT,osZTUjMgFe4lBvolAJmuqPkGeTBm,glwb_psy\r\n3,Shlok Sharma,Amreli,2323000106,123456789111,AXIS0111111,20000,GLWB,56005006003,NEFT,2xWOntyBO3iE7M1xYkjSoIG6lBSd,glwb_psy\r\n )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0688341+05:30","Level":"Information","MessageTemplate":"*************** START : csvData (csvData (csvData : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0688450+05:30","Level":"Information","MessageTemplate":"*************** START : dtExportData Count(dtExportData Count : 2 )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0688533+05:30","Level":"Information","MessageTemplate":"*************** START : result (result : System.Byte[] )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0689230+05:30","Level":"Information","MessageTemplate":"*************** START : rootPath (rootPath : D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/GLWBRequestPaymentFiles )  ***************"}
+{"Timestamp":"2023-03-14T15:59:07.0694582+05:30","Level":"Information","MessageTemplate":"GeneratedFileForUploadToServer : D:\\Shlok\\Azure DevOps\\LabourCommissioner\\LabourCommissioner\\wwwroot/GLWBRequestPaymentFiles/283424_GLWB_PSY_20230314035907.csv "}
+{"Timestamp":"2023-03-14T15:59:07.0792769+05:30","Level":"Information","MessageTemplate":"Update FileName &  Confirm Upload Status in  glwbpaymentinfo (PaymentInfoIds): 2,3, "}
+{"Timestamp":"2023-03-14T15:59:07.0793287+05:30","Level":"Information","MessageTemplate":"*************** END : GLWBUploadFileOnServer (Date : 14/03/2023 035907 )  ***************"}

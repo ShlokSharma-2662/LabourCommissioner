@@ -1,0 +1,173 @@
+﻿@using System.Security.Claims
+@model HospitalScheduleTime
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (HospitalScheduleTime)ViewBag.HospitalScheduleTime;
+    var docData = (HospitalScheduleTime)ViewBag.DocumentsList;
+
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string DistrictId = "";
+    string TalukaId = "";
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.ServiceId);
+        ApplicationNo = Convert.ToString(Data.ApplicationNo);
+        ApplicationId = Convert.ToString(Data.ApplicationId);
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    //TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+
+}
+<form asp-action="UploadUserApplicationReport" asp-controller="EmployeeHome" data-ajax="true" data-ajax-method="POST" data-ajax-begin="OnBegin" data-ajax-success="OnSuccess" enctype="multipart/form-data">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    Schedule Time
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <input type="hidden" id="ApplicationId" asp-for="ApplicationId" name="ApplicationId" value="@ApplicationId" />
+            <input type="hidden" id="ApplicationNo" asp-for="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="ServiceId" asp-for="ServiceId" name="ServiceId" value="@ServiceId" />
+            <div class="modal-body bocw_bg">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group row">
+
+                            <div class="form-group">
+                                <label>
+                                    <span id="lblOTP">Remarks</span><span class="text-red"></span>
+                                </label>
+                                <div class="">
+                                    <textarea id="remarks" name="remarks" cols="20" rows="2" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            @if (ServiceId == "12")
+                            {
+                                //string IsValidate = "false";
+                                string required = "required";
+
+                                if (docData != null)
+                                {
+                                    //IsValidate = (docData.CouchDBDocId != null) ? "false" : "true";
+                                    required = (docData.CouchDBDocId != null) ? "" : "required";
+                                }
+                                <div class="form-group">
+                                    <label>
+                                        <span id="lblOTP">Upload Application Report:</span><span class="text-red"></span>
+                                    </label>
+                                    <div class="">
+
+                                        <input type="file" id="IdImage" name="IdImage" accept="img/*,png/*,pdf/*" onchange="fileValidation(this.value)" class="fileupload custom-file-input form-control h-auto fs-75" @required />
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                if (docData != null)
+                                {
+                                    <div class="">
+                                        <a asp-controller="BOCWAccidentalSahayYojana" asp-action="DownloadDocument" asp-route-id="@docData.CouchDBDocId" asp-route-filename="@docData.DocumentName">@docData.DocumentName</a>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                        <br />
+                        <input type="submit" value="Submit" class="btn btn-warning">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$(function() {
+        //    $('.datepicker').datepicker({
+        //        changeMonth: true,
+        //        changeYear: true,
+        //        format: "dd/mm/yyyy",
+        //        language: "local",
+        //        todayHighlight: 'TRUE',
+        //        autoclose: true
+        //    });
+        //});
+        $(function() {
+            var today = new Date();
+            debugger
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "local",
+                todayHighlight: 'TRUE',
+                autoclose: true,
+                startDate: "today"
+
+            });
+        });
+    });
+
+
+    $(document).ready(function() {
+        debugger;
+        GetHospitalScheduleTime(@ApplicationId, @ServiceId);
+
+    });
+
+    function GetHospitalScheduleTime(ApplicationId, ServiceId) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/EmployeeHome/GetHospitalScheduleTime",
+            data: { applicationid: ApplicationId, serviceid: ServiceId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+
+                var dateArray = data.response[0].fromdate.split('T')[0].split('-');
+                var date = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+                $('#fromdate').val(date);
+
+                var dateArray = data.response[0].todate.split('T')[0].split('-');
+                var date1 = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+                $('#todate').val(date1);
+                $('#fromtime').val(data.response[0].fromtime);
+                $('#totime').val(data.response[0].totime);
+            },
+            error: (error) => {
+                debugger;
+                console.log(JSON.stringify(error));
+            }
+        });
+
+    };
+
+    function OnBegin() {
+        $('.btn-close').click();
+        debugger;
+    }
+    function OnSuccess(response) {
+        debugger;
+        var msg = response.msg;
+        swal({
+            title: "",
+            text: msg,
+            type: "success",
+            showCancelButtonClass: "btn-primary",
+            confirmButtonText: 'OK'
+        }, function() {
+            window.location.reload();
+        });
+    }
+</script>

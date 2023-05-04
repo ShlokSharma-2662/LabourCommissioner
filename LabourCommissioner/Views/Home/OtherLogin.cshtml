@@ -1,0 +1,176 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model LabourCommissioner.Abstraction.DataModels.Employeemaster
+@{
+    ViewData["Title"] = "Board Employee Login";
+    Layout = "~/Views/Shared/_OtherLoginLayout.cshtml";
+
+}
+
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container d-flex align-items-sm-center  flex-column flex-sm-row justify-content-start justify-content-sm-between">
+
+                <div class="px-2 pt-2 mt-5" style="background: rgb(0 72 130 / 60%); border-radius: 16px; ">
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/pm.png" class="rounded-pill me-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Modi"]<br />
+                            @localizer["PM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/cm.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Bhupendra"]<br />
+                            @localizer["CM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/b.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Balvantsinh"]<br />
+                            @localizer["HM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/h.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Kunvarjibhai"]<br />
+                            @localizer["Minister"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/ASIAS.jpg" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["AS"]<br />
+                            @localizer["IAS"]
+                        </span>
+                    </div>
+
+                </div>
+
+                <!--data-aos="fade-down"-->
+                <div id="login" class="card mt-5 bg-transparent login-bx" style="width:400px;border: solid 2px #fff;border-radius: 1.55rem;overflow: hidden;">
+                    <div class="card-header bg-warning2 py-3">
+                        <div class="card-title mb-0 h5">
+                            <i class="bx bx-log-in align-middle"></i>
+                            @localizer["OtherLogin"]
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="OtherLogin" asp-controller="Account">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <span class="text-danger">
+                                    @ViewBag.Message
+                                </span>
+                            }
+                           @* <div class="form-floating mb-3">
+                                <input asp-for="UserName" class="form-control" tabindex="1" id="floatingInput" />
+                                <label asp-for="UserName" for="floatingInput"><i class='bx bxs-user'></i> User Name</label>
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input asp-for="Password" type="password" class="form-control" tabindex="2" id="floatingInputpwd" placeholder="name@example.com">
+                                <label asp-for="Password" for="floatingInputpwd"><i class='bx bxs-lock'></i> Password</label>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>*@
+                             <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text rounded-0"><i class='bx bxs-user lh-1point5'></i></div>
+                                </div>
+                                <input asp-for="UserName" class="form-control" tabindex="1" id="floatingInput" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text rounded-0"><i class='bx bxs-lock lh-1point5'></i></div>
+                                </div>
+                                <input asp-for="Password" type="password" class="form-control" tabindex="2" id="floatingInputpwd" placeholder="name@example.com">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text rounded-0"><i class='bx bxs-user lh-1point5'></i></div>
+                                </div>
+                                <select asp-for="UserType" class="form-control" tabindex="3">
+                                    <option value="0" selected disabled hidden>-- Select User Type --</option>
+                                    <option value="3">Company Login</option>
+                                    <option value="4">Hospital Login</option>
+                                    <option value="5">CESS Collector Login</option>
+                                </select>
+                                <span asp-validation-for="UserType" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <dnt-captcha asp-captcha-generator-max="999999"
+                                             asp-captcha-generator-min="111111"
+                                             asp-captcha-generator-language="English"
+                                             asp-captcha-generator-display-mode="ShowDigits"
+                                             asp-use-relative-urls="true"
+                                             asp-placeholder="Enter Captcha"
+                                             asp-validation-error-message="Captcha નાખવો અનિવાર્ય છે."
+                                             asp-font-name="Tahoma"
+                                             asp-font-size="20"
+                                             asp-fore-color="#333333"
+                                             asp-back-color="#ccc"
+                                             asp-text-box-class="form-control w-auto rounded-0"
+                                             asp-text-box-template="<span class='input-group-prepend'><span class='form-group-text'></span></span>{0}"
+                                             asp-validation-message-class="text-danger"
+                                             asp-refresh-button-class="bx bx-refresh bx-md"
+                                             asp-use-noise="false" />
+                                @*<span asp-validation-error-message=""Please enter the security code."></span>*@
+                            </div>
+                            @* <span class="control-label col-md-2">Employee Department</span>*@
+                            @*<div class="form-floating mb-3">
+                            <select asp-for="EmployeeType" class="form-control">
+                            <option value="0" selected disabled hidden>--Select Department--</option>
+                            <option value="1">BOCW Employee</option>
+                            <option value="2">GLWB Employee</option>
+                            <option value="3">Super Admin</option>
+                            <option value="4">BOCW Admin</option>
+                            <option value="5">GLWB Admin</option>
+                            </select>
+
+                            </div>*@
+                            @* <span asp-validation-for="EmployeeType" class="text-danger"></span>*@
+                            <div class="d-grid mb-3">
+                                <input type="submit" value="@localizer["Login"]" class="btn btn-secondary" />
+                            </div>
+                        </form>
+                        @*<div class="mb-2 d-flex justify-content-between f500">
+
+                        <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#popup">@localizer["ForgotPassword"]</a>
+
+
+                        <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#forgetuseridpopup">યુઝર આઇડી ભૂલી ગયા છો?</a>
+                        </div>
+                        <div class="text-white f500">
+                        <span>@localizer["NewUser"]</span>
+                        <a asp-controller="Home" asp-action="Registration" class="text-white ms-1">@localizer["PleaseRegisterHere"]</a>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        var span = $("#DNTCaptchaInputText").siblings().find('span')[1];
+        $(span).addClass('field-validation-error');
+        $("#DNTCaptchaInputText").attr('tabindex', '4');
+    });
+</script>

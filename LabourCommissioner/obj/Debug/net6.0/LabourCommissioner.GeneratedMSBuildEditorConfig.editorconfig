@@ -1,0 +1,1215 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.RootNamespace = LabourCommissioner
+build_property.RootNamespace = LabourCommissioner
+build_property.ProjectDir = D:\Azure DevOps\LabourCommissioner\LabourCommissioner\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\Azure DevOps\LabourCommissioner\LabourCommissioner
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWAccidentalSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0FjY2lkZW50YWxTYWhheVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWAntyesthiYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0FudHllc3RoaVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWBeforePrasutiSahay/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0JlZm9yZVByYXN1dGlTYWhheVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWBeforePrasutiSahay/AppPersonalDetails_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0JlZm9yZVByYXN1dGlTYWhheVxBcHBQZXJzb25hbERldGFpbHNfT0xELmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWBhagyaLaxmiBondYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWBhagyaLaxmiBondYojna/AppPersonalDetails_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hXEFwcFBlcnNvbmFsRGV0YWlsc19PTEQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWHostelSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV0hvc3RlbFNhaGF5WW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWMaster/BOCWMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV01hc3RlclxCT0NXTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWMaster/BOCWOfficeMasterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV01hc3RlclxCT0NXT2ZmaWNlTWFzdGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWNanajiYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV05hbmFqaVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWPIPSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1BJUFNhaGF5WW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWServiceRoutine/BOCWManualPaymentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1NlcnZpY2VSb3V0aW5lXEJPQ1dNYW51YWxQYXltZW50RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWSikshanSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1Npa3NoYW5TYWhheVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWTabibiSahayYojanaClaim/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1RhYmliaVNhaGF5WW9qYW5hQ2xhaW1cQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWTabibiSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1RhYmliaVNhaGF5WW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWTabletSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1RhYmxldFNhaGF5WW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWVishishtaCoachingYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/BOCWVYAVSHAYIK/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQk9DV1ZZQVZTSEFZSUtcQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCApplication/ApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NBcHBsaWNhdGlvblxBcHBsaWNhdGlvbkRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCApplication/CCApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NBcHBsaWNhdGlvblxDQ0FwcGxpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCApplication/CCCompletedAppForPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NBcHBsaWNhdGlvblxDQ0NvbXBsZXRlZEFwcEZvclBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCApplication/CTPPaymentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NBcHBsaWNhdGlvblxDVFBQYXltZW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCApplication/_CTPSummaryPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NBcHBsaWNhdGlvblxfQ1RQU3VtbWFyeVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CCRegistration/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0NSZWdpc3RyYXRpb25cUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CMDashboard/ApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01EYXNoYm9hcmRcQXBwbGljYXRpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/CMDashboard/CMDApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01EYXNoYm9hcmRcQ01EQXBwbGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/AdminEmployeeDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEFkbWluRW1wbG95ZWVEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/ApproveActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEFwcHJvdmVBY3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/BOCWCompletedAadeshForPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEJPQ1dDb21wbGV0ZWRBYWRlc2hGb3JQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/BOCWCompletedApplicationForPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEJPQ1dDb21wbGV0ZWRBcHBsaWNhdGlvbkZvclBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/BOCWPaymentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEJPQ1dQYXltZW50SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/BOCWViewAadeshDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEJPQ1dWaWV3QWFkZXNoRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/EmployeeApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEVtcGxveWVlQXBwbGljYXRpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/EmployeeApplicationSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEVtcGxveWVlQXBwbGljYXRpb25TZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/EmployeeDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEVtcGxveWVlRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/EmployeeDocumentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEVtcGxveWVlRG9jdW1lbnRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBCompletedAadeshForPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JDb21wbGV0ZWRBYWRlc2hGb3JQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBEmployeeApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JFbXBsb3llZUFwcGxpY2F0aW9uRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBHospitalApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JIb3NwaXRhbEFwcGxpY2F0aW9uRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBHospitalApplicationDetailsClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JIb3NwaXRhbEFwcGxpY2F0aW9uRGV0YWlsc0NsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBPaymentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JQYXltZW50SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/GLWBViewAadeshDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEdMV0JWaWV3QWFkZXNoRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/ViewApplicantionStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXFZpZXdBcHBsaWNhbnRpb25TdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/ViewRegisteredApplicant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXFZpZXdSZWdpc3RlcmVkQXBwbGljYW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/ViewTotalApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXFZpZXdUb3RhbEFwcGxpY2F0aW9uRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/_RejectActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXF9SZWplY3RBY3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/_SendBackActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXF9TZW5kQmFja0FjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeHome/_ViewHistoryActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVIb21lXF9WaWV3SGlzdG9yeUFjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeMaster/AddUpdatePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJcQWRkVXBkYXRlUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeMaster/MenuMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJcTWVudU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/EmployeeMaster/PostMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJcUG9zdE1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBAccidentalDisabilitySahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkFjY2lkZW50YWxEaXNhYmlsaXR5U2FoYXlZb2phbmFcQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBAccidentalSahayYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkFjY2lkZW50YWxTYWhheVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBCycleYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkN5Y2xlWW9qbmFcQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBDisabledChildrenSahayYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkRpc2FibGVkQ2hpbGRyZW5TYWhheVlvam5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBGameYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkdhbWVZb2puYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHigherEducationAward/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhpZ2hlckVkdWNhdGlvbkF3YXJkXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHigherStudy/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhpZ2hlclN0dWR5XEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHomeLoanSubsidyYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhvbWVMb2FuU3Vic2lkeVlvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHomeTownClaimYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhvbWVUb3duQ2xhaW1Zb2phbmFcQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHomeTownYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhvbWVUb3duWW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHSCPurashkarYojana/AppPersonalDetails_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhTQ1B1cmFzaGthcllvamFuYVxBcHBQZXJzb25hbERldGFpbHNfT0xELmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBHSCPurashkarYojana/GLWBHSCPurashkarYojanaAppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkhTQ1B1cmFzaGthcllvamFuYVxHTFdCSFNDUHVyYXNoa2FyWW9qYW5hQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBLaptopSubsidyYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQkxhcHRvcFN1YnNpZHlZb2puYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBMahilashramLagnaSahay/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQk1haGlsYXNocmFtTGFnbmFTYWhheVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBPrasutiSahayBetiProtsahanYojna/AppPersonalDetails - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlByYXN1dGlTYWhheUJldGlQcm90c2FoYW5Zb2puYVxBcHBQZXJzb25hbERldGFpbHMgLSBDb3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBPrasutiSahayBetiProtsahanYojna/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlByYXN1dGlTYWhheUJldGlQcm90c2FoYW5Zb2puYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBPravasanYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlByYXZhc2FuWW9qYW5hXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBRamatGamatSpardha/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlJhbWF0R2FtYXRTcGFyZGhhXEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBServiceRoutine/GLWBManualPaymentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlNlcnZpY2VSb3V0aW5lXEdMV0JNYW51YWxQYXltZW50RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBSSCPurashkarYojana/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlNTQ1B1cmFzaGthcllvamFuYVxBcHBQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBSSCPurashkarYojana/AppPersonalDetails_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlNTQ1B1cmFzaGthcllvamFuYVxBcHBQZXJzb25hbERldGFpbHNfT0xELmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBTabibiSahayClaimyojnas/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlRhYmliaVNhaGF5Q2xhaW15b2puYXNcQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBTabibiSahay/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlRhYmliaVNhaGF5XEFwcFBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/GLWBVIshishtKarykram/AppPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR0xXQlZJc2hpc2h0S2FyeWtyYW1cQXBwUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/ApplicationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHBsaWNhdGlvbkRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/BOCWScheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCT0NXU2NoZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/EmployeeLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbXBsb3llZUxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/ForgetPasswordReset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JnZXRQYXNzd29yZFJlc2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Form2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Form3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/GLWBScheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHTFdCU2NoZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/GLWBSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHTFdCU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcmlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/ListDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/OtherHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdGhlckhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/OtherLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdGhlckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/RegistrationWithoutENirmanCardNo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb25XaXRob3V0RU5pcm1hbkNhcmROby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/SchemeUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTY2hlbWVVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/UpdateCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGRhdGVDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Home/_LocalAuthorityDetailsPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTG9jYWxBdXRob3JpdHlEZXRhaWxzUG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/DistrictMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xEaXN0cmljdE1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/DocumentMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xEb2N1bWVudE1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetDistrictMasters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXREaXN0cmljdE1hc3RlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetDocumentMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXREb2N1bWVudE1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetResourceMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXRSZXNvdXJjZU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetServiceSchedulerMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXRTZXJ2aWNlU2NoZWR1bGVyTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetTalukaMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXRUYWx1a2FNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/GetVillageMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHZXRWaWxsYWdlTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/OfficeMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xPZmZpY2VNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/ResourceMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xSZXNvdXJjZU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/ServiceMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xTZXJ2aWNlTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/ServiceSchedulerMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xTZXJ2aWNlU2NoZWR1bGVyTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/TalukaMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xUYWx1a2FNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Masters/VillageMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xWaWxsYWdlTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Report/ApplicationDetailsPendencyReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEFwcGxpY2F0aW9uRGV0YWlsc1BlbmRlbmN5UmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Report/DayWisePendencyReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XERheVdpc2VQZW5kZW5jeVJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Report/PendencyReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFBlbmRlbmN5UmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Report/ReportPrint.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFJlcG9ydFByaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Scheme/GetSchemeDescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZW1lXEdldFNjaGVtZURlc2NyaXB0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAccidentalSahayYojana/_BOCWAccidentalSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFcX0JPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAccidentalSahayYojana/_BOCWAccidentalSahayYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFcX0JPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAccidentalSahayYojana/_BOCWAccidentalSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFcX0JPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAccidentalSahayYojana/_BOCWAccidentalSahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFcX0JPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAccidentalSahayYojana/_BOCWAccidentalSahayYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFcX0JPQ1dBY2NpZGVudGFsU2FoYXlZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAntyesthiYojana/_BOCWAntyesthiYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBbnR5ZXN0aGlZb2phbmFcX0JPQ1dBbnR5ZXN0aGlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAntyesthiYojana/_BOCWAntyesthiYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBbnR5ZXN0aGlZb2phbmFcX0JPQ1dBbnR5ZXN0aGlZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAntyesthiYojana/_BOCWAntyesthiYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBbnR5ZXN0aGlZb2phbmFcX0JPQ1dBbnR5ZXN0aGlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAntyesthiYojana/_BOCWAntyesthiYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBbnR5ZXN0aGlZb2phbmFcX0JPQ1dBbnR5ZXN0aGlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWAntyesthiYojana/_BOCWAntyesthiYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dBbnR5ZXN0aGlZb2phbmFcX0JPQ1dBbnR5ZXN0aGlZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBeforePrasutiSahay/_BOCWBeforePrasutiSahayDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCZWZvcmVQcmFzdXRpU2FoYXlcX0JPQ1dCZWZvcmVQcmFzdXRpU2FoYXlEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBeforePrasutiSahay/_BOCWBeforePrasutiSahayPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCZWZvcmVQcmFzdXRpU2FoYXlcX0JPQ1dCZWZvcmVQcmFzdXRpU2FoYXlQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBeforePrasutiSahay/_BOCWBeforePrasutiSahaySchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCZWZvcmVQcmFzdXRpU2FoYXlcX0JPQ1dCZWZvcmVQcmFzdXRpU2FoYXlTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBeforePrasutiSahay/_BOCWBeforePrasutiSahayTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCZWZvcmVQcmFzdXRpU2FoYXlcX0JPQ1dCZWZvcmVQcmFzdXRpU2FoYXlUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBeforePrasutiSahay/_BOCWBeforePrasutiSahayTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCZWZvcmVQcmFzdXRpU2FoYXlcX0JPQ1dCZWZvcmVQcmFzdXRpU2FoYXlUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBhagyaLaxmiBondYojna/_BOCWBhagyaLaxmiBondYojnaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCaGFneWFMYXhtaUJvbmRZb2puYVxfQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBhagyaLaxmiBondYojna/_BOCWBhagyaLaxmiBondYojnaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCaGFneWFMYXhtaUJvbmRZb2puYVxfQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBhagyaLaxmiBondYojna/_BOCWBhagyaLaxmiBondYojnaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCaGFneWFMYXhtaUJvbmRZb2puYVxfQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBhagyaLaxmiBondYojna/_BOCWBhagyaLaxmiBondYojnaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCaGFneWFMYXhtaUJvbmRZb2puYVxfQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hVGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWBhagyaLaxmiBondYojna/_BOCWBhagyaLaxmiBondYojnaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dCaGFneWFMYXhtaUJvbmRZb2puYVxfQk9DV0JoYWd5YUxheG1pQm9uZFlvam5hVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWHostelSahayYojana/_BOCWHostelSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dIb3N0ZWxTYWhheVlvamFuYVxfQk9DV0hvc3RlbFNhaGF5WW9qYW5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWHostelSahayYojana/_BOCWHostelSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dIb3N0ZWxTYWhheVlvamFuYVxfQk9DV0hvc3RlbFNhaGF5WW9qYW5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWHostelSahayYojana/_PersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dIb3N0ZWxTYWhheVlvamFuYVxfUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWHostelSahayYojana/_TermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dIb3N0ZWxTYWhheVlvamFuYVxfVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWNanajiYojana/_BOCWNanajiYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dOYW5hamlZb2phbmFcX0JPQ1dOYW5hamlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWNanajiYojana/_BOCWNanajiYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dOYW5hamlZb2phbmFcX0JPQ1dOYW5hamlZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWNanajiYojana/_BOCWNanajiYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dOYW5hamlZb2phbmFcX0JPQ1dOYW5hamlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWNanajiYojana/_BOCWNanajiYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dOYW5hamlZb2phbmFcX0JPQ1dOYW5hamlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWNanajiYojana/_BOCWNanajiYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dOYW5hamlZb2phbmFcX0JPQ1dOYW5hamlZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWPIPSahayYojana/_BOCWPIPSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dQSVBTYWhheVlvamFuYVxfQk9DV1BJUFNhaGF5WW9qYW5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWPIPSahayYojana/_BOCWPIPSahayYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dQSVBTYWhheVlvamFuYVxfQk9DV1BJUFNhaGF5WW9qYW5hUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWPIPSahayYojana/_BOCWPIPSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dQSVBTYWhheVlvamFuYVxfQk9DV1BJUFNhaGF5WW9qYW5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWPIPSahayYojana/_BOCWPIPSahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dQSVBTYWhheVlvamFuYVxfQk9DV1BJUFNhaGF5WW9qYW5hVGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWPIPSahayYojana/_BOCWPIPSahayYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dQSVBTYWhheVlvamFuYVxfQk9DV1BJUFNhaGF5WW9qYW5hVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWServiceRoutine/_BOCWPaymentResponse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTZXJ2aWNlUm91dGluZVxfQk9DV1BheW1lbnRSZXNwb25zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWServiceRoutine/_BOCWPDFileGeneration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTZXJ2aWNlUm91dGluZVxfQk9DV1BERmlsZUdlbmVyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWSikshanSahayYojana/_BOCWSikshanSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTaWtzaGFuU2FoYXlZb2phbmFcX0JPQ1dTaWtzaGFuU2FoYXlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWSikshanSahayYojana/_BOCWSikshanSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTaWtzaGFuU2FoYXlZb2phbmFcX0JPQ1dTaWtzaGFuU2FoYXlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWSikshanSahayYojana/_BOCWSikshanSahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTaWtzaGFuU2FoYXlZb2phbmFcX0JPQ1dTaWtzaGFuU2FoYXlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWSikshanSahayYojana/_PersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTaWtzaGFuU2FoYXlZb2phbmFcX1BlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWSikshanSahayYojana/_TermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dTaWtzaGFuU2FoYXlZb2phbmFcX1Rlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojanaClaim/_BOCWTabibiSahayYojanaClaimDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYUNsYWltXF9CT0NXVGFiaWJpU2FoYXlZb2phbmFDbGFpbURvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojanaClaim/_BOCWTabibiSahayYojanaClaimPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYUNsYWltXF9CT0NXVGFiaWJpU2FoYXlZb2phbmFDbGFpbVBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojanaClaim/_BOCWTabibiSahayYojanaClaimSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYUNsYWltXF9CT0NXVGFiaWJpU2FoYXlZb2phbmFDbGFpbVNjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojanaClaim/_BOCWTabibiSahayYojanaClaimTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYUNsYWltXF9CT0NXVGFiaWJpU2FoYXlZb2phbmFDbGFpbVRhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojanaClaim/_BOCWTabibiSahayYojanaClaimTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYUNsYWltXF9CT0NXVGFiaWJpU2FoYXlZb2phbmFDbGFpbVRlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojana/_BOCWTabibiSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYVxfQk9DV1RhYmliaVNhaGF5WW9qYW5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojana/_BOCWTabibiSahayYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYVxfQk9DV1RhYmliaVNhaGF5WW9qYW5hUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojana/_BOCWTabibiSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYVxfQk9DV1RhYmliaVNhaGF5WW9qYW5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojana/_BOCWTabibiSahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYVxfQk9DV1RhYmliaVNhaGF5WW9qYW5hVGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabibiSahayYojana/_BOCWTabibiSahayYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJpYmlTYWhheVlvamFuYVxfQk9DV1RhYmliaVNhaGF5WW9qYW5hVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabletSahayYojana/_BOCWTabletYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJsZXRTYWhheVlvamFuYVxfQk9DV1RhYmxldFlvamFuYURvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabletSahayYojana/_BOCWTabletYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJsZXRTYWhheVlvamFuYVxfQk9DV1RhYmxldFlvamFuYVBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabletSahayYojana/_BOCWTabletYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJsZXRTYWhheVlvamFuYVxfQk9DV1RhYmxldFlvamFuYVNjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabletSahayYojana/_BOCWTabletYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJsZXRTYWhheVlvamFuYVxfQk9DV1RhYmxldFlvamFuYVRhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWTabletSahayYojana/_BOCWTabletYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dUYWJsZXRTYWhheVlvamFuYVxfQk9DV1RhYmxldFlvamFuYVRlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVishishtaCoachingYojana/_BOCWVishishtaCoachingYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWaXNoaXNodGFDb2FjaGluZ1lvamFuYVxfQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVishishtaCoachingYojana/_BOCWVishishtaCoachingYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWaXNoaXNodGFDb2FjaGluZ1lvamFuYVxfQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVishishtaCoachingYojana/_BOCWVishishtaCoachingYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWaXNoaXNodGFDb2FjaGluZ1lvamFuYVxfQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVishishtaCoachingYojana/_BOCWVishishtaCoachingYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWaXNoaXNodGFDb2FjaGluZ1lvamFuYVxfQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hVGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVishishtaCoachingYojana/_BOCWVishishtaCoachingYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWaXNoaXNodGFDb2FjaGluZ1lvamFuYVxfQk9DV1Zpc2hpc2h0YUNvYWNoaW5nWW9qYW5hVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVYAVSHAYIK/_BOCWVYAVSHAYIKDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWWUFWU0hBWUlLXF9CT0NXVllBVlNIQVlJS0RvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVYAVSHAYIK/_BOCWVYAVSHAYIKPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWWUFWU0hBWUlLXF9CT0NXVllBVlNIQVlJS1BlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVYAVSHAYIK/_BOCWVYAVSHAYIKSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWWUFWU0hBWUlLXF9CT0NXVllBVlNIQVlJS1NjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVYAVSHAYIK/_BOCWVYAVSHAYIKTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWWUFWU0hBWUlLXF9CT0NXVllBVlNIQVlJS1RhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/BOCWVYAVSHAYIK/_BOCWVYAVSHAYIKTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJPQ1dWWUFWU0hBWUlLXF9CT0NXVllBVlNIQVlJS1Rlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/Components/AdminMenu/AdminMenuViewComponent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5NZW51XEFkbWluTWVudVZpZXdDb21wb25lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/Components/SearchBar/BottomBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoQmFyXEJvdHRvbUJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/Components/SearchBar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoQmFyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalDisabilitySahayYojana/_GLWBAccidentalDisabilitySahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsRGlzYWJpbGl0eVNhaGF5WW9qYW5hXF9HTFdCQWNjaWRlbnRhbERpc2FiaWxpdHlTYWhheVlvamFuYURvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalDisabilitySahayYojana/_GLWBAccidentalDisabilitySahayYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsRGlzYWJpbGl0eVNhaGF5WW9qYW5hXF9HTFdCQWNjaWRlbnRhbERpc2FiaWxpdHlTYWhheVlvamFuYVBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalDisabilitySahayYojana/_GLWBAccidentalDisabilitySahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsRGlzYWJpbGl0eVNhaGF5WW9qYW5hXF9HTFdCQWNjaWRlbnRhbERpc2FiaWxpdHlTYWhheVlvamFuYVNjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalDisabilitySahayYojana/_GLWBAccidentalDisabilitySahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsRGlzYWJpbGl0eVNhaGF5WW9qYW5hXF9HTFdCQWNjaWRlbnRhbERpc2FiaWxpdHlTYWhheVlvamFuYVRhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalDisabilitySahayYojana/_GLWBAccidentalDisabilitySahayYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsRGlzYWJpbGl0eVNhaGF5WW9qYW5hXF9HTFdCQWNjaWRlbnRhbERpc2FiaWxpdHlTYWhheVlvamFuYVRlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalSahayYojana/_GLWBAccidentalSahayYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFcX0dMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalSahayYojana/_GLWBAccidentalSahayYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFcX0dMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalSahayYojana/_GLWBAccidentalSahayYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFcX0dMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalSahayYojana/_GLWBAccidentalSahayYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFcX0dMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBAccidentalSahayYojana/_GLWBAccidentalSahayYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFcX0dMV0JBY2NpZGVudGFsU2FoYXlZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCompanyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDb21wYW55RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCompanyvisisht.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDb21wYW55dmlzaXNodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCompanyYojan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDb21wYW55WW9qYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBcycle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JjeWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCycleYojna/_GLWBCycleYojnaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDeWNsZVlvam5hXF9HTFdCQ3ljbGVZb2puYURvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCycleYojna/_GLWBCycleYojnaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDeWNsZVlvam5hXF9HTFdCQ3ljbGVZb2puYVBlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCycleYojna/_GLWBCycleYojnaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDeWNsZVlvam5hXF9HTFdCQ3ljbGVZb2puYVNjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCycleYojna/_GLWBCycleYojnaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDeWNsZVlvam5hXF9HTFdCQ3ljbGVZb2puYVRhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBCycleYojna/_GLWBCycleYojnaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JDeWNsZVlvam5hXF9HTFdCQ3ljbGVZb2puYVRlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHigherStudy/_GLWBHigherStudyDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIaWdoZXJTdHVkeVxfR0xXQkhpZ2hlclN0dWR5RG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHigherStudy/_GLWBHigherStudyPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIaWdoZXJTdHVkeVxfR0xXQkhpZ2hlclN0dWR5UGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHigherStudy/_GLWBHigherStudySchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIaWdoZXJTdHVkeVxfR0xXQkhpZ2hlclN0dWR5U2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHigherStudy/_GLWBHigherStudyTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIaWdoZXJTdHVkeVxfR0xXQkhpZ2hlclN0dWR5VGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHigherStudy/_GLWBHigherStudyTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIaWdoZXJTdHVkeVxfR0xXQkhpZ2hlclN0dWR5VGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeLoanSubsidyYojana/_GLWBHomeLoanSubsidyYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lTG9hblN1YnNpZHlZb2phbmFcX0dMV0JIb21lTG9hblN1YnNpZHlZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeLoanSubsidyYojana/_GLWBHomeLoanSubsidyYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lTG9hblN1YnNpZHlZb2phbmFcX0dMV0JIb21lTG9hblN1YnNpZHlZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeLoanSubsidyYojana/_GLWBHomeLoanSubsidyYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lTG9hblN1YnNpZHlZb2phbmFcX0dMV0JIb21lTG9hblN1YnNpZHlZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeLoanSubsidyYojana/_GLWBHomeLoanSubsidyYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lTG9hblN1YnNpZHlZb2phbmFcX0dMV0JIb21lTG9hblN1YnNpZHlZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeLoanSubsidyYojana/_GLWBHomeLoanSubsidyYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lTG9hblN1YnNpZHlZb2phbmFcX0dMV0JIb21lTG9hblN1YnNpZHlZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownClaimYojana/_GLWBHomeTownYojanaClaimSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bkNsYWltWW9qYW5hXF9HTFdCSG9tZVRvd25Zb2phbmFDbGFpbVNjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownClaimYojana/_GLWBHomeTownYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bkNsYWltWW9qYW5hXF9HTFdCSG9tZVRvd25Zb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownClaimYojana/_GLWBHomeTownYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bkNsYWltWW9qYW5hXF9HTFdCSG9tZVRvd25Zb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownClaimYojana/_GLWBHomeTownYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bkNsYWltWW9qYW5hXF9HTFdCSG9tZVRvd25Zb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownClaimYojana/_GLWBHomeTownYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bkNsYWltWW9qYW5hXF9HTFdCSG9tZVRvd25Zb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownYojana/_GLWBHomeTownYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bllvamFuYVxfR0xXQkhvbWVUb3duWW9qYW5hRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownYojana/_GLWBHomeTownYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bllvamFuYVxfR0xXQkhvbWVUb3duWW9qYW5hUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownYojana/_GLWBHomeTownYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bllvamFuYVxfR0xXQkhvbWVUb3duWW9qYW5hU2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownYojana/_GLWBHomeTownYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bllvamFuYVxfR0xXQkhvbWVUb3duWW9qYW5hVGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHomeTownYojana/_GLWBHomeTownYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIb21lVG93bllvamFuYVxfR0xXQkhvbWVUb3duWW9qYW5hVGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHSCPurashkarYojana/_GLWBHSCPurashkarYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JIU0NQdXJhc2hrYXJZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHSCPurashkarYojana/_GLWBHSCPurashkarYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JIU0NQdXJhc2hrYXJZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHSCPurashkarYojana/_GLWBHSCPurashkarYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JIU0NQdXJhc2hrYXJZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHSCPurashkarYojana/_GLWBHSCPurashkarYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JIU0NQdXJhc2hrYXJZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBHSCPurashkarYojana/_GLWBHSCPurashkarYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JIU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JIU0NQdXJhc2hrYXJZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBLaptopSubsidyYojna/_GLWBLaptopSubsidyYojnaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JMYXB0b3BTdWJzaWR5WW9qbmFcX0dMV0JMYXB0b3BTdWJzaWR5WW9qbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBLaptopSubsidyYojna/_GLWBLaptopSubsidyYojnaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JMYXB0b3BTdWJzaWR5WW9qbmFcX0dMV0JMYXB0b3BTdWJzaWR5WW9qbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBLaptopSubsidyYojna/_GLWBLaptopSubsidyYojnaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JMYXB0b3BTdWJzaWR5WW9qbmFcX0dMV0JMYXB0b3BTdWJzaWR5WW9qbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBLaptopSubsidyYojna/_GLWBLaptopSubsidyYojnaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JMYXB0b3BTdWJzaWR5WW9qbmFcX0dMV0JMYXB0b3BTdWJzaWR5WW9qbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBLaptopSubsidyYojna/_GLWBLaptopSubsidyYojnaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JMYXB0b3BTdWJzaWR5WW9qbmFcX0dMV0JMYXB0b3BTdWJzaWR5WW9qbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBMahilashramLagnaSahay/_GLWBMahilashramLagnaSahayDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlcX0dMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBMahilashramLagnaSahay/_GLWBMahilashramLagnaSahayPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlcX0dMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBMahilashramLagnaSahay/_GLWBMahilashramLagnaSahaySchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlcX0dMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBMahilashramLagnaSahay/_GLWBMahilashramLagnaSahayTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlcX0dMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBMahilashramLagnaSahay/_GLWBMahilashramLagnaSahayTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlcX0dMV0JNYWhpbGFzaHJhbUxhZ25hU2FoYXlUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBPrasutiSahayBetiProtsahanYojna/_GLWBPrasutiSahayBetiProtsahanYojnaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFcX0dMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBPrasutiSahayBetiProtsahanYojna/_GLWBPrasutiSahayBetiProtsahanYojnaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFcX0dMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBPrasutiSahayBetiProtsahanYojna/_GLWBPrasutiSahayBetiProtsahanYojnaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFcX0dMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBPrasutiSahayBetiProtsahanYojna/_GLWBPrasutiSahayBetiProtsahanYojnaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFcX0dMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBPrasutiSahayBetiProtsahanYojna/_GLWBPrasutiSahayBetiProtsahanYojnaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFcX0dMV0JQcmFzdXRpU2FoYXlCZXRpUHJvdHNhaGFuWW9qbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBServiceRoutine/_GLWBPaymentResponse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTZXJ2aWNlUm91dGluZVxfR0xXQlBheW1lbnRSZXNwb25zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBServiceRoutine/_GLWBPDFileGeneration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTZXJ2aWNlUm91dGluZVxfR0xXQlBERmlsZUdlbmVyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBSSCPurashkarYojana/_GLWBSSCPurashkarYojanaDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JTU0NQdXJhc2hrYXJZb2phbmFEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBSSCPurashkarYojana/_GLWBSSCPurashkarYojanaPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JTU0NQdXJhc2hrYXJZb2phbmFQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBSSCPurashkarYojana/_GLWBSSCPurashkarYojanaSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JTU0NQdXJhc2hrYXJZb2phbmFTY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBSSCPurashkarYojana/_GLWBSSCPurashkarYojanaTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JTU0NQdXJhc2hrYXJZb2phbmFUYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBSSCPurashkarYojana/_GLWBSSCPurashkarYojanaTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JTU0NQdXJhc2hrYXJZb2phbmFcX0dMV0JTU0NQdXJhc2hrYXJZb2phbmFUZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahayClaimyojnas/_GLWBTabibiSahayClaimyojnasDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheUNsYWlteW9qbmFzXF9HTFdCVGFiaWJpU2FoYXlDbGFpbXlvam5hc0RvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahayClaimyojnas/_GLWBTabibiSahayClaimyojnasPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheUNsYWlteW9qbmFzXF9HTFdCVGFiaWJpU2FoYXlDbGFpbXlvam5hc1BlcnNvbmFsRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahayClaimyojnas/_GLWBTabibiSahayClaimyojnasSchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheUNsYWlteW9qbmFzXF9HTFdCVGFiaWJpU2FoYXlDbGFpbXlvam5hc1NjaGVtZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahayClaimyojnas/_GLWBTabibiSahayClaimyojnasTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheUNsYWlteW9qbmFzXF9HTFdCVGFiaWJpU2FoYXlDbGFpbXlvam5hc1RhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahayClaimyojnas/_GLWBTabibiSahayClaimyojnasTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheUNsYWlteW9qbmFzXF9HTFdCVGFiaWJpU2FoYXlDbGFpbXlvam5hc1Rlcm1zQ29uZGl0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahay/_GLWBTabibiSahayDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheVxfR0xXQlRhYmliaVNhaGF5RG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahay/_GLWBTabibiSahayPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheVxfR0xXQlRhYmliaVNhaGF5UGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahay/_GLWBTabibiSahaySchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheVxfR0xXQlRhYmliaVNhaGF5U2NoZW1lRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahay/_GLWBTabibiSahayTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheVxfR0xXQlRhYmliaVNhaGF5VGFiLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/GLWBTabibiSahay/_GLWBTabibiSahayTermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdMV0JUYWJpYmlTYWhheVxfR0xXQlRhYmliaVNhaGF5VGVybXNDb25kaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_AddressDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRyZXNzRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_BankDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYW5rRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_Culture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DdWx0dXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_EmployeeDocumentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZURvY3VtZW50Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_ForgetPasswordPopUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3JnZXRQYXNzd29yZFBvcFVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_ForgetPasswordResetPopUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3JnZXRQYXNzd29yZFJlc2V0UG9wVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_ForgetUserId.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb3JnZXRVc2VySWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_GLWBPersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HTFdCUGVyc29uYWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_GLWBPersonalDetailsWithoutBankandDisablity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HTFdCUGVyc29uYWxEZXRhaWxzV2l0aG91dEJhbmthbmREaXNhYmxpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_GLWB_BankDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HTFdCX0JhbmtEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_HospitalApplicationReportUpload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib3NwaXRhbEFwcGxpY2F0aW9uUmVwb3J0VXBsb2FkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_HospitalTimeSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib3NwaXRhbFRpbWVTY2hlZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_PersonalBasic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZXJzb25hbEJhc2ljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_PersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_PersonalDetailsWithoutBankandDisablity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QZXJzb25hbERldGFpbHNXaXRob3V0QmFua2FuZERpc2FibGl0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_SchemeDescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TY2hlbWVEZXNjcmlwdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_SchemeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TY2hlbWVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_TermsCondition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UZXJtc0NvbmRpdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_UpdateBOCWBankDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9VcGRhdGVCT0NXQmFua0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_UpdateCitizenMobileNo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9VcGRhdGVDaXRpemVuTW9iaWxlTm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_UpdateGLWBBankDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9VcGRhdGVHTFdCQmFua0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/wwwroot/MailTemplate/MailVerification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxNYWlsVGVtcGxhdGVcTWFpbFZlcmlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/wwwroot/MailTemplate/PasswordRecovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxNYWlsVGVtcGxhdGVcUGFzc3dvcmRSZWNvdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_EmployeeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-9rlfz7j2qy
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mol5qi1bf8
+
+[D:/Azure DevOps/LabourCommissioner/LabourCommissioner/Views/Shared/_OtherLoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9PdGhlckxvZ2luTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-9zhnbwzw42

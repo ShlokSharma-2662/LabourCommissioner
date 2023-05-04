@@ -1,0 +1,444 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model Usermaster
+@{
+    ViewData["Title"] = "Home Page";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container d-flex align-items-sm-center  flex-column flex-sm-row justify-content-start justify-content-sm-between">
+                @*<div class="carousel-container align-items-end text-lg-start">*@
+
+                <div class="px-2 pt-2 mt-5" style="background: rgb(0 72 130 / 60%); border-radius: 16px; ">
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/pm.png" class="rounded-pill me-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Modi"]<br />
+                            @localizer["PM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/cm.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Bhupendra"]<br />
+                            @localizer["CM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/b.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Balvantsinh"]<br />
+                            @localizer["HM"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/h.png" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["Kunvarjibhai"]<br />
+                            @localizer["Minister"]
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white">
+                        <img src="~/assets/img/ASIAS.jpg" class="rounded-pill me-2 p-2" height="85" width="85" />
+                        <span class="text-start">
+                            @localizer["AS"]<br />
+                            @localizer["IAS"]
+                        </span>
+                    </div>
+
+                </div>
+
+                <!--data-aos="fade-down"-->
+                <div id="login" class="card mt-5 bg-transparent login-bx" style="width:400px;border: solid 2px #fff;border-radius: 1.55rem;overflow: hidden;">
+                    <div class="card-header card-primary py-3">
+                        <div class="card-title mb-0 h5">
+                            <i class="bx bx-log-in align-middle"></i>
+                            @localizer["LoginToPortal"]
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <form asp-action="Login" asp-controller="Account">
+                            @* <div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+                            @if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <span class="text-danger">
+                                    @ViewBag.Message
+                                </span>
+                            }
+                            
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text rounded-0"><i class='bx bxs-user lh-1point5'></i></div>
+                                </div>
+                                <input asp-for="UserName" class="form-control" tabindex="1" id="floatingInput" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text rounded-0"><i class='bx bxs-lock lh-1point5'></i></div>
+                                </div>
+                                <input asp-for="Password" type="password" class="form-control" tabindex="2" id="floatingInputpwd" placeholder="name@example.com">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                          
+
+                            <div class="form-floating mb-4">
+                                <dnt-captcha asp-captcha-generator-max="999999"
+                                             asp-captcha-generator-min="111111"
+                                             asp-captcha-generator-language="English"
+                                             asp-captcha-generator-display-mode="ShowDigits"
+                                             asp-use-relative-urls="true"
+                                             asp-placeholder="Enter Captcha"
+                                             asp-validation-error-message="Captcha નાખવો અનિવાર્ય છે."
+                                             asp-font-size="20"
+                                             asp-fore-color="#333333"
+                                             asp-back-color="#ccc"
+                                             asp-text-box-class="form-control w-auto rounded-0"
+                                             asp-text-box-template="<span class='input-group-prepend'><span class='form-group-text'></span></span>{0}"
+                                             asp-validation-message-class="text-danger"
+                                             asp-refresh-button-class="bx bx-refresh bx-md"
+                                             asp-use-noise="false" />
+                                @*<span asp-validation-error-message=""Please enter the security code."></span>*@
+                            </div>
+                            <div class="d-grid mb-3">
+                                <input type="submit" value="@localizer["Login"]" class="btn btn-secondary" />
+                            </div>
+                        </form>
+                        <div class="mb-2 d-flex justify-content-between f500">
+
+                            <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#popup">@localizer["ForgotPassword"]</a>
+
+
+                            <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#forgetuseridpopup">@localizer["ForgotUserId"]</a>
+                        </div>
+                        <div class="text-white f500">
+                            <span>@localizer["NewUser"]</span>
+                            <a asp-controller="Home" asp-action="Registration" class="text-white ms-1">@localizer["PleaseRegisterHere"]</a>
+                        </div>
+                       @* <div class="text-white f500">
+                            <span>@localizer["CCNewUser"]</span>
+                            <a asp-controller="CCRegistration" asp-action="Registration" class="text-white ms-1">@localizer["CCPleaseRegisterHere"]</a>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+<div id="main">
+
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-pencil'></i></div>
+                        <h4 class="title"><a asp-controller="Home" asp-action="Registration">૧. @localizer["RegisterYourself"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-user-check'></i></div>
+                        <h4 class="title"><a href="">૨. @localizer["Login"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-file'></i></div>
+                        <h4 class="title"><a href="">૩. @localizer["ApplyFortheScheme"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-check-circle'></i></div>
+                        <h4 class="title"><a href="">૪. @localizer["SubmitApplication"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+
+                
+            </div>
+            <div class="row justify-content-center mt-4 pt-3">
+                
+                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-file'></i></div>
+                        <h4 class="title"><a asp-controller="Home" asp-action="BOCWScheme">@localizer["BOCWSchemeDetails"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class='bx bx-file'></i></div>
+                        <h4 class="title"><a asp-controller="Home" asp-action="GLWBScheme">@localizer["GLWBSchemeDetails"]</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                @*<div class="col-md-6 col-lg-3 mb-5 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box bg-primary">
+                        <div class="icon"><i class="bx bx-file text-warning"></i></div>
+                        <h4 class="title text-white"><a class="text-white" href="">૩. Apply For the Scheme</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box bg-primary">
+                        <div class="icon"><i class="bx bx-file text-warning"></i></div>
+                        <h4 class="title text-white"><a class="text-white" href="">૩. Apply For the Scheme</a></h4>
+                        <p class="description"></p>
+                    </div>
+                </div>*@
+
+                
+
+                
+
+                
+
+            </div>
+
+            @*<div class="row">
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box">
+            <div class="icon">@localizer["Step1"] <i class='bx bx-pencil'></i></div>
+            <h4 class="title"><a asp-controller="Home" asp-action="  Registration">@localizer["RegisterYourself"]</a></h4>
+            <p class="description"></p>
+            </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+            <div class="icon">@localizer["Step2"] <i class='bx bx-user-check'></i></div>
+            <h4 class="title"><a href="">@localizer["Login"]</a></h4>
+            <p class="description"></p>
+            </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+            <div class="icon">@localizer["Step3"]<i class='bx bx-file'></i></div>
+            <h4 class="title"><a href="">@localizer["ApplyFortheScheme"]</a></h4>
+            <p class="description"></p>
+            </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+            <div class="icon">@localizer["Step4"]<i class='bx bx-check-circle'></i></div>
+            <h4 class="title"><a href="">@localizer["SubmitApplication"]</a></h4>
+            <p class="description"></p>
+            </div>
+            </div>
+
+            </div>*@
+
+        </div>
+    </section><!-- End Icon Boxes Section -->
+    <!-- ======= About Us Section ======= -->
+    <!--<section id="about" class="about py-5">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Labour, Skill Development and Employment Department</h2>
+                <p></p>
+            </div>-->
+    @*<div class="row content">
+    <div class="col-lg-6">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+    </p>
+    <ul>
+    <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+    <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+    <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+    </ul>
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0">
+    <p>
+    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <a href="#" class="btn-learn-more rounded-pill text-uppercase">Learn More</a>
+    </div>
+    </div>*@
+
+    <!--</div>
+    </section>-->
+    <!-- End About Us Section -->
+    <!-- ======= Portfoio Section ======= -->
+    @*<section id="portfolio" class="portfoio">
+    <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+    <h2 class="mb-0">Online Schemes Application </h2>
+    <p></p>
+    </div>
+
+    <partial name="~/Views/Shared/_SchemeDetails.cshtml" />*@
+    <!--filter effect-->
+    <!--<div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">Labour Welfare Board</li>
+                <li data-filter=".filter-card">Building and Other Constructions Workers Welfare Board</li>
+                <li data-filter=".filter-web">Other</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row portfolio-container portfolio-container2">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="scheme"><a asp-controller="Home" asp-action="Form">
+                <i class="bx bx-help-circle"></i>
+                <h5>Scheme name display here</h5></a>
+            </div>
+        </div>
+
+    </div>-->
+    @*</div>
+    </section>*@<!-- End Portfoio Section -->
+
+
+</div><!-- End #main -->
+
+<partial name="_ForgetPasswordPopUp" />
+<partial name="_ForgetUserId" />
+
+<div class="modal fade" id="dynamicResetPasswordModel" tabindex="-1" role="dialog" aria-labelledby="dynamicResetPasswordModelLabel" aria-hidden="true">
+    <div id="ResetPasswordpartialView"></div>
+</div>
+
+@*<partial name="_ForgetPasswordResetPopUp"/>*@
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+@*<script type="text/javascript">
+    function testSweet() {
+        swal({
+            title: "Message",
+            text: "13232",
+            type: "success"
+        });
+    }
+</script>*@
+<script src="~/js/Common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        var span = $("#DNTCaptchaInputText").siblings().find('span')[1];
+        $(span).addClass('field-validation-error');
+        $("#DNTCaptchaInputText").attr('tabindex', '3');
+    });
+    $(function() {
+        debugger;
+        var msg = '@Html.Raw(@TempData["Message"])';
+        //var msg = 'Your Form Is Submitted SuccessFully..!!||1';
+        if (msg != null && msg != '') {
+
+            ShowDynamicSwalAlert("", msg);
+            //swal({
+            //    title: "Message",
+            //    text: msg,
+            //    type: "success"
+            //});
+        }
+    });
+
+
+    $(function() {
+        var msg = '@Html.Raw(@TempData["Message1"])';
+        if (msg != null && msg != '') {
+            swal({
+                title: "Message",
+                text: msg,
+                type: "error"
+            });
+        }
+    });
+
+
+</script>

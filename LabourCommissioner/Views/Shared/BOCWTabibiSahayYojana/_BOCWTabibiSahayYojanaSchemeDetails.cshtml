@@ -1,0 +1,202 @@
+﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model BOCWTBSYSchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var Totalsahay = ViewBag.TotalSahay;
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWTabibiSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <input type="hidden" asp-for="totalsahay" value="@Totalsahay" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+
+
+        @* //new design for antyesthi *@
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend>યોજના ની વિગત</legend>
+            <div class="form-horizontal form-bordered">
+
+                <div class="form-group row">
+                    <span id="" class="control-label col-md-3">ટેસ્ટના માન (૧૭ પ્રકરના ટેસ્ટ ):<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="testname" class="form-control">
+                        <span asp-validation-for="testname" class="text-danger"> </span>
+                         <span id="body_innerbody_reqApplicantGender" style="color:Red;display:none;">ટેસ્ટના માન (૧૭ પ્રકરના ટેસ્ટ )લખો</span>
+                          
+                    </div>
+
+                     @*<span id="" class="control-label col-md-3">રોગ/બીમારી જો હોઈ તો તેમની વિગત:<span class="text-danger">*</span></span>
+                          
+                     <div class="control-form myRadioButtonList">
+                                <input asp-for="testno" type="radio" value="1" id="chkYes"  name="insuranceNo" />હાં
+                                <span class="px-2"><input asp-for="testno" type="radio" value="2" id="chkNo" name="insuranceNo" />નાં<br /></span>
+                                <span asp-validation-for="testno" class="text-danger"></span>
+                                <span id="body_innerbody_reqApplicantGender" style="color:Red;display:none;">રોગ/બીમારી જો હોઈ તો તેમની વિગત</span>
+                            </div>
+                </div>
+
+                 <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">રોગ/બીમારી ની વિગત:</span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="testdetails" id="vigat" class="form-control">
+                        </div>
+
+                    </div>*@
+
+                     <span class="control-label col-md-3">
+                            રોગ/બીમારી જો હોઈ તો તેમની વિગત:  <span class="text-danger">*</span>
+                        </span>
+                        <style>
+                             .myRadioButtonList input {
+            padding-right: 5px;
+            padding-left: 30px;
+            padding-bottom: 0;
+            padding-top: 0px;
+            margin-top: 10px;
+            display: inline;
+            
+   
+}
+        }
+
+        .myRadioButtonList label {
+             margin-left: 26px;
+            padding-right: 25px;
+            padding-left: 5px;
+            padding-bottom: 0;
+            padding-top: 0px;
+            margin-top: -16px;
+            display: inline;
+        }
+                        </style>                                                                                                                                                                                                                                                                                                           
+                        <div class="control-form col-md-3">
+                            <div class="control-form myRadioButtonList">
+                                <input asp-for="testno" type="radio" value="1" id="chkYes"  name="testno" />હાં
+                                <span class="px-2"><input asp-for="testno" type="radio" value="2" id="chkNo" name="testno" />નાં<br /></span>
+                                <span asp-validation-for="testno" class="text-danger"></span>
+                                <span id="body_innerbody_reqApplicantGender" style="color:Red;display:none;">રોગ/બીમારી જો હોઈ તો તેમની વિગત</span>
+                            </div>
+                           
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <span id="body_innerbody_label1" class="control-label col-md-3">રોગ/બીમારી ની વિગત:<span class="text-danger">*</span></span>
+                        <div class="control-form col-md-3">
+                            <input asp-for="testdetails" id="vigat" class="form-control">
+                            <span asp-validation-for="testdetails" class="text-danger"></span>
+                            <span id="body_innerbody_txtStudentName" style="color:Red;display:none;">રોગ/બીમારી ની વિગત લખો.</span>
+                        </div>
+
+                    </div>
+
+                @* total saahaay *@
+               @* <div class="form-group row">
+                    <label asp-for="totalsahay" class="control-label col-md-3">
+                        ટોટલ સહાય(રૂપિયામાં) :  <span class="text-danger">*</span>
+                    </label>
+
+                    <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" value="@Totalsahay" class="form-control" readonly />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                    </div>
+                </div>*@
+            </div>
+
+
+
+        </fieldset>
+
+
+
+
+
+        @*<fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>*@
+
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3" type="submit">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+<script type="text/javascript">
+
+//     function Cleartotalsahay() { 
+//     //$('#Relation').children("option:selected").val('');  
+//     $('#schemetype').prop('checked', true);
+//     $('#Totalsahay').val('');
+//}
+    //function GettotalsahaybysahayId(serviceid , schemetype) {
+        
+    //     var schemetype = $('#schemetype').children("option:selected").val();     
+
+    //    $.ajax({
+    //        type: "get",
+    //        url: "/BOCWTabibiSahayYojana/GettotalsahaybysahayId",
+    //        data: { serviceid: serviceid, schemetype: schemetype},
+    //        datatype: "json",
+    //        traditional: true,
+    //        success: function(data) {
+    //            debugger;
+    //             var totalsahay = data.data.result.totalsahay;
+    //            $('#Totalsahay').val(totalsahay);
+
+    //        }
+    //    });
+    //}
+    // radio validation for taxtboxs
+     $(function () {
+        $("input[name='testno']").click(function () {
+            if ($("#chkYes").is(":checked")) {
+                $("#vigat").removeAttr("disabled");
+                $("#vigat").focus();
+            } else {
+                $("#vigat").attr("disabled", "disabled");
+            }
+        });
+    });
+    //function validate() {
+    //    if (document.getElementById("ddlList").value == "") {
+    //        alert("લાભાર્થીનો શ્રમિક સાથેનો સબંધ પસંદ કરો"); // prompt user
+    //        document.getElementById("ddlList").focus(); //set focus back to control
+    //        return false;
+    //    }
+    //}
+    //$("#dob").change(function() {
+    //    var today = new Date();
+    //    var birthDate = new Date($('#dob').val());
+    //    var age = today.getFullYear() - birthDate.getFullYear();
+    //    $("#age").val(age);
+    //});
+
+        //jQuery for mandatory for dropsdown compuslory manual query
+
+</script>
+
+

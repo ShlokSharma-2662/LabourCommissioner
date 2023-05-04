@@ -1,0 +1,178 @@
+﻿@using LabourCommissioner.Abstraction.DataModels
+@model CCRegistration
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero2">
+    <h2 class="animate__animated animate__fadeInDown">CESS Collector Registration</h2>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services2">
+        <div class="container">
+
+            <div class="section-title pt-5 pb-4 text-start">
+                <h2 class="mb-0">યુઝરની નોંધણીની વિગતો</h2>
+            </div>
+            @*<div class="text-danger" asp-validation-summary="All"></div>*@
+            <form enctype="multipart/form-data" onsubmit="return checkPANTANRegex()" method="post" asp-controller="CCRegistration" asp-action="AddRegistration">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-2 bg-primary d-flex justify-content-between">
+                                <span class="text-white"><i class='bx bxs-pencil align-middle'></i> <small> ( * marks fields are Mandatory)</small> </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal form-bordered">
+                                            <div class="form-group row">
+                                                <label asp-for="UserType" class="control-label col-md-2">
+                                                    User Type<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-10">
+                                                    <select asp-for="UserType" asp-items="@(new SelectList(@ViewBag.UserTypeList,"Value","Text"))" class="form-control">
+                                                        <option value="">-- Please Select --</option>
+                                                    </select>
+                                                    <span asp-validation-for="UserType" class="text-danger"></span>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label asp-for="Name" class="control-label col-md-2">
+                                                    Name<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="Name" type="text" maxlength="100" class="form-control">
+                                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                                </div>
+
+                                                <label asp-for="MobileNo" class="control-label col-md-2 allownumericwithoutdecimal">
+                                                    Mobile No.<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="MobileNo" type="text" maxlength="10" onkeypress="return AllowNumeric(event);" class="form-control">
+                                                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label asp-for="EmailId" class="control-label col-md-2">
+                                                    Email<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="EmailId" type="text" maxlength="100" class="form-control" >
+                                                    <span asp-validation-for="EmailId" class="text-danger"></span>
+                                                </div>
+
+                                                <label asp-for="PANTANNo" class="control-label col-md-2">
+                                                    PAN No. / TAN No.<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="PANTANNo" type="text" maxlength="10" class="form-control">
+                                                    <span asp-validation-for="PANTANNo" class="text-danger"></span>
+                                                    <span id="spnErrorMsg" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <label asp-for="Password" class="control-label col-md-2">
+                                                    Password<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="Password" type="password" maxlength="100" class="form-control">
+                                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                                </div>
+
+                                                <label asp-for="ConfirmPassword" class="control-label col-md-2">
+                                                    Confirm Password<span class="text-danger">*</span>
+                                                </label>
+                                                <div class="control-form col-md-4">
+                                                    <input asp-for="ConfirmPassword" type="password" maxlength="100" class="form-control">
+                                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label  class="control-label col-md-2">
+                                                    Captcha Code<span class="text-danger">*</span>
+                                                </label>
+
+                                                <div class="control-form col-md-4">
+                                                    <dnt-captcha asp-captcha-generator-max="999999"
+                                                                 asp-captcha-generator-min="111111"
+                                                                 asp-captcha-generator-language="English"
+                                                                 asp-captcha-generator-display-mode="ShowDigits"
+                                                                 asp-use-relative-urls="true"
+                                                                 asp-placeholder="Enter Captcha"
+                                                                 asp-validation-error-message="Captcha નાખવો અનિવાર્ય છે."
+                                                                 asp-font-size="20"
+                                                                 asp-fore-color="#333333"
+                                                                 asp-back-color="#ccc"
+                                                                 asp-text-box-class="form-control w-auto"
+                                                                 asp-text-box-template="<span class='input-group-prepend'><span class='form-group-text'></span></span>{0}"
+                                                                 asp-validation-message-class="text-danger"
+                                                                 asp-refresh-button-class="bx bx-refresh bx-md"
+                                                                 asp-use-noise="false" />
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer text-center">
+                                        @*<button class="btn btn-sm btn-secondary pl-3 pr-3 mr-2">નોંધણી કરો</button>*@
+                                        <button type="submit" class="btn btn-primary">
+                                            Register
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary cancel" onclick="closeoncancel();">
+                                            Cancel
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            @*<button class="btn btn-sm btn-primary pl-3 pr-3">Back</button>*@
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+
+
+</main>
+@section Scripts {
+    <script type="text/javascript">
+        function checkPANTANRegex() {
+
+            debugger;
+            $("#spnErrorMsg").text('');
+            const PANTANNo = $("#PANTANNo").val();
+            if (PANTANNo != "" && PANTANNo != undefined) {
+                const regexPAN = new RegExp('[A-Z]{5}[0-9]{4}[A-Z]{1}');
+                const regexTAN = new RegExp('[A-Z]{4}[0-9]{5}[A-Z]{1}');
+
+                if (regexPAN.test(PANTANNo) || regexTAN.test(PANTANNo)) {
+                    $("#spnErrorMsg").text('');
+                    return true;
+                }
+                else {
+                    $("#spnErrorMsg").text('પાન નંબર / ટાન નંબર બરાબર નથી.');
+                    return false;
+                }
+            }
+        }
+    </script>
+}

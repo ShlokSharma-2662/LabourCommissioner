@@ -1,0 +1,144 @@
+﻿@model IEnumerable<EmpApplicationDetailsModel>
+@using System.Security.Claims
+
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    IEnumerable<Claim> claims = identity.Claims;
+    var Data = (EmpApproveApplication)ViewBag.SendBackApplication;
+    string ServiceId = "";
+    string ApplicantName = "";
+    string ApplicationNo = "";
+    string ApplicationId = "";
+    string approvalstate = "";
+    string FromPostId = "";
+    string approvalstatus = "";
+    string DistrictId = "";
+    string TalukaId = "";
+
+    if (@Data != null)
+    {
+        ServiceId = Convert.ToString(Data.serviceid);
+        ApplicationNo = Convert.ToString(Data.applicationno);
+        ApplicationId = Convert.ToString(Data.applicationid);
+        approvalstate = Convert.ToString(Data.isapproved);
+        FromPostId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("PostId", StringComparison.OrdinalIgnoreCase))?.Value;
+    }
+    DistrictId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("DistrictId", StringComparison.OrdinalIgnoreCase))?.Value;
+    TalukaId = identity?.Claims.FirstOrDefault(x => x.Type.Equals("TalukaId", StringComparison.OrdinalIgnoreCase))?.Value;
+    string ddlDisplay = "";
+    string textDisplay = "";
+    bool isFirstLevel = (bool)ViewBag.isFirstLevel;
+    if (isFirstLevel == true)
+    {
+        ddlDisplay = "none";
+        textDisplay = "block";
+
+    }
+    else
+    {
+        ddlDisplay = "block";
+        textDisplay = "none";
+    }
+
+}
+<form asp-controller="EmployeeHome" asp-action="SendBackApplication" data-ajax="true" data-ajax-method="POST" data-ajax-begin="OnBegin" data-ajax-success="OnSuccess">
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h5 class="modal-title d-flex align-items-center w-100 justify-content-between flex-row-reverse" id="AcceptPopupTitle">
+                    <img src="/assets/img/BOCWLogo.png" class="rounded-circle me-2" height="50" width="50">SendBack Application
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style=" filter: invert(1); "></button>
+            </div>
+            <input type="hidden" id="ApplicationId" name="ApplicationId" value="@ApplicationId" />
+            <input type="hidden" id="approvalstate" name="approvalstate" value="@approvalstate" />
+            <input type="hidden" id="ApplicationNo" name="ApplicationNo" value="@ApplicationNo" />
+            <input type="hidden" id="approvalstatus" name="approvalstatus" value="@approvalstatus" />
+            <input type="hidden" id="ServiceId" name="ServiceId" value="@ServiceId" />
+            <input type="hidden" id="fromPostId" name="fromPostId" value="@FromPostId" />
+            <div class="modal-body bocw_bg">
+                <div class="form-group">
+                    <div style="display:@textDisplay">
+                        <p>
+                            <span>To Role :</span><span> To Applicant</span>
+                        </p>
+                    </div>
+                    <div class="ddlRole" style="display:@ddlDisplay">
+                        <span>To Role:</span><span class="text-danger">*</span>
+                        <select name="toSendBackRole" asp-items="@(new SelectList(@ViewBag.SendBackRoles,"Value", "Text"))" id="toSendBackRole" tabindex="3" class="form-control sendBack"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span id="lblOTP">Remarks</span><span class="text-danger">*</span>
+                    </label>
+                    <div class="">
+                        <textarea id="remarks" name="remarks" cols="20" rows="2" class="form-control" maxlength="2400" required></textarea>
+                    </div>
+                </div>
+                <br />
+                <input type="submit" value="Submit" class="btn btn-warning">
+            </div>
+
+            <div class="modal-footer bg-warning">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        debugger;
+        //GetSendBackRole(@ServiceId, @FromPostId, @DistrictId, @TalukaId,@ApplicationId);
+
+    });
+    function GetSendBackRole(ServiceId, PostId, DistrictId, TalukaId, Applicationid) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/EmployeeHome/GetSendBackRole",
+            data: { serviceid: ServiceId, postid: PostId, districtid: DistrictId, talukaid: TalukaId, aplicationid: Applicationid },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var ToSendBackRole = "";
+                //ToRole = ToRole + '<option value="0"  >--Select--</option>';
+                for (var i = 0; i < data.data.result.length; i++) {
+                    var splitted = data.data.result[i].value;
+                    var isFirst = splitted.split("/");
+                    if (isFirst[0] == 10 && PostId <= 33) {
+                        $("select").remove(".sendBack");
+                        $("p").append("To Applicant");
+                    }
+                    else {
+                        ToSendBackRole = ToSendBackRole + '<option value=' + data.data.result[i].value + ' selected>' + data.data.result[i].text + '</option>';
+                        $('#toSendBackRole').html(ToSendBackRole);
+                    }
+                }
+                //$('#PlistDistrict').html(DistrictList);
+            }
+        });
+
+    };
+    function OnBegin() {
+        $('.btn-close').click();
+        debugger;
+
+    }
+    function OnSuccess(response) {
+        debugger;
+        var msg = response.msg;
+        swal({
+            title: "",
+            text: msg,
+            type: "success",
+            showCancelButtonClass: "btn-primary",
+            confirmButtonText: 'OK'
+        }, function() {
+            window.location.reload();
+        });
+    }
+</script>

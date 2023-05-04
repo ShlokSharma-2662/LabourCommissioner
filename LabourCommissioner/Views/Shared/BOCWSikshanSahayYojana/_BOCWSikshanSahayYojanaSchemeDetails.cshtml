@@ -1,0 +1,314 @@
+﻿﻿@using LabourCommissioner.Abstraction.ViewDataModels;
+@using System.Web
+@using LabourCommissioner.Common.Utility
+@model SchemeDetails
+@{
+    var TabSequenceNo = ViewBag.TabSequenceNo;
+    var ServiceId = ViewBag.ServiceId;
+    var ApplicationId = ViewBag.ApplicationId;
+    var isfilled = ViewBag.isFilled;
+    var ApplicationNo = "";
+    var isFilled = ViewBag.isFilled;
+    //if (isfilled == true)
+    //{
+    //    ApplicationNo = Model.ApplicationNo;
+    //}
+
+}
+
+
+<form id="schemeDetailsForm" enctype="multipart/form-data" method="post" asp-controller="BOCWSikshanSahayYojana" asp-action="AddSchemeDetails">
+    <input type="hidden" asp-for="TabSequenceNo" value="@TabSequenceNo" />
+    <input type="hidden" asp-for="ApplicationId" value="@ApplicationId" />
+    <input type="hidden" asp-for="ServiceId" value="@ServiceId" />
+    <div class="tab-pane fade show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        @*<div class="text-danger" asp-validation-summary="All"></div>*@
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">
+                    અભ્યાસની વિગત
+                </span>
+            </legend>
+            <div class="form-horizontal form-bordered">
+                <div class="form-group row">
+                    <span class="control-label col-md-3">સહાયની વિગત:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        <select asp-for="Schmename" onchange="GetSyllabusBySchemeType(this.value);" class="form-control">
+                            <option value="0">--Select--</option>
+                            <option value="1">શિક્ષણ સહાય</option>
+                            <option value="2">પી.એચ.ડી સહાય</option>
+                        </select>
+                        <span asp-validation-for="Schmename" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3">અભ્યાસક્રમ:<span class="text-danger">*</span></span>
+                    <div class="control-form col-md-3">
+                        @*<select asp-for="Syllabus" id="GSyllabus" onchange="GetDeegreeBySubjectId(this.value);" asp-items="@(isfilled == true ? new SelectList(@ViewBag.Syllabus,"Value", "Text",selectedValue:@Model.Syllabus) : new SelectList(@ViewBag.Syllabus,"Value", "Text"))" class="form-control">*@
+                        <select asp-for="Syllabus" id="GSyllabus" onchange="GetDeegreeBySubjectId(this.value);" asp-items="@(isfilled == true ? new SelectList(@ViewBag.Syllabus,"Value", "Text",selectedValue:@Model.Syllabus) : null)" class="form-control">
+                            <option selected disabled hidden>--Select--</option>
+                        </select>
+                        <span asp-validation-for="Syllabus" class="text-danger"></span>
+                        @*<select asp-for="Syllabus" asp-items="@(new SelectList(@ViewBag.Syllabus,"Value", "Text"))" class="form-control"></select>*@
+                    </div>
+
+                </div>
+                <div class="form-group row">
+
+                    <span class="control-label col-md-3">
+                        ડીગ્રી/ધોરણ  :   <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3">
+                        <select asp-for="Course" id="GSubject" onchange="GetSemesterbyCourseId(this.value);" asp-items="@(isfilled == true ? new SelectList(@ViewBag.Degree, "Value", "Text", selectedValue: @Model.Course) : new SelectList(@ViewBag.Degree,"Value","Text"))" class="form-control">
+                            <option selected disabled hidden>--Select--</option>
+                        </select>
+                        <span asp-validation-for="Course" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3">
+                        અભ્યાસનું વર્ષ/સેમ.  <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3">
+                        <select asp-for="AcadmicYearSem" id="AcadmicYearSem" onchange="GetBenifitByCourseId(this.value,$('#GSubject').val(),0);" asp-items="@(isfilled == true ? new SelectList(@ViewBag.Semester,"Value","Text",selectedValue:@Model.AcadmicYearSem) : null)" class="form-control">
+                            <option selected disabled hidden>--Select--</option>
+                        </select>
+                        <span asp-validation-for="AcadmicYearSem" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3">
+                        એડમીશન મળ્યા/સત્ર શરુ થયા તારીખ :   <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3">
+                        <input type="text" asp-for="StartDate" onchange="    ValidateDate(this.value);" autocomplete="off" class="form-control dateValidateCls datepicker dateValidateCls" placeholder="dd/MM/yyyy" />
+                        @*<input data-date-format="dd/mm/yyyy" onchange="    ValidateDate(this.value);" id="datepicker" class="form-control" autocomplete="off" placeholder="dd/MM/yyyy" />*@
+                        <span asp-validation-for="StartDate" id="dateSpan" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <span class="control-label col-md-3">
+                        શાળા/કોલેજનું નામ:   <span class="text-danger">*</span>
+                    </span>
+                    <div class="control-form col-md-3">
+                        <input asp-for="SchoolCollageName" class="form-control" autocomplete="off" />
+                        <span asp-validation-for="SchoolCollageName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="benifitsrs" class="control-label col-md-3">
+                        સહાય (રૂપિયામાં):  <span class="text-danger">*</span>
+                        <input id="Benifitsrs" asp-for="benifitsrs" class="form-control" readonly />
+                        <span asp-validation-for="benifitsrs" class="text-danger"></span>
+                    </label>
+                    <label asp-for="ubenifitsrs" class="control-label col-md-3">
+                        સ્કૂલ ફી (રૂપિયામાં) <span class="text-danger">*</span>
+                        <input id="Userbenifitsrs" onblur="GetFinalBenifits('School');" asp-for="ubenifitsrs" class="form-control" />
+                        <span asp-validation-for="ubenifitsrs" class="text-danger"></span>
+                    </label>
+                    <label asp-for="fbenifitsrs" class="control-label col-md-3">
+                        મળવા પાત્ર સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Finalbenifits" asp-for="fbenifitsrs" class="form-control" readonly />
+                        <span asp-validation-for="fbenifitsrs" class="text-danger"></span>
+                    </label>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="hostelbenifits" class="control-label col-md-3">
+                        હોસ્ટેલ સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Hostelbenifits" asp-for="hostelbenifits" class="form-control" readonly />
+                        <span asp-validation-for="hostelbenifits" class="text-danger"></span>
+                    </label>
+                    <label asp-for="uhostelbenifits" class="control-label col-md-3">
+                        હોસ્ટેલ ફી (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Userhostelbenifits" onchange="GetFinalBenifits('Hostel');" asp-for="uhostelbenifits" class="form-control" />
+                        <span asp-validation-for="uhostelbenifits" class="text-danger"></span>
+                    </label>
+                    <label asp-for="fbooksbenifits" class="control-label col-md-3">
+                        મળવા પાત્ર હોસ્ટેલ સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Finalhostelbenifits" asp-for="fhostelbenifits" class="form-control" readonly />
+                        <span asp-validation-for="fhostelbenifits" class="text-danger"></span>
+                    </label>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="booksbenifits" class="control-label col-md-3">
+                        પુસ્તક સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Bookbenifits" asp-for="booksbenifits" class="form-control" readonly />
+                        <span asp-validation-for="booksbenifits" class="text-danger"></span>
+                    </label>
+                    <label asp-for="ubooksbenifits" class="control-label col-md-3">
+                        પુસ્તક ફી (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Userbookbenifits" onblur="GetFinalBenifits('books');" asp-for="ubooksbenifits" class="form-control" />
+                        <span asp-validation-for="ubooksbenifits" class="text-danger"></span>
+                    </label>
+                    <label asp-for="fbooksbenifits" class="control-label col-md-3">
+                        મળવા પાત્ર પુસ્તક સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                        <input id="Finalbookbenifits" onblur="GetFinalBenifits(this.value);" asp-for="fbooksbenifits" class="form-control" readonly />
+                        <span asp-validation-for="fbooksbenifits" class="text-danger"></span>
+                    </label>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="totalsahay" class="control-label col-md-3">
+                        કુલ મળવા પાત્ર સહાય (રૂપિયામાં) :  <span class="text-danger">*</span>
+                    </label>
+
+                    <div class="control-form col-md-3">
+                        <input id="Totalsahay" asp-for="totalsahay" class="form-control" readonly />
+                        <span asp-validation-for="totalsahay" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="custom-fieldset mb-4">
+            <legend id="body_innerbody_ucApplicantBankdetails_ucLegend">
+                <span id="body_innerbody_ucApplicantBankdetails_lblLegend">બેંકની વિગતો</span>
+            </legend>
+
+            <partial name="~/Views/Shared/_BankDetails.cshtml" />
+        </fieldset>
+
+        <div class="card-footer text-center border">
+            <button class="btn btn-sm btn-primary pl-3 pr-3">Save</button>
+            <button type="button" class="btn btn-sm btn-secondary pl-3 pr-3 mr-2" onClick="CancelOnScheme('@HttpUtility.UrlEncode(CommonUtils.Encrypt(@ServiceId))');">Cancel</button>
+        </div>
+
+    </div>
+</form>
+<script type="text/javascript">
+    $(function() {
+        var today = new Date();
+        $('.datepicker').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "dd/mm/yyyy",
+            language: "local",
+            todayHighlight: 'TRUE',
+            autoclose: true
+        });
+    });
+
+    $(document).ready(function() {
+        debugger;
+        //if ('@isFilled' == 'True') {
+        //    GetBenifitByCourseId($("#AcadmicYearSem").val(), $('#GSubject').val());
+        //}
+
+    });
+
+
+    function ValidateDate(date) {
+        debugger;
+        var today = new Date();     
+        var dateArray = date.split('/');
+        var startDate = dateArray[2] + "-" + dateArray[1] + "-" + dateArray[0];
+        startDate = new Date(startDate);
+        var monthDiff = today.getMonth() - startDate.getMonth();
+
+        //var today = new Date();
+        //var startdate = new Date(date);
+        //var diff = (Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - Date.UTC(startdate.getFullYear(), startdate.getMonth(), startdate.getDate())) / (1000 * 60 * 60 * 24);
+        //var monthDiff = Math.floor(diff / 30);
+        if (monthDiff > 6) {
+            $("#datepicker").val();
+            $('#dateSpan').html("સત્ર શરૂ થવા ના પેહલા ૬ માસ દરમિયાન જ યોજના માં અરજી કરવી..!!!!");
+        }
+    }
+
+
+
+    function GetDeegreeBySubjectId(subjectId) {
+
+        var subjectID = subjectId;
+        $.ajax({
+            type: "get",
+            url: "/BOCWSikshanSahayYojana/GetSubject",
+            data: { subjectId: subjectId },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                var DegreeList = "";
+                DegreeList = DegreeList + '<option value="">--Select--</option>';
+                for (var i = 0; i < data.data.result.length; i++) {
+                    DegreeList = DegreeList + '<option value=' + data.data.result[i].value + '>' + data.data.result[i].text + '</option>';
+                }
+                $('#GSubject').html(DegreeList);
+
+            }
+        });
+    }
+
+    function GetSyllabusBySchemeType(schemeType) {
+        debugger;
+        var SchemeType = schemeType;
+        $.ajax({
+            type: "get",
+            url: "/BOCWSikshanSahayYojana/GetEducation",
+            data: { schemeType: SchemeType },
+            datatype: "json",
+            traditional: true,
+            success: function(data) {
+                debugger;
+                var SyllabusList = "";
+                SyllabusList = SyllabusList + '<option value="">--Select--</option>';
+                for (var i = 0; i < data.data.length; i++) {
+                    SyllabusList = SyllabusList + '<option value=' + data.data[i].value + '>' + data.data[i].text + '</option>';
+                }
+                $('#GSyllabus').html(SyllabusList);
+
+            }
+        });
+    }
+
+    function GetBenifitByCourseId(semesteryear, courseid, callfrom) {
+        debugger;
+        $.ajax({
+            type: "get",
+            url: "/BOCWSikshanSahayYojana/GetBenifitByCourseId",
+            data: { courseId: courseid, semesteryear: semesteryear },
+            datatype: "json",
+            traditional: true,
+            async: false,
+            success: function(data) {
+                debugger;
+                if (callfrom == 0) {
+                    $('#Finalbenifits').val('');
+                    $('#Finalhostelbenifits').val('');
+                    $('#Finalbookbenifits').val('');
+                    $('#Userbenifitsrs').val('');
+                    $('#Userhostelbenifits').val('');
+                    $('#Userbookbenifits').val('');
+                    $('#Totalsahay').val('');
+                }
+
+                var val = $("#GSyllabus").val();
+
+                //if (val == 4 ||val == 5 || val == 6 || val == 7 || val == 8 || val == 9) {
+                if (val == 6 || val == 7 || val == 8) {
+                    minBenifit = data.data.result[0].minfees;
+                    maxBenifit = data.data.result[0].maxfees;
+                    Benifitsrs = minBenifit;
+                }
+                Benifitsrs = data.data.result[0].benifitsrs;
+                Hostelbenifits = data.data.result[0].hostelbenifits;
+                Bookbenifits = data.data.result[0].booksbenifits;
+                UserBenifitsrs = data.data.result[0].ubenifitsrs;
+                UserHostelbenifits = data.data.result[0].uhostelbenifits;
+                UserBookbenifits = data.data.result[0].ubooksbenifits;
+                Finalbenifits = data.data.result[0].fbenifitsrs;
+                Finalhostelbenifits = data.data.result[0].fhostelbenifits;
+                Finalbookbenifits = data.data.result[0].fbooksbenifits;
+                $('#Benifitsrs').val(Benifitsrs);
+                $('#Hostelbenifits').val(Hostelbenifits);
+                $('#Bookbenifits').val(Bookbenifits);
+            }
+        });
+    }
+
+
+</script>
